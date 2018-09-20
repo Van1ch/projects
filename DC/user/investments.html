@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dream-Company</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <script src="../js/jquery.js"></script>
+    <script src="//cdn.blitz-market.ru/sprite/latest/"></script>
+    <script src="../js/user.js"></script>
+    <script>
+        $(document).ready(function () {
+            let tab = $('.user-investment__header-tab'),
+                tabContent = $('.user-investment__content'),
+                info = $('.user-investment__header')[0];
+
+            function hide(a) {
+                for (let i = a; i < tabContent.length; i++) {
+                    tabContent[i].classList.remove('user-content_shown');
+                    tabContent[i].classList.add('user-content_hidden');
+                }
+            }
+
+            hide(1);
+
+            function show(b) {
+                if (tabContent[b].classList.contains('user-content_hidden')) {
+                    hide(0);
+                    tabContent[b].classList.remove('user-content_hidden');
+                    tabContent[b].classList.add('user-content_shown');
+                }
+            }
+
+            info.addEventListener('click', (event) => {
+                let target = event.target;
+                if (target.classList.contains('user-investment__header-tab')) {
+                    for (let i = 0; i < tab.length; i++) {
+                        if (target === tab[i]) {
+                            for (let i = 0; i < tab.length; i++) {
+                                tab[i].classList.remove('user-tab_active');
+                            }
+                            tab[i].classList.add('user-tab_active');
+                            show(i);
+                            break;
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <header class="header">
+            <div class="header-burger">
+                <div class="header-burger__inner"></div>
+            </div>
+            <a href="/" class="header-logo">
+                <img src="../img/header/logo.png" alt="Logo">
+            </a>
+            <a href="#" class="header-exit">
+                <img src="../img/general/exit.svg" alt="Exit">
+            </a>
+        </header>
+        <div class="user-menu">
+            <div class="user-menu__top">
+                <div class="user-menu__top-back">
+                    <img src="../img/general/back.svg" alt="Back">
+                </div>
+                <div class="user-menu__top-exit">
+                    <img src="../img/general/exit_white.svg" alt="Exit">
+                </div>
+                <div class="user-menu__top-info">
+                    <div class="user-menu__top-info__name">Дмитрий Верховецкий</div>
+                    <div class="user-menu__top-info__login">Gonalebia_1982</div>
+                </div>
+            </div>
+            <div class="user-menu__bottom">
+                <a href="../about.html" class="user-menu__bottom-item">
+                    О системе
+                </a>
+                <a href="../investor.html" class="user-menu__bottom-item">
+                    Инвестору
+                </a>
+                <a href="../customer.html" class="user-menu__bottom-item">
+                    Заемщику
+                </a>
+                <a href="../start.html" class="user-menu__bottom-item">
+                    Инструкции
+                </a>
+                <a href="../partners.html" class="user-menu__bottom-item">
+                    Бонусы
+                </a>
+                <a href="//vk.com/topic-158158419_36347098" class="user-menu__bottom-item">
+                    Отзывы
+                </a>
+                <a href="//vk.com/im?sel=-158158419" class="user-menu__bottom-item">
+                    Тех. поддержка
+                </a>
+                <div class="user-menu__bottom-contacts">
+                    <a href="//vk.com/dream.company">
+                        <img src="../img/general/vk_blue.svg" alt="VK">
+                    </a>
+                    <span>support@dream-company.me</span>
+                </div>
+            </div>
+        </div>
+        <div class="user-link__wrapper">
+            <div class="container">
+                <div class="user-link">
+                    <div class="user-link__arrow">
+                        <img src="../img/general/arrow_left.svg" alt="Previous">
+                    </div>
+                    <div class="user-link__text">
+                        Выдача займов
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-deposit__wrapper">
+            <div class="container">
+                <div class="user-investment">
+                    <div class="user-investment__header user-header">
+                        <div class="user-investment__header-tab user-tab user-tab_active">Базовая</div>
+                        <div class="user-investment__header-tab user-tab">Расширенная</div>
+                    </div>
+                    <div class="user-investment__content user-investment__content_fade">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../img/general/dollar.svg" alt="Dollar">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="user-investment__content-text">
+                                    <div class="user-investment__content-text__text">
+                                        <p>
+                                            Базовая группа займов представляет из себя инвестиционные планы для
+                                            начинающих инвесторов или тех, кто пока не обладает должными возможностями,
+                                            чтобы попробовать себя в роли полноценного инвестора.
+                                        </p>
+                                        <p>
+                                            Займы в данной категории, как правило, относятся к микрокредитованию частных
+                                            лиц на небольшие суммы, при соответствующих сроках. В займах данной группы
+                                            полностью отсутствует обеспечение залогом, что потенциально сказывается на
+                                            повышении рисков в данных предложениях. Посему, для устранения возможных
+                                            убытков, доступные сроки и суммы инвестирования в данной группе минимальны.
+                                            А система бонусов реализуется единоразово.
+                                        </p>
+                                        <p>
+                                            Важно помнить, что привлекаемые денежные средства в виде займов со стороны
+                                            клиента не являются депозитами, принимаемыми кредитными организациями, как
+                                            следствие не застрахованы в системе обязательного страхования вкладов в
+                                            банках РФ. Данная процедура является финансированием займов в одностороннем
+                                            порядке и осуществляется по собственной воле клиента, строго после принятия
+                                            условий взаимодействия сторон в полном объеме, включая потенциальные риски
+                                            данного рода деятельности и возможные последствия при наступлении таковых.
+                                        </p>
+                                    </div>
+                                    <span class="user-investment__content-text__learnMore">читать больше</span>
+                                </div>
+                                <a href="investment-select.html" class="user-investment__content-button button button_red">
+                                    Выбрать
+                                    <span class="button-line"></span>
+                                    <img src="../img/main/arrow-right.svg" alt="Arrow_right" class="button-arrow">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-investment__content user-investment__content_fade">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../img/general/dollar-house.svg" alt="Dollar">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="user-investment__content-text">
+                                    <div class="user-investment__content-text__text">
+                                        <p>
+                                            Расширенная группа займов позволяет взглянуть на инвестиции в займы под
+                                            другим углом. Она представляет из себя ряд инвестиционных планов для более
+                                            опытных инвесторов - людей, стремящихся к чему-то большему. Данная группа
+                                            позволяет использовать возможности нашей площадки в полной мере, используя
+                                            Ваше время и средства максимально эффективно.
+                                        </p>
+                                        <p>
+                                            Её отличительной особенностью является финансирование займов малого и
+                                            среднего бизнеса. Однако в ней задействовано и кредитование частных лиц, но
+                                            на более высокие суммы, нежели в базовой, как следствие – и на более
+                                            длительные сроки. Здесь, как правило, реализуется не только обеспеченность
+                                            займов, но и внутреннее страхование, что в купе дает максимальную защиту от
+                                            имеющихся потенциальных рисков в данной сфере. А также, в отличие от
+                                            базовой, расширенная группа займов не обременена ограничениями в развитии
+                                            бонусной системы, будь то партнерство или программа лояльности.
+                                        </p>
+                                        <p>
+                                            Важно помнить, что привлекаемые денежные средства в виде займов со стороны
+                                            клиента не являются депозитами, принимаемыми кредитными организациями, как
+                                            следствие не застрахованы в системе обязательного страхования вкладов в
+                                            банках РФ. Данная процедура является финансированием займов в одностороннем
+                                            порядке и осуществляется по собственной воле клиента, строго после принятия
+                                            условий взаимодействия сторон в полном объеме, включая потенциальные риски
+                                            данного рода деятельности и возможные последствия при наступлении таковых.
+                                        </p>
+                                    </div>
+                                    <span class="user-investment__content-text__learnMore">читать больше</span>
+                                </div>
+                                <a href="investment-select.html" class="user-investment__content-button button button_blue">
+                                    Выбрать
+                                    <span class="button-line"></span>
+                                    <img src="../img/main/arrow-right.svg" alt="Arrow_right" class="button-arrow">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="/user" class="footer-item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="30" viewBox="0 0 32 30">
+                <defs>
+                    <path id="kfjra" d="M72.03 1191.65v18.62a2.62 2.62 0 0 1-2.59 2.65H58.91v2.96h2.05c.34 0 .62.29.62.63v1.85c0 .35-.28.64-.62.64h-9.9a.63.63 0 0 1-.62-.64v-1.85c0-.34.28-.63.62-.63h2.06v-2.97H42.58a2.62 2.62 0 0 1-2.58-2.65v-18.6a2.62 2.62 0 0 1 2.58-2.66h26.86a2.63 2.63 0 0 1 2.59 2.65zm-3.53 17.62v-16.65H43.53v16.65zm-10.94-2.26h-3.1v-12.08h3.1zm-2.27-10.2l1-1.03h-1zm1.44 8.32l-1 1.03h1zm0-2.17l-1.44 1.48v1.04l1.44-1.47zm0-2.17l-1.44 1.48v1.04l1.44-1.47zm0-2.17l-1.44 1.48v1.05l1.44-1.48zm0-2.17l-1.44 1.48v1.04l1.44-1.47zm2.1 4.06h3.09v6.5h-3.1zm-5.63 6.5h-3.1v-9.14h3.1zm-.83-8.29h-1.44v7.44h1.44z"></path>
+                    <linearGradient id="grad" x1="713.53" x2="714" y1="1190.03" y2="1218.26" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-40 -1189)">
+                        <use xlink:href="#kfjra"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="operations.html" class="footer-item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="29" viewBox="0 0 29 29">
+                <defs>
+                    <path id="plqca" d="M181.1 1204.15c0 7.8-6.38 14.11-14.24 14.11a14.18 14.18 0 0 1-14.23-14.11c0-7.8 6.37-14.12 14.23-14.12s14.24 6.32 14.24 14.12zm-9.3 2.53a3.69 3.69 0 0 0-1.87-3.33c-.58-.32-1.36-.66-2.36-1.02a7.18 7.18 0 0 1-1.79-.84 1.17 1.17 0 0 1-.41-.97c0-.4.14-.76.43-1.05.29-.29.67-.43 1.15-.43.94 0 1.64.64 2.1 1.94l2.32-.94c-.56-1.9-1.78-2.95-3.66-3.18v-1.54h-1.69v1.54c-1.24.18-2.16.66-2.74 1.44a4.32 4.32 0 0 0-.38 4.6c.32.56.75 1 1.27 1.3.52.32 1.24.63 2.17.95 1.03.36 1.7.66 2 .9.3.23.44.58.44 1.03 0 .44-.15.82-.44 1.13-.3.31-.77.47-1.4.47-1.36 0-2.16-.73-2.4-2.18l-2.61.67c.53 2.32 1.89 3.59 4.1 3.81v1.99h1.68v-2a4.54 4.54 0 0 0 3.03-1.37 4.2 4.2 0 0 0 1.06-2.92z"></path>
+                    <linearGradient id="grad" x1="166.63" x2="167.1" y1="1190.03" y2="1218.26" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-152 -1190)">
+                        <use xlink:href="#plqca"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="investments.html" class="footer-item footer-item_active">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="26" viewBox="0 0 32 26">
+                <defs>
+                    <path id="1vx8a" d="M290.1 1214.86h-1.3v-22.25a.83.83 0 0 0-.85-.82h-4.14a.83.83 0 0 0-.84.82v22.25h-1.37v-19.04a.83.83 0 0 0-.85-.82h-4.14a.83.83 0 0 0-.84.82v19.04h-1.37v-14.06a.83.83 0 0 0-.85-.82h-4.14a.83.83 0 0 0-.84.82v14.06h-1.37v-9.48a.83.83 0 0 0-.85-.82h-4.14a.83.83 0 0 0-.84.82v9.48h-1.6a.83.83 0 0 0-.85.82c0 .45.38.82.84.82H290.1c.47 0 .84-.37.84-.82a.83.83 0 0 0-.84-.82z"></path>
+                    <linearGradient id="grad" x1="274.92" x2="274.94" y1="1191.79" y2="1216.5" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-259 -1191)">
+                        <use xlink:href="#1vx8a"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="partners.html" class="footer-item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="30" viewBox="0 0 27 30">
+                <defs>
+                    <path id="ghoja" d="M393.92 1200.17c-.47 1.79-1.56 2.18-2.14 2.26-.36.72-1.14 2.18-1.93 2.91-.31.3-.72.55-1.21.74a5.3 5.3 0 0 1-3.94 0c-.5-.2-.9-.44-1.21-.74-.8-.73-1.58-2.2-1.93-2.91-.59-.08-1.67-.47-2.14-2.26-.25-.95-.19-1.73.2-2.31.16-.26.36-.43.54-.55 0-.2.01-.43.04-.7-.34-.47-.8-1.48-.23-3.12.6-1.74 1.95-2 2.61-2.03.22-.4.64-1 1.4-1.53a5.4 5.4 0 0 1 3.1-.93c1.42 0 2.85.5 4.14 1.45 2.08 1.54 1.9 4.95 1.86 5.57.07.52.1.97.1 1.29.18.12.38.3.55.55.37.58.44 1.36.19 2.31zm6.1 13.3v4.84c0 .38-.31.69-.7.69h-25.31a.69.69 0 0 1-.69-.69v-4.84a4.8 4.8 0 0 1 3.03-4.48l6-2.4a.69.69 0 0 1 .9.4l1.5 4.17.3-.86-.48-1.16a.69.69 0 0 1 .64-.94h2.92a.69.69 0 0 1 .64.94l-.48 1.16.3.86 1.5-4.17a.69.69 0 0 1 .9-.4l6 2.4a4.8 4.8 0 0 1 3.02 4.48zm-4.34-.16h-4.6c-.38 0-.68.3-.68.69v2.13c0 .38.3.7.68.7h4.6c.38 0 .69-.32.69-.7V1214c0-.38-.31-.7-.69-.7z"></path>
+                    <linearGradient id="grad" x1="386.32" x2="387.01" y1="1189" y2="1219" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-373 -1189)">
+                        <use xlink:href="#ghoja"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="calc.html" class="footer-item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="30" viewBox="0 0 27 30">
+                <defs>
+                    <path id="q172a" d="M509.08 1192.64v22.72c0 2-1.77 3.64-3.95 3.64h-18.79c-2.18 0-3.95-1.63-3.95-3.64v-22.72c0-2 1.77-3.64 3.95-3.64h18.8c2.17 0 3.94 1.63 3.94 3.64zm-22.78 5.91h18.88v-5.8H486.3zm4.8 13.3c0-1.26-1.1-2.28-2.47-2.28-1.36 0-2.47 1.02-2.47 2.28 0 1.25 1.1 2.27 2.47 2.27s2.47-1.02 2.47-2.27zm0-7.85c0-1.26-1.1-2.28-2.47-2.28-1.36 0-2.47 1.02-2.47 2.28 0 1.26 1.1 2.28 2.47 2.28s2.47-1.02 2.47-2.28zm7.1 7.85c0-1.26-1.1-2.28-2.46-2.28-1.37 0-2.47 1.02-2.47 2.28 0 1.25 1.1 2.27 2.47 2.27 1.36 0 2.47-1.02 2.47-2.27zm0-7.85c0-1.26-1.1-2.28-2.46-2.28-1.37 0-2.47 1.02-2.47 2.28 0 1.26 1.1 2.28 2.47 2.28 1.36 0 2.47-1.02 2.47-2.28zm7.11 7.85c0-1.26-1.1-2.28-2.47-2.28-1.36 0-2.47 1.02-2.47 2.28 0 1.25 1.11 2.27 2.47 2.27 1.37 0 2.47-1.02 2.47-2.27zm0-7.85c0-1.26-1.1-2.28-2.47-2.28-1.36 0-2.47 1.02-2.47 2.28 0 1.26 1.11 2.28 2.47 2.28 1.37 0 2.47-1.02 2.47-2.28z"></path>
+                    <linearGradient id="grad" x1="495.39" x2="496.08" y1="1189" y2="1219" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-482 -1189)">
+                        <use xlink:href="#q172a"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="credentials.html" class="footer-item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="28" viewBox="0 0 32 28">
+                <defs>
+                    <path id="t36ya" d="M618.93 1193.52v20.96c0 .76-.28 1.4-.83 1.95-.55.54-1.21.8-1.99.8h-26.39c-.77 0-1.44-.26-1.99-.8a2.63 2.63 0 0 1-.83-1.95v-20.96c0-.76.28-1.4.83-1.95a2.74 2.74 0 0 1 2-.8h26.38c.78 0 1.44.26 2 .8.54.54.82 1.2.82 1.95zm-2.25 10.48h-27.52v10.48c0 .15.05.28.17.39.1.1.24.16.4.16h26.38c.16 0 .29-.06.4-.16.11-.11.17-.24.17-.4zm0-6.62v-3.86a.52.52 0 0 0-.17-.39.55.55 0 0 0-.4-.16h-26.39a.55.55 0 0 0-.4.16.52.52 0 0 0-.16.4v3.85zm-25.27 13.24h4.5v2.2h-4.5zm6.76 0h6.76v2.2h-6.76z"></path>
+                    <linearGradient id="grad" x1="602.9" x2="602.93" y1="1190.76" y2="1217.24" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-587 -1190)">
+                        <use xlink:href="#t36ya"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="settings.html" class="footer-item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="29" viewBox="0 0 29 29">
+                <defs>
+                    <path id="v3w8a" d="M728 1205.91c0 .74-.6 1.34-1.36 1.34h-2.15a10.9 10.9 0 0 1-.92 2.22l1.52 1.5c.53.53.53 1.38 0 1.9l-2.52 2.5c-.51.51-1.4.51-1.91 0l-1.53-1.5c-.7.38-1.45.69-2.23.91v2.14c0 .74-.6 1.34-1.35 1.34h-3.57c-.74 0-1.35-.6-1.35-1.34v-2.14c-.77-.22-1.52-.53-2.23-.91l-1.52 1.5c-.5.5-1.43.5-1.92 0l-2.52-2.5a1.33 1.33 0 0 1 0-1.9l1.52-1.5c-.39-.7-.7-1.45-.92-2.22h-2.15c-.75 0-1.36-.6-1.36-1.34v-3.53c0-.74.61-1.34 1.36-1.34h2.15c.22-.77.53-1.51.92-2.22l-1.52-1.5a1.34 1.34 0 0 1 0-1.9l2.52-2.5c.51-.51 1.4-.51 1.92 0l1.52 1.5c.7-.38 1.46-.69 2.23-.91v-2.14c0-.74.6-1.34 1.35-1.34h3.57c.74 0 1.35.6 1.35 1.34v2.14c.78.22 1.52.53 2.23.92l1.53-1.51c.49-.5 1.42-.5 1.91 0l2.52 2.5a1.33 1.33 0 0 1 0 1.9l-1.52 1.5c.39.7.7 1.45.92 2.22h2.15c.75 0 1.36.6 1.36 1.34zm-14.23-6.65a4.92 4.92 0 0 0-4.94 4.89c0 2.7 2.22 4.89 4.94 4.89 2.71 0 4.93-2.2 4.93-4.9s-2.22-4.88-4.93-4.88z"></path>
+                    <linearGradient id="grad" x1="713.53" x2="714" y1="1190.03" y2="1218.26" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#508ab3"></stop>
+                        <stop offset="1" stop-color="#883759"></stop>
+                    </linearGradient>
+                </defs>
+                <g>
+                    <g transform="translate(-699 -1190)">
+                        <use xlink:href="#v3w8a"></use>
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </footer>
+</div>
+</body>
+</html>

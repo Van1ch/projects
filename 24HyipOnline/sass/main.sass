@@ -1,0 +1,712 @@
+//global settings
+
+*
+    outline: 0
+    padding: 0
+    margin: 0
+label
+    margin-bottom: 0
+button:active, button:focus, button:hover
+    outline: none !important
+    box-shadow: none !important
+
+p
+    margin: 0
+
+html, body
+    margin: 0
+    padding: 0
+    width: 100%
+    height: 100%
+
+.wrapper
+    font-size: 16px
+    display: flex
+    flex-direction: column
+    height: 100%
+    width: 100%
+    font-family: "Lato", sans-serif
+    font-weight: 400
+    color: #232323
+
+.content
+    position: relative
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+//main styles
+
+.item-title
+    color: #213d7c
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: 700
+    padding-bottom: 15px
+    position: relative
+    &:after
+        position: absolute
+        content: ''
+        display: block
+        width: 30px
+        height: 5px
+        background-color: #e99e26
+        bottom: 0
+        left: 0
+
+.section-title
+    color: #213d7c
+    font-size: 48px
+    font-weight: 300
+    position: relative
+    padding-bottom: 20px
+    span
+        font-weight: 700
+    &:after
+        position: absolute
+        content: ''
+        display: block
+        width: 30px
+        height: 5px
+        background-color: #e99e26
+        bottom: 0
+        left: 0
+
+.btn
+    padding: 10px 60px
+    border-radius: 30px
+    border: 2px solid #ff9e16
+    background-color: rgba(255, 158, 22, .7)
+    font-weight: 400
+    font-size: 24px
+    color: #fefefe
+    transition: 0.3s all
+    text-transform: uppercase
+    &:hover
+        transition: 0.3s all
+        background-color: rgba(255, 158, 22, 1)
+
+.logIn
+    font-weight: 400
+    color: #fefefe
+    font-size: 16px
+    border-radius: 20px
+    border: 2px solid #fff
+    background: transparent
+    padding: 6px 40px
+    cursor: pointer
+    transition: 0.3s all
+    &:hover
+        transition: 0.3s all
+        background: #fff
+        color: #5624b5
+
+//main
+
+.main
+    max-width: 1235px
+    margin: 0 auto
+    color: #fefefe
+    display: flex
+    justify-content: space-between
+    &-wrapper
+        min-height: 100vh
+        height: 100vh
+        position: relative
+        padding-top: 80px
+        padding-bottom: 305px
+        width: 100%
+        background: url('../img/main/main-bg.png') no-repeat center
+        background-size: cover
+    &-form
+        padding-top: 40px
+        vertical-align: top
+        &__input
+            width: 100%
+            background: transparent
+            border: none
+            border-bottom: 1px solid #fff
+            padding-bottom: 10px
+            padding-left: 15px
+            color: #fff
+            margin-bottom: 40px
+            &::-webkit-input-placeholder
+                color: #fff
+            &::-moz-placeholder
+                color: #fff
+        &__checkbox
+            text-align: center
+            font-weight: 300
+            font-size: 14px
+            margin-bottom: 25px
+            span
+                position: relative
+                padding-bottom: 3px
+                &:after
+                    position: absolute
+                    content: ''
+                    display: block
+                    height: 1px
+                    width: 100%
+                    background: #fff
+                    bottom: 0
+                    left: 0
+                a
+                    color: #fefefe
+                    text-decoration: none
+    &-title
+        color: #fff
+        font-size: 28px
+        font-weight: 300
+        margin-bottom: 50px
+        span
+            font-weight: 400
+    &-logo
+        font-size: 60px
+        font-weight: 300
+        line-height: 55px
+        margin-bottom: 25px
+        span
+            font-weight: 400
+        &_special
+            color: #ff9e16
+            font-weight: 700
+    &-subtitle
+        font-size: 60px
+        font-weight: 400
+        line-height: 55px
+        margin-bottom: 40px
+    &-button
+        color: #fefefe
+        font-size: 18px
+        font-weight: 300
+        border: 1px solid #fff
+        border-radius: 30px
+        background: transparent
+        padding: 20px 40px
+        cursor: pointer
+        transition: 0.3s all
+        line-height: 16px
+        &:hover
+            transition: 0.3s all
+            background: #fff
+            color: #5624b5
+    &-checkbox
+        input
+            position: absolute
+            z-index: -10
+            opacity: 0
+            margin: 0
+        span
+            position: relative
+            padding: 0 0 0 60px
+            cursor: pointer
+            text-decoration: underline
+            &:after
+                content: ''
+                position: absolute
+                width: 15px
+                height: 15px
+                border: 1px solid #ffffff
+                background: transparent
+                transition: .3s all
+                left: 26px
+            &:before
+                content: ''
+                position: absolute
+                width: 8px
+                height: 8px
+                background: #fff
+                transition: .3s all
+                opacity: 0
+                left: 26px
+                top: -1px
+                transform: translateX(43%) translateY(44%)
+        input:checked + span:before
+            opacity: 1
+
+.arrow
+    padding: 20px
+    cursor: pointer
+    position: absolute
+    bottom: 37px
+    left: 50%
+    transform: translateX(-50%)
+
+.cross
+    position: absolute
+    z-index: 0
+
+.cross1
+    top: 153px
+    left: 177px
+
+.cross2
+    top: 360px
+    right: 670px
+
+.cross3
+    bottom: 139px
+    left: 188px
+
+.cross4
+    top: 226px
+    right: 200px
+
+.cross5
+    bottom: -80px
+    right: 0
+
+//header
+
+.header
+    color: #fefefe
+    max-width: 1235px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 220px
+    &-signUp
+        text-transform: none
+        padding: 6px 40px
+        font-size: 16px
+        margin-left: 55px
+    &-logo
+        font-size: 24px
+        font-weight: 300
+        span
+            font-weight: 700
+            font-size: 36px
+
+//about
+
+.about
+    max-width: 1500px
+    margin: 0 auto
+    padding-top: 150px
+    padding-bottom: 120px
+    display: flex
+    justify-content: space-between
+    &-text
+        &__title
+            margin-bottom: 40px
+        &__text
+            span
+                margin-bottom: 35px
+                display: block
+
+//adv
+
+.adv
+    max-width: 1280px
+    margin: 0 auto
+    &-item
+        padding-top: 60px
+        margin-bottom: 80px
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        &_special
+            flex-direction: row-reverse
+        &__img
+            display: inline-block
+        &__text
+            margin-left: -85px
+            max-width: 630px
+            display: inline-block
+            box-shadow: 0 10px 38px rgba(0, 0, 0, 0.39)
+            background-color: #fff
+            padding: 40px 90px 50px 40px
+            z-index: 1
+            &_special
+                margin-right: -85px
+                margin-left: 0
+            &-title
+                margin-bottom: 25px
+        &__number
+            position: absolute
+            right: 0
+            top: 0
+            opacity: 0.3
+            color: #ff9e16
+            font-family: "Open Sans", sans-serif
+            font-size: 200px
+            font-weight: 700
+            line-height: 160px
+            z-index: -1
+            &_special
+                left: 0
+
+//work
+
+.work
+    max-width: 1240px
+    margin: 0 auto
+    padding-bottom: 150px
+    &-title
+        margin-bottom: 25px
+    &-subtitle
+        font-family: "Segoe UI", sans-serif
+        font-size: 18px
+        margin-bottom: 60px
+    &-items
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-item
+        max-width: 295px
+        display: flex
+        justify-content: center
+        align-items: center
+        &__number
+            background-color: #213d7c
+            border-radius: 100%
+            letter-spacing: 0.45px
+            font-weight: 700
+            font-size: 36px
+            color: #fff
+            width: 80px
+            height: 80px
+            display: flex
+            justify-content: center
+            align-items: center
+            &_special
+                background-color: #ff9e16
+        &__img
+            width: 190px
+            height: 190px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            background-color: #f9f9f9
+            border-radius: 10px
+            box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px
+            &-title
+                text-transform: uppercase
+                margin-bottom: 15px
+                text-align: center
+                color: #835cff
+                letter-spacing: 0.16px
+
+//sub
+
+.sub
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    justify-content: flex-end
+    padding-top: 69px
+    padding-bottom: 60px
+    &-wrapper
+        background: url('../img/sub/sub.png') no-repeat center
+        -webkit-background-size: cover
+        background-size: cover
+        position: relative
+    &-right
+        max-width: 525px
+    &-title
+        margin-bottom: 40px
+    &-text
+        font-size: 18px
+        font-family: "Segoe UI", sans-serif
+        margin-bottom: 30px
+        &_last
+            margin-bottom: 60px
+        &_twoItems
+            display: flex
+            align-items: center
+            img
+                margin-right: 15px
+
+.cross6
+    top: 21px
+    right: 890px
+
+.cross7
+    top: 266px
+    right: 203px
+
+.cross8
+    bottom: -45px
+    left: 110px
+
+//stats
+
+.stats
+    max-width: 1000px
+    margin: 0 auto
+    padding-top: 190px
+    padding-bottom: 45px
+    &-item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        font-family: "SegoeUI", sans-serif
+        &_special
+            position: relative
+            &:after
+                position: absolute
+                content: ''
+                display: block
+                top: 25%
+                left: 50%
+                width: 439px
+                height: 439px
+                transform: translateX(-50%) translateY(-50%)
+                background: url('../img/stats/stats-circles.png')
+        &__text
+            text-align: center
+            color: #906dfd
+            font-size: 14px
+            max-width: 178px
+            &_special
+                font-weight: 300
+                font-size: 30px
+                span
+                    font-weight: 600
+        &__number
+            font-weight: 600
+            font-size: 48px
+            color: #906dfd
+
+//reviews
+
+.reviews
+    max-width: 1240px
+    margin: 0 auto
+    padding-top: 65px
+    padding-bottom: 65px
+    &-wrapper
+        background: url('../img/reviews/reviews-bg.png') no-repeat center
+        background-size: cover
+    &-text
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__title
+            color: #ffffff
+            font-weight: 300
+            margin-bottom: 40px
+        &__subtitle
+            color: #ffffff
+            font-family: "SegoeUI", sans-serif
+            font-size: 18px
+            font-weight: 400
+    &-item
+        background-color: #ffffff
+        padding: 30px 35px
+        &__title
+            margin-bottom: 25px
+            font-size: 25px
+//footer
+.footer
+    max-width: 1235px
+    margin: 0 auto
+    padding-top: 30px
+    padding-bottom: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-logo
+        font-size: 24px
+        font-weight: 300
+        span
+            font-weight: 700
+            font-size: 36px
+    &-copyright
+        font-size: 16px
+    &-logIn
+        color: #232323
+        border: 2px solid #232323
+        &:hover
+            color: #fff
+            background: #5624b5
+    &-signUp
+        text-transform: none
+        padding: 6px 40px
+        font-size: 16px
+        margin-left: 55px
+.popup
+    background-color: #ffffff
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25)
+    border-radius: 20px
+    width: 400px
+    position: absolute
+    top: 300px
+    left: 50%
+    display: inline-block
+    transform: translateX(-50%)
+    padding: 50px 50px 40px
+    z-index: 100
+    &-active
+        visibility: visible
+        opacity: 1
+    &-close
+        position: absolute
+        top: -8px
+        right: 8px
+        font-size: 32px
+        font-weight: 300
+        cursor: pointer
+        padding: 10px
+    &-title
+        font-size: 24px
+        text-align: center
+        margin-bottom: 40px
+    &-input
+        width: 100%
+        background: transparent
+        border: none
+        border-bottom: 1px solid #232323
+        padding-bottom: 10px
+        padding-left: 15px
+        margin-bottom: 40px
+    &-btn
+        background: linear-gradient(to right, #501ed1 0%, #1e4592 100%)
+        border-radius: 30px
+        color: #ffffff
+        font-size: 18px
+        text-transform: uppercase
+        padding: 15px 50px
+        border: none
+        cursor: pointer
+        display: block
+        margin: 0 auto 40px
+    &-links
+        display: flex
+        justify-content: space-between
+        color: #bbbbbb
+        font-weight: 300
+        span
+            cursor: pointer
+.modalSignUp
+    visibility: hidden
+    opacity: 0
+    transition: .3s all
+    &-agree
+        margin-bottom: 35px
+        span
+            padding: 0 0 0 45px
+            &:after
+                left: 16px
+                top: -1px
+                border: 1px solid #232323
+            a
+                color: #232323
+            &:before
+                left: 16px
+                top: -1px
+                background: #232323
+    &_active
+        visibility: visible
+        opacity: 1
+.modalLogIn
+    visibility: hidden
+    opacity: 0
+    transition: .3s all
+    &-button
+        padding-left: 90px
+        padding-right: 90px
+    &_active
+        visibility: visible
+        opacity: 1
+.modalForgot
+    visibility: hidden
+    opacity: 0
+    transition: .3s all
+    &-button
+        margin-top: 35px
+    &_active
+        visibility: visible
+        opacity: 1
+.blackout
+    transition: .3s all
+    cursor: pointer
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 102%
+    background: rgba(255,255,255,.8)
+    z-index: 50
+    &-active
+        visibility: visible
+        opacity: 1
+.captcha
+    width: 304px
+    height: 74px
+    background: #000
+
+//error
+.error
+    z-index: 10
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    &-wrapper
+        padding-top: 30px
+        background-image: radial-gradient(circle 810px at 2612.7% -2845.26%, #393939 0%, #ddd5ca 100%)
+        width: 100%
+        font-family: "Lato", sans-serif
+    &-logo
+        margin-bottom: 90px
+        color: #213d7c
+        font-size: 27px
+        font-weight: 300
+        span
+            font-size: 45px
+            font-weight: 700
+        .number
+            color: #ff9e16
+            font-weight: 700
+            font-size: 45px
+    &-title
+        color: #213d7c
+        font-size: 45px
+        font-weight: 400
+        text-transform: uppercase
+        margin-bottom: 20px
+    &-subtitle
+        color: #213d7c
+        font-size: 30px
+        font-weight: 400
+        margin-bottom: 50px
+    &-img
+        img
+            transform: translateY(6px)
+    &-main
+        display: flex
+    &-number
+        font-size: 411px
+        color: #213d7c
+        font-weight: 400
+        max-height: 300px
+.cross100
+    z-index: 5
+    top: 89px
+    left: 85px
+.cross101
+    z-index: 5
+    right: 770px
+    top: 320px
+.cross102
+    z-index: 5
+    right: 300px
+    top: 160px
+.cross103
+    z-index: 5
+    bottom: 308px
+    left: 95px
+.cross104
+    z-index: 5
+    right: 80px
+    bottom: 100px

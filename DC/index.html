@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dream Company</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/main.css?v=1.4">
+    <script src="//cdn.blitz-market.ru/sprite/latest/"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            let tab = $('.offer-tabs__header-tab'),
+                tabContent = $('.offer-tabs__content'),
+                info = $('.offer-tabs__header')[0];
+
+            function hide(a) {
+                for (let i = a; i < tabContent.length; i++) {
+                    tabContent[i].classList.remove('offer-tabs__content_shown');
+                    tabContent[i].classList.add('offer-tabs__content_hidden');
+                }
+            }
+
+            hide(1);
+
+            function show(b) {
+                if (tabContent[b].classList.contains('offer-tabs__content_hidden')) {
+                    hide(0);
+                    tabContent[b].classList.remove('offer-tabs__content_hidden');
+                    tabContent[b].classList.add('offer-tabs__content_shown');
+                }
+            }
+
+            info.addEventListener('click', (event) => {
+                let target = event.target;
+                if (target.classList.contains('offer-tabs__header-tab')) {
+                    for (let i = 0; i < tab.length; i++) {
+                        if (target === tab[i]) {
+                            for (let i = 0; i < tab.length; i++) {
+                                tab[i].classList.add('offer-tabs__header-tab_notActive');
+                            }
+                            tab[i].classList.remove('offer-tabs__header-tab_notActive');
+                            show(i);
+                            break;
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="main-wrapper">
+            <header class="header">
+                <div class="header-burger">
+                    <div class="header-burger__inner"></div>
+                </div>
+                <a href="/" class="header-logo">
+                    <img src="img/header/logo.png" alt="Logo">
+                </a>
+                <a data-toggle="modal" data-target="#logIn" class="header-logIn">
+                    <img src="img/header/lock.svg" alt="Lock">
+                </a>
+            </header>
+            <div class="main-menu">
+                <div class="main-menu__items">
+                    <a href="about.html" class="main-menu__items-item">О системе</a>
+                    <a href="investor.html" class="main-menu__items-item">Инвестору</a>
+                    <a href="customer.html" class="main-menu__items-item">Заемщику</a>
+                    <a href="start.html" class="main-menu__items-item">Инструкции</a>
+                    <a href="partners.html" class="main-menu__items-item">Бонусы</a>
+                </div>
+                <a href="//vk.com/dream.company" class="main-menu__vk">
+                    <img src="img/main/vk.svg" alt="VK">
+                </a>
+            </div>
+            <div class="main">
+                <div class="main-title">
+                    Dream
+                    <br>
+                    Company
+                </div>
+                <p class="main-text">
+                    Инновационный продукт, предлагающий стабильный доход в рамках законодательства! Зарабатывайте,
+                    выдавая займы уже сейчас!
+                </p>
+                <a data-toggle="modal" data-target="#signUp" class="main-button button">Зарегистрироваться
+                    <span class="main-button__line"></span>
+                    <img src="img/main/arrow-right.svg" alt="Arrow_right" class="main-button__arrow">
+                </a>
+                <a href="#steps" class="main-arrow">
+                    <img src="img/main/arrow.svg" alt="Arrow_down">
+                </a>
+            </div>
+        </div>
+        <div class="steps" id="steps">
+            <div class="container">
+                <div class="steps-title section-title">Как это работает?</div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="steps-item">
+                            <div class="steps-item__img">
+                                <img src="img/steps/steps-1.svg" alt="Steps-1">
+                            </div>
+                            <p class="steps-item__text">Компания производит качественный
+                                <br>
+                                отбор и фильтрацию
+                                <br>
+                                заемщиков
+                            </p>
+                            <div class="steps-item__number">
+                                <span class="steps-item__number_inner">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="steps-item">
+                            <div class="steps-item__img">
+                                <img src="img/steps/steps-2.svg" alt="Steps-2">
+                            </div>
+                            <p class="steps-item__text">Инвестор пополняет лицевой счет и настраивает параметры выдачи
+                                займов</p>
+                            <div class="steps-item__number">
+                                <span class="steps-item__number_inner">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="steps-item">
+                            <div class="steps-item__img">
+                                <img src="img/steps/steps-3.svg" alt="Steps-3">
+                            </div>
+                            <p class="steps-item__text">Система распределяет вложенные средства на большое количество
+                                займов, делая Вашу прибыль максимально надежной и стабильной</p>
+                            <div class="steps-item__number">
+                                <span class="steps-item__number_inner">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="steps-item">
+                            <div class="steps-item__img">
+                                <img src="img/steps/steps-4.svg" alt="Steps-4">
+                            </div>
+                            <p class="steps-item__text">Заемщик возвращает деньги с процентами удобным для него
+                                способом</p>
+                            <div class="steps-item__number">
+                                <span class="steps-item__number_inner">4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 offset-0 offset-sm-3">
+                        <div class="steps-item">
+                            <div class="steps-item__img">
+                                <img src="img/steps/steps-5.svg" alt="Steps-5">
+                            </div>
+                            <p class="steps-item__text">Полученный доход распределяется пропорционально между
+                                инвесторами, вошедшими в
+                                <br>
+                                займ
+                            </p>
+                            <div class="steps-item__number">
+                                <span class="steps-item__number_inner">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="steps-buttons">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <a href="about.html#faq" class="steps-buttons__button button">
+                                FAQ
+                                <img src="img/steps/faq.svg" alt="FAQ">
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <a href="//vk.com/topic-158158419_36347098" class="steps-buttons__button button">
+                                Отзывы
+                                <img src="img/steps/review.svg" alt="Review">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-lines">
+                <img src="img/steps/lines.svg" alt="Lines">
+            </div>
+        </div>
+        <div class="five">
+            <div class="container">
+                <div class="five-title section-title">
+                    <span class="five-title_blue">5 ПРОСТЫХ</span>
+                    ДЕЙСТВИЙ, КОТОРЫЕ ИЗМЕНЯТ ВАШУ ЖИЗНЬ!
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="five-item">
+                            <div class="five-item__img">
+                                <img src="img/five/five-1.svg" alt="Five-1">
+                            </div>
+                            <div class="five-item__circle">
+                                <span class="five-item__circle_inner"></span>
+                            </div>
+                            <div class="five-item__text">
+                                Ознакомьтесь с условиями сотрудничества
+                            </div>
+                            <div class="five-item__number">01</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="five-item">
+                            <div class="five-item__img">
+                                <img src="img/five/five-2.svg" alt="Five-2">
+                            </div>
+                            <div class="five-item__circle">
+                                <span class="five-item__circle_inner"></span>
+                            </div>
+                            <div class="five-item__text">
+                                Пройдите моментальную регистрацию
+                            </div>
+                            <div class="five-item__number">02</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="five-item">
+                            <div class="five-item__img">
+                                <img src="img/five/five-3.svg" alt="Five-3">
+                            </div>
+                            <div class="five-item__circle">
+                                <span class="five-item__circle_inner"></span>
+                            </div>
+                            <div class="five-item__text">
+                                Пополните счет и выдайте займы на выгодных для Вас условиях
+                            </div>
+                            <div class="five-item__number">03</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="five-item">
+                            <div class="five-item__img">
+                                <img src="img/five/five-4.svg" alt="Five-4">
+                            </div>
+                            <div class="five-item__circle">
+                                <span class="five-item__circle_inner"></span>
+                            </div>
+                            <div class="five-item__text">
+                                Расслабьтесь и получайте удовольствие, наблюдая за постоянно растущей прибылью!
+                            </div>
+                            <div class="five-item__number">04</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 offset-0 offset-sm-3">
+                        <div class="five-item">
+                            <div class="five-item__img">
+                                <img src="img/five/five-5.svg" alt="Five-5">
+                            </div>
+                            <div class="five-item__circle">
+                                <span class="five-item__circle_inner"></span>
+                            </div>
+                            <div class="five-item__text">
+                                Выводите заработанные средства когда угодно и где угодно
+                            </div>
+                            <div class="five-item__number">05</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="five-buttons">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <a href="start.html" class="five-buttons__button button">
+                                Видео-инструкции
+                                <img src="img/five/five-button1.svg" alt="Img">
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <a href="start.html" class="five-buttons__button button">
+                                Начать сейчас
+                                <img src="img/five/five-button2.svg" alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="five-bottom"></div>
+        </div>
+        <div class="offer">
+            <div class="container">
+                <div class="offer-title section-title">Наши предложения</div>
+                <div class="offer-subtitle">Выберите группу займов</div>
+                <div class="offer-tabs">
+                    <div class="offer-tabs__header">
+                        <div class="offer-tabs__header-tab offer-tabs__header-tab_red">
+                            Базовая
+                        </div>
+                        <div class="offer-tabs__header-tab offer-tabs__header-tab_blue offer-tabs__header-tab_notActive">
+                            Расширенная
+                        </div>
+                    </div>
+                    <div class="offer-tabs__content offer-tabs__content_fade">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="offer-tabs__content-text">
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Краткосрочные займы
+                                    </span>
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Диверсификация рисков
+                                    </span>
+                                    <span class="offer-tabs__content-text__item">Имущество под залог</span>
+                                    <span class="offer-tabs__content-text__item">Долгосрочные займы</span>
+                                    <span class="offer-tabs__content-text__item">Кредитование организаций и ИП</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-tabs__content-lines">
+                            <img src="img/offer/lines.svg" alt="Lines">
+                        </div>
+                        <div class="offer-tabs__content-img__logo">
+                            <div class="offer-tabs__content-img__logo-img">
+                                <img src="img/offer/logo.png" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer-tabs__content offer-tabs__content_fade">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="offer-tabs__content-text">
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Краткосрочные займы
+                                    </span>
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Диверсификация рисков
+                                    </span>
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Имущество под залог
+                                    </span>
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Долгосрочные займы
+                                    </span>
+                                    <span class="offer-tabs__content-text__item offer-tabs__content-text__item_active">
+                                        Кредитование организаций и ИП
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-tabs__content-lines">
+                            <img src="img/offer/lines_blue.svg" alt="Lines">
+                        </div>
+                        <div class="offer-tabs__content-img__logo offer-tabs__content-img__logo_blue">
+                            <div class="offer-tabs__content-img__logo-img">
+                                <img src="img/offer/logo.png" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="offer-text">
+                    Финансирование займов служит прямой поддержкой в развитии нашего основного вида деятельности и
+                    построено на взаимовыгодных условиях. Используя базовую группу, Вы сможете выдавать краткосрочные
+                    потребительские займы частным лицам. А не высокие пороги инвестиционных планов позволят получить
+                    необходимый опыт в области кредитования на доступной для Вас сумме.
+                </p>
+            </div>
+        </div>
+        <div class="ref">
+            <div class="container">
+                <div class="ref-title section-title">
+                    Партнерская программа
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div class="ref-img">
+                            <img src="img/ref/ref-people.svg" alt="People">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-8">
+                        <div class="ref-subtitle">Командная работа –
+                            <br>
+                            дополнительный доход
+                        </div>
+                        <p class="ref-text">Dream-Company – импонирует активным участникам площадки. У нас предусмотрен
+                            широкий комлекс наград для каждого, кто зарабатывая сам, рад поделиться этой возможностью с
+                            другими людьми, тем самым, содействуя развитию нашего продукта. Привлекайте к финансированию
+                            займов третьих лиц, и получайте стабильный доход с каждого выданного ими займа. Нами была
+                            разработана уникальная бонусная система, реализовав потенциал которой, Вы сможете постоянно
+                            увеличивать свои дивиденды. Приглашайте друзей, знакомых и просто целеустремленных людей,
+                            готовых зарабатывать на</p>
+                        <a href="partners.html" class="ref-button button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="container">
+                <div class="stats-title section-title">НАША СТАТИСТИКА</div>
+                <p class="stats-text">Стремительно развиваясь, открывая перед собой новые горизонты и расширяя спектр
+                    услуг, наша компания повышает степени защиты капитала, а также качество сервиса. У нас, люди без
+                    доли сомнений реализуют свои активы, достигая в последствии поставленных целей и задач в области
+                    финансов. Работать с нами – удобно, выгодно и безопасно. Десятки тысяч счастливых клиентов уже
+                    убедились в этом! Попробуйте сейчас - и Вы не сможете остановиться. Ведь теперь – исполнить свою
+                    мечту стало так просто!</p>
+                <div class="stats-img">
+                    <img src="img/stats/stats-img.png" alt="Stats-img">
+                </div>
+                <div class="stats-item">
+                    <div class="stats-item__number">70046</div>
+                    <div class="stats-item__text">Количество участников</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-item__number">201</div>
+                    <div class="stats-item__text">Лет в работе</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-item__number">2 000 000</div>
+                    <div class="stats-item__text">Сумма в активах</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="img/footer/footer-logo.png" alt="Footer-logo">
+            </div>
+            <div class="footer-text">Заработай легко и быстро вместе с нами!
+            </div>
+            <a data-toggle="modal" data-target="#signUp" class="main-button button footer-button">Зарегистрироваться
+                <span class="main-button__line"></span>
+                <img src="img/main/arrow-right.svg" alt="Arrow_right" class="main-button__arrow">
+            </a>
+            <div class="footer-bottom">
+                <a href="//vk.com/dream.company" class="footer-bottom__vk">
+                    <img src="img/footer/vk.svg" alt="VK" class="footer-bottom__vk-img">
+                    <span class="footer-bottom__vk-text">VKontakte</span>
+                </a>
+                <div class="footer-bottom__mail">myemail@gmail.com
+                </div>
+                <div class="footer-bottom__copyright">Copyrighting 2017-2018</div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="signUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Регистрация</span>
+                        /
+                        <a data-toggle="modal" data-target="#logIn" class="modal-body__links hide_modal">Вход</a>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="email" class="modal-input" placeholder="E-mail">
+                        <input type="text" class="modal-input" placeholder="Логин">
+                        <input type="text" class="modal-input" placeholder="Имя">
+                        <input type="text" class="modal-input" placeholder="Фамилия">
+                        <input type="text" class="modal-input" placeholder="Отчество">
+                        <input type="password" class="modal-input" placeholder="Пароль">
+                        <input type="password" class="modal-input" placeholder="Повторите пароль">
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Указанные мною данные соответствуют реальными
+                            </span>
+                        </label>
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Я в курсе, что совпадения IP адресов между партнерами запрещено
+                            </span>
+                        </label>
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Других аккаунтов на платформе не имею, о мерах ответственности за мультиаккаунты
+                                осведомлен(а)
+                            </span>
+                        </label>
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Принимаю условия платформы в полном объеме
+                            </span>
+                        </label>
+                        <input type="submit" value="Зарегистрироваться" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="logIn" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Вход</span>
+                        /
+                        <a data-toggle="modal" data-target="#signUp" class="modal-body__links hide_modal">Регистрация
+                        </a>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="text" class="modal-input" placeholder="E-mail или Логин">
+                        <input type="password" class="modal-input" placeholder="Пароль">
+                        <span class="modal-forgot">Забыли пароль?
+                            <a data-toggle="modal" data-target="#forgot" class="modal-forgot__span hide_modal">
+                                Восстановить
+                            </a>
+                        </span>
+                        <input type="submit" value="Войти" class="modal-submit modal-submit__forgot">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="forgot" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header_forgot">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Восстановление пароля</span>
+                        <span class="modal-body__links modal-body__links_forgot">Введите email, указанный при
+                            регистрации
+                        </span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="text" class="modal-input" placeholder="E-mail или Логин">
+                        <input type="submit" value="Изменить пароль" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="application" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Заявка отправлена</span>
+                        <span class="modal-body__links modal-body__links_forgot">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                            accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoqu
+                        </span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deposit" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header_forgot">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Депозит</span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="number" class="modal-input" placeholder="Введите сумму инвестиций">
+                        <input type="submit" value="Открыть депозит" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active modal-body__links_centered">Вы уверены,
+                            что хотите удалить
+                            аккаунт?</span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deposit_success" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active modal-body__links_centered">Депозит
+                            успешно создан</span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="data" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header_forgot">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="text" class="modal-input" placeholder="Фамилия">
+                        <input type="text" class="modal-input" placeholder="Имя">
+                        <input type="text" class="modal-input" placeholder="Отчество">
+                        <input type="date" class="modal-input modal-input_date" placeholder="Дата рождения">
+                        <input type="text" class="modal-input" placeholder="Паспортные данные">
+                        <input type="text" class="modal-input" placeholder="ИНН">
+                        <input type="text" class="modal-input" placeholder="СНИЛС">
+                        <input type="text" class="modal-input" placeholder="Адрес регистрации">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <div class="upload-passport">
+                            <img src="img/modal/upload.png" alt="Upload" class="upload-passport__img">
+                            <input type="file" class="upload-passport__input">
+                            <span class="upload-passport__text">Загрузить скан-копию паспорта</span>
+                        </div>
+                        <input type="submit" value="Отправить заявку" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

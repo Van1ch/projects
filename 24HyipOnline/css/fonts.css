@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato-Regular.eot');
+    src: local('Lato-Regular'), local('Lato-Regular'),
+    url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Lato-Regular.woff') format('woff'),
+    url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato-Light.eot');
+    src: local('Lato-Light'), local('Lato-Light'),
+    url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Lato-Light.woff') format('woff'),
+    url('../fonts/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: url('../fonts/Lato-Bold.eot');
+    src: local('Lato-Bold'), local('Lato-Bold'),
+    url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Lato-Bold.woff') format('woff'),
+    url('../fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans-Bold.eot');
+    src: local('OpenSans-Bold'), local('OpenSans-Bold'),
+    url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SegoeUI";
+    src: url('../fonts/SegoeUI.eot');
+    src: local('SegoeUI'), local('SegoeUI'),
+    url('../fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SegoeUI.woff') format('woff'),
+    url('../fonts/SegoeUI.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SegoeUI";
+    src: url('../fonts/SegoeUI-SemiBold.eot');
+    src: local('SegoeUI-SemiBold'), local('SegoeUI-SemiBold'),
+    url('../fonts/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SegoeUI-SemiBold.woff') format('woff'),
+    url('../fonts/SegoeUI-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

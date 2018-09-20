@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dream Company</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/jquery.css">
+    <link rel="stylesheet" href="css/main.css?v=1.4">
+    <script src="js/jquery.js"></script>
+    <script src="//cdn.blitz-market.ru/sprite/latest/"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $("#sum").slider({
+                    value: 1000,
+                    orientation: "horizontal",
+                    range: "min",
+                    animate: true,
+                    min: 1000,
+                    max: 30000,
+                    slide: function (event, ui) {
+                        $("#sum-amount").val(ui.value + " РУБ");
+                    }
+                });
+            });
+            $(function () {
+                $("#days").slider({
+                    value: 1,
+                    orientation: "horizontal",
+                    range: "min",
+                    animate: true,
+                    min: 1,
+                    max: 30,
+                    slide: function (event, ui) {
+                        if (ui.value === 1) {
+                            $("#days-amount").val(ui.value + " ДЕНЬ");
+                        } else if ((ui.value >= 2) && (ui.value <= 4)) {
+                            $("#days-amount").val(ui.value + " ДНЯ");
+                        } else {
+                            $("#days-amount").val(ui.value + " ДНЕЙ");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="howItWorks-wrapper">
+            <header class="header">
+                <div class="header-burger">
+                    <div class="header-burger__inner"></div>
+                </div>
+                <a href="/" class="header-logo">
+                    <img src="img/header/logo.png" alt="Logo">
+                </a>
+                <a data-toggle="modal" data-target="#logIn" class="header-logIn">
+                    <img src="img/header/lock.svg" alt="Lock">
+                </a>
+            </header>
+            <div class="main-menu">
+                <div class="main-menu__items">
+                    <a href="about.html" class="main-menu__items-item">О системе</a>
+                    <a href="investor.html" class="main-menu__items-item">Инвестору</a>
+                    <a href="customer.html" class="main-menu__items-item">Заемщику</a>
+                    <a href="start.html" class="main-menu__items-item">Инструкции</a>
+                    <a href="partners.html" class="main-menu__items-item">Бонусы</a>
+                </div>
+                <a href="//vk.com/dream.company" class="main-menu__vk">
+                    <img src="img/main/vk.svg" alt="VK">
+                </a>
+            </div>
+        </div>
+        <div class="customer-main__wrapper">
+            <div class="container">
+                <div class="customer-main">
+                    <div class="customer-main__card">
+                        <div class="customer-main__card-title title">Срочно нужны деньги?</div>
+                        <div class="customer-main__card-subtitle">Оформите заявку - и мгновенно получите займ!</div>
+                    </div>
+                    <form action="#" class="customer-main__form">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="customer-main__form-checkbox">
+                                    <label class="modal-label">
+                                        <input type="radio" class="modal-label__input" name="customer-form__input">
+                                        <span class="modal-checkbox__text">
+                                            Физ. лицо
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="customer-main__form-checkbox">
+                                    <label class="modal-label">
+                                        <input type="radio" class="modal-label__input" name="customer-form__input">
+                                        <span class="modal-checkbox__text">
+                                            Юр. лицо
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-main__form-input">
+                            <div class="customer-main__form-input__title">
+                                Какая сумма Вам необходима?
+                                <span>(От 1000 до 30000 рублей)</span>
+                            </div>
+                            <div class="customer-main__form-input__input">
+                                <div class="customer-main__form-input__input-slider__wrapper">
+                                    <div id="sum" class="customer-main__form-input__input-slider"></div>
+                                </div>
+                                <div class="customer-main__form-input__input-inner">
+                                    <input type="text" id="sum-amount" readonly="" value="1000 РУБ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-main__form-input">
+                            <div class="customer-main__form-input__title">
+                                На сколько дней
+                                <span>(От 1 до 30 дней)</span>
+                            </div>
+                            <div class="customer-main__form-input__input customer-main__form-input__input_blue">
+                                <div class="customer-main__form-input__input-slider__wrapper">
+                                    <div id="days" class="customer-main__form-input__input-slider"></div>
+                                </div>
+                                <div class="customer-main__form-input__input-inner">
+                                    <input type="text" id="days-amount" readonly="" value="1 ДЕНЬ">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="main-button button customer-main__form-button">Оформить займ
+                            <span class="main-button__line"></span>
+                            <img src="img/main/arrow-right.svg" alt="Arrow_right" class="main-button__arrow">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="investor-payments">
+            <div class="container">
+                <div class="investor-payments__title title">Пополняйте и выводите средства удобным для Вас способом
+                </div>
+                <div class="investor-payments__slider">
+                    <div class="investor-payments__slider-item">
+                        <svg width="170" height="60" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bm_icon_payment_colored_payeer"></use>
+                        </svg>
+                    </div>
+                    <div class="investor-payments__slider-item">
+                        <svg width="170" height="60" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bm_icon_payment_colored_qiwi"></use>
+                        </svg>
+                    </div>
+                    <div class="investor-payments__slider-item">
+                        <svg width="170" height="60" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bm_icon_payment_colored_advcash"></use>
+                        </svg>
+                    </div>
+                    <div class="investor-payments__slider-item">
+                        <svg width="170" height="60" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bm_icon_payment_colored_yandexmoney"></use>
+                        </svg>
+                    </div>
+                    <div class="investor-payments__slider-item">
+                        <svg width="170" height="60" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bm_icon_payment_colored_bitcoin"></use>
+                        </svg>
+                    </div>
+                    <div class="investor-payments__slider-item">
+                        <svg width="170" height="60" role="img">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bm_icon_payment_colored_card"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="customer-offer">
+            <div class="container">
+                <div class="customer-offer__title title">Наши предложения</div>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <div class="customer-offer__item">
+                            <div class="customer-offer__item-img">
+                                <img src="img/customer/customer1.svg" alt="Customer1">
+                            </div>
+                            <div class="customer-offer__item-text">Оформите заявку</div>
+                            <div class="customer-offer__item-arrow">
+                                <div class="customer-offer__item-arrow__inner">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="customer-offer__item">
+                            <div class="customer-offer__item-img">
+                                <img src="img/customer/customer2.svg" alt="Customer1">
+                            </div>
+                            <div class="customer-offer__item-text">Дождитесь обработки</div>
+                            <div class="customer-offer__item-arrow">
+                                <div class="customer-offer__item-arrow__inner">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="customer-offer__item">
+                            <div class="customer-offer__item-img">
+                                <img src="img/customer/customer3.svg" alt="Customer1">
+                            </div>
+                            <div class="customer-offer__item-text">Получите деньги</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="whatsMicroloan">
+            <div class="container">
+                <div class="textItem">
+                    <div class="title textItem-title">Что такое микрозайм</div>
+                    <div class="textItem-block">
+                        <div class="textItem-block__video whatsMicroloan-img"></div>
+                        <div class="textItem-block__bottom">
+                            <p class="textItem-block__bottom-text">
+                                Микрозайм представляет собой определенную сумму денежных средств, чаще всего небольшую,
+                                взятую тем или иным лицом под определенный процент в микрофинансовой компании. От
+                                банковского кредита микрозайм отличается меньшими лимитами выдаваемой суммы,
+                                сравнительно короткими сроками, а так же простотой и скоростью оформления, с учетом
+                                отсутствия лишней волокиты. Как правило, для получения займа Вам необходим лишь паспорт
+                                и несколько иной информации используемой для персонализации клиента. Заемщика не
+                                обязывают к предоставлению справок, залога, не просят привлечь поручителей. Микрозайм –
+                                это эластичные условия получения необходимой суммы денежных средств д
+                            </p>
+                            <div class="textItem-block__bottom-button">Читать больше</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review customer-review">
+            <div class="container">
+                <div class="review-title title customer-review__title">Отзывы счастливых клиентов</div>
+                <div class="review-slider">
+                    <div class="review-slider__item">
+                        <div class="review-slider__item-img">
+                            <img src="img/about/review1.png" alt="Avatar">
+                        </div>
+                        <div class="review-slider__item-title">Дмитрий Верховецкий</div>
+                        <div class="review-slider__item-text">
+                            Разнообразный и богатый опыт сложившаяся структура организации способствует подготовки и
+                            реализации позиций, занимаемых участниками в отношении
+                        </div>
+                    </div>
+                    <div class="review-slider__item">
+                        <div class="review-slider__item-img">
+                            <img src="img/about/review2.png" alt="Avatar">
+                        </div>
+                        <div class="review-slider__item-title">Вероника Гринь</div>
+                        <div class="review-slider__item-text">
+                            Разнообразный и богатый опыт сложившаяся структура организации способствует подготовки и
+                            реализации позиций, занимаемых участниками в отношении
+                        </div>
+                    </div>
+                    <div class="review-slider__item">
+                        <div class="review-slider__item-img">
+                            <img src="img/about/review1.png" alt="Avatar">
+                        </div>
+                        <div class="review-slider__item-title">Дмитрий Верховецкий</div>
+                        <div class="review-slider__item-text">
+                            Разнообразный и богатый опыт сложившаяся структура организации способствует подготовки и
+                            реализации позиций, занимаемых участниками в отношении
+                        </div>
+                    </div>
+                    <div class="review-slider__item">
+                        <div class="review-slider__item-img">
+                            <img src="img/about/review2.png" alt="Avatar">
+                        </div>
+                        <div class="review-slider__item-title">Вероника Гринь</div>
+                        <div class="review-slider__item-text">
+                            Разнообразный и богатый опыт сложившаяся структура организации способствует подготовки и
+                            реализации позиций, занимаемых участниками в отношении
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer_other">
+        <div class="container">
+            <div class="footer-triangles">
+                <img src="img/footer/triangles.png" alt="Triangles">
+            </div>
+            <div class="footer-text footer-text_other">ЗАРАБАТЫВАЙТЕ ВЫДАВАЯ ЗАЙМЫ
+            </div>
+            <a data-toggle="modal" data-target="#signUp" class="main-button button footer-button">Зарегистрироваться
+                <span class="main-button__line"></span>
+                <img src="img/main/arrow-right.svg" alt="Arrow_right" class="main-button__arrow">
+            </a>
+            <div class="footer-bottom">
+                <a href="//vk.com/dream.company" class="footer-bottom__vk">
+                    <img src="img/footer/vk.svg" alt="VK" class="footer-bottom__vk-img">
+                    <span class="footer-bottom__vk-text">VKontakte</span>
+                </a>
+                <div class="footer-bottom__mail">myemail@gmail.com
+                </div>
+                <div class="footer-bottom__copyright">Copyrighting 2017-2018</div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="signUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Регистрация</span>
+                        /
+                        <a data-toggle="modal" data-target="#logIn" class="modal-body__links hide_modal">Вход</a>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="email" class="modal-input" placeholder="E-mail">
+                        <input type="text" class="modal-input" placeholder="Логин">
+                        <input type="text" class="modal-input" placeholder="Имя">
+                        <input type="text" class="modal-input" placeholder="Фамилия">
+                        <input type="text" class="modal-input" placeholder="Отчество">
+                        <input type="password" class="modal-input" placeholder="Пароль">
+                        <input type="password" class="modal-input" placeholder="Повторите пароль">
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Указанные мною данные соответствуют реальными
+                            </span>
+                        </label>
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Я в курсе, что совпадения IP адресов между партнерами запрещено
+                            </span>
+                        </label>
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Других аккаунтов на платформе не имею, о мерах ответственности за мультиаккаунты
+                                осведомлен(а)
+                            </span>
+                        </label>
+                        <label class="modal-label">
+                            <input type="checkbox" class="modal-label__input">
+                            <span class="modal-checkbox__text">
+                                Принимаю условия платформы в полном объеме
+                            </span>
+                        </label>
+                        <input type="submit" value="Зарегистрироваться" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="logIn" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Вход</span>
+                        /
+                        <a data-toggle="modal" data-target="#signUp" class="modal-body__links hide_modal">Регистрация
+                        </a>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="text" class="modal-input" placeholder="E-mail или Логин">
+                        <input type="password" class="modal-input" placeholder="Пароль">
+                        <span class="modal-forgot">Забыли пароль?
+                            <a data-toggle="modal" data-target="#forgot" class="modal-forgot__span hide_modal">
+                                Восстановить
+                            </a>
+                        </span>
+                        <input type="submit" value="Войти" class="modal-submit modal-submit__forgot">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="forgot" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header_forgot">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Восстановление пароля</span>
+                        <span class="modal-body__links modal-body__links_forgot">Введите email, указанный при
+                            регистрации
+                        </span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="text" class="modal-input" placeholder="E-mail или Логин">
+                        <input type="submit" value="Изменить пароль" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="application" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Заявка отправлена</span>
+                        <span class="modal-body__links modal-body__links_forgot">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+                            accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoqu
+                        </span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deposit" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header_forgot">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active">Депозит</span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="number" class="modal-input" placeholder="Введите сумму инвестиций">
+                        <input type="submit" value="Открыть депозит" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active modal-body__links_centered">Вы уверены,
+                            что хотите удалить аккаунт?
+                        </span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deposit_success" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body__links">
+                        <span class="modal-body__links modal-body__links_active modal-body__links_centered">Депозит
+                            успешно создан
+                        </span>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="data" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-header_forgot">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="img/modal/cross.png" alt="Cross">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <input type="text" class="modal-input" placeholder="Фамилия">
+                        <input type="text" class="modal-input" placeholder="Имя">
+                        <input type="text" class="modal-input" placeholder="Отчество">
+                        <input type="date" class="modal-input modal-input_date" placeholder="Дата рождения">
+                        <input type="text" class="modal-input" placeholder="Паспортные данные">
+                        <input type="text" class="modal-input" placeholder="ИНН">
+                        <input type="text" class="modal-input" placeholder="СНИЛС">
+                        <input type="text" class="modal-input" placeholder="Адрес регистрации">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <div class="upload-passport">
+                            <img src="img/modal/upload.png" alt="Upload" class="upload-passport__img">
+                            <input type="file" class="upload-passport__input">
+                            <span class="upload-passport__text">Загрузить скан-копию паспорта</span>
+                        </div>
+                        <input type="submit" value="Отправить заявку" class="modal-submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
