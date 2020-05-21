@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Futura PT";
+    src: url('../fonts/FuturaPT-ExtraBold.eot');
+    src: local('FuturaPT-ExtraBold'), local('FuturaPT-ExtraBold'),
+    url('../fonts/FuturaPT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-ExtraBold.woff') format('woff'),
+    url('../fonts/FuturaPT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura PT";
+    src: url('../fonts/FuturaPT-Medium.eot');
+    src: local('FuturaPT-Medium'), local('FuturaPT-Medium'),
+    url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff'),
+    url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura PT";
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: local('FuturaPT-Bold'), local('FuturaPT-Bold'),
+    url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Bold.woff') format('woff'),
+    url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham Pro";
+    src: url('../fonts/GothamPro-Bold.eot');
+    src: local('GothamPro-Bold'), local('GothamPro-Bold'),
+    url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro-Bold.woff') format('woff'),
+    url('../fonts/GothamPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura PT - Book";
+    src: url('../fonts/FuturaPT-Book.eot');
+    src: local('FuturaPT-Book'), local('FuturaPT-Book'),
+    url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Book.woff') format('woff'),
+    url('../fonts/FuturaPT-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura PT";
+    src: url('../fonts/FuturaPT-Light.eot');
+    src: local('FuturaPT-Light'), local('FuturaPT-Light'),
+    url('../fonts/FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Light.woff') format('woff'),
+    url('../fonts/FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
