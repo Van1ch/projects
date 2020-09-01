@@ -1,0 +1,27 @@
+.salesGoods
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 20px)
+        margin-left: -10px
+    &-item
+        flex-basis: 230px
+        flex-grow: 1
+        margin: 0 10px 50px 10px
+    &-more
+        display: flex
+        justify-content: center
+        &__inner
+            color: #000000
+            text-transform: uppercase
+            font-weight: 500
+
+@media (max-width: 800px)
+    .salesGoods
+        &-item
+            margin-bottom: 30px
+
+@media (max-width: 600px)
+    .salesGoods
+        &-item
+            margin-bottom: 20px

@@ -1,0 +1,281 @@
+.profit
+    padding-top: 80px
+    padding-bottom: 90px
+    position: relative
+    &-text
+        z-index: 2
+        position: relative
+        max-width: 650px
+        margin-bottom: 45px
+    &-title
+        z-index: 2
+        margin-bottom: 20px
+    &-calc
+        z-index: 2
+        position: relative
+        padding: 70px 80px
+        box-shadow: 13px 16px 38px rgba(0, 0, 0, 0.2)
+        background-color: #ffffff
+        &__wrapper
+            max-width: 900px
+            position: relative
+        &__btn
+            text-align: center
+        &__lines
+            width: 103px
+            position: absolute
+            right: -45px
+            top: 80px
+            z-index: 1
+        &__form
+            &-item
+                display: flex
+                justify-content: space-between
+                margin-bottom: 45px
+                &:last-child
+                    margin-bottom: 65px
+                &__input
+                    &-title
+                        font-size: 20px
+                        margin-bottom: 12px
+                    &-input.open .profit-calc__form-item__input-input__options
+                        opacity: 1
+                        visibility: visible
+                        pointer-events: all
+                    &-input.open .profit-calc__form-item__input-input__trigger-arrow
+                        transform: rotate(180deg)
+                    &-input.open .profit-calc__form-item__input-input__trigger
+                        border: 2px solid $supernova
+                    &-input
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        font-size: 30px
+                        &__wrapper
+                            min-width: 235px
+                        &__trigger
+                            padding: 25px 25px 25px 35px
+                            cursor: pointer
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                            border: 2px solid #000000
+                            transition: .3s border
+                            &:hover
+                                border: 2px solid $supernova
+                            &-arrow
+                                width: 0
+                                height: 0
+                                border-style: solid
+                                border-width: 17px 10px 0 10px
+                                border-color: #000000 transparent transparent transparent
+                                transition: .3s transform
+                        &__options
+                            position: absolute
+                            top: 100%
+                            left: 0
+                            border: 2px solid $supernova
+                            border-top: 0
+                            border-bottom: 0
+                            transition: .3s all
+                            opacity: 0
+                            visibility: hidden
+                            pointer-events: none
+                            z-index: 3
+                            width: 100%
+                            background-color: #ffffff
+                        &__option
+                            border-bottom: 2px solid $supernova
+                            width: 100%
+                            cursor: pointer
+                            padding: 25px 0 25px 35px
+                            transition: .3s background-color
+                            display: block
+                            &:hover
+                                background-color: $supernova
+                        &__option.selected
+                            background-color: $supernova
+                &__text
+                    &-title
+                        font-size: 20px
+                        margin-bottom: 25px
+                    &-number
+                        font-size: 48px
+                        font-weight: 900
+    &-img
+        position: absolute
+        right: 0
+        top: 80px
+        z-index: 0
+        max-width: 780px
+        max-height: 800px
+    &-triangle
+        z-index: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 680px 680px 0 0
+        border-color: $mercury transparent transparent transparent
+
+@media (max-width: 1700px)
+    .profit
+        &-img
+            top: 150px
+            width: 700px
+@media (max-width: 1500px)
+    .profit
+        &-img
+            top: 200px
+            width: 650px
+@media (max-width: 1220px)
+    .profit
+        padding: 50px 0
+        &-img
+            top: 100px
+            width: 450px
+        &-text
+            max-width: 550px
+            margin-bottom: 30px
+        &-triangle
+            border-width: 500px 500px 0 0
+        &-calc
+            padding: 50px 70px
+            &__wrapper
+                max-width: 750px
+            &__form
+                &-item
+                    margin-bottom: 25px
+                    &:last-child
+                        margin-bottom: 40px
+                    &__text
+                        &-title
+                            margin-bottom: 28px
+                            font-size: 18px
+                        &-number
+                            font-size: 40px
+                    &__input
+                        &-input
+                            font-size: 26px
+                            &__wrapper
+                                min-width: 200px
+                            &__trigger
+                                padding: 20px 20px 20px 30px
+                                &-arrow
+                                    border-width: 15px 8px 0 8px
+                            &__option
+                                padding: 20px 20px 20px 30px
+            &__lines
+                width: 75px
+                top: 70px
+                right: -35px
+@media (max-width: 992px)
+    .profit
+        padding-top: 40px
+        &-img
+            width: 370px
+        &-text
+            max-width: 380px
+        &-triangle
+            border-width: 400px 400px 0 0
+        &-calc
+            padding: 30px 40px
+            &__lines
+                width: 65px
+                top: 50px
+                right: -30px
+            &__wrapper
+                max-width: 600px
+            &__form
+                &-item
+                    margin-bottom: 20px
+                    &:last-child
+                        margin-bottom: 30px
+                    &__text
+                        &-title
+                            margin-bottom: 23px
+                            font-size: 16px
+                        &-number
+                            font-size: 32px
+                    &__input
+                        &-title
+                            font-size: 16px
+                        &-input
+                            font-size: 22px
+                            &__wrapper
+                                min-width: 170px
+                            &__trigger
+                                padding: 15px 15px 15px 20px
+                                &-arrow
+                                    border-width: 12px 6px 0 6px
+                            &__option
+                                padding: 15px 15px 15px 20px
+@media (max-width: 768px)
+    .profit
+        &-img
+            display: none
+        &-text
+            max-width: 100%
+        &-calc
+            padding: 20px 30px
+            &__lines
+                width: 55px
+                top: 35px
+                right: -20px
+            &__form
+                &-item
+                    margin-bottom: 15px
+                    &:last-child
+                        margin-bottom: 25px
+                    &__text
+                        &-title
+                            margin-bottom: 21px
+                            font-size: 14px
+                        &-number
+                            font-size: 24px
+                    &__input
+                        &-title
+                            font-size: 14px
+                        &-input
+                            font-size: 20px
+                            &__wrapper
+                                min-width: 140px
+                            &__trigger
+                                padding: 10px 10px 10px 15px
+                                &-arrow
+                                    border-width: 10px 5px 0 5px
+                            &__option
+                                padding: 10px 10px 10px 15px
+            &__wrapper
+                max-width: 100%
+        &-triangle
+            border-width: 330px 330px 0 0
+@media (max-width: 576px)
+    .profit
+        &-calc
+            padding: 15px 20px
+            &__btn
+                &-link
+                    width: 100%
+            &__lines
+                right: -15px
+                top: auto
+                bottom: -50px
+            &__form
+                &-item
+                    flex-direction: column
+                    &__input
+                        margin-bottom: 0
+                    &__text
+                        margin-top: 15px
+                        &-title
+                            margin-bottom: 5px
+        &-triangle
+            border-width: 250px 250px 0 0
+
+@media (max-width: 450px)
+    .profit
+        &-triangle
+            border-width: 200px 200px 0 0

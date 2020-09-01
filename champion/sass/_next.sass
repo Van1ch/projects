@@ -1,0 +1,163 @@
+.next
+    padding: 100px 0
+    background-image: url(../img/next/bg.jpg)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    &-title
+        color: #ffffff
+        margin-bottom: 110px
+    &-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        &__item
+            flex-basis: 295px
+            max-width: 100%
+            position: relative
+            margin-bottom: 20px
+            padding: 0 10px
+            &:hover
+                .next-list__item-img__content
+                    animation-name: shake
+            &-num
+                position: absolute
+                top: -45px
+                left: -37px
+                font-size: 221px
+                font-weight: 800
+                z-index: 0
+                line-height: 100%
+                color: #45575f
+                opacity: 0.6
+                @supports (-webkit-background-clip: text)
+                    color: transparent
+                    background-clip: text
+                    -moz-background-clip: text
+                    -webkit-background-clip: text
+                    background-image: url(../img/next/numBg.png)
+                    background-position: center center
+                    background-repeat: repeat
+            &-img
+                margin-left: 25px
+                margin-bottom: 15px
+                min-height: 67px
+                position: relative
+                z-index: 1
+                &__content
+                    display: block
+                    max-height: 100%
+                    max-width: 100%
+                    animation-iteration-count: 1
+                    animation-fill-mode: none
+                    animation-duration: 0.5s
+                    animation-timing-function: linear
+            &-title
+                text-shadow: 8px 13px 13px rgba(0, 0, 0, 0.14)
+                color: $seaBuckthorn
+                font-size: 36px
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 100px
+                position: relative
+                &_white
+                    display: block
+                    color: #ffffff
+                &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    bottom: -25px
+                    left: 30px
+                    width: 1px
+                    height: 50px
+                    background-color: $wildSand
+                    transform: translateY(100%)
+            &-text
+                color: #b3c0c8
+            &-phones
+                margin-top: 15px
+                &__item
+                    font-size: 18px
+                    color: #ffffff
+                    display: block
+                    margin-bottom: 5px
+                    &:last-child
+                        margin-bottom: 0
+    &-btn
+        margin-top: 40px
+        &__link
+            font-size: 14px
+            padding: 16px 30px
+            box-shadow: 8px 13px 13px 1px rgba(0, 0, 0, 0.14)
+
+@keyframes shake
+    0%
+        transform: rotate(0)
+    10%
+        transform: rotate(-10deg)
+    20%
+        transform: rotate(0)
+    30%
+        transform: rotate(10deg)
+    40%
+        transform: rotate(0)
+    50%
+        transform: rotate(-10deg)
+    60%
+        transform: rotate(0)
+    70%
+        transform: rotate(10deg)
+    80%
+        transform: rotate(0)
+    90%
+        transform: rotate(-10deg)
+    100%
+        transform: rotate(0)
+
+@media (max-width: 1210px)
+    .next
+        padding: 60px 0
+        &-title
+            margin-bottom: 60px
+        &-list
+            &__item
+                flex-basis: 250px
+
+@media (max-width: 1100px)
+    .next
+        &-title
+            text-align: center
+        &-btn
+            margin-top: 20px
+        &-list
+            &__item
+                flex-basis: 360px
+                margin-bottom: 40px
+                text-align: center
+                &-img
+                    margin-left: 0
+                    &__content
+                        margin: 0 auto
+                &-title
+                    margin-bottom: 60px
+                    font-size: 30px
+                    &::after
+                        bottom: -5px
+                        left: 50%
+                &-num
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+
+@media (max-width: 750px)
+    .next
+        &-list
+            &__item
+                flex-basis: 300px
+                
+@media (max-width: 620px)
+    .next
+        padding: 30px 0 0 10px
+        &-title
+            margin-bottom: 30px

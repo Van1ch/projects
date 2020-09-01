@@ -1,0 +1,240 @@
+.hero
+    position: relative
+    &-verticalLine
+        position: absolute
+        height: 100%
+        width: 1px
+        background: $tuna
+        top: 0
+        z-index: 0
+        &_left
+            left: 0
+        &_right
+            right: 0
+        &_midLeft
+            left: 25%
+        &_midRight
+            left: 50%
+        &_almostRight
+            right: 25%
+    &-wrapper
+        background: $sharkLight
+    &-main
+        padding-top: 56px
+        padding-bottom: 70px
+        position: relative
+        z-index: 1
+        &__title
+            max-width: 580px
+            margin-bottom: 80px
+            span
+                z-index: 3 !important
+                font-size: 36px
+            h1
+                font-weight: 700
+                font-size: 60px
+                text-transform: uppercase
+        &__companies
+            display: flex
+            max-width: 560px
+            flex-wrap: wrap
+            &-item
+                &:nth-child(odd)
+                    margin-right: 64px
+                &:nth-child(-n+2)
+                    margin-bottom: 70px
+                &:hover
+                    > img
+                        filter: none
+                    > img.hero-main__companies-item__img_special
+                        display: none
+                    > img.hero-main__companies-item__img_special_hover
+                        display: inline
+                &__img
+                    height: 100%
+                    max-height: 50px
+                    max-width: 237px
+                    margin-bottom: 20px
+                    filter: brightness(0) invert(1)
+                    transition: .3s filter
+                    &_special
+                        filter: none
+                        transition: .3s display
+                        &_hover
+                            display: none
+                &__text
+                    display: block
+                &__link
+                    color: $tundora
+                    transition: .3s color
+                    &:hover
+                        color: #ffffff
+                    &::after
+                        background: $tundora
+        &__img
+            display: none
+    &-footer
+        padding: 65px 0 75px
+        position: relative
+        &__wrapper
+            background: $shark
+        &__title
+            font-size: 24px
+            text-transform: uppercase
+            font-weight: 700
+            display: inline-block
+            margin-right: 57px
+            max-width: 240px
+            vertical-align: middle
+            z-index: 1
+            position: relative
+        &__btn
+            vertical-align: middle
+            background-color: $totemPole
+            text-transform: uppercase
+            font-weight: 700
+            padding: 16px 35px
+            text-decoration: none
+            color: #ffffff
+            transition: .3s background
+            z-index: 1
+            position: relative
+            &:hover
+                background: rgba($totemPole, .7)
+        &__img
+            position: absolute
+            z-index: 1
+            right: -14%
+            bottom: 0
+
+@media (max-width: 1540px)
+    .hero
+        &-footer
+            &__img
+                max-width: 650px
+                right: -7%
+@media (max-width: 1370px)
+    .hero
+        &-footer
+            &__img
+                max-width: 600px
+                right: -1%
+@media (max-width: 1230px)
+    .hero
+        &-footer
+            padding: 50px 0
+            text-align: center
+            &__img
+                display: none
+        &-main
+            padding-top: 40px
+            padding-bottom: 50px
+            &__title
+                max-width: 100%
+                padding: 0 30px
+                margin-bottom: 40px
+                span
+                    font-size: 28px
+                h1
+                    font-size: 50px
+            &__img
+                display: block
+                text-align: center
+                margin-bottom: 40px
+            &__companies
+                max-width: 100%
+                justify-content: center
+                &-item
+                    text-align: center
+                    flex-basis: 30%
+                    &:nth-child(odd)
+                        margin: 0
+                    &:nth-child(-n+2)
+                        margin-right: 30px
+        &-verticalLine
+            display: none
+        &-footer
+            &__title
+                text-align: left
+@media (max-width: 1000px)
+    .hero
+        &-main
+            &__title
+                margin-bottom: 25px
+                span
+                    font-size: 24px
+                h1
+                    font-size: 44px
+            &__img
+                img
+                    max-height: 400px
+            &__companies
+                &-item
+                    flex-basis: 50%
+                    &:nth-child(-n+2)
+                        margin-right: 0
+                        margin-bottom: 35px
+@media (max-width: 768px)
+    .hero
+        &-main
+            padding-bottom: 30px
+            &__title
+                text-align: center
+                margin-bottom: 25px
+                span
+                    font-size: 24px
+                h1
+                    font-size: 44px
+            &__img
+                margin-bottom: 30px
+                img
+                    max-height: 300px
+            &__companies
+                &-item
+                    flex-basis: 100%
+                    &:nth-child(-n+3)
+                        margin: 0 0 20px 0
+                    &__img
+                        filter: none
+        &-footer
+            padding: 30px 0
+            &__title
+                margin-right: 10px
+                font-size: 18px
+            &__btn
+                font-size: 14px
+@media (max-width: 576px)
+    .hero
+        &-main
+            padding: 30px 0
+            &__title
+                span
+                    font-size: 16px
+                h1
+                    font-size: 32px
+            &__img
+                margin-bottom: 20px
+                img
+                    max-height: 250px
+            &__companies
+                &-item
+                    font-size: 14px
+                    &__img
+                        max-width: 180px
+                        margin-bottom: 15px
+        &-footer
+            &__title
+                font-size: 14px
+            &__btn
+                padding: 12px 25px
+                font-size: 12px
+@media (max-width: 450px)
+    .hero
+        &-footer
+            display: flex
+            flex-direction: column
+            align-items: center
+            &__title
+                text-align: center
+                margin-right: 0
+                margin-bottom: 15px

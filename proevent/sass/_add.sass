@@ -1,0 +1,137 @@
+.add
+    background-image: url(../img/info/bg.jpg)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    padding: 150px 0
+    &-slider
+        &__item
+            padding-left: 30px
+            &-title
+               font-size: 30px 
+               text-transform: uppercase
+               letter-spacing: 1.2px
+               color: #ffffff
+               font-weight: 700
+               margin-bottom: 20px
+            &-text
+                font-size: 20px
+                color: #ffffff
+                letter-spacing: 0.6px
+        &__dots
+            padding-left: 30px
+            .slick-dots
+                margin-top: 50px
+                justify-content: flex-start
+                .slick-active
+                    background-color: #fff
+    &-sliderFor
+        &__item
+            position: relative
+            text-decoration: none
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            &:hover
+                .add-sliderFor__item-arrow
+                    width: 85px
+                    height: 85px
+            &-inner
+                visibility: hidden
+                opacity: 0
+                display: block
+                width: 100%
+            &-text
+                position: absolute
+                top: 20px
+                left: 20px
+                color: #ffffff
+                font-size: 20px
+            &-arrow
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 80px
+                height: 80px
+                background-color: $stormGray
+                border-radius: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                transition: .3s width, .3s height
+                &__inner
+                    margin-right: -8px
+                    width: 0
+                    height: 0
+                    border-style: solid
+                    border-width: 15px 0 15px 25px
+                    border-color: transparent transparent transparent #ffffff
+            &-img
+                max-width: 100%
+                max-height: 100%
+            &-video
+                width: 100%
+                min-height: 400px
+
+@media (max-width: 1240px)
+    .add
+        padding: 100px 0
+        &-slider
+            &__item
+                &-title
+                    font-size: 40px
+                &-text
+                    font-size: 20px
+            &__dots
+                .slick-dots
+                    margin-top: 35px
+
+@media (max-width: 991px)
+    .add
+        padding: 70px 0
+        &-slider
+            &__item
+                padding-left: 0
+                text-align: center
+                &-title
+                    font-size: 32px
+                    margin-bottom: 10px
+                &-text
+                    font-size: 18px
+            &__dots
+                padding-left: 0
+                .slick-dots
+                    margin-top: 20px
+                    justify-content: center
+        &-sliderFor
+            max-width: 350px
+            margin: 0 auto
+            margin-bottom: 20px
+            &__item
+                text-align: center
+
+@media (max-width: 767px)
+    .add
+        padding: 50px 0
+        &-slider
+            &__item
+                &-title
+                    font-size: 26px
+                &-text
+                    font-size: 16px
+        &-sliderFor
+            &__item
+                &:hover
+                    .add-sliderFor__item-arrow
+                        width: 75px
+                        height: 75px
+                &-text
+                    font-size: 18px
+                &-arrow
+                    width: 70px
+                    height: 70px
+
+@media (max-width: 450px)
+    .add
+        padding: 30px 0

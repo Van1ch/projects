@@ -1,0 +1,132 @@
+.technology
+    padding: 80px 0 70px 0
+    &-title
+        max-width: 830px
+        margin-bottom: 40px
+    &-subtitle
+        max-width: 1000px
+        margin-bottom: 50px
+    &-list
+        &__title
+            font-size: 30px
+            text-transform: uppercase
+            letter-spacing: 0.75px
+            text-align: center
+            color: #000000
+            font-weight: 900
+            margin-bottom: 35px
+        &__item
+            &:hover
+                .technology-list__item
+                    &-photo
+                        &::after
+                            opacity: 0
+                    &-text
+                        &__circle
+                            background-color: #ffffff
+                            box-shadow: 5px 8px 21px 1px rgba(30, 21, 56, 0.28)
+                            &-img
+                                filter: none
+            &-photo
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: cover
+                position: relative
+                &::after
+                    position: absolute
+                    display: block
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    content: ''
+                    background-image: url('../img/technology/bg.png')
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: cover
+                    opacity: 1
+                    transition: .3s opacity
+                &__empty
+                    display: block
+                    width: 100%
+                    opacity: 0
+                    visibility: hidden
+            &-text
+                text-align: center
+                max-width: 210px
+                margin: 0 auto
+                z-index: 10
+                &__circle
+                    width: 110px
+                    height: 110px
+                    background-color: #57577e
+                    border-radius: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin: 0 auto
+                    margin-top: -55px
+                    z-index: 1
+                    position: relative
+                    transition: .3s background-color, .3s box-shadow
+                    margin-bottom: 25px
+                    &-img
+                        max-width: 60%
+                        filter: brightness(0) invert(1)
+                        transition: .3s filter
+                &__title
+                    color: #000000
+                    font-size: 20px
+                    font-weight: 700
+                    text-transform: uppercase
+                    letter-spacing: 0.5px
+                    margin-bottom: 10px
+                &__subtitle
+                    color: #5f5f78
+                    font-weight: 400
+                    letter-spacing: 0.5px
+
+@media (max-width: 1240px)
+    .technology
+        padding: 60px 0
+        &-title
+            max-width: 100%
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 40px
+        &-list
+            &__title
+                font-size: 28px
+                margin-bottom: 30px
+            &__item
+                &-text
+                    &__circle
+                        width: 95px
+                        height: 95px
+@media (max-width: 992px)
+    .technology
+        padding: 50px 0 30px 0
+        text-align: center
+        &-list
+            &__item
+                margin-bottom: 20px
+@media (max-width: 767px)
+    .technology
+        padding: 40px 0 20px 0
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 30px
+        &-list
+            &__title
+                margin-bottom: 20px
+@media (max-width: 576px)
+    .technology
+        padding: 30px 0 10px 0
+        &-list
+            &__title
+                font-size: 24px
+            &__item
+                &-photo
+                    max-width: 250px
+                    margin: 0 auto

@@ -1,0 +1,143 @@
+.choose
+    padding: 70px 0 150px 0
+    background-color: $wildSand
+    &-title
+        margin-bottom: 90px
+    &-list
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        &__item
+            flex-basis: 560px
+            text-align: center
+            &:first-child
+                margin-right: 30px
+            &:last-child
+                margin-left: 30px
+            &-photo
+                padding: 30px
+                margin-bottom: 45px
+                background-color: #fff
+                z-index: 5
+                position: relative
+                box-shadow: 11px 17px 25px 1px rgba(0, 0, 0, 0.13)
+                &__content
+                    background-size: cover
+                    background-position: center center
+                    background-repeat: no-repeat
+                    &-img
+                        display: block
+                        opacity: 0
+                        visibility: hidden
+                        width: 100%
+                &__wrapper
+                    position: relative
+                    &::before
+                        position: absolute
+                        display: block
+                        content: ''
+                        top: -30px
+                        right: -30px
+                        width: 100%
+                        height: 100%
+                        background-image: url('../img/choose/dec.png')
+                        background-repeat: no-repeat
+                        background-size: cover
+                        background-position: center center
+                        z-index: 0
+            &-title
+                font-size: 24px
+                font-weight: 700
+                text-transform: uppercase
+                max-width: 400px
+                margin: 0 auto
+                margin-bottom: 10px
+            &-subtitle
+                font-size: 20px
+                color: $mako
+                max-width: 450px
+                margin: 0 auto
+                margin-bottom: 60px
+            &-btn
+                &__link
+                    position: relative
+                    &::after, &::before
+                        position: absolute
+                        display: block
+                        content: ''
+                        top: 50%
+                        background-color: $silver
+                        height: 1px
+                        width: 80px
+                    &::after
+                        right: -20px
+                        transform: translateX(100%)
+                    &::before
+                        left: -20px
+                        transform: translateX(-100%)
+
+@media (max-width: 1240px)
+    .choose
+        padding: 50px 0
+        &-title
+            text-align: center
+            margin-bottom: 50px
+        &-list
+            &__item
+                flex-basis: 470px
+                &-photo
+                    margin-bottom: 30px
+                    &__wrapper
+                        &::before
+                            top: -15px
+                            right: -15px
+                &-subtitle
+                    margin-bottom: 30px
+
+@media (max-width: 1030px)
+    .choose
+        padding: 40px 0
+        &-list
+            &__item
+                flex-basis: 560px
+                &:first-child, &:last-child
+                    margin: 0 30px
+                &:first-child
+                    margin-bottom: 60px
+                &-title
+                    font-size: 20px
+                &-subtitle
+                    font-size: 18px
+                &-photo
+                    padding: 20px          
+
+@media (max-width: 600px)
+    .choose
+        &-list
+            &__item
+                &-title
+                    font-size: 18px
+                &-subtitle
+                    font-size: 16px
+                &-btn
+                    &__link
+                        &::after, &::before
+                            width: 40px
+                        &::after
+                            right: -10px
+                        &::before
+                            left: -10px
+@media (max-width: 400px)
+    .choose
+        &-list
+            &__item
+                &-btn
+                    &__link
+                        &::after, &::before
+                            width: 30px
+                        &::after
+                            right: -8px
+                        &::before
+                            left: -8px
+                &-photo
+                    padding: 10px

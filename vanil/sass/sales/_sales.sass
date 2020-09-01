@@ -1,0 +1,75 @@
+.sales
+    &-list
+        display: flex
+        width: calc(100% + 40px)
+        margin-left: -20px
+        margin-bottom: 10px
+        flex-wrap: wrap
+    &-item
+        margin: 0 20px 45px 20px
+        flex-basis: 280px
+        flex-grow: 1
+        &:hover
+            .sales-item__title::after
+                width: 100%
+        &__img
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            position: relative
+            overflow: hidden
+            margin-bottom: 20px
+            &-inner
+                opacity: 0
+                visibility: hidden
+                display: block
+                width: 100%
+            &-text
+                position: absolute
+                bottom: 0
+                right: -30px
+                color: $hintOfRed
+                font-size: 160px
+                text-transform: uppercase
+                font-weight: 700
+                line-height: 70%
+        &__title
+            display: inline-block
+            font-size: 20px
+            font-weight: 700
+            text-transform: uppercase
+            color: #000000
+            margin-bottom: 10px
+            &::after
+                width: 0
+        &__text
+            font-weight: 300
+            color: $silverChalice
+    &-more
+        display: flex
+        justify-content: center
+        &__inner
+            color: #000000
+            text-transform: uppercase
+            font-weight: 500
+
+@media (max-width: 1100px)
+    .sales
+        &-item
+            &__img
+                &-text
+                    font-size: 140px
+
+@media (max-width: 1000px)
+    .sales
+        &-item
+            &__img
+                &-text
+                    font-size: 120px
+
+@media (max-width: 800px)
+    .sales
+        &-item
+            margin-bottom: 20px
+            &__img
+                margin-bottom: 10px

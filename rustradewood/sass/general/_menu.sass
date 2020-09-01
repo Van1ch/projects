@@ -1,0 +1,82 @@
+.menu
+    position: fixed
+    height: 100%
+    width: 300px
+    right: -300px
+    top: 0
+    background-color: $dingley
+    z-index: 50
+    padding: 60px 30px 20px 30px
+    transition: .5s right
+    overflow: auto
+    color: #ffffff
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-content
+        display: flex
+        flex-direction: column
+        &__item
+            color: #ffffff
+            margin-bottom: 20px
+            font-size: 20px
+            &:last-child
+                margin-bottom: 0
+    &-close
+        padding: 5px
+        position: absolute
+        top: 15px
+        right: 15px
+        width: 35px
+    &-bottom
+        &__phone
+            display: none
+            &-link
+                color: #ffffff
+                font-size: 18px
+                margin-bottom: 10px
+            &-text
+                color: rgba(255, 255, 255, 0.4);
+                font-size: 12px
+                font-weight: 300
+                letter-spacing: 0.3px
+        &__lang
+            display: none
+            margin-top: 15px
+            font-size: 14px
+            &-item
+                cursor: pointer
+                margin-right: 14px
+                position: relative
+                &::before
+                    position: absolute
+                    right: -8px
+                    top: 0
+                    height: 100%
+                    width: 2px
+                    content: ''
+                    display: block
+                    background-color: #fff
+                &:last-child
+                    margin-right: 0
+                    &::before
+                        display: none
+            &-item.active
+                color: lighten($chelseaCucumber, 15%)
+                &::after
+                    display: none
+
+.menu.active
+    right: 0
+
+@media (max-width: 600px)
+    .menu
+        &-bottom
+            &__phone
+                display: block
+
+@media (max-width: 400px)
+    .menu
+        &-bottom
+            &__lang
+                display: flex

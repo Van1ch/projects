@@ -1,0 +1,51 @@
+.contacts
+    padding: 40px 0 50px 0
+    &-container
+        display: flex
+    &-text
+        flex-basis: 50%
+        padding-right: 15px
+        padding-bottom: 60px
+        &__item
+            margin-bottom: 20px
+            font-size: 16px
+            &:last-child
+                margin-bottom: 0
+            span
+                color: $costaDelSol
+                font-size: 14px
+            &-phone
+                font-size: 20px
+                color: #000000
+                font-weight: 700
+                letter-spacing: 0.5px
+            &-mail
+                color: #000000
+    &-map
+        flex-basis: 50%
+
+@media (max-width: 1210px)
+    .contacts
+        padding-top: 20px
+
+@media (max-width: 850px)
+    .contacts
+        padding-bottom: 0
+        padding-top: 10px
+        &-container
+            flex-direction: column
+        &-text, &-map
+            flex-basis: auto
+        &-text
+            padding-right: 0
+            padding-bottom: 30px
+            display: flex
+            flex-direction: column
+            align-items: center
+            &__item
+                margin-bottom: 15px
+                font-size: 15px
+        &-map
+            width: calc(100% + 30px)
+            margin-left: -15px
+            min-height: 250px

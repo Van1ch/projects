@@ -1,0 +1,196 @@
+@import _variables.sass
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none !important
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'HarmoniaSansProCyr'
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+    font-size: 16px
+    font-weight: 400
+    color: #ffffff
+    position: relative
+    overflow-x: hidden
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+@import _section.sass
+@import _breadcrumbs.sass
+@import _link.sass
+@import _logo.sass
+@import _btn.sass
+@import _slider.sass
+@import _menu.sass
+@import _modal.sass
+    
+@import _header.sass
+@import _hero.sass
+@import _offer.sass
+@import _about.sass
+@import _clients.sass
+@import _footer.sass
+
+@import _chapters.sass
+@import _software.sass
+@import _application.sass
+
+@import _softwareHero.sass
+@import _advantages.sass
+@import _soft.sass
+@import _gallery.sass
+@import _cardHero.sass
+@import _cardBottom.sass
+@import _cardTech.sass
+@import _add.sass
+@import _price.sass
+
+@import _rentHero.sass
+@import _anticrown.sass
+@import _technology.sass
+@import _ad.sass
+@import _reason.sass
+@import _happen.sass
+@import _where.sass
+@import _range.sass
+
+@import _saleHero.sass
+@import _business.sass
+@import _automatic.sass
+@import _feedback.sass
+@import _finance.sass
+@import _key.sass
+
+@import _contacts.sass
+
+.empty
+    height: 0
+    padding-top: 0
+    padding-bottom: 0
+    visibility: hidden
+    opacity: 0
+    margin-bottom: 0
+    margin-top: 0
+
+span.wpcf7-not-valid-tip,
+div.wpcf7 .ajax-loader,
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors, 
+div.wpcf7-acceptance-missing,
+div.wpcf7-response-output
+    display: none !important
+.application-form .wpcf7-not-valid::-webkit-input-placeholder
+    color: #FC7D91 !important
+.wpcf7-not-valid
+    border-color: #f34f41 !important
+body .alertify-notifier .ajs-message.ajs-warning
+    background: white
+    -webkit-box-shadow: 0 0 3px #333333
+    box-shadow: 0 0 3px #333333
+body .alertify-notifier .ajs-message.ajs-success
+    color: #fff
+    background: rgba(40, 136, 62, 0.9)
+    text-shadow: 0 0 1px rgba(0,0,0,.5)
+body .alertify-notifier
+    z-index: 99998
+
+.loadMore
+    text-align: center
+    .key-slider__btn-wrapper
+        margin-top: 50px
+        display: inline-block
+    .key-slider__btn-content
+        color: #adadd6
+        &::before, &::after
+            background-color: #adadd6
+
+.moneySymbol
+    color: transparent
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    &-white
+        filter: invert(1)
+
+.info
+    color: #000000
+    padding: 40px 0
+    p, ul, ol
+        margin-top: 20px
+    p
+        font-size: 18px
+    ul, ol
+        list-style: none
+    ol
+        counter-reset: section
+    li
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+    ul > li
+        padding-left: 20px
+        position: relative
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            background-color: #20202e
+            width: 10px
+            height: 10px
+            border-radius: 100%
+            left: 0
+            top: 4px
+    ol > li
+        padding-left: 40px
+        position: relative
+        min-height: 30px
+        display: flex
+        align-items: center
+        &::before
+            counter-increment: section
+            content: counter(section)
+            width: 30px
+            height: 30px
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            font-weight: 700
+            font-size: 14px
+            line-height: 22px
+            color: #333
+            padding: 2px
+            border: 2px solid #20202e
+            box-sizing: border-box
+            position: absolute
+            left: 0
+            top: 2px
+            background-color: white
+            border-radius: 100%
+
+@media (max-width: 767px)
+    .info
+        padding: 20px 0 30px 0
+
+@media (min-width: 1240px )
+    .content
+        padding-top: 97px
+
+@media (min-width: 992px) and (max-width: 1240px)
+    .content
+        padding-top: 92px
+
+@media (min-width: 768px) and (max-width: 992px)
+    .content
+        padding-top: 91px

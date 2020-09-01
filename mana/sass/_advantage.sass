@@ -1,0 +1,192 @@
+.advantage
+    padding-top: 60px
+    padding-bottom: 100px
+    position: relative
+    background-color: $concrete
+    &-title
+        margin-bottom: 100px
+        position: relative
+        z-index: 1
+        max-width: 710px
+    &-top
+        pointer-events: none
+        font-family: 'OpenSans'
+        z-index: 0
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        font-weight: 700
+        line-height: 210px
+        color: transparent
+        -webkit-text-stroke: 1px #ffffff;
+        font-size: 321px
+        text-transform: uppercase
+    &-list
+        margin-bottom: 50px
+        &__item
+            position: relative
+            padding: 35px 35px 35px 25px
+            transition: .3s background-color
+            margin-bottom: 20px
+            &::before
+                position: absolute
+                left: 25px
+                top: 0
+                transform: translateY(-100%)
+                display: block
+                opacity: 0
+                visibility: hidden
+                content: ''
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 45px 26px 0 26px
+                border-color: $supernova transparent transparent transparent
+                transition: .3s all
+            &-title
+                font-size: 28px
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 10px
+            &:hover
+                background-color: #ffffff
+                &::before
+                    opacity: 1
+                    visibility: visible
+                    transform: translateY(-50%)
+    &-warranty
+        padding: 45px 0 65px 120px
+        background: url('../img/advantage/bg.png') no-repeat
+        background-size: cover
+        color: #ffffff
+        &__suptitle
+            font-weight: 700
+            text-transform: uppercase
+            color: $concrete
+            margin-bottom: 45px
+        &__title
+            color: $supernova
+            font-size: 65px
+            font-family: 'BankGothicRUSSMedium'
+            letter-spacing: -3.25px
+            text-transform: uppercase
+            margin-bottom: 15px
+        &__subtitle
+            font-size: 30px
+            margin-bottom: 30px
+            &-star
+                color: $supernova
+        &__correction
+            font-size: 14px
+            &-star
+                color: $supernova
+
+@media (max-width: 1220px)
+    .advantage
+        padding-bottom: 100px
+        &-title
+            max-width: 100%
+            margin-bottom: 50px
+        &-top
+            font-size: 270px
+            line-height: 175px
+        &-list
+            margin-bottom: 30px
+            &__item
+                padding: 30px 30px 30px 20px
+                &-title
+                    font-size: 24px
+        &-warranty
+            padding-left: 90px
+            &__suptitle
+                margin-bottom: 35px
+            &__title
+                font-size: 52px
+            &__subtitle
+                font-size: 24px
+@media (max-width: 992px)
+    .advantage
+        padding-top: 40px
+        padding-bottom: 50px
+        &-title
+            margin-bottom: 30px
+        &-top
+            font-size: 200px
+            line-height: 130px
+        &-list
+            margin-bottom: 10px
+            &__item
+                padding: 20px
+                &::before
+                    z-index: 1
+                    border-width: 35px 20px 0 20px
+        &-warranty
+            padding: 30px 0 30px 50px
+            &__suptitle
+                margin-bottom: 30px
+            &__title
+                font-size: 40px
+                margin-bottom: 10px
+            &__subtitle
+                font-size: 20px
+                margin-bottom: 25px
+@media (max-width: 768px)
+    .advantage
+        &-title
+            margin-bottom: 20px
+        &-top
+            font-size: 150px
+            line-height: 100px
+        &-list
+            &__item
+                padding: 15px
+                &-title
+                    font-size: 20px
+
+@media (max-width: 576px)
+    .advantage
+        padding-bottom: 0
+        &-list
+            &__item
+                &-title
+                    position: relative
+                    z-index: 1
+                &-text
+                    position: relative
+                    z-index: 1
+                &::before
+                    z-index: 0
+                    left: 0
+                    top: 50%
+                    border-width: 20px 0 20px 44px
+                    border-color: transparent transparent transparent $supernova
+                    transform: translateY(-50%) translateX(-50%) 
+                &:hover
+                    &::before
+                        transform: translateX(-20%) translateY(-50%)
+        &-warranty
+            width: calc(100% + 30px)
+            margin-left: -15px
+            background-position: 50% 50%
+
+@media (max-width: 480px)
+    .advantage
+        &-title
+            margin-bottom: 10px
+        &-top
+            font-size: 110px
+            line-height: 70px
+        &-list
+            &__item
+                margin-bottom: 10px
+                text-align: center
+        &-warranty
+            padding: 20px
+            &__suptitle
+                margin-bottom: 20px
+            &__title
+                font-size: 32px
+            &__subtitle
+                font-size: 16px
+                margin-bottom: 20px

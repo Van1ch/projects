@@ -1,0 +1,217 @@
+.trend
+    padding-top: 140px
+    padding-bottom: 70px
+    &-title
+        margin-bottom: 70px
+        max-width: 1070px
+    &-text
+        margin-bottom: 120px
+        font-size: 24px
+        line-height: 30px
+        &_yellow
+            font-weight: 700
+            background-color: $supernova
+            display: block
+            padding: 0 5px
+    &-chart
+        height: 100%
+        max-height: 530px
+        position: relative
+        margin-bottom: 25px
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        &__item
+            flex-grow: 1
+            background: url('../img/general/noise.gif')
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            color: $supernova
+            font-size: 24px
+            padding: 15px 12px 12px 12px
+            z-index: 1
+            max-width: 24%
+            &:nth-child(1)
+                margin-top: 70%
+            &:nth-child(1).aos-animate
+                margin-top: 43%
+            &:nth-child(2)
+                margin-top: 70%
+            &:nth-child(2).aos-animate
+                margin-top: 32%
+            &:nth-child(3)
+                margin-top: 70%
+            &:nth-child(3).aos-animate
+                margin-top: 25%
+            &:nth-child(4)
+                margin-top: 70%
+            &:nth-child(4).aos-animate
+                margin-top: -3%
+            &-top
+                &__money
+                    display: block
+                    font-size: 18px
+                    color: #ffffff
+                &__percent
+                    margin-bottom: 15px
+                    display: block
+            &-bottom
+                text-align: center
+        &__line
+            position: absolute
+            z-index: 0
+            width: 100%
+            height: 1px
+            background-color: #000000
+            left: 0
+            &_top
+                top: 0
+            &_top1
+                top: 16.6%
+            &_top2
+                top: 33.2%
+            &_bottom2
+                bottom: 33.2%
+            &_bottom1
+                bottom: 16.6%
+            &_bottom
+                bottom: 0
+            &_center
+                top: 50%
+    &-correction
+        font-size: 16px
+        &__star
+            color: $supernova
+            font-weight: 700
+    &-reason
+        padding: 50px 45px 120px 45px
+        background: url('../img/trend/reasonBg.png') no-repeat
+        background-attachment: fixed
+        background-size: cover
+        margin-left: 30px
+        color: #ffffff
+        &__title
+            font-weight: 700
+            text-transform: uppercase
+            font-size: 30px
+            margin-bottom: 60px
+            max-width: 370px
+            &_yellow
+                color: $supernova
+        &__item
+            display: flex
+            justify-content: space-between
+            margin-bottom: 60px
+            &:last-child
+                margin: 0
+            &-img
+                margin-right: 40px
+                min-width: 64px
+                text-align: right
+            &-text
+                line-height: 24px
+                &_yellow
+                    font-weight: 700
+                    color: $supernova
+
+@media (max-width: 1220px)
+    .trend
+        padding-top: 100px
+        padding-bottom: 50px
+        &-text
+            font-size: 20px
+            margin-bottom: 80px
+        &-reason
+            padding: 30px 25px 40px 25px
+            &__title
+                font-size: 24px
+                margin-bottom: 40px
+            &__item
+                margin-bottom: 30px
+                &-img
+                    margin-right: 20px
+                    min-width: 50px
+                    &__img
+                        max-width: 50px
+        &-chart
+            height: auto
+            min-height: 500px
+@media (max-width: 992px)
+    .trend
+        padding-top: 70px
+        &-title
+            margin-bottom: 30px
+        &-text
+            margin-bottom: 60px
+            font-size: 18px
+            &_yellow
+                display: inline
+        &-chart
+            &__item
+                max-width: 23%
+                font-size: 20px
+                &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4),
+                    margin-top: 55%
+        &-correction
+            margin-bottom: 20px
+        &-reason
+            margin: 0
+            padding-bottom: 50px
+            &__title
+                max-width: 100%
+                font-size: 24px
+                margin-bottom: 30px
+            &__item
+                margin-bottom: 20px
+                &-img
+                    min-width: 40px
+                    &__img
+                        max-width: 40px
+@media (max-width: 768px)
+    .trend
+        &-title
+            margin-bottom: 20px
+        &-chart
+            min-height: 400px
+            &__item
+                max-width: 22%
+        &-reason
+            &__title
+                font-size: 22px
+    
+@media (max-width: 768px)
+    .trend
+        padding-bottom: 0
+        &-reason
+            width: calc(100% + 30px)
+            margin-left: -15px
+            z-index: 1
+            position: relative
+@media (max-width: 576px)
+    .trend
+        padding-top: 30px
+@media (max-width: 470px)
+    .trend
+        &-chart
+            &__item
+                padding: 15px 8px
+                &-top
+                    &__money
+                        font-size: 16px
+                    &__percent
+                        font-size: 18px
+                &-bottom
+                    font-size: 18px
+@media (max-width: 350px)
+    .trend
+        &-chart
+            &__item
+                padding: 15px 4px
+                &-top
+                    &__money
+                        font-size: 14px
+                    &__percent
+                        font-size: 16px
+                &-bottom
+                    font-size: 16px

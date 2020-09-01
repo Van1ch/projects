@@ -1,0 +1,191 @@
+.footer
+    display: flex
+    background-color: #fff
+    &-content
+        flex-basis: 50%
+        padding-left: calc((100% - 1180px) / 2)
+        padding-top: 80px
+        padding-bottom: 40px
+        padding-right: 70px
+        &__main
+            margin-bottom: 120px
+            &-item
+                margin-bottom: 20px
+                font-size: 16px
+                span
+                    color: $costaDelSol
+                    font-size: 14px
+                &__phone
+                    font-size: 20px
+                    color: #000000
+                    font-weight: 700
+                    letter-spacing: 0.5px
+                &__mail
+                    color: #000000
+        &__bottom
+            display: flex
+            justify-content: space-between
+            &-item
+                font-size: 12px
+                letter-spacing: 0.3px
+                color: $doveGray
+                &:first-child
+                    margin-right: 15px
+                a
+                    color: $doveGray
+                    display: inline
+                div
+                    margin-bottom: 10px
+                a.footer-content__bottom-item__link
+                    color: #000000
+    &-map
+        flex-basis: 50%
+        min-height: 100%
+        max-height: 100%
+        &__notmap
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            position: relative
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                width: 100%
+                height: 100%
+                opacity: 0.6
+                background-color: #000000
+            &-text
+                height: 334px
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                overflow: hidden
+                display: flex
+                align-items: center
+                justify-content: center
+                z-index: 1
+                &__inner
+                    color: #ffffff
+                    @supports (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.8))
+                        color: transparent
+                        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8)
+                    line-height: 70%
+                    min-width: 2230px
+                    font-size: 278px
+                    font-weight: 700
+                    text-transform: uppercase
+                    letter-spacing: 1.5px
+                    display: flex
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    animation-name: gallery
+                    animation-iteration-count: infinite
+                    animation-fill-mode: none
+                    animation-duration: 30s
+                    animation-timing-function: linear
+                    &_2
+                        left: 2230px
+
+@keyframes gallery
+    0%
+        transform: translateX(0%)
+    100%
+        transform: translateX(-100%)
+
+.footer
+    &-contacts
+        background-color: $mercury
+        font-size: 12px
+        padding: 20px 0
+        color: $doveGray
+        &__container
+            display: flex
+            justify-content: space-between
+            a
+                color: $doveGray
+            a.footer-contacts__dev
+                color: #000000
+
+@media (max-width: 1210px)
+    .footer
+        &-content
+            padding-left: 15px
+
+@media (max-width: 1100px)
+    .footer
+        &-content
+            padding: 50px 20px 30px 15px
+            &__main
+                margin-bottom: 70px
+
+@media (max-width: 1000px)
+    .footer
+        &-contacts
+            padding: 15px 0
+            &__container
+                flex-direction: column
+                align-items: center
+            &__item
+                margin-bottom: 10px
+                text-align: center
+                &:last-child
+                    margin-bottom: 0
+
+@media (max-width: 900px)
+    .footer
+        flex-direction: column
+        &-content
+            padding-top: 40px
+            padding-bottom: 10px
+            padding-left: 15px
+            padding-right: 15px
+            &__main
+                margin-bottom: 20px
+            &__map
+                min-height: 300px
+                margin-bottom: 20px
+                width: calc(100% + 30px)
+                margin-left: -15px
+        &-map
+            display: none
+
+@media (max-width: 600px)
+    .footer
+        &-content
+            padding-top: 25px
+            &__title
+                margin-bottom: 10px
+            &__main
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin-bottom: 10px
+            &__map
+                min-height: 250px
+    
+@media (max-width: 500px)
+    .footer
+        &-content
+            padding: 20px 15px
+            padding-bottom: 10px
+            &__main
+                &-item
+                    font-size: 15px
+                    margin-bottom: 10px
+                    span
+                        font-size: 12px
+                    &__phone
+                        font-size: 18px
+            &__bottom
+                flex-direction: column
+                text-align: center
+                br
+                    display: none
+                &-item
+                    &:first-child
+                        margin-right: 0
+                    div
+                        margin-bottom: 7px

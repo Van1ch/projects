@@ -1,0 +1,147 @@
+.finance
+    padding: 90px 0
+    background-image: url('../img/finance/bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    &-title
+        color: #ffffff
+        margin-bottom: 30px
+        max-width: 600px
+    &-subtitle
+        max-width: 700px
+        margin-bottom: 60px
+    &-list
+        max-width: 710px
+        &__item
+            display: flex
+            justify-content: space-between
+            margin: 10px 0
+            &:nth-last-child(2)
+                .finance-list__item-text
+                    border-bottom: none
+            &-price
+                min-width: 255px
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: #57577e
+                border-radius: 5px
+                font-size: 36px
+                font-weight: 700
+                margin-bottom: 10px
+                img
+                    width: 19px
+                    margin-right: 10px
+            &-text
+                width: 100%
+                min-height: 110px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                margin-right: 20px
+                border-bottom: 1px solid #8787aa
+                &__title
+                    font-size: 24px
+                    font-weight: 700
+                    text-transform: uppercase
+                    letter-spacing: 0.6px
+                    margin-bottom: 10px
+                &__text
+                    color: #8686ac
+                    letter-spacing: 0.4px
+        &__btn
+            text-align: center
+            margin-top: 90px
+            &-link
+                border-radius: 38px
+                font-size: 20px
+                padding: 25px 75px
+                display: inline-block
+@media (max-width: 1240px)
+    .finance
+        padding: 75px 0
+@media (max-width: 992px)
+    .finance
+        padding: 60px 0
+        &-title
+            max-width: 100%
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 40px
+        &-list
+            &__btn
+                margin-top: 60px
+                &-link
+                    font-size: 18px
+                    padding: 22px 60px
+@media (max-width: 767px)
+    .finance
+        padding: 40px 0
+        position: relative
+        &::before
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            display: block
+            content: ''
+            background-color: #000000
+            opacity: 0.5
+            z-index: 0
+        &-title
+            position: relative
+            z-index: 1
+            text-align: center
+        &-subtitle
+            position: relative
+            z-index: 1
+            text-align: center
+            margin-bottom: 30px
+        &-list
+            position: relative
+            z-index: 1
+            &__btn
+                margin-top: 40px
+            &__item
+                &-text
+                    &__title
+                        font-size: 20px
+                        margin-bottom: 5px
+                &-price
+                    font-size: 30px
+                    min-width: 200px
+@media (max-width: 500px)
+    .finance
+        &-list
+            &__item
+                flex-direction: column
+                margin-bottom: 15px
+                border-bottom: 1px solid #8787aa
+                padding-bottom: 15px
+                &:nth-last-child(2)
+                    margin-bottom: 0
+                    border-bottom: none
+                &-text
+                    min-height: 1px
+                    text-align: center
+                    border: none
+                    margin-bottom: 15px
+                &-price
+                    padding: 10px 0
+                    font-size: 26px
+                    min-width: 180px
+                    margin-bottom: 0
+                    img
+                        width: 16px
+                        margin-right: 5px
+            &__btn
+                margin-top: 20px
+                &-link
+                    padding: 18px 50px
+@media (max-width: 500px)
+    .finance
+        padding: 30px 0
+        &-title
+            margin-bottom: 15px

@@ -1,0 +1,147 @@
+.gallery
+    position: relative
+    &-container
+        display: flex
+        min-width: 2000px
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        animation-name: gallery
+        animation-iteration-count: infinite
+        animation-fill-mode: none
+        animation-duration: 30s
+        animation-timing-function: linear
+        &_2
+            left: 2000px
+        &__wrapper
+            width: 100%
+            min-height: 410px
+            overflow: hidden
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            &_special
+                .gallery-container
+                    animation-name: gallery-reverse
+                    &_2
+                        left: -2000px
+        &__item
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            flex-basis: 480px
+            margin: 10px
+    &-content
+        &__wrapper
+            min-height: 410px
+            width: 50%
+            background-color: #fff
+            z-index: 1
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            padding: 0 50px 0 10px
+            padding-left: calc( (100% - 1210px) / 2 )
+            display: flex
+            justify-content: flex-end
+            align-items: center
+        &__title
+            font-size: 35px
+            font-weight: 500
+            text-transform: none
+        &__subtitle
+            margin-bottom: 35px
+            letter-spacing: 0.1px
+        &__btn
+            &-link
+                padding: 18px 70px
+
+@media (max-width: 1410px)
+    .gallery
+        &-content
+            &__wrapper
+                padding: 0 60px 0 10px
+
+@media (max-width: 1310px)
+    .gallery
+        &-content
+            &__wrapper
+                min-height: 370px
+                padding: 0 60px 0 10px
+            &__title
+                font-size: 32px
+            &__subtitle
+                margin-bottom: 40px
+        &-container
+            min-width: 1800px
+            &_2
+                left: 1800px
+            &__wrapper
+                min-height: 370px
+                &_special
+                    .gallery-container
+                        &_2
+                            left: -1800px
+
+@media (max-width: 1200px)
+    .gallery
+        &-content
+            &__wrapper
+                width: 100%
+                justify-content: center
+                min-height: auto
+                padding: 30px 15px
+                text-align: center
+                position: relative
+                top: auto
+                transform: none
+            &__subtitle
+                margin-bottom: 30px
+        &-container
+            min-width: 1800px
+            &_2
+                left: 1800px
+            &__item
+                margin-bottom: 0
+            &__wrapper
+                min-height: 370px
+                display: none
+                &_special
+                    display: flex
+
+@media (max-width: 900px)
+    .gallery
+        &-container
+            min-width: 1660px
+            &__wrapper
+                min-height: 340px
+                &_special
+                    .gallery-container
+                        &_2
+                            left: -1660px
+
+@media (max-width: 600px)
+    .gallery
+        &-content
+            &__wrapper
+                padding: 25px 15px
+            &__subtitle
+                margin-bottom: 20px
+                br
+                    display: none
+            &__title
+                font-size: 28px
+        &-container
+            min-width: 1370px
+            &__item
+                margin: 7px
+                margin-bottom: 0
+            &__wrapper
+                min-height: 280px
+                &_special
+                    .gallery-container
+                        &_2
+                            left: -1370px

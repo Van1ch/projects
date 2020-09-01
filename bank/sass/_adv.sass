@@ -1,0 +1,79 @@
+.adv
+    background-image: url(../img/adv/bg.jpg)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    color: #ffffff
+    &-title
+        margin-bottom: 90px
+    &-list
+        display: flex
+        justify-content: space-between
+        &__item
+            flex-basis: 250px
+            &-img
+                position: relative
+                margin-bottom: 70px
+                min-height: 77px
+                display: inline-flex
+                align-items: flex-end
+                &__content
+                    max-width: 100%
+                &::after
+                    position: absolute
+                    left: 10px
+                    bottom: -20px
+                    transform: translateY(100%)
+                    content: ''
+                    display: block
+                    width: 1px
+                    height: 30px
+                    background-color: $putty
+            &-text
+                font-size: 24px
+                letter-spacing: 0.6px
+            &-btn
+                margin-top: 20px
+                &__inner
+                    padding: 12px 25px
+                    font-size: 16px
+
+@media (max-width: 1100px)
+    .adv
+        &-title
+            margin-bottom: 50px
+            text-align: center
+        &-list
+            flex-wrap: wrap
+            &__item
+                flex-basis: 50%
+                margin-bottom: 20px
+                text-align: center
+                &-text
+                    font-size: 22px
+                    padding: 0 15px
+                    br
+                        display: none
+                &-img
+                    margin-bottom: 40px
+                    min-height: 66px
+                    &::after
+                        left: 50%
+                        height: 25px
+                        bottom: -10px
+                    &__content
+                        max-height: 65px
+
+@media (max-width: 650px)
+    .adv
+        &-title
+            margin-bottom: 30px
+        &-list
+            &__item
+                flex-basis: 100%
+                margin-bottom: 15px
+                &:last-child
+                    margin-bottom: 0
+                &-text
+                    font-size: 20px
+                    padding: 0

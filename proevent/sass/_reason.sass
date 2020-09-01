@@ -1,0 +1,60 @@
+.reason
+    padding: 70px 0 50px 0
+    &-title
+        max-width: 830px
+        margin-bottom: 60px
+    &-item
+        color: #000000
+        &__photo
+            background-image: url('../img/reason/bg.jpg')
+            background-size: cover
+            background-attachment: fixed
+            background-repeat: no-repeat
+            background-position: center center
+            width: 140px
+            height: 140px
+            border-radius: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 25px
+            &-photo
+                max-width: 100%
+                max-height: 100%
+        &__title
+            font-size: 24px
+            font-weight: 700
+            letter-spacing: 0.6px
+            text-transform: uppercase
+            margin-bottom: 20px
+@media (max-width: 1240px)
+    .reason
+        &-item
+            &__title
+                font-size: 22px
+                margin-bottom: 15px
+@media (max-width: 992px)
+    .reason
+        padding: 50px 0
+        padding-bottom: 25px
+        &-title
+            margin-bottom: 40px
+        &-item
+            margin-bottom: 20px
+            text-align: center
+            &__photo
+                margin: 0 auto
+                margin-bottom: 20px
+            &__title
+                font-size: 20px
+@media (max-width: 767px)
+    .reason
+        padding: 30px 0
+        padding-bottom: 15px
+        text-align: center
+        &-title
+            margin-bottom: 30px
+        &-item
+            &__photo
+                width: 120px
+                height: 120px

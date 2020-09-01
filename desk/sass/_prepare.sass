@@ -1,0 +1,40 @@
+.prepare
+    position: relative
+    background-color: $mirage
+    padding: 120px 0 100px 0
+    color: #ffffff
+    &-content
+        position: relative
+        z-index: 1
+    &-subtitle
+        margin-bottom: 44px
+    &-btn
+        display: flex
+        justify-content: flex-end
+        &__inner
+            flex-basis: 50%
+            &-link
+                padding: 18px 50px
+
+@media (max-width: 1100px)
+    .prepare
+        padding: 90px 0 80px 0
+        &-title, &-subtitle
+            text-align: center
+        &-btn
+            justify-content: center
+            &__inner
+                flex-basis: 100%
+                text-align: center
+
+@media (max-width: 900px)
+    .prepare
+        padding: 70px 0 60px 0
+        &-subtitle
+            margin-bottom: 30px
+
+@media (max-width: 600px)
+    .prepare
+        padding: 30px 0 30px 0
+        &-subtitle
+            margin-bottom: 20px

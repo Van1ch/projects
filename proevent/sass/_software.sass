@@ -1,0 +1,146 @@
+.software
+    padding-bottom: 70px
+    &-subtitle
+        margin-bottom: 30px
+    &-dec
+        top: 50px
+    &-item
+        width: 100%
+        box-shadow: 7px 11px 32px 1px rgba(95, 95, 106, 0.21)
+        background-color: #fff
+        margin-bottom: 20px
+        height: calc(100% - 20px)
+        display: flex !important
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+        &__circle
+            left: auto !important
+            top: 10px !important
+            right: 10px !important
+        &__top
+            height: 280px
+            width: 100%
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            position: relative
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-image: url('../img/software/itemBg.png')
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                opacity: 1
+                transition: .3s opacity
+        &__bottom
+            flex-grow: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &-text
+                flex-grow: 1
+                transition: .3s background-color
+                padding: 20px 20px 30px 25px
+                &__title
+                    color: #000000
+                    font-size: 24px
+                    font-weight: 900
+                    letter-spacing: 0.6px
+                    text-transform: uppercase
+                    margin-bottom: 15px
+                    transition: .3s color
+                &__text
+                    letter-spacing: 0.4px
+                    color: $scarpaFlow
+                    transition: .3s color
+            &-buttons
+                display: flex
+                &__item
+                    flex-basis: 50%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-decoration: none
+                    padding: 20px 3px
+                    font-family: "Proxima Nova"
+                    text-transform: uppercase
+                    font-weight: 700
+                    transition: .3s background-color, .3s color
+                    &-img
+                        width: 21px
+                        height: 21px
+                        fill: #ffffff
+                        margin-right: 13px
+                        transition: .3s fill
+                    &_left
+                        background-color: $manatee
+                        color: #ffffff
+                    &_right
+                        border-top: 1px solid $mischka
+                        color: $manatee
+        &:hover
+            .software-item__top::after
+                opacity: 0
+            .software-item__bottom-text
+                background-color: $lightComet
+                &__title
+                    color: #ffffff
+                &__text
+                    color: #ffffff
+            .software-item__bottom-buttons__item
+                &-img
+                    fill: $manatee
+                &_right
+                    background-color: $lightComet
+                    color: #ffffff
+                &_left
+                    background-color: #ffffff
+                    color: #000000
+                    &:hover
+                        background-color: $lightComet
+                        color: #ffffff
+                        ~ .software-item__bottom-buttons__item
+                            &-img
+                                fill: #ffffff
+                            &_right
+                                color: $manatee
+                                background-color: #ffffff
+
+@media (max-width: 992px)
+    .software
+        padding-bottom: 50px
+        &-item
+            &__top
+                height: 250px
+            &__bottom
+                &-text
+                    padding: 20px
+                    &__title
+                        font-size: 21px
+                        margin-bottom: 10px
+                &-buttons
+                    &__item
+                        padding: 15px 3px
+
+@media (max-width: 767px)
+    .software
+        &-item
+            &__circle
+                top: 30px !important
+                right: -14px !important
+    
+@media (max-width: 576px)
+    .software
+        padding-bottom: 30px
+        &-title
+            text-align: center
+        &-subtitle
+            text-align: center
+            margin-bottom: 20px

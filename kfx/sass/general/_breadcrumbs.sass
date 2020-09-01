@@ -1,0 +1,21 @@
+.breadcrumbs
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 5px
+    &-item
+        color: #ffffff
+        position: relative
+        font-size: 12px
+        line-height: 16px
+        font-weight: 300
+        margin: 5px 0
+        font-weight: 400
+        &::after
+            background-color: #fff
+        &__dec
+            color: #ffffff
+            margin: 0 5px
+    &-item.inactive
+        color: $citron
+        font-weight: 700

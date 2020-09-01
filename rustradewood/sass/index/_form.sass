@@ -1,0 +1,73 @@
+.form
+    position: relative
+    z-index: 1
+    &-container
+        box-shadow: 3px 5px 64px 1px rgba(28, 27, 34, 0.15)
+        background-color: #ffffff
+        padding: 80px 120px
+    &-title
+        margin-bottom: 10px
+        text-align: center
+    &-subtitle
+        font-weight: 300
+        margin-bottom: 40px
+        text-align: center
+    &-content
+        margin-bottom: 30px
+        display: flex
+        &__input
+            flex-grow: 1
+            margin-right: 30px
+        &__submit
+            border: none
+            padding: 16px 35px
+            cursor: pointer
+    &-policy
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 15px
+        &__text
+            font-size: 12px
+            font-weight: 300
+            letter-spacing: 0.3px
+            a
+                text-decoration: none
+                color: #000000
+
+@media (max-width: 1100px)
+    .form
+        &-container
+            padding: 60px 50px
+
+@media (max-width: 900px)
+    .form
+        &-content
+            &__input
+                margin-right: 20px
+        &-container
+            padding: 40px 15px
+
+@media (max-width: 850px)
+    .form
+        &-content
+            &__submit
+                padding: 15px 35px
+@media (max-width: 800px)
+    .form
+        &-container
+            padding: 30px 15px
+        &-subtitle
+            margin-bottom: 20px
+        &-content
+            flex-direction: column
+            max-width: 500px
+            margin: 0 auto
+            margin-bottom: 20px
+            &__input
+                width: 100%
+                margin-right: 0
+                margin-bottom: 15px
+        &-policy
+            max-width: 500px
+            margin: 0 auto

@@ -1,0 +1,83 @@
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-wrapper
+        background: $sharkLight
+        padding: 45px 0 50px 0
+        border-bottom: 1px solid $tuna
+    &-item
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 12px
+            border: 1px solid rgba(255, 255, 255, 0.1)
+            padding: 12px
+            border-radius: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            svg
+                width: 15px
+                height: 15px
+                fill: $abbey
+                transition: .3s fill
+            &:hover
+                svg
+                    fill: #ffffff
+        &__text
+            &-title
+                font-size: 14px
+                font-weight: 700
+                display: block
+            &-link
+                font-size: 16px
+                display: inline-block
+                color: $kashmirBlue
+                &::after
+                    background: $kashmirBlue
+@media (max-width: 1230px)
+    .header
+        &-wrapper
+            padding: 40px 0
+        &-logo
+            img
+                max-width: 200px
+@media (max-width: 1000px)
+    .header
+        flex-wrap: wrap
+        &-logo
+            flex-basis: 100%
+            text-align: center
+            margin-bottom: 15px
+        &-item
+            &__img
+                padding: 10px
+            &__text
+                &-title
+                    font-size: 12px
+                &-link
+                    font-size: 14px
+@media (max-width: 768px)
+    .header
+        &-wrapper
+            padding: 30px 0
+        &-logo
+            margin-bottom: 20px
+            img
+                max-width: 170px
+        &-item
+            flex-basis: 100%
+            justify-content: center
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+            &__text
+                min-width: 200px
+@media (max-width: 576px)
+    .header
+        &-item
+            &__img
+                padding: 8px
+        &-wrapper
+            padding: 25px 0

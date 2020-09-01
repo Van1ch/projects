@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champion</title>
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./img/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./img/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="./img/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="./img/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="./img/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="./img/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="./img/favicon/mstile-310x310.png" />
+
+    <link rel="stylesheet" href="./css/alertify.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="header-wrapper">
+                <div class="container">
+                    <header class="header">
+                        <a href="/" class="header-logo">
+                            <div class="header-logo__photo">
+                                <svg viewBox="0 0 26 21" class="header-logo__photo-content">
+                                    <g>
+                                        <path
+                                            d="M25.99997,2.31394v18.68544h-6.88774v-3.18735h-2.66853v3.18735h-6.88763v-3.18735h-2.66853v3.18735h-6.88763v-18.68544l3.44376,-2.3142l3.44387,2.3142v3.00828h2.66853v-3.00888l3.44376,-2.3136l3.44387,2.3142v3.00828h2.66853v-3.00888l3.44376,-2.3136zM9.55607,9.95241h-2.66853v3.23002h2.66853zM19.11211,9.95241h-2.66842v3.23002h2.66842z"">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class=" header-text">чемпион</div>
+                        </a>
+                        <nav class="header-nav">
+                            <a href="#type" data-scroll="true" class="header-nav__item">Профили евроштакетника</a>
+                            <a href="#fit" data-scroll="true" class="header-nav__item">Применение</a>
+                            <a href="#order" data-scroll="true" class="header-nav__item">Заказать</a>
+                            <a href="#contacts" data-scroll="true" class="header-nav__item">Контакты</a>
+                        </nav>
+                        <div class="header-phone__wrapper">
+                            <a href="tel:78172265400" class="header-phone">
+                                <div class="header-phone__photo">
+                                    <svg viewBox="0 0 15 15" class="header-phone__photo-content">
+                                        <g>
+                                            <path
+                                                d="M13.79636,9.84535c-0.91839,0 -1.82007,-0.14422 -2.6746,-0.42606c-0.41874,-0.14302 -0.93349,-0.01202 -1.18904,0.25059l-1.68652,1.27338c-1.95602,-1.04442 -3.16086,-2.2487 -4.19071,-4.18971l1.23573,-1.64295c0.32112,-0.3209 0.43625,-0.78903 0.29823,-1.22831c-0.28358,-0.85873 -0.42767,-1.76074 -0.42767,-2.67896c0.00011,-0.66403 -0.53982,-1.20427 -1.20358,-1.20427h-2.75459c-0.66376,0 -1.20369,0.54024 -1.20369,1.20427c0,7.60722 6.18896,13.79624 13.79642,13.79624c0.66364,0 1.20358,-0.54024 1.20358,-1.20367v-2.74687c0,-0.66403 -0.54005,-1.20367 -1.20358,-1.20367z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="header-phone__text">+7 (8172) 265-400</div>
+                            </a>
+                            <div class="header-phone__caption">звонок по РФ бесплатный</div>
+                        </div>
+                    </header>
+                </div>
+                <div class="header-rectangle"></div>
+            </div>
+            <section class="hero-wrapper">
+                <div class="container-fluid">
+                    <div class="hero">
+                        <div class="hero-photo">
+                            <div class="hero-photo__text">Один раз и навсегда</div>
+                        </div>
+                        <div class="hero-text">
+                            <h1 class="hero-text__title">Евроштакетник
+                                от производителя</h1>
+                            <div class="hero-text__subtitle section-subtitle">
+                                <div class="hero-text__subtitle-title">Цены на 20% ниже рынка</div>
+                                <div class="hero-text__subtitle-text">Доставка на следующий день, благодаря собственному
+                                    производству и безупречной логистике!</div>
+                            </div>
+                            <a data-fancybox data-src="#modal" href="javascript:;" data-touch="false" class="hero-text__btn">
+                                <span class="hero-text__btn-link btn">Оставить заявку</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="picket">
+                <div class="container">
+                    <h2 class="section-title picket-title">Евроштакетник металлический</h2>
+                    <div class="section-subtitle picket-subtitle">Штакетник собственного производства – хорошая
+                        альтернатива забору из профнастила, отличающаяся низкой ценой и простотой установки забора.
+                    </div>
+                    <div class="picket-adv">
+                        <div class="picket-adv__item">
+                            <div class="picket-adv__item-photo">
+                                <img src="./img/picket/fence.png" alt="fence" class="picket-adv__item-photo__content">
+                            </div>
+                            <div class="picket-adv__item-text">Не нуждается в покраске</div>
+                        </div>
+                        <div class="picket-adv__item">
+                            <div class="picket-adv__item-photo">
+                                <img src="./img/picket/time.png" alt="time" class="picket-adv__item-photo__content">
+                            </div>
+                            <div class="picket-adv__item-text">Монтируется буквально за считанные дни
+                            </div>
+                        </div>
+                    </div>
+                    <div class="picket-list">
+                        <div class="picket-list__items">
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/1.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/2.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/3.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/4.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/5.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/6.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/7.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/8.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                            <div class="picket-list__items-item">
+                                <div class="picket-list__items-item__content"
+                                    style="background-image: url('../img/picket/9.jpg');">
+                                    <img src="./img/general/rec.jpg" alt="" class="picket-list__items-item__content-inner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="picket-list__big" style="background-image: url('../img/picket/9.jpg');">
+                            <img src="./img/general/rec.jpg" alt="" class="picket-list__big-inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="picket-rectangle"></div>
+            </section>
+            <section class="reason">
+                <div class="container">
+                    <h2 class="reason-title section-title">
+                        <span class="reason-title__special">6 причин</span>
+                        заказать штакетник у нас
+                    </h2>
+                    <div class="reason-list">
+                        <div class="reason-list__column">
+                            <div class="reason-list__column-item">
+                                <div class="reason-list__column-item__photo">
+                                    <img src="./img/reason/1.png" alt="1" class="reason-list__column-item__photo-img">
+                                </div>
+                                <div class="reason-list__column-item__title">
+                                    Оцинкованная сталь с полимерным покрытием
+                                </div>
+                                <div class="reason-list__column-item__text">
+                                    Позволяет увеличить срок службы забора до 50 лет
+                                </div>
+                            </div>
+                            <div class="reason-list__column-item">
+                                <div class="reason-list__column-item__photo">
+                                    <img src="./img/reason/2.png" alt="2" class="reason-list__column-item__photo-img">
+                                </div>
+                                <div class="reason-list__column-item__title">
+                                    Защита от ржавения
+                                </div>
+                                <div class="reason-list__column-item__text">
+                                    4 слоя защитного покрытия стали надежно защищают планки евроштакетника от коррозии
+                                </div>
+                            </div>
+                            <div class="reason-list__column-item">
+                                <div class="reason-list__column-item__photo">
+                                    <img src="./img/reason/3.png" alt="3" class="reason-list__column-item__photo-img">
+                                </div>
+                                <div class="reason-list__column-item__title">
+                                    Гарантия лучшей цены
+                                </div>
+                                <div class="reason-list__column-item__text">
+                                    За отличное качество у нас очень низкая цена! Нашли цену ниже? Предоставьте нам счет
+                                    и мы еще снизим цены для Вас!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reason-list__center">
+                            <img src="./img/reason/img.jpg" alt="img" class="reason-list__center-img reason-list__center-item" data-aos="fade-up">
+                            <img src="./img/reason/fence.png" alt="fence" class="reason-list__center-fence reason-list__center-item" data-aos="fade-up" data-aos-delay="150">
+                            <img src="./img/reason/dec.png" alt="dec" class="reason-list__center-dec reason-list__center-item" data-aos="fade-up" data-aos-delay="300">
+                        </div>
+                        <div class="reason-list__column">
+                            <div class="reason-list__column-item">
+                                <div class="reason-list__column-item__photo">
+                                    <img src="./img/reason/4.png" alt="4" class="reason-list__column-item__photo-img">
+                                </div>
+                                <div class="reason-list__column-item__title">
+                                    Повышенная прочность
+                                </div>
+                                <div class="reason-list__column-item__text">
+                                    До 33 ребер жесткости дает невероятную устойчивость вашему забору
+                                </div>
+                            </div>
+                            <div class="reason-list__column-item">
+                                <div class="reason-list__column-item__photo">
+                                    <img src="./img/reason/5.png" alt="5" class="reason-list__column-item__photo-img">
+                                </div>
+                                <div class="reason-list__column-item__title">
+                                    Двухсторонняя окраска
+                                </div>
+                                <div class="reason-list__column-item__text">
+                                    Мы производим одно- и двусторонний штакетник
+                                </div>
+                            </div>
+                            <div class="reason-list__column-item">
+                                <div class="reason-list__column-item__photo">
+                                    <img src="./img/reason/6.png" alt="6" class="reason-list__column-item__photo-img">
+                                </div>
+                                <div class="reason-list__column-item__title">
+                                    Завальцованный край
+                                </div>
+                                <div class="reason-list__column-item__text">
+                                    Защищает от порезов ваших детей
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="type" id="type">
+                <div class="container">
+                    <h2 class="type-title section-title">
+                        Предлагаем 2 типа штакетника
+                    </h2>
+                    <div class="type-subtitle">
+                        <img src="./img/type/subtitle.png" alt="subtitle" class="type-subtitle__img">
+                        <div class="type-subtitle__text">Производство 24 часа</div>
+                    </div>
+                    <div class="type-list">
+                        <div class="type-list__item">
+                            <div class="type-list__item-title">М-образный, 100 мм</div>
+                            <div class="type-list__item-photo">
+                                <img src="./img/type/1.png" alt="1" class="type-list__item-photo__img">
+                                <div class="type-list__item-photo__rib-wrapper">
+                                    <div class="type-list__item-photo__rib">
+                                        <div class="type-list__item-photo__rib-num">9</div>
+                                        <div class="type-list__item-photo__rib-text">ребер <br> жесткости</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-list__item-price">
+                                <div class="type-list__item-price__photo">
+                                    <img src="./img/type/11.png" alt="11s" class="type-list__item-price__photo-img">
+                                </div>
+                                <div class="type-list__item-price__text">
+                                    <div class="type-list__item-price__text-title">Одностороннее покрытие</div>
+                                    <div class="type-list__item-price__text-subtitle">48 <span class="ruble">₽</span>/метр</div>
+                                </div>
+                                <div class="type-list__item-price__btn">
+                                    <a data-fancybox data-src="#product" href="javascript:;" data-touch="false" class="type-list__item-price__btn-link btn">Подробнее</a>
+                                </div>
+                                <div class="data">
+                                    { "title":"М-ОБРАЗНЫЙ, 100 ММ", "cover": "Одностороннее покрытие", "colors":["url('./img/type/Group 7.png')", "url('./img/type/Group 8.png')", "url('./img/type/Group 9.png')"] }
+                                </div>
+                            </div>
+                            <div class="type-list__item-price">
+                                <div class="type-list__item-price__photo">
+                                    <img src="./img/type/12.png" alt="11s" class="type-list__item-price__photo-img">
+                                </div>
+                                <div class="type-list__item-price__text">
+                                    <div class="type-list__item-price__text-title">Двустороннее покрытие</div>
+                                    <div class="type-list__item-price__text-subtitle">52 <span class="ruble">₽</span>/метр</div>
+                                </div>
+                                <div class="type-list__item-price__btn">
+                                    <a data-fancybox data-src="#product" href="javascript:;" data-touch="false" class="type-list__item-price__btn-link btn">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-list__item">
+                            <div class="type-list__item-title">Полукруглый, 110 мм</div>
+                            <div class="type-list__item-photo">
+                                <img src="./img/type/2.png" alt="2" class="type-list__item-photo__img">
+                                <div class="type-list__item-photo__rib-wrapper">
+                                    <div class="type-list__item-photo__rib">
+                                        <div class="type-list__item-photo__rib-num">33</div>
+                                        <div class="type-list__item-photo__rib-text">ребра <br> жесткости</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-list__item-price">
+                                <div class="type-list__item-price__photo">
+                                    <img src="./img/type/21.png" alt="21" class="type-list__item-price__photo-img">
+                                </div>
+                                <div class="type-list__item-price__text">
+                                    <div class="type-list__item-price__text-title">Одностороннее покрытие</div>
+                                    <div class="type-list__item-price__text-subtitle">56 ₽/метр</div>
+                                </div>
+                                <div class="type-list__item-price__btn">
+                                    <a data-fancybox data-src="#product" href="javascript:;" data-touch="false" class="type-list__item-price__btn-link btn">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="type-list__item-price">
+                                <div class="type-list__item-price__photo">
+                                    <img src="./img/type/22.png" alt="22" class="type-list__item-price__photo-img">
+                                </div>
+                                <div class="type-list__item-price__text">
+                                    <div class="type-list__item-price__text-title">Двустороннее покрытие</div>
+                                    <div class="type-list__item-price__text-subtitle">64 ₽/метр</div>
+                                </div>
+                                <div class="type-list__item-price__btn">
+                                    <a data-fancybox data-src="#product" href="javascript:;" data-touch="false" class="type-list__item-price__btn-link btn">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="color">
+                <div class="container">
+                    <h2 class="color-title section-title">Варианты цветов</h2>
+                    <div class="color-list">
+                        <div class="color-list__item-wrapper">
+                            <div class="color-list__item">
+                                <div class="color-list__item-color">Цвет RAL 3005 </div>
+                                <div class="color-list__item-name">Вишня</div>
+                                <div class="color-list__item-dec color-list__item-dec_topRight"></div>
+                                <div class="color-list__item-dec color-list__item-dec_bottomLeft"></div>
+                                <div class="color-list__item-dec color-list__item-dec_bottomRight"></div>
+                            </div>
+                            <div class="color-list__item-img">
+                                <img src="./img/color/1.png" alt="" class="color-list__item-img__content">
+                            </div>
+                            <div class="color-list__item-bg"></div>
+                        </div>
+                        <div class="color-list__item-wrapper">
+                            <div class="color-list__item">
+                                <div class="color-list__item-color">Цвет RAL 6005</div>
+                                <div class="color-list__item-name">Зеленый</div>
+                                <div class="color-list__item-dec color-list__item-dec_topRight"></div>
+                                <div class="color-list__item-dec color-list__item-dec_bottomLeft"></div>
+                                <div class="color-list__item-dec color-list__item-dec_bottomRight"></div>
+                            </div>
+                            <div class="color-list__item-img">
+                                <img src="./img/color/2.png" alt="" class="color-list__item-img__content">
+                            </div>
+                            <div class="color-list__item-bg"></div>
+                        </div>
+                        <div class="color-list__item-wrapper">
+                            <div class="color-list__item">
+                                <div class="color-list__item-color">Цвет RAL 8017</div>
+                                <div class="color-list__item-name">Коричневый</div>
+                                <div class="color-list__item-dec color-list__item-dec_topRight"></div>
+                                <div class="color-list__item-dec color-list__item-dec_bottomLeft"></div>
+                                <div class="color-list__item-dec color-list__item-dec_bottomRight"></div>
+                            </div>
+                            <div class="color-list__item-img">
+                                <img src="./img/color/3.png" alt="" class="color-list__item-img__content">
+                            </div>
+                            <div class="color-list__item-bg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="fit" id="fit">
+                <div class="container">
+                    <div class="fit-title section-title">Металлический штакетник идеально подходит для:</div>
+                    <div class="fit-list">
+                        <div class="fit-list__item">
+                            <div class="fit-list__item-photo">
+                                <img src="./img/fit/1.png" alt="1" class="fit-list__item-photo__img">
+                            </div>
+                            <div class="fit-list__item-text">
+                                <div class="fit-list__item-text__bold">Дачных и садовых</div>
+                                участков
+                            </div>
+                        </div>
+                        <div class="fit-list__item">
+                            <div class="fit-list__item-photo">
+                                <img src="./img/fit/2.png" alt="1" class="fit-list__item-photo__img">
+                            </div>
+                            <div class="fit-list__item-text">
+                                <div class="fit-list__item-text__bold">Загородных домов</div>
+                                и коттеджей
+                            </div>
+                        </div>
+                        <div class="fit-list__item">
+                            <div class="fit-list__item-photo">
+                                <img src="./img/fit/3.png" alt="1" class="fit-list__item-photo__img">
+                            </div>
+                            <div class="fit-list__item-text">
+                                <div class="fit-list__item-text__bold">Офисов </div>
+                                и магазинов
+                            </div>
+                        </div>
+                        <div class="fit-list__item">
+                            <div class="fit-list__item-photo">
+                                <img src="./img/fit/4.png" alt="1" class="fit-list__item-photo__img">
+                            </div>
+                            <div class="fit-list__item-text">
+                                <div class="fit-list__item-text__bold">Общественных </div>
+                                учреждений
+                            </div>
+                        </div>
+                        <div class="fit-list__item">
+                            <div class="fit-list__item-photo">
+                                <img src="./img/fit/5.png" alt="1" class="fit-list__item-photo__img">
+                            </div>
+                            <div class="fit-list__item-text">
+                                <div class="fit-list__item-text__bold">Автостоянок</div>
+                                и других объектов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="choose">
+                <div class="container">
+                    <h2 class="section-title choose-title">Выбери свой забор из штакетника</h2>
+                    <div class="choose-list">
+                        <div class="choose-list__item">
+                            <div class="choose-list__item-photo__wrapper">
+                                <div class="choose-list__item-photo">
+                                    <div class="choose-list__item-photo__content" style="background-image: url('../img/choose/1.jpg');">
+                                        <img src="/img/general/rec2.png" alt="1" class="choose-list__item-photo__content-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose-list__item-title">
+                                Забор евроштакетника в один ряд
+                            </div>
+                            <div class="choose-list__item-subtitle">
+                                Рекомендуемый зазор между планками 1-5 см
+                            </div>
+                            <div class="choose-list__item-btn">
+                                <a data-fancybox data-src="#modal" href="javascript:;" data-touch="false" class="choose-list__item-btn__link btn">Оставить заявку</a>
+                            </div>
+                        </div>
+                        <div class="choose-list__item">
+                            <div class="choose-list__item-photo__wrapper">
+                                <div class="choose-list__item-photo">
+                                    <div class="choose-list__item-photo__content" style="background-image: url('../img/choose/2.jpg');">
+                                        <img src="/img/general/rec2.png" alt="1" class="choose-list__item-photo__content-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose-list__item-title">
+                                Забор евроштакетника в один ряд
+                            </div>
+                            <div class="choose-list__item-subtitle">
+                                Рекомендуемый зазор между планками 1-5 см
+                            </div>
+                            <div class="choose-list__item-btn">
+                                <a data-fancybox data-src="#modal" href="javascript:;" data-touch="false" class="choose-list__item-btn__link btn">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="next">
+                <div class="container">
+                    <h2 class="section-title next-title">Я все понял, а что дальше?</h2>
+                    <div class="next-list">
+                        <div class="next-list__item">
+                            <div class="next-list__item-num">1</div>
+                            <div class="next-list__item-img">
+                                <img src="./img/next/1.png" alt="1" class="next-list__item-img__content">
+                            </div>
+                            <div class="next-list__item-title">Сейчас</div>
+                            <div class="next-list__item-text">
+                                Вы оставляете заявку на сайте, или звоните по телефону
+                            </div>
+                            <div class="next-list__item-phones">
+                                <a href="#" class="next-list__item-phones__item">8-800-700-91-52</a>
+                                <a href="#" class="next-list__item-phones__item">8-8172-265-400</a>
+                            </div>
+                            <div class="next-btn">
+                                <a data-fancybox data-src="#modal" href="javascript:;" data-touch="false" class="next-btn__link btn">Оставить заявку</a>
+                            </div>
+                        </div>
+                        <div class="next-list__item">
+                            <div class="next-list__item-num">2</div>
+                            <div class="next-list__item-img">
+                                <img src="./img/next/2.png" alt="1" class="next-list__item-img__content">
+                            </div>
+                            <div class="next-list__item-title">
+                                <span class="next-list__item-title_white">В течение</span>
+                                15 минут</div>
+                            <div class="next-list__item-text">
+                                Менеджер консультирует Вас и помогает определится с выбором
+                            </div>
+                        </div>
+
+                        <div class="next-list__item">
+                            <div class="next-list__item-num">3</div>
+                            <div class="next-list__item-img">
+                                <img src="./img/next/3.png" alt="1" class="next-list__item-img__content">
+                            </div>
+                            <div class="next-list__item-title">
+                                <span class="next-list__item-title_white">В течение</span>
+                                4 часов</div>
+                            <div class="next-list__item-text">
+                                На производстве начинают изготавливать Ваш штакетник.
+                            </div>
+                        </div>
+                        <div class="next-list__item">
+                            <div class="next-list__item-num">4</div>
+                            <div class="next-list__item-img">
+                                <img src="./img/next/4.png" alt="1" class="next-list__item-img__content">
+                            </div>
+                            <div class="next-list__item-title">
+                                <span class="next-list__item-title_white">Через</span>
+                                24 часа</div>
+                            <div class="next-list__item-text">
+                                Ваш штакетник готов к доставке либо самовывозу. Производится доставка.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-wrapper" id="order">
+                <div class="container">
+                    <div class="form">
+                        <div class="form-man">
+                            <div class="form-man__img">
+                                <img src="./img/form/man.png" alt="man" class="form-man__img-content">
+                            </div>
+                            <div class="form-man__rec"  data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                                <div class="form-man__rec-img">
+                                    <img src="./img/form/money.png" alt="money" class="form-man__rec-img__content">
+                                </div>
+                                <div class="form-man__rec-text">
+                                    <div class="form-man__rec-text__title">Держим цену ниже средней</div>
+                                    <div class="form-man__rec-text__text">за счет собственного производства</div>
+                                </div>
+                                <div class="form-man__rec-dec form-man__rec-dec_topLeft"></div>
+                                <div class="form-man__rec-dec form-man__rec-dec_topRight"></div>
+                                <div class="form-man__rec-dec form-man__rec-dec_bottomLeft"></div>
+                                <div class="form-man__rec-dec form-man__rec-dec_bottomRight"></div>
+                            </div>
+                        </div>
+                        <div class="form-content">
+                            <h2 class="section-title form-content__title">Односторонний 
+                                или двусторонний 
+                                штакетник?</h2>
+                            <div class="section-subtitle form-content__subtitle">Если у вас возникли вопросы, либо нужна консультация специалиста, мы с радостью вам поможем. </div>
+                            <input type="text" class="form-content__input input" placeholder="Ваше имя">
+                            <input type="tel" class="form-content__input input" placeholder="Номер телефона">
+                            <div class="form-content__checkbox">
+                                <img src="./img/general/checkbox.png" alt="" class="form-content__checkbox-img">
+                                <div class="form-content__checkbox-text">
+                                    Согласен с <a href="#" class="form-content__checkbox-text__link link">политикой конфиденциальности</a>
+                                </div>
+                            </div>
+                            <input type="submit" class="form-content__btn btn" value="Оставить заявку">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-bg__wrapper">
+                    <div class="form-bg">
+                        <div class="form-bg__inner"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="feedback">
+                <div class="container">
+                    <h2 class="section-title feedback-title">Отзывы</h2>
+                    <div class="feedback-slider">
+                        <div class="feedback-slider__item-wrapper">
+                            <div class="feedback-slider__photo">
+                                <img src="./img/feedback/img.jpg" alt="img" class="feedback-slider__photo-content">
+                            </div>
+                            <div class="feedback-slider__item">
+                                <div class="feedback-slider__item-inner">
+                                    <div class="feedback-slider__item-inner__top">
+                                        <div class="feedback-slider__item-inner__top-quotes">
+                                            <svg viewBox="0 0 39 28"
+                                                class="feedback-slider__item-inner__top-quotes__content">
+                                                <g>
+                                                    <path
+                                                        d="M0.00007,-0.00033h16.7141v16.80031l-5.57133,11.19961h-8.35716l5.57144,-11.19961h-8.35705zM38.99982,-0.00033v16.80031l-5.57144,11.19961h-8.35705l5.57133,-11.19961h-8.35705v-16.80031z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="feedback-slider__item-inner__top-line"></div>
+                                    </div>
+                                    <p class="feedback-slider__item-inner__text">
+                                        Решили с мужем на даче обновить старый забор и стали искать в интернете на
+                                        форумах, какой забор понадежнее и долговечнее. Пересмотрели много вариантов и
+                                        остановились на евроштакетнике, как раз подошел нам по нашей задумке и цене, а
+                                        также по качеству и то, что есть возможность быстрой доставки транспортной
+                                        компанией прямо в наш город. Договорились с компанией, сделали примерный расчет,
+                                        но заказали с запасом. Доставку осуществили быстро, с этим вопрос был решен
+                                        быстро и без проблем. Устанавливали недолго, получился очень даже ничего,
+                                        надежный и симпатичный как мы и хотели. Спасибо за такой разумный вариант,
+                                        надеемся, что он нам прослужит долго.
+                                    </p>
+                                    <div class="feedback-slider__item-inner__bottom">
+                                        <div class="feedback-slider__item-inner__bottom-name">Светлана Леонтьева</div>
+                                        <div class="feedback-slider__item-inner__bottom-line"></div>
+                                        <div class="feedback-slider__item-inner__bottom-date">24.06.2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider__item-wrapper">
+                            <div class="feedback-slider__photo">
+                                <img src="./img/feedback/img.jpg" alt="img" class="feedback-slider__photo-content">
+                            </div>
+                            <div class="feedback-slider__item">
+                                <div class="feedback-slider__item-inner">
+                                    <div class="feedback-slider__item-inner__top">
+                                        <div class="feedback-slider__item-inner__top-quotes">
+                                            <svg viewBox="0 0 39 28"
+                                                class="feedback-slider__item-inner__top-quotes__content">
+                                                <g>
+                                                    <path
+                                                        d="M0.00007,-0.00033h16.7141v16.80031l-5.57133,11.19961h-8.35716l5.57144,-11.19961h-8.35705zM38.99982,-0.00033v16.80031l-5.57144,11.19961h-8.35705l5.57133,-11.19961h-8.35705v-16.80031z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="feedback-slider__item-inner__top-line"></div>
+                                    </div>
+                                    <p class="feedback-slider__item-inner__text">
+                                        Решили с мужем на даче обновить старый забор и стали искать в интернете на
+                                        форумах, какой забор понадежнее и долговечнее. Пересмотрели много вариантов и
+                                        остановились на евроштакетнике, как раз подошел нам по нашей задумке и цене, а
+                                        также по качеству и то, что есть возможность быстрой доставки транспортной
+                                        компанией прямо в наш город. Договорились с компанией, сделали примерный расчет,
+                                        но заказали с запасом. Доставку осуществили быстро, с этим вопрос был решен
+                                        быстро и без проблем. Устанавливали недолго, получился очень даже ничего,
+                                        надежный и симпатичный как мы и хотели. Спасибо за такой разумный вариант,
+                                        надеемся, что он нам прослужит долго.
+                                    </p>
+                                    <div class="feedback-slider__item-inner__bottom">
+                                        <div class="feedback-slider__item-inner__bottom-name">Светлана Леонтьева</div>
+                                        <div class="feedback-slider__item-inner__bottom-line"></div>
+                                        <div class="feedback-slider__item-inner__bottom-date">24.06.2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider__item-wrapper">
+                            <div class="feedback-slider__photo">
+                                <img src="./img/feedback/img.jpg" alt="img" class="feedback-slider__photo-content">
+                            </div>
+                            <div class="feedback-slider__item">
+                                <div class="feedback-slider__item-inner">
+                                    <div class="feedback-slider__item-inner__top">
+                                        <div class="feedback-slider__item-inner__top-quotes">
+                                            <svg viewBox="0 0 39 28"
+                                                class="feedback-slider__item-inner__top-quotes__content">
+                                                <g>
+                                                    <path
+                                                        d="M0.00007,-0.00033h16.7141v16.80031l-5.57133,11.19961h-8.35716l5.57144,-11.19961h-8.35705zM38.99982,-0.00033v16.80031l-5.57144,11.19961h-8.35705l5.57133,-11.19961h-8.35705v-16.80031z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="feedback-slider__item-inner__top-line"></div>
+                                    </div>
+                                    <p class="feedback-slider__item-inner__text">
+                                        Решили с мужем на даче обновить старый забор и стали искать в интернете на
+                                        форумах, какой забор понадежнее и долговечнее. Пересмотрели много вариантов и
+                                        остановились на евроштакетнике, как раз подошел нам по нашей задумке и цене, а
+                                        также по качеству и то, что есть возможность быстрой доставки транспортной
+                                        компанией прямо в наш город. Договорились с компанией, сделали примерный расчет,
+                                        но заказали с запасом. Доставку осуществили быстро, с этим вопрос был решен
+                                        быстро и без проблем. Устанавливали недолго, получился очень даже ничего,
+                                        надежный и симпатичный как мы и хотели. Спасибо за такой разумный вариант,
+                                        надеемся, что он нам прослужит долго.
+                                    </p>
+                                    <div class="feedback-slider__item-inner__bottom">
+                                        <div class="feedback-slider__item-inner__bottom-name">Светлана Леонтьева</div>
+                                        <div class="feedback-slider__item-inner__bottom-line"></div>
+                                        <div class="feedback-slider__item-inner__bottom-date">24.06.2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-slider__item-wrapper">
+                            <div class="feedback-slider__photo">
+                                <img src="./img/feedback/img.jpg" alt="img" class="feedback-slider__photo-content">
+                            </div>
+                            <div class="feedback-slider__item">
+                                <div class="feedback-slider__item-inner">
+                                    <div class="feedback-slider__item-inner__top">
+                                        <div class="feedback-slider__item-inner__top-quotes">
+                                            <svg viewBox="0 0 39 28"
+                                                class="feedback-slider__item-inner__top-quotes__content">
+                                                <g>
+                                                    <path
+                                                        d="M0.00007,-0.00033h16.7141v16.80031l-5.57133,11.19961h-8.35716l5.57144,-11.19961h-8.35705zM38.99982,-0.00033v16.80031l-5.57144,11.19961h-8.35705l5.57133,-11.19961h-8.35705v-16.80031z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="feedback-slider__item-inner__top-line"></div>
+                                    </div>
+                                    <p class="feedback-slider__item-inner__text">
+                                        Решили с мужем на даче обновить старый забор и стали искать в интернете на
+                                        форумах, какой забор понадежнее и долговечнее. Пересмотрели много вариантов и
+                                        остановились на евроштакетнике, как раз подошел нам по нашей задумке и цене, а
+                                        также по качеству и то, что есть возможность быстрой доставки транспортной
+                                        компанией прямо в наш город. Договорились с компанией, сделали примерный расчет,
+                                        но заказали с запасом. Доставку осуществили быстро, с этим вопрос был решен
+                                        быстро и без проблем. Устанавливали недолго, получился очень даже ничего,
+                                        надежный и симпатичный как мы и хотели. Спасибо за такой разумный вариант,
+                                        надеемся, что он нам прослужит долго.
+                                    </p>
+                                    <div class="feedback-slider__item-inner__bottom">
+                                        <div class="feedback-slider__item-inner__bottom-name">Светлана Леонтьева</div>
+                                        <div class="feedback-slider__item-inner__bottom-line"></div>
+                                        <div class="feedback-slider__item-inner__bottom-date">24.06.2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-slider__nav">
+                        <div class="feedback-slider__nav-dots"></div>
+                        <div class="feedback-slider__nav-arrows"></div>
+                    </div>
+                </div>
+                <div class="feedback-bg__wrapper">
+                    <div class="feedback-bg">
+                        <div class="feedback-bg__inner"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="delivery">
+                <div class="container">
+                    <h2 class="section-title delivery-title">Доставка в любой город РФ</h2>
+                    <div class="delivery-car">
+                        <img src="./img/delivery/car.png" alt="car" class="delivery-car__img">
+                    </div>
+                    <div class="delivery-content__wrapper">
+                        <div class="delivery-content">
+                            <div class="delivery-content__item">
+                                <div class="delivery-content__item-img">
+                                    <img src="./img/delivery/1.png" alt="1" class="delivery-content__item-img__content">
+                                </div>
+                                <div class="delivery-content__item-text">
+                                    <div class="delivery-content__item-text__title">Бесплатная доставка до терминала ТК</div>
+                                    <div class="delivery-content__item-text__text">в Московской и Ленинградской областях</div>
+                                </div>
+                            </div>
+                            <div class="delivery-content__item">
+                                <div class="delivery-content__item-img">
+                                    <img src="./img/delivery/2.png" alt="1" class="delivery-content__item-img__content">
+                                </div>
+                                <div class="delivery-content__item-text">
+                                    <div class="delivery-content__item-text__title">Доставка заказа в течение 2х - 3х дней</div>
+                                    <div class="delivery-content__item-text__text">с момента подачи заявки</div>
+                                </div>
+                            </div>
+                            <div class="delivery-content__item">
+                                <div class="delivery-content__item-img">
+                                    <img src="./img/delivery/3.png" alt="1" class="delivery-content__item-img__content">
+                                </div>
+                                <div class="delivery-content__item-text">
+                                    <div class="delivery-content__item-text__title">Доставка в  любой регион РФ</div>
+                                    <div class="delivery-content__item-text__text">транспортной компанией</div>
+                                </div>
+                            </div>
+                            <div class="delivery-content__btn">
+                                <a data-fancybox data-src="#modal" href="javascript:;" data-touch="false" class="delivery-content__btn-link btn">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-map">
+                    <img src="./img/delivery/map.png" alt="map" class="delivery-map__img">
+                </div>
+                <div class="delivery-bg__wrapper">
+                    <div class="delivery-bg">
+                        <div class="delivery-bg__inner"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="map" id="contacts">
+                <div class="container-fluid">
+                    <div id="map" class="map-content"></div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="container">
+                <div class="footer">
+                    <div class="footer-item">
+                        <div class="footer-item__title">Штакетник чемпион</div>
+                        <a href="#" class="footer-item__phone">8-800-700-91-52</a>
+                        <div class="footer-item__free">звонок по РФ бесплатный</div>
+                        <div class="footer-item__caption">Дилер по Вологодской
+                            и Архангельской области</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-item__title">Кровельный центр Легион</div>
+                        <a href="#" class="footer-item__phone">8-8172-265-400</a>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-right__item">
+                            Все права защищены, копирование любых материалов запрещено.
+                        </div>
+                        <a data-fancybox data-src="#policy" href="javascript:;" class="footer-right__item footer-right__item-link link ">Политика
+                            конфиденциальности</a>
+                        <div class="footer-right__copyright">
+                            © 2020
+                        </div>
+                        <div class="footer-right__development">
+                            Разработка сайта - <a href="https://udnet.ru/" target="_blank"
+                                class="footer-right__development-link link">Удобный интернет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="modal-wrapper" id="modal">
+            <div class="modal">
+                <div class="modal-photo"></div>
+                <div class="modal-content">
+                    <div class="modal-content__title">Оставить заявку</div>
+                    <div class="modal-content__text">Просто заполните контактную форму, наш специалист свяжется с Вами в ближайшее время.</div>
+                    <input type="text" class="modal-content__input input" placeholder="Ваше имя">
+                    <input type="tel" class="modal-content__input input" placeholder="Телефон">
+                    <input type="email" class="modal-content__input input" placeholder="E-mail:">
+                    <input type="submit" value="Отправить" class="modal-content__btn btn">
+                    <div class="modal-content__policy">
+                        <img src="./img/general/checkbox.png" alt="" class="modal-content__policy-checkbox">
+                        <div class="modal-content__policy-text">Я принимаю политику обработки <a data-fancybox data-src="#policy" href="javascript:;" class="modal-content__policy-text__link link">персональных данных</a>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="policy-wrapper" id="policy">
+            <div class="policy">
+                <div class="policy-title">Политика конфиденциальности</div>
+                <p class="policy-text">Настоящее Пользовательское соглашение является публичным документом администратора сайта https://udnet.ru (далее – Администратор) и определяет порядок использования посетителями (далее - Посетитель) сайта https://udnet.ru, принадлежащего Администратору, и обработки, хранения и иного использования информации, получаемой Администратором от Посетителя на сайте Администратора. Администратор сайта может изменить в любой момент данное Пользовательское соглашение без уведомления Посетителя сайта.</p>
+                <ul class="policy-list">
+                    <li class="policy-list__item">Посетитель сайта, оставляя какую-либо информацию, относящуюся прямо или косвенно к определенному или определяемому физическому лицу (далее - Персональные данные), подтверждает, что ознакомился с данным Пользовательским соглашением и согласен с ним.</li>
+                    <li class="policy-list__item">В отношении всех сообщаемых Персональных данных Посетитель дает Администратору полное согласие на их обработку.</li>
+                    <li class="policy-list__item">Администратор сайта гарантирует Посетителю, что обработка и хранение поступивших Персональных данных Посетителя будет осуществляться в соответствии с положениями Федерального закона от 27.06.2006 № 152-ФЗ «О персональных данных».</li>
+                    <li class="policy-list__item">Посетитель сайта понимает и соглашается с тем, что предоставление Администратору какой-либо информации, не имеющей никакого отношения к целям сайта, запрещено. Такой информацией может являться информация, касающаяся состояния здоровья, интимной жизни, национальности, религии, политических, философских и иных убеждений Посетителя, а равно и информация, которая является коммерческой, банковской и иной тайной Посетителя сайта.</li>
+                    <li class="policy-list__item">Администратор гарантирует Посетителю, что использует Персональные данные, поступившие от Посетителя, исключительно в целях, ограниченных маркетинговыми, рекламными, информационными целями Администратора, а также для анализа и исследования Посетителей сайта, а также в целях предоставления ему товаров и услуг непосредственно находящихся, либо нет, на сайте Администратора.</li>
+                    <li class="policy-list__item">Посетитель в соответствии с ч. 1 ст. 18 Федерального закона «О рекламе» дает Администратору свое согласие на получение сообщений рекламного характера по указанным контактным данным.Посетитель самостоятельно несёт ответственность за нарушение законодательства при использовании сайта Администратора.</li>
+                    <li class="policy-list__item">Посетитель самостоятельно несёт ответственность за нарушение законодательства при использовании сайта Администратора.</li>
+                    <li class="policy-list__item">Администратор не несет никакой ответственности в случае нарушения законодательства Посетителем, в том числе, не гарантирует, что содержимое сайта соответствует целям Посетителя сайта.</li>
+                    <li class="policy-list__item">Посетитель сайта несет самостоятельно ответственность в случае, если были нарушены права и законные интересы третьих лиц, при использовании сайта Администратора, Посетителем.</li>
+                    <li class="policy-list__item">Администратор вправе запретить использование сайта Посетителю, если на то есть законные основания.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-wrapper" id="product">
+            <div class="product">
+                <div class="product-top">
+                    <div class="product-top__photo"></div>
+                    <div class="product-top__content">
+                        <div class="product-top__content-title">
+                            Штакетник полукруглый, 110 мм
+                        </div>
+                        <div class="product-top__content-side">
+                            <img src="./img/general/productCheckbox.png" alt="" class="product-top__content-side__checkbox">
+                            <div class="product-top__content-side__text">Одностороннее покрытие</div>
+                        </div>
+                        <div class="product-top__content-settings">
+                            <div class="product-top__content-settings__item">
+                                <div class="product-top__content-settings__item-title">Введите длину забора, мм</div>
+                                <input type="number" class="product-top__content-settings__item-input" placeholder="Например, 32200">
+                            </div>
+                            <div class="product-top__content-settings__item">
+                                <div class="product-top__content-settings__item-title">Введите высоту забора, мм </div>
+                                <input type="number" class="product-top__content-settings__item-input" placeholder="Например, 1500">
+                            </div>
+                        </div>
+                        <div class="product-top__content-color">
+                            <div class="product-top__content-color__title">Выберите цвет</div>
+                            <form action="#">
+                                <div class="product-top__content-color__choose">
+                                    <div class="product-top__content-color__choose-item" style="background-image: url('../img/general/red.png');" data-color="Красный"></div>
+                                    <div class="product-top__content-color__choose-item" style="background-image: url('../img/general/green.png');" data-color="Зеленый"></div>
+                                    <div class="product-top__content-color__choose-item" style="background-image: url('../img/general/brown.png');" data-color="Коричневый"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-bottom__wrapper">
+                    <div class="product-bottom">
+                        <input type="text" class="product-bottom__input input" placeholder="Ваше имя">
+                        <input type="tel" class="product-bottom__input input" placeholder="Номер телефона">
+                        <div class="product-bottom__checkbox">
+                            <img src="./img/general/checkbox.png" alt="" class="product-bottom__checkbox-img">
+                            <div class="product-bottom__checkbox-text">
+                                Согласен с <a data-fancybox data-src="#policy" href="javascript:;" class="product-bottom__checkbox-text__link link">политикой конфиденциальности</a>
+                            </div>
+                        </div>
+                        <input type="submit" class="product-bottom__submit btn" value="Оставить заявку">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/alertify.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+.cardTech
+    padding-top: 50px
+    &-title
+        margin-bottom: 90px
+    &-list
+        padding-left: 9px
+        color: #000000
+        font-size: 24px
+        letter-spacing: 0.6px
+        display: flex
+        flex-direction: column
+        &__item
+            padding-left: 13px
+            position: relative
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                width: 6px
+                height: 6px
+                border-radius: 100%
+                background-color: #000000
+                left: 0
+                top: 9px
+                transform: translate(-100%, 0)
+    &-img
+        position: relative
+        padding-bottom: 60px
+        // &::before
+        //     position: absolute
+        //     display: block
+        //     content: ''
+        //     z-index: 2
+        //     right: 40px
+        //     top: 0
+        //     transform: translateY(-50%)
+        //     height: 112px
+        //     width: 25px
+        //     background-color: #67678c
+        &__dec
+            position: absolute
+            bottom: 0
+            right: 20px
+            z-index: 0
+        &__content
+            position: relative
+            z-index: 1
+            max-width: 100%
+            width: 100%
+
+@media (max-width: 1239px)
+    .cardTech
+        &-title
+            margin-bottom: 90px
+        &-list
+            font-size: 22px
+            &__item
+                margin-bottom: 15px
+        
+@media (max-width: 991px)
+    .cardTech
+        padding-top: 25px
+        &-title
+            text-align: center
+            margin-bottom: 40px
+        &-list
+            width: auto
+            max-width: 100%
+            margin-bottom: 30px
+        &-img
+            text-align: center
+            padding-bottom: 50px
+            &::before
+                display: none
+            &__dec
+                display: none
+            &__content
+                width: auto
+
+@media (max-width: 767px)
+    .cardTech
+        padding-top: 15px
+        &-img
+            padding-bottom: 40px
+        &-title
+            margin-bottom: 20px
+        &-list
+            font-size: 18px
+            &__item
+                margin-bottom: 12px

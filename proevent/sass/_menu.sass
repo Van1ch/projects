@@ -1,0 +1,40 @@
+.menu
+    position: fixed
+    height: 100%
+    width: 300px
+    right: 0
+    top: 0
+    background-color: lighten($lightSteelGray, 10%)
+    z-index: 50
+    padding: 50px 30px
+    transform: translateX(100%)
+    transition: .5s transform
+    overflow: auto
+    &-content
+        position: relative
+        &__item
+            margin-bottom: 15px
+            &-link
+                padding: 10px
+                font-size: 20px
+                text-decoration: none
+                color: #ffffff
+                display: block
+        &__close
+            padding: 5px
+            position: absolute
+            top: -10px
+            right: 10px
+            width: 42px
+            height: 42px
+            &-item
+                width: 100%
+                height: 1px
+                background-color: #ffffff
+                &:first-child
+                    transform: rotate(45deg)
+                &:last-child
+                    transform: rotate(-45deg)
+            
+.menu.active
+    transform: translateX(0)

@@ -1,0 +1,147 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-rectangle
+        position: absolute
+        right: 0
+        top: 0
+        background-color: $mako
+        height: 100%
+        width:  calc((100% - 1180px) / 2)
+    &-wrapper
+        background-color: #fff
+        position: relative
+    &-logo
+        display: flex
+        align-items: center
+        &__photo
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 47px
+            height: 47px
+            background-color: $mako
+            border-radius: 100%
+            margin-right: 15px
+            &-content
+                width: 26px
+                height: 21px
+                fill: $seaBuckthorn
+    &-text
+        color: #000000
+        font-size: 24px
+        font-weight: 700
+        text-transform: uppercase
+    &-nav
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        &__item
+            font-size: 18px
+            font-weight: 600
+            color: #000000
+            margin-right: 30px
+            transition: .3s color
+            &:last-child
+                margin-right: 0
+            &:hover
+                color: $seaBuckthorn
+    &-phone
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+        &:hover
+            .header-phone__photo
+                background-color: $seaBuckthorn
+        &__photo
+            width: 35px
+            height: 35px
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color: #ffffff
+            border-radius: 100%
+            margin-right: 15px
+            transition: .3s background-color
+            &-content
+                width: 15px
+                height: 15px
+        &__text
+            color: #ffffff
+            font-weight: 700
+            text-transform: uppercase
+            font-size: 20px
+        &__wrapper
+            background-color: $mako
+            padding: 25px 0
+            padding-left: 30px
+        &__caption
+            text-align: right
+            color: #ffffff
+
+@media (min-width: 1151px)
+    .header-wrapper
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 100
+        width: 100%
+
+@media (max-width: 1240px)
+    .header
+        &-rectangle
+            width: 100px
+            z-index: 0
+        &-phone
+            &__wrapper
+                position: relative
+                z-index: 1
+@media (max-width: 1150px)
+    .header
+        flex-wrap: wrap
+        padding-bottom: 20px
+        &-nav
+            justify-content: center
+            min-width: calc(100% + 30px)
+            margin-left: -15px
+            order: 3
+            padding-top: 20px
+            border-top: 1px solid $mako
+            &__item
+                margin: 0 10px
+                &:last-child
+                    margin-right: 10px
+        &-phone
+            &__wrapper
+                min-width: 210px
+                flex-basis: 210px
+                padding: 20px 0 20px 15px
+            &__text
+                font-size: 18px
+            &__photo
+                width: 30px
+                height: 30px
+        &-rectangle
+            height: 100px
+
+@media (max-width: 470px)
+    .header
+        flex-direction: column
+        padding: 20px 0
+        &-phone
+            justify-content: center
+            &__wrapper
+                margin-top: 15px
+                padding: 10px 15px
+                flex-basis: 100%
+                width: calc(100% + 30px)
+                margin-left: -15px
+            &__caption
+                text-align: center
+        &-rectangle
+            display: none
+        &-nav
+            padding: 15px 0
+            padding-bottom: 0
+            border-top: none

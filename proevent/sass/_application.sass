@@ -1,0 +1,192 @@
+.application
+    background-image: url('../img/application/bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    padding: 120px 0 80px 0
+    &-title
+        color: #ffffff
+        max-width: 510px
+        margin-bottom: 40px
+    &-subtitle
+        margin-bottom: 10px
+        color: $amethystSmoke
+    &-text
+        font-size: 20px
+        max-width: 600px
+        margin-bottom: 90px
+    &-form
+        margin-bottom: 25px
+        form
+            display: flex
+            align-items: center
+        &__submit
+            border: none
+            font-size: 18px
+            padding: 26px 3px
+            width: 100%
+            max-width: 240px
+            text-align: center
+            border-radius: 37px
+            cursor: pointer
+            font-weight: 700
+        &__input
+            width: 100%
+            max-width: 540px
+            margin-right: 20px
+            font-size: 52px
+            color: $waterloo
+            border: none
+            background-color: transparent
+            letter-spacing: 2.6px
+            font-weight: 700
+            &::-webkit-input-placeholder
+                letter-spacing: 2.6px
+                font-weight: 700
+                color: $waterloo
+    &-checkbox
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 15px
+        &__text
+            max-width: 450px
+            font-size: 12px
+            letter-spacing: 0.3px
+            color: $comet
+            &-link
+                color: $comet
+                text-decoration: none
+                &::after
+                    background-color: $comet
+
+.software
+    &-application
+        background-image: url('../img/application/bg2.jpg')
+        .application-title
+            max-width: 620px
+        .application-subtitle
+            max-width: 620px
+            margin-bottom: 100px
+
+.rent
+    &-application
+        .application-title
+            margin-bottom: 30px
+            max-width: 645px
+        .application-subtitle
+            margin-bottom: 15px
+            max-width: 540px
+
+.sale
+    &-application
+        background-image: url('../img/application/bg3.jpg')
+
+@media (max-width: 1240px)
+    .application
+        padding: 90px 0 60px 0
+@media (max-width: 992px)
+    .application
+        padding: 70px 0 50px 0
+        position: relative
+        &::before
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            display: block
+            content: ''
+            background-color: #000000
+            opacity: 0.5
+            z-index: 0
+        &-subtitle
+            position: relative
+            z-index: 1
+        &-title
+            position: relative
+            z-index: 1
+            margin-bottom: 20px
+        &-text
+            position: relative
+            z-index: 1
+            font-size: 18px
+            margin-bottom: 70px
+        &-form
+            position: relative
+            z-index: 1
+            &__input
+                font-size: 44px
+                max-width: 600px
+            &__submit
+                padding: 20px 3px
+                font-size: 16px
+                max-width: 200px
+        &-checkbox
+            position: relative
+            z-index: 1
+    .software
+        &-application
+            .application-title
+                max-width: 100%
+            .application-subtitle
+                max-width: 100%
+                margin-bottom: 70px
+@media (max-width: 767px)
+    .application
+        text-align: center
+        padding: 40px 0
+        &-title
+            margin-bottom: 20px
+        &-form
+            form
+                flex-wrap: wrap
+                justify-content: center
+            &__input
+                max-width: 100%
+                text-align: center
+                margin-bottom: 20px
+                font-size: 40px
+                margin-right: 0
+            &__submit
+                padding: 16px 3px
+        &-text
+            margin-bottom: 30px
+        &-checkbox
+            &__text
+                text-align: left
+                max-width: 100%
+    .software
+        &-application
+            .application-subtitle
+                margin-bottom: 50px
+@media (max-width: 576px)
+    .application
+        padding: 30px 0
+        &-form
+            &__input
+                font-size: 36px
+@media (max-width: 470px)
+    .application
+        &-form
+            &__input
+                font-size: 32px
+    .software
+        &-application
+            .application-subtitle
+                margin-bottom: 40px
+@media (max-width: 410px)
+    .application
+        &-form
+            &__input
+                font-size: 28px
+@media (max-width: 360px)
+    .application
+        &-form
+            &__input
+                font-size: 24px
+        &-checkbox
+            &__text
+                &-link
+                    &::after
+                        display: none

@@ -1,0 +1,128 @@
+.bottom
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.16)
+    background-color: #ffffff
+    padding: 30px 0 70px 0
+    &-top
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 50px
+        &__title
+            text-align: center
+            font-size: 26px
+            font-weight: 600
+            color: $tundora
+            margin-bottom: 30px
+        &__text
+            width: 100%
+            max-width: 850px
+            resize: none
+            min-height: 250px
+            border: 1px solid $silver
+            padding: 20px
+            font-size: 23px
+            margin-bottom: 40px
+            &::-webkit-input-placeholder
+                line-height: 220px
+                text-align: center
+                font-size: 21px
+                font-weight: 600
+                color: $silver
+        &__error
+            color: red
+            margin-top: 10px
+            display: none
+    &-bottom
+        box-shadow: -1px 11px 27px 1px rgba(6, 12, 6, 0.23)
+        background-image: url(../img/bottom/bg.jpg)
+        background-repeat: no-repeat
+        background-position: 90% 85%
+        padding: 120px 15px 80px 15px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        &__title
+            margin-bottom: 100px
+            font-size: 38px
+            font-weight: 700
+            color: $tundora
+            text-align: center
+        &__button
+            padding: 16px 40px
+            text-decoration: none
+
+@media (max-width: 1350px)
+    .bottom
+        &-bottom
+            padding: 100px 15px 60px 15px
+            background-size: contain
+
+@media (max-width: 1100px)
+    .bottom
+        &-bottom
+            &__title
+                margin-bottom: 80px
+
+@media (max-width: 900px)
+    .bottom
+        padding: 40px 0 70px 0
+        &-top
+            margin-bottom: 50px
+            &__title
+                font-size: 22px
+                margin-bottom: 20px
+            &__text
+                min-height: 200px
+                max-width: 600px
+                font-size: 20px
+                &::-webkit-input-placeholder
+                    line-height: 170px
+                    font-size: 18px
+        &-bottom
+            padding: 80px 15px 50px 15px
+            &__title
+                margin-bottom: 60px
+                font-size: 34px
+
+@media (max-width: 600px)
+    .bottom
+        padding: 30px 0 30px 0
+        &-top
+            margin-bottom: 30px
+            &__title
+                font-size: 20px
+                br
+                    display: none
+        &-bottom
+            padding: 80px 15px 50px 15px
+            &__title
+                margin-bottom: 40px
+                font-size: 30px
+
+@media (max-width: 450px)
+    .bottom
+        &-top
+            &__text
+                min-height: 170px
+                padding: 10px
+                margin-bottom: 20px
+                &::-webkit-input-placeholder
+                    line-height: 140px
+                    font-size: 15px
+        &-bottom
+            padding: 60px 15px 50px 15px
+            &__title
+                margin-bottom: 30px
+                font-size: 26px
+            &__button
+                padding: 16px 25px
+
+@media (max-width: 380px)
+    .bottom
+        &-bottom
+            padding: 60px 15px 50px 15px
+            &__title
+                margin-bottom: 30px
+                font-size: 24px
+            

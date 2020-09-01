@@ -1,0 +1,133 @@
+.soft
+    padding-top: 70px
+    padding-bottom: 120px
+    &-title
+        max-width: 800px
+        margin-bottom: 60px
+    &-item
+        box-shadow: 7px 11px 32px 1px rgba(95, 95, 106, 0.21)
+        margin-bottom: 20px
+        height: calc(100% - 20px)
+        flex-direction: column
+        display: flex
+        background-color: #fff
+        position: relative
+        &__top
+            flex-grow: 1
+            transition: .3s background-color
+            padding: 30px 20px
+            &-img
+                margin-bottom: 70px
+                &__img
+                    max-height: 55px
+                    max-width: 100%
+                    transition: .3s filter
+            &-title
+                font-size: 24px
+                font-weight: 900
+                letter-spacing: 0.6px
+                text-transform: uppercase
+                color: #000000
+                margin-bottom: 10px
+                transition: .3s color
+            &-text
+                transition: .3s color
+                color: $scarpaFlow
+        &__buttons
+            display: flex
+            &-item
+                flex-basis: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+                text-decoration: none
+                padding: 20px 0
+                font-family: "Proxima Nova"
+                text-transform: uppercase
+                font-weight: 700
+                transition: .3s background-color, .3s color, .3s border-top
+                &__img
+                    width: 21px
+                    height: 21px
+                    fill: #ffffff
+                    margin-right: 13px
+                    transition: .3s fill
+                &_left
+                    background-color: $manatee
+                    color: #ffffff
+                    border-top: 1px solid $manatee
+                &_right
+                    border-top: 1px solid #dfdfe7
+                    color: $manatee
+        &:hover
+            .soft-item__top
+                background-color: $lightComet
+                &-title
+                    color: #ffffff
+                &-text
+                    color: #ffffff
+                &-img
+                    &__img
+                        filter: brightness(0) invert(1)
+            .soft-item__buttons-item
+                &_right
+                    background-color: $lightComet
+                    color: #ffffff
+                    border-top: 1px solid #727293
+                &_left
+                    &:hover
+                        background-color: $lightComet
+                        border-top: 1px solid #727293
+                        color: #ffffff
+                        ~ .soft-item__buttons-item
+                            &__img
+                                fill: #ffffff
+                            &_right
+                                border-top: 1px solid $manatee
+                                background-color: $manatee
+@media (max-width: 1240px)
+    .soft
+        padding-top: 50px
+        padding-bottom: 100px
+        &-item
+            &__top
+                padding: 25px 20px
+                &-img
+                    margin-bottom: 50px
+                &-title
+                    font-size: 22px
+@media (max-width: 992px)
+    .soft
+        padding-top: 40px
+        padding-bottom: 70px
+        &-title
+            margin-bottom: 40px
+        &-item
+            &__top
+                padding: 20px
+                &-img
+                    margin-bottom: 40px
+                &-title
+                    font-size: 22px
+            &__buttons
+                &-item
+                    padding: 15px 0
+@media (max-width: 767px)
+    .soft
+        padding-bottom: 50px
+        &-title
+            font-size: 32px
+            margin-bottom: 30px
+            text-align: center
+@media (max-width: 576px)
+    .soft
+        padding: 30px 0
+        &-item
+            text-align: center
+            &__top
+                &-img
+                    margin-bottom: 20px
+                    &__img
+                        max-height: 45px
+                &-title
+                    font-size: 20px

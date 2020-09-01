@@ -1,0 +1,130 @@
+.benefit
+    padding-top: 70px
+    padding-bottom: 90px
+    &-title
+        margin-bottom: 40px
+    &-text
+        line-height: 24px
+        margin-bottom: 75px
+    &-btn
+        display: block
+        max-width: 420px
+        margin: 0 auto
+    &-list
+        &__item
+            padding-bottom: 55px
+            position: relative
+            &::before
+                position: absolute
+                left: -40px
+                top: 0
+                opacity: 0
+                visibility: hidden
+                display: block
+                content: ''
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 130px 0 130px 143px
+                border-color: transparent transparent transparent $supernova
+                z-index: 0
+                transition: .3s all
+            &:hover
+                &::before
+                    opacity: 1
+                    visibility: visible
+                    left: -16px
+            &-img
+                margin-bottom: 20px
+                height: 51px
+                z-index: 1
+                position: relative
+                &__img
+                    max-height: 100%
+                    max-width: 100%
+            &-title
+                font-weight: 700
+                text-transform: uppercase
+                padding-bottom: 15px
+                margin-bottom: 10px
+                position: relative
+                max-width: 240px
+                z-index: 1
+                &::before
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    display: block
+                    content: ''
+                    height: 2px
+                    width: 48px
+                    background-color: $supernova
+            &-text
+                max-width: 240px
+                font-size: 16px
+                position: relative
+                z-index: 1
+@media (max-width: 1220px)
+    .benefit
+        padding-top: 50px
+        padding-bottom: 70px
+        &-title
+            margin-bottom: 30px
+        &-text
+            margin-bottom: 50px
+        &-list
+            &__item
+                padding-bottom: 40px
+                &::before
+                    border-width: 110px 0 110px 120px
+                &-img
+                    height: 45px
+                    margin-bottom: 15px
+                    &__img
+                        max-height: 45px
+@media (max-width: 992px)
+    .benefit
+        padding: 40px 0
+        &-title
+            margin-bottom: 20px
+        &-text
+            margin-bottom: 35px
+        &-list
+            &__item
+                padding-bottom: 30px
+                &::before
+                    border-width: 90px 0 90px 100px
+                &:hover .benefit-list__item-title::before
+                   display: none
+                &-text
+                    font-size: 14px
+                &-title
+                    padding-bottom: 10px
+                    margin-bottom: 5px
+        &-btn
+            max-width: 340px
+@media (max-width: 768px)
+    .benefit
+        &-list
+            &__item
+                &::before
+                    border-width: 70px 0 70px 80px
+@media (max-width: 576px)
+    .benefit
+        &-text
+            margin-bottom: 25px
+        &-list
+            &__item
+                display: flex
+                flex-direction: column
+                align-items: center
+                text-align: center
+                &-title
+                    &::before
+                        left: 50%
+                        transform: translateX(-50%)
+                &-img
+                    height: auto
+                    margin-bottom: 10px
+        &-btn
+            max-width: 280px

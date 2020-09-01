@@ -1,0 +1,253 @@
+.main
+    padding-top: 50px
+    &-tabs
+        display: flex
+        width: calc(100% + 20px)
+        margin-left: -10px
+        margin-bottom: 65px
+        flex-wrap: wrap
+        &__item.active
+            &::before
+                transform-origin: left
+                transform: scaleX(1)
+            &::after
+                border-color: transparent
+        &__item
+            flex-basis: 260px
+            flex-grow: 1
+            margin: 0 10px 10px 10px
+            padding: 30px 15px
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 24px
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: 0.6px
+            position: relative
+            cursor: pointer
+            span
+                z-index: 1
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                width: 100%
+                height: 100%
+                border: 1px solid #000000
+                top: 0
+                left: 0
+                transition: .3s border-color
+            &::before
+                content: ''
+                position: absolute
+                z-index: 0
+                top: 0
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 100%
+                transform-origin: right
+                transform: scaleX(0)
+                transition: transform 0.3s ease
+                background-color: $yellow
+            &:hover
+                &::before
+                    transform-origin: left
+                    transform: scaleX(1)
+                &::after
+                    border-color: transparent
+    &-item
+        display: none
+    &-item.active
+        display: block
+    &-slider
+        &__realWrapper
+            position: relative
+            margin-bottom: 75px
+            &:last-child
+                margin-bottom: 0
+        &__arrow
+            position: absolute
+            top: 177px
+            cursor: pointer
+            svg
+                width: 12px
+            path
+                fill: #000000
+            &_prev
+                left: -10px
+                transform: translate(-100%, -50%)
+            &_next
+                right: -10px
+                transform: translate(100%, -50%)
+        &__arrow.swiper-button-disabled
+            display: none
+        &__item
+            display: flex
+            flex-direction: column
+            &:hover
+                .main-slider__top-btn
+                    opacity: 1
+                    visibility: visible
+                    &:hover
+                        background-color: $yellow
+                        color: #000000
+        &__top
+            position: relative
+            margin-bottom: 15px
+            &-img
+                background-size: cover
+                background-position: center center
+                background-repeat: no-repeat
+                &__inner
+                    opacity: 0
+                    visibility: hidden
+                    width: 100%
+                    display: block
+            &-btn
+                position: absolute
+                width: 100%
+                bottom: 0
+                left: 0
+                background-color: transparentize(#ffffff, .6)
+                font-size: 16px
+                font-weight: 700
+                color: $mountainMist
+                text-transform: uppercase
+                letter-spacing: 0.4px
+                text-align: center
+                padding: 15px
+                opacity: 0
+                visibility: hidden
+                transition: .3s color, .3s background-color, .3s visibility, .3s opacity
+            &-heart
+                position: absolute
+                top: 16px
+                right: 13px
+                width: 21px
+                path
+                    stroke: #818181
+                    fill: transparent
+                    transition: .3s stroke, .3s fill
+                &:hover
+                    path
+                        stroke: $red
+                        fill: $red
+            &-heart.active
+                path
+                    stroke: $red
+                    fill: $red
+        &__bottom
+            display: flex
+            flex-direction: column
+            flex-grow: 1
+            &-top, &-bottom
+                display: flex
+                justify-content: space-between
+            &-bottom
+                margin-top: 20px
+                align-items: center
+            &-top
+                min-height: 39px
+                flex-grow: 1
+        &__title
+            max-width: 155px
+            font-weight: 300
+            margin-right: 10px
+            color: #000000
+        &__prices
+            .main-slider__prices-old ~ .main-slider__prices-new
+                color: $red
+            &-old
+                text-decoration: line-through
+                font-size: 14px
+                color: #000000
+                margin-bottom: 3px
+                white-space: nowrap
+            &-new
+                color: #000000
+                font-size: 16px
+                white-space: nowrap
+        &__text
+            white-space: nowrap
+            margin-right: 10px
+            color: $mountainMist
+        &__colors
+            display: flex
+            width: calc(100% + 6px)
+            margin-left: -3px
+            margin-bottom: -3px
+            justify-content: flex-end
+            flex-wrap: wrap
+            margin-left: 10px
+            &-item
+                margin: 0 3px 3px 3px
+                width: 13px
+                height: 13px
+                border-radius: 100%
+
+@media (max-width: 1230px)
+    .main
+        &-slider
+            &__arrow
+                &_next, &_prev
+                    transform: translate(0, -50%)
+                    z-index: 1
+                &_next
+                    right: 10px
+                &_prev
+                    left: 10px
+
+@media (max-width: 1100px)
+    .main
+        &-slider
+            &__item
+                &:hover .main-slider__top-btn
+                    background-color: $yellow
+                    color: #000000
+            &__top
+                &-btn
+                    opacity: 1
+                    visibility: visible
+                    background-color: $yellow
+                    color: #000000
+
+@media (max-width: 1099px)
+    .main
+        &-tabs
+            margin-bottom: 50px
+            &__item
+                padding: 20px 10px
+                font-size: 22px
+        &-slider
+            &__realWrapper
+                margin-bottom: 50px
+            &__bottom
+                &-bottom
+                    margin-top: 7px
+            &__text
+                font-size: 14px
+            &__colors
+                &-item
+                    width: 11px
+                    height: 11px
+            &__top
+                margin-bottom: 10px
+                &-btn
+                    padding: 12px
+            &__prices
+                &-old
+                    font-size: 13px
+
+@media (max-width: 569px)
+    .main
+        padding-top: 30px
+        &-slider
+            &__realWrapper
+                margin-bottom: 30px
+        &-tabs
+            margin-bottom: 20px
+            &__item
+                padding: 16px 10px
+                font-size: 21px

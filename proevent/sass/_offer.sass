@@ -1,0 +1,141 @@
+.offer
+    padding: 90px 0 100px 0
+    &-sliderFor
+        &__item
+            position: relative
+            margin: 0 12px 12px 0
+            &-img
+                background-size: cover
+                background-position: center center
+                background-repeat: no-repeat
+                position: relative
+                z-index: 1
+                &__inner
+                    opacity: 0
+                    visibility: hidden
+                    width: 100%
+                    display: block
+            &::before
+                z-index: 0
+                position: absolute
+                display: block
+                width: 100%
+                height: 100%
+                content: ''
+                left: 12px
+                top: 12px
+                background-color: $mischka
+            &-video
+                width: 100%
+                min-height: 320px
+                position: relative
+            &:hover
+                .offer-sliderFor__item-arrow
+                    width: 85px
+                    height: 85px
+            &-text
+                z-index: 2
+                position: absolute
+                top: 20px
+                left: 20px
+                color: #ffffff
+                font-size: 22px
+            &-arrow
+                z-index: 2
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 80px
+                height: 80px
+                background-color: $stormGray
+                border-radius: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                transition: .3s width, .3s height
+                &__inner
+                    margin-right: -8px
+                    width: 0
+                    height: 0
+                    border-style: solid
+                    border-width: 15px 0 15px 25px
+                    border-color: transparent transparent transparent #ffffff
+    &-text
+        margin-left: 40px
+        &__slider
+            &-item
+                &__title
+                    color: #000000
+                    font-size: 30px
+                    text-transform: uppercase
+                    letter-spacing: 0.9px
+                    margin-bottom: 15px
+                    font-weight: 900
+                    &_special
+                        color: $stormGray
+                &__text
+                    color: #000000
+                    font-size: 20px
+                    letter-spacing: 0.6px
+        &__dots
+            .slick-dots
+                margin-top: 50px
+                justify-content: flex-start
+
+@media (max-width: 1240px)
+    .offer
+        padding: 70px 0
+        &-text
+            margin-top: 30px
+            margin-left: 20px
+            &__slider
+                &-item
+                    &__title
+                        font-size: 28px
+            &__dots
+                .slick-dots
+                    margin-top: 40px
+@media (max-width: 992px)
+    .offer
+        padding: 50px 0
+        &-text
+            margin-left: 10px
+            margin-top: 20px
+            &__slider
+                &-item
+                    &__title
+                        font-size: 22px
+                    &__text
+                        font-size: 18px
+            &__dots
+                .slick-dots
+                    margin-top: 30px
+@media (max-width: 768px)
+    .offer
+        padding: 30px 0
+        &-text
+            &__slider
+                text-align: center
+                &-title
+                    margin-bottom: 10px
+            &__dots
+                .slick-dots
+                    justify-content: center
+                    margin-top: 20px
+        &-sliderFor
+            &__item
+                &-text
+                    font-size: 20px
+                &-arrow
+                    width: 70px
+                    height: 70px
+@media (max-width: 400px)
+    .offer
+        &-text
+            &__slider
+                &-item
+                    &__title
+                        font-size: 20px
+                    &__text
+                        font-size: 16px

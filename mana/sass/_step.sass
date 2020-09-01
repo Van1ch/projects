@@ -1,0 +1,88 @@
+.step
+    padding-top: 100px
+    padding-bottom: 80px
+    background: url('../img/step/bg.png') center no-repeat
+    background-size: cover
+    color: #ffffff
+    &-title
+        margin-bottom: 140px
+        font-size: 56px
+    &-list
+        &__item
+            position: relative
+            &-title
+                font-size: 20px
+                color: $supernova
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 25px
+                z-index: 1
+                position: relative
+            &-text
+                position: relative
+                z-index: 1
+                max-width: 240px
+            &-number
+                z-index: 0
+                position: absolute
+                left: 0
+                top: 0
+                transform: translateY(-50%)
+                font-size: 211px
+                text-transform: uppercase
+                font-weight: 900
+                -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3)
+                color: transparent
+
+@media (max-width: 1220px)
+    .step
+        padding-top: 70px
+        padding-bottom: 60px
+        &-title
+            margin-bottom: 100px
+            font-size: 44px
+        &-list
+            &__item
+                &-number
+                    font-size: 160px
+@media (max-width: 992px)
+    .step
+        padding-top: 40px
+        padding-bottom: 0
+        &-title
+            margin-bottom: 70px
+            font-size: 34px
+        &-list
+            &__item
+                margin-bottom: 70px
+                &-number
+                    font-size: 140px
+@media (max-width: 768px)
+    .step
+        &-title
+            font-size: 26px
+
+@media (max-width: 576px)
+    .step
+        &-title
+            margin-bottom: 40px
+        &-list
+            &__item
+                text-align: center
+                &-text
+                    max-width: 100%
+                &-number
+                    font-size: 120px
+                    left: 50%
+                    line-height: 100px
+                    transform: translateX(-50%) translateY(-30%)
+
+@media (max-width: 360px)
+    .step
+        &-title
+            font-size: 24px
+            
+@media (max-width: 330px)
+    .step
+        &-title
+            font-size: 23px

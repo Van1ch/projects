@@ -1,0 +1,66 @@
+.footer
+    display: flex
+    padding: 50px 0
+    justify-content: space-between
+    color: #ffffff
+    &-wrapper
+        background-color: $mako
+    &-item
+        font-size: 18px
+        &__title
+            margin-bottom: 20px
+        &__phone
+            color: #ffffff
+            font-size: 30px
+            font-weight: 700
+        &__free
+            margin: 10px 0
+            color: $gumbo
+        &__caption
+            max-width: 240px
+    &-right
+        font-size: 14px
+        &__item
+            max-width: 280px
+            margin-bottom: 20px
+            color: $regentGray
+            &-link
+                display: inline-block
+                &::after
+                    background-color: $regentGray
+        &__copyright
+            margin-bottom: 20px
+        &__development
+            &-link
+                color: $halfBaked
+                &::after
+                    background-color: $halfBaked
+
+@media (max-width: 900px)
+    .footer
+        padding: 40px 0
+        flex-wrap: wrap
+        justify-content: center
+        text-align: center
+        &-item
+            margin: 0 15px
+            margin-bottom: 25px
+        &-right
+            text-align: center
+            flex-basis: 100%
+            &__item
+                max-width: 100%
+                margin-bottom: 10px
+            &__copyright
+                margin-bottom: 10px
+@media (max-width: 600px)
+    .footer
+        flex-direction: column
+        padding: 25px 0
+        &-item
+            &__title
+                margin-bottom: 5px
+            &__free
+                margin: 5px 0
+            &__caption
+                max-width: 100%

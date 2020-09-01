@@ -1,0 +1,28 @@
+.footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 27px 0
+    &-wrapper
+        background: $woodSmoke
+    &-item
+        font-size: 16px
+        color: $midGray
+        text-decoration: none
+        transition: .3s color
+        &_link
+            &:hover
+                color: #ffffff
+@media (max-width: 1230px)
+    .footer
+        &-item
+            font-size: 14px
+@media (max-width: 768px)
+    .footer
+        padding: 20px 0
+        flex-direction: column
+        &-item
+            font-size: 12px
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0

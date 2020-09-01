@@ -1,0 +1,135 @@
+.picket
+    padding: 60px 0 0 0
+    position: relative
+    &-rectangle
+        position: absolute
+        right: 0
+        top: 0
+        background-color: $mako
+        height: calc(100% + 120px)
+        z-index: 0
+    &-title
+        position: relative
+        z-index: 1
+    &-subtitle
+        max-width: 700px
+        margin-bottom: 30px
+        position: relative
+        z-index: 1
+    &-adv
+        display: flex
+        align-items: center
+        margin-bottom: 50px
+        position: relative
+        z-index: 1
+        &__item
+            display: flex
+            align-items: center
+            margin-right: 60px
+            &:last-child
+                margin: 0
+            &-photo
+                margin-right: 15px
+            &-text
+                font-size: 18px
+                font-weight: 700
+    &-list
+        display: flex
+        position: relative
+        z-index: 1
+        &__items
+            flex-basis: 50%
+            flex-wrap: wrap
+            display: flex
+            justify-content: space-between
+            &-item
+                width: 33.33%
+                padding: 8px 10px
+                display: flex
+                &:nth-last-child(-n+3)
+                    margin-bottom: 0
+                &__content.active
+                    &::after
+                        opacity: 0.8
+                &__content
+                    background-size: cover
+                    background-position: center center
+                    background-repeat: no-repeat
+                    position: relative
+                    cursor: pointer
+                    flex-basis: 100%
+                    border: 2px solid transparent
+                    background-clip: content-box
+                    &::after
+                        position: absolute
+                        display: block
+                        content: ''
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        left: 0
+                        background-color: $mako
+                        opacity: 0
+                        transition: .3s opacity
+                    &:hover
+                        border-color: $seaBuckthorn
+                    &-inner
+                        width: 100%
+                        visibility: hidden
+                        opacity: 0
+                        display: block
+        &__big
+            flex-basis: 50%
+            margin: 10px 0 10px 10px
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            &-inner
+                width: 100%
+                opacity: 0
+                visibility: hidden
+                display: none
+
+@media (max-width: 1210px)
+    .picket
+        padding-bottom: 40px
+        &-rectangle
+            display: none
+@media (max-width: 800px)
+    .picket
+        text-align: center
+        padding: 30px 0
+        &-subtitle
+            max-width: 100%
+        &-adv
+            flex-direction: column
+            margin-bottom: 20px
+            &__item
+                flex-direction: column
+                margin-right: 0
+                margin-bottom: 15px
+                &-photo
+                    margin-right: 0
+                    margin-bottom: 5px
+        &-list
+            flex-wrap: wrap
+            justify-content: center
+            max-width: 400px
+            margin: 0 auto
+            &__items
+                order: 1
+                flex-basis: 100%
+                justify-content: center
+                justify-content: space-between
+                &-item
+                    padding: 3px
+                    flex-basis: 33.33%
+                    &__content
+                        &:hover
+                            border-color: transparent
+            &__big
+                order: 0
+                margin: 10px
+                margin: 5px
+                &-inner
+                    display: block

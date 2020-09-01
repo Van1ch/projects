@@ -1,0 +1,113 @@
+.header
+    padding-top: 30px
+    &-logo
+        &__img
+            max-width: 250px
+    &-top
+        padding-bottom: 20px
+        border-bottom: 1px solid $shark
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-phone
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        height: 100%
+        &__img
+            padding: 15px
+            border: 1px solid rgba(255, 255, 255, 0.5)
+            border-radius: 100%
+            display: inline-flex
+            margin-right: 20px
+            &-img
+                fill: $supernova
+                width: 18px
+                height: 18px
+        &__text
+            &-link
+                color: #ffffff
+                font-size: 30px
+                font-weight: 700
+                text-transform: uppercase
+    &-nav
+        padding-top: 20px
+        text-transform: uppercase
+        display: flex
+        font-size: 16px
+        &__item
+            margin-right: 65px
+            &:last-child
+                margin: 0
+            &-link
+                color: #ffffff
+                position: relative
+                transition: .3s color
+                &::before, &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    height: 4px
+                    width: 0
+                    background-color: $supernova
+                    bottom: -10px
+                    transition: .3s width
+                &::before
+                    left: 50%
+                &::after
+                    right: 50%
+                &:hover
+                    color: $supernova
+                    &::after, &::before
+                        width: 35%
+
+@media (max-width: 1220px)
+    .header
+        &-logo
+            &__img
+                max-width: 200px
+        &-phone
+            &__text
+                &-link
+                    font-size: 28px
+
+@media (max-width: 992px)
+    .header
+        &-logo
+            text-align: center
+        &-phone
+            justify-content: center
+        &-nav
+            justify-content: space-between
+            width: calc(100% + 20px)
+            margin-left: -10px
+            &__item
+                margin: 0 10px
+                &:last-child
+                    margin: 0 10px
+
+@media (max-width: 768px)
+    .header
+        padding-top: 20px
+        &-phone
+            &__img
+                padding: 10px
+            &__text
+                &-link
+                    font-size: 22px
+        &-nav
+            font-size: 14px
+            flex-wrap: wrap
+@media (max-width: 576px)
+    .header
+        &-nav
+            justify-content: center
+            &__item
+                margin-bottom: 10px
+        &-logo
+            margin-bottom: 10px
+@media (max-width: 500px)
+    .header
+        &-top
+            justify-content: center
+            flex-wrap: wrap

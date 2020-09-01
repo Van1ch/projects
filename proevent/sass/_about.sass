@@ -1,0 +1,151 @@
+.about
+    position: relative
+    background-image: url('../img/about/aboutBg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    padding: 80px 0
+    min-height: 670px
+    &-img
+        position: relative
+        width: 100%
+        &__wrapper
+            z-index: 0
+            position: absolute
+            right: 3%
+            bottom: 0
+            width: 55%
+            max-width: 900px
+        &__img
+            width: 100%
+            display: block
+        &__serpentine
+            height: 100%
+            z-index: 0
+            position: absolute
+            pointer-events: none
+            &_1
+                bottom: -50px
+            &_2
+                top: 0
+            &_3
+                top: 20px
+    &-text
+        z-index: 1
+        position: relative
+        max-width: 550px
+        color: #ffffff
+        &__title
+            line-height: 38px
+            font-size: 30px
+            font-weight: 700
+            letter-spacing: 0.75px
+            text-transform: uppercase
+            margin-bottom: 40px
+            &_special
+                color: $stormGray
+        &__text
+            margin-bottom: 70px
+            margin-right: 35px
+            &-item
+                line-height: 21px
+                margin-bottom: 15px
+                &:last-child
+                    margin-bottom: 0
+        &__btn
+            &-link
+                border-radius: 32px
+                font-size: 18px
+                padding: 20px 35px
+@media (max-width: 1500px)
+    .about
+        &-img
+            &__wrapper
+                right: 0%
+@media (max-width: 1400px)
+    .about
+        &-img
+            &__wrapper
+                width: 60%
+                right: -2%
+@media (max-width: 1240px)
+    .about
+        padding: 60px 0
+        min-height: 600px
+        &-text
+            &__title
+                margin-bottom: 30px
+            &__text
+                margin-bottom: 50px
+@media (max-width: 992px)
+    .about
+        min-height: auto
+        &::before
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            display: block
+            content: ''
+            background-color: #000000
+            opacity: 0.7
+            z-index: 1
+        &-img
+            &__serpentine
+                &_3
+                    top: -20px
+        &-text
+            &__title
+                font-size: 26px
+                line-height: 34px
+            &__text
+                margin-bottom: 30px
+            &__btn
+                &-link
+                    display: inline-block
+                    font-size: 16px
+                    padding: 15px 30px
+@media (max-width: 768px)
+    .about
+        padding: 40px 0
+        &-img
+            &__wrapper
+                width: 450px
+                max-width: 90%
+        &-text
+            &__text
+                margin-right: 0
+@media (max-width: 576px)
+    .about
+        padding: 30px 0
+        text-align: center
+        &-text
+            &__title
+                font-size: 20px
+                line-height: 28px
+                margin-bottom: 20px
+            &__text
+                margin-bottom: 20px
+                &-item
+                    margin-bottom: 10px
+            &__btn
+                &-link
+                    font-size: 14px
+@media (max-width: 460px)
+    .about
+        &-img
+            &__wrapper
+                width: 415px
+                max-width: 1000px
+                right: -5%
+@media (max-width: 380px)
+    .about
+        &-img
+            &__wrapper
+                right: -10%
+@media (max-width: 350px)
+    .about
+        &-img
+            &__wrapper
+                right: -13%

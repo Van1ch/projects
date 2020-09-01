@@ -1,0 +1,16 @@
+.link
+    position: relative
+    text-decoration: none
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        bottom: 0
+        left: 0
+        height: 1px
+        width: 100%
+        background-color: $stormGray
+        transition: .3s width
+    &:hover
+        &::after
+            width: 0

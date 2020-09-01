@@ -1,0 +1,93 @@
+.where
+    padding: 90px 0 20px 0
+    &-title
+        margin-bottom: 65px
+    &-item
+        margin-bottom: 90px
+        &:hover
+            .where-item__photo-img
+                animation-name: shake
+        &__title
+            font-size: 24px
+            color: #000000
+            text-transform: uppercase
+            font-weight: 700
+            letter-spacing: 0.6px
+        &__photo
+            min-height: 78px
+            margin-bottom: 20px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-end
+            &-img
+                max-height: 100%
+                max-width: 100%
+                animation-iteration-count: 1
+                animation-fill-mode: none
+                animation-duration: 0.5s
+                animation-timing-function: linear
+
+@keyframes shake
+    0%
+        transform: rotate(0)
+    10%
+        transform: rotate(-10deg)
+    20%
+        transform: rotate(0)
+    30%
+        transform: rotate(10deg)
+    40%
+        transform: rotate(0)
+    50%
+        transform: rotate(-10deg)
+    60%
+        transform: rotate(0)
+    70%
+        transform: rotate(10deg)
+    80%
+        transform: rotate(0)
+    90%
+        transform: rotate(-10deg)
+    100%
+        transform: rotate(0)
+
+@media (max-width: 1240px)
+    .where
+        padding: 70px 0 10px 0
+        &-title
+            margin-bottom: 50px
+        &-item
+            margin-bottom: 60px
+@media (max-width: 992px)
+    .where
+        text-align: center
+        padding: 50px 0 0 0
+        &-title
+            margin-bottom: 40px
+        &-item
+            margin-bottom: 40px
+            &__photo
+                align-items: center
+            &__title
+                font-size: 22px
+@media (max-width: 767px)
+    .where
+        padding: 40px 0 0 0
+        &-title
+            margin-bottom: 30px
+        &-item
+            margin-bottom: 30px
+            &__title
+                font-size: 20px
+@media (max-width: 576px)
+    .where
+        padding: 30px 0 0 0
+        &-title
+            margin-bottom: 20px
+        &-item
+            margin-bottom: 20px
+            br
+                display: none
+            &__title
+                font-size: 20px

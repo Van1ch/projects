@@ -1,0 +1,112 @@
+.rentHero
+    background-color: $darkSteelGray
+    overflow: hidden
+    position: relative
+    .container
+        position: relative
+    &-title
+        z-index: 10
+        font-size: 40px
+        max-width: 590px
+        color: #ffffff
+        margin-bottom: 20px
+    &-subtitle
+        position: relative
+        z-index: 10
+        letter-spacing: 0.6px
+        margin-bottom: 130px
+        font-size: 24px
+        &__special
+            display: block
+            font-weight: 300
+    &-btn
+        z-index: 10
+        position: relative
+        padding-bottom: 100px
+        &__link
+            padding: 20px 37px
+            text-align: center
+            font-size: 18px
+            border-radius: 32px
+            display: inline-block
+    &-img
+        position: absolute
+        height: 100%
+        right: 0
+        bottom: 0
+        z-index: 1
+    &-dots
+        position: absolute
+        bottom: 0
+        right: 0
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        height: 100%
+        pointer-events: none
+        &_1
+            width: 100%
+            z-index: 0
+            background-image: url('../img/rentHero/1.png')
+            height: 170%
+            bottom: -400px
+        &_2
+            background-size: contain
+            width: 65%
+            z-index: 2
+            background-image: url('../img/rentHero/2.png')
+@media (max-width: 1240px)
+    .rentHero
+        &-btn
+            padding-bottom: 80px
+        &-subtitle
+            margin-bottom: 80px
+@media (max-width: 992px)
+    .rentHero
+        position: relative
+        &::before
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            display: block
+            content: ''
+            background-color: #000000
+            opacity: 0.7
+            z-index: 2
+        &-btn
+            padding-bottom: 60px
+        &-subtitle
+            margin-bottom: 40px
+            font-size: 22px
+        &-title
+            font-size: 34px
+        &-dots
+            &_2
+                z-index: 1
+@media (max-width: 767px)
+    .rentHero
+        &-title
+            text-align: center
+            font-size: 32px
+        &-subtitle
+            text-align: center
+            margin-bottom: 30px
+            font-size: 22px
+        &-btn
+            padding-bottom: 60px
+            text-align: center
+            &__link
+                font-size: 16px
+                padding: 18px 32px
+@media (max-width: 576px)
+    .rentHero
+        &-title
+            font-size: 28px
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 20px
+            font-size: 18px
+        &-btn
+            padding-bottom: 40px

@@ -1,0 +1,188 @@
+.policy
+    background: #ffffff
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 25px
+    &-list
+        list-style: none
+        &__item
+            padding-left: 20px
+            margin-bottom: 20px
+            position: relative
+            &::before
+                position: absolute
+                left: 12px
+                top: 4px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: $putty
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modalNew
+    padding: 40px 60px 50px 60px
+    background: #ffffff
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 800px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-title
+        font-weight: 700
+        text-align: center
+        font-size: 26px
+        margin-bottom: 30px
+    &-text
+        text-align: center
+        font-size: 18px
+        p
+            margin-bottom: 20px
+        p.special
+            font-weight: 700
+            margin-top: 10px
+            margin-bottom: 30px
+    &-form
+        form
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: flex-start
+        .wpcf7-form-control-wrap
+            flex-basis: 46%
+        &__item
+            flex-basis: 46%
+            margin-bottom: 15px
+        &__item.btn-filled
+            padding: 14px 40px
+            border: none
+            cursor: pointer
+            font-size: 18px
+    &-checkbox
+        flex-basis: 46%
+        font-size: 12px
+        display: flex
+        align-items: flex-start
+        &__wrapper
+            display: flex
+            justify-content: flex-end
+        &__img
+            width: 18px
+            margin-right: 10px
+        &__text
+            .link
+                color: $putty
+                &::after
+                    background-color: $putty
+
+.modal
+    background: #ffffff
+    padding: 80px 80px
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 480px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-title
+        font-weight: 700
+        font-size: 36px
+        letter-spacing: 0.9px
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 5px
+    &-subtitle
+        font-size: 18px
+        letter-spacing: 0.45px
+        text-align: center
+        margin-bottom: 30px
+    &-input
+        width: 100%
+        margin-bottom: 15px
+    &-policy
+        display: flex
+        align-items: center
+        margin-bottom: 35px
+        &__text
+            font-size: 12px
+            &-link
+                color: $putty
+                &::after
+                    background-color: $putty
+        &__img
+            margin-right: 12px
+            max-width: 20px
+    &-submit
+        cursor: pointer
+        width: 100%
+        border: none
+        padding: 15px 30px
+    &-special
+        &__wrapper
+            max-width: 800px
+
+@media (max-width: 900px)
+    .modalNew
+        &-form
+            &__item.btn-filled
+                padding: 10px 30px
+
+@media (max-width: 700px)
+    .modalNew
+        padding: 40px 30px 30px 30px
+        &-form
+            .wpcf7-form-control-wrap
+                flex-basis: 100%
+            &__item
+                flex-basis: 100%
+        &-checkbox
+            flex-basis: 100%
+        &-text
+            font-size: 16px
+            p
+                margin-bottom: 10px
+            p.special
+                margin-top: 5px
+                margin-bottom: 20px
+        &-title
+            font-size: 24px
+            margin-bottom: 20px
+        
+@media (max-width: 500px)
+    .modalNew
+        padding: 30px 20px
+
+@media (max-width: 600px)
+    .modal
+        padding: 35px 25px 25px 25px
+        &-success
+            padding: 25px
+        &-wrapper
+            max-width: 320px
+        &-title
+            font-size: 28px
+        &-subtitle
+            margin-bottom: 20px
+        &-policy
+            margin-bottom: 20px
+    .policy
+        font-size: 15px
+        &-title
+            margin-bottom: 15px
+            font-size: 20px
+        &-wrapper.fancybox-content
+            padding: 20px

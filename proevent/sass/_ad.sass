@@ -1,0 +1,55 @@
+.ad
+    background-image: url('../img/ad/bg.jpg')
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    text-align: center
+    padding: 65px 0
+    &-title
+        margin-bottom: 45px
+        font-size: 24px
+        text-transform: uppercase
+        font-weight: 700
+        letter-spacing: 0.6px
+    &-btn
+        &__link
+            display: inline-block
+            font-size: 22px
+            padding: 23px 55px
+            border-radius: 36px
+@media (max-width: 1240px)
+    .ad
+        padding: 50px 0
+@media (max-width: 992px)
+    .ad
+        padding: 40px 0
+        &-title
+            margin-bottom: 30px
+        &-btn
+            &__link
+                font-size: 20px
+                padding: 20px 50px
+@media (max-width: 767px)
+    .ad
+        padding: 30px 0
+        &-title
+            margin-bottom: 20px
+            font-size: 20px
+        &-btn
+            &__link
+                font-size: 18px
+                padding: 18px 45px
+@media (max-width: 576px)
+    .ad
+        &-title
+            font-size: 18px
+        &-btn
+            &__link
+                font-size: 16px
+                padding: 16px 40px
+@media (max-width: 350px)
+    .ad
+        &-btn
+            &__link
+                font-size: 15px
+                padding: 16px 30px

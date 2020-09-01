@@ -1,0 +1,495 @@
+.quiz
+    background-color: $athensGray
+    padding: 150px 0 130px 0
+    .container
+        position: relative
+    &-title
+        margin-bottom: 60px
+    &-rotate
+        position: absolute
+        top: -20px
+        right: 45px
+        &__text
+            position: absolute
+            top: 50%
+            left: 50%
+            animation-name: rotate
+            animation-iteration-count: infinite
+            animation-fill-mode: none
+            animation-duration: 10s
+            animation-timing-function: linear
+    &-bar
+        display: flex
+        height: 1px
+        align-items: center
+        background-color: #000000
+        flex-direction: row-reverse
+        margin: 0 10px
+        margin-bottom: 75px
+        &__item
+            flex-grow: 1
+            height: 3px
+            position: relative
+            &-text
+                position: absolute
+                top: -10px
+                left: 0
+                transform: translate(-50%, -100%)
+                font-size: 14px
+                letter-spacing: 0.35px
+                white-space: nowrap
+            &::after
+                position: absolute
+                display: block
+                width: 0
+                height: 100%
+                content: ''
+                background-color: $royalBlue
+                transition: .3s width
+            &::before
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 0
+                content: ''
+                display: block
+                border-radius: 100%
+                width: 9px
+                height: 9px
+                background-color: #000000
+                transition: .3s background-color
+            &:first-child
+                flex-grow: 0
+        &__item.active
+            &::before
+                background-color: $royalBlue
+            ~ .quiz-bar__item::after
+                width: 100%
+            ~ .quiz-bar__item::before
+                background-color: $royalBlue
+    &-content
+        &__final.active
+            display: block
+        &__final
+            display: none
+            background-color: $royalBlue
+            color: #ffffff
+            text-align: center
+            padding: 60px 10px
+            &-title
+                font-size: 30px
+                font-weight: 500
+                letter-spacing: 0.75px
+                text-transform: uppercase
+                margin-bottom: 10px
+            &-subtitle
+                font-size: 24px
+                font-weight: 300
+                margin-bottom: 60px
+            &-img
+                margin-bottom: 60px
+            &-btn
+                background-color: #000000
+                cursor: pointer
+                max-width: 280px
+                margin: 0 auto
+                &::before
+                    background: linear-gradient(to right, #7944e6 0%, #7944e6 50%, black 50%, black 100%)
+        &__item.active
+            display: block
+        &__item
+            margin-bottom: 40px
+            min-height: 350px
+            display: none
+            &-final
+                &__title
+                    font-size: 30px
+                    letter-spacing: 0.75px
+                    font-weight: 500
+                    margin-bottom: 40px
+                &__subtitle
+                    font-size: 20px
+                    letter-spacing: 0.5px
+                    margin-bottom: 60px
+                &__form
+                    margin-bottom: 40px
+                    form
+                        align-items: center
+                        display: flex
+                    &-input
+                        width: 280px
+                        margin-right: 20px
+                    &-submit
+                        width: auto
+                        margin-left: 20px
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        &__img
+                            position: relative
+                            width: 46px
+                            height: 15px
+                            fill: #ffffff
+                            margin-left: 30px
+                &__checkbox
+                    display: flex
+                    align-items: flex-start
+                    &-img
+                        margin-right: 10px
+                    .link
+                        color: $royalBlue
+                        &::after
+                            background-color: $royalBlue
+            &-slider
+                margin-top: 110px
+                margin-bottom: 80px
+                .slider-container
+                    font-family: 'FuturaPt'
+                    margin: 0 auto
+                    .scale
+                        top: 5px
+                        span
+                            &:last-child
+                                left: auto !important
+                                right: 0 !important
+                        ins
+                            font-size: 14px
+                            color: #000000
+                            letter-spacing: 0.35px
+                            font-weight: 400
+                            position: relative
+                            left: auto
+                    .selected-bar
+                        background-image: linear-gradient(to right, #962eaf 0%, #7349f1 100%)
+                        height: calc(100% + 1px)
+                    .back-bar
+                        background-image: none
+                        background-color: transparent
+                        border-bottom: 1px solid #000000
+                    .clickable-dummy
+                        top: 0
+                        left: 0
+                    .pointer.high
+                        height: 40px
+                        width: 40px
+                        border-radius: 100%
+                        background-color: #fff
+                        top: 0
+                        background-image: none
+                        border: 1px solid #000000
+                        position: relative
+                        &::after
+                            content: ''
+                            display: block
+                            position: absolute
+                            top: 0
+                            width: 1px
+                            height: 100%
+                            left: 50%
+                            background-color: #000000
+                        &::before
+                            content: ''
+                            display: block
+                            position: absolute
+                            top: 50%
+                            width: 100%
+                            height: 1px
+                            left: 0
+                            background-color: #000000
+
+                    .back-bar
+                        height: 40px
+                .pointer-label.high
+                    font-size: 20px
+                    font-weight: 500
+                    letter-spacing: 0.5px
+                    color: #000000
+                    background-color: transparent
+                    top: -30px
+            &-title
+                font-size: 30px
+                font-weight: 500
+                letter-spacing: 0.75px
+                margin-bottom: 50px
+                &__number
+                    color: $royalBlue
+            &-list
+                display: flex
+                justify-content: space-between
+                flex-wrap: wrap
+                width: calc(100% + 30px)
+                margin-left: -15px
+                &__item
+                    flex-basis: 255px
+                    cursor: pointer
+                    margin: 0 15px 20px 15px
+                    &:hover
+                        .quiz-content__item-list__item-img::after
+                            opacity: 1
+                            visibility: visible
+                        .quiz-content__item-list__item-img__inner
+                            opacity: 1
+                            visibility: visible
+                    &-img
+                        background-size: cover
+                        background-position: center center
+                        background-repeat: no-repeat
+                        margin-bottom: 12px
+                        position: relative
+                        &::after
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            display: block
+                            content: ''
+                            background-color: transparentize($mirage, .2)
+                            z-index: 0
+                            opacity: 0
+                            visibility: hidden
+                            transition: .3s opacity
+                        &__empty
+                            width: 100%
+                            display: block
+                            opacity: 0
+                            visibility: hidden
+                        &__inner
+                            position: absolute
+                            top: 50%
+                            z-index: 1
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                            width: 50px
+                            height: 50px
+                            border: 2px solid $royalBlue
+                            border-radius: 100%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            opacity: 0
+                            visibility: hidden
+                            transition: .3s opacity
+                            svg
+                                fill: $royalBlue
+                                width: 30px
+                                height: 19px
+                    &-text
+                        font-size: 18px
+                        letter-spacing: 0.45px
+                &__item.active
+                    .quiz-content__item-list__item-img::after
+                        opacity: 1
+                        visibility: visible
+                    .quiz-content__item-list__item-img__inner
+                        opacity: 1
+                        visibility: visible
+        &__nav
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            &-prev
+                font-size: 20px
+                letter-spacing: 0.5px
+                cursor: pointer
+                margin-right: 50px
+                &::after
+                    background-color: #000000
+            &-next
+                display: flex
+                justify-content: space-between
+                align-items: center
+                padding: 18px 35px
+                cursor: pointer
+                &__text
+                    margin-right: 50px
+                &__img
+                    position: relative
+                    width: 46px
+                    height: 15px
+                    fill: #ffffff
+
+@keyframes rotate
+    0%
+        transform: translate(-50%, -50%) rotate(0deg)
+    100%
+        transform: translate(-50%, -50%) rotate(360deg)
+
+@media (max-width: 1300px)
+    .quiz
+        padding: 120px 0 110px 0
+
+@media (max-width: 1200px)
+    .quiz
+        &-content
+            &__item
+                &-final
+                    &__title
+                        margin-bottom: 30px
+                    &__subtitle
+                        margin-bottom: 40px
+                    &__form
+                        form
+                            justify-content: center
+                        &-input
+                            width: 240px
+                            margin-right: 15px
+                        &-submit
+                            margin-left: 10px
+                            &__img
+                                width: 35px
+                                margin-left: 10px
+
+@media (max-width: 1140px)
+    .quiz
+        padding: 90px 0 70px 0
+        &-bar
+            margin-bottom: 50px
+        &-content
+            &__item
+                margin-bottom: 20px
+                min-height: 320px
+                &-list
+                    &__item
+                        flex-basis: 220px
+
+@media (max-width: 1050px)
+    .quiz
+        &-content
+            &__item
+                &-final
+                    &__title
+                        margin-bottom: 20px
+                    &__subtitle
+                        margin-bottom: 30px
+                    &__form
+                        &-input
+                            width: 230px
+                        &-submit
+                            padding: 18px 20px
+
+@media (max-width: 1000px)
+    .quiz
+        padding: 70px 0 50px 0
+        &-title
+            text-align: center
+            br
+                display: none
+        &-bar
+            margin-bottom: 40px
+        &-content
+            &__final
+                padding: 40px 10px
+                &-title
+                    font-size: 26px
+                &-subtitle
+                    font-size: 22px
+                    margin-bottom: 40px
+                &-img
+                    margin-bottom: 40px
+            &__item
+                &-final
+                    &__title
+                        margin-bottom: 20px
+                        text-align: center
+                    &__subtitle
+                        text-align: center
+                        margin-bottom: 30px
+                    &__form
+                        form
+                            flex-direction: column
+                            align-items: center
+                        &-input
+                            margin-right: 0
+                            margin-bottom: 15px
+                            width: 100%
+                            max-width: 320px
+                        &-submit
+                            width: 100%
+                            max-width: 320px
+                            margin-left: 0
+                            padding: 14px 30px
+                    &__checkbox
+                        margin: 0 auto
+                        max-width: 320px
+                &-title
+                    text-align: center
+                    margin-bottom: 30px
+                    font-size: 26px
+                &-list
+                    justify-content: center
+                &-slider
+                    margin: 70px 0
+                    .slider-container
+                        .scale
+                            top: 5px
+                            ins
+                                font-size: 12px
+                        .pointer.high
+                            height: 30px
+                            width: 30px
+                        .back-bar
+                            height: 30px
+                    .pointer-label.high
+                        font-size: 18px
+                        top: -25px
+            &__nav
+                justify-content: center
+
+@media (max-width: 600px)
+    .quiz
+        padding: 30px 0 30px 0
+        &-rotate
+            right: 40px
+            top: -35px
+            &__inner
+                width: 25px
+            &__text
+                width: 70px
+    .quiz
+        &-content
+            &__final
+                padding: 30px 10px
+                &-title
+                    font-size: 22px
+                &-subtitle
+                    font-size: 18px
+                    margin-bottom: 20px
+                &-img
+                    margin-bottom: 20px
+                    &__content
+                        max-width: 70px
+            &__item
+                &-final
+                    &__title
+                        margin-bottom: 15px
+                        font-size: 26px
+                    &__subtitle
+                        font-size: 18px
+                        margin-bottom: 25px
+
+@media (max-width: 500px)
+    .quiz
+        &-content
+            &__nav
+                &-prev
+                    margin-right: 30px
+                    font-size: 18px
+                &-next
+                    padding: 15px 30px
+                    &__text
+                        margin-right: 30px
+
+@media (max-width: 400px)
+    .quiz
+        &-content
+            &__nav
+                flex-direction: column-reverse
+                &-prev
+                    margin-right: 0
+                    font-size: 18px
+                    margin-top: 15px
+                &-next
+                    padding: 15px 30px
+                    &__text
+                        margin-right: 30px

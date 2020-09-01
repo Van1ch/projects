@@ -1,0 +1,77 @@
+.chapters
+    padding-bottom: 60px
+    &-item
+        display: flex
+        justify-content: center
+        align-items: center
+        background-image: url('../img/hero/heroBg.jpg')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        position: relative
+        overflow: hidden
+        &__link
+            z-index: 1
+            padding: 50px 0
+            height: 100%
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            text-decoration: none
+            &-img
+                max-width: 47px
+                max-height: 41px
+                margin-right: 25px
+                transition: .3s filter
+            &-text
+                font-size: 30px
+                letter-spacing: 0.75px
+                text-transform: uppercase
+                font-weight: 700
+                color: $stormGray
+                transition: .3s color
+        &__img
+            z-index: 0
+            position: absolute
+            right: 0
+            bottom: 0
+            transform: translateX(15%) scale(1.2)
+            max-height: 150%
+            opacity: 0
+            transition: .3s opacity
+        &.active, &:hover
+            .chapters-item__link-img
+                filter: brightness(0) invert(1)
+            .chapters-item__link-text
+                color: #ffffff
+            .chapters-item__img
+                opacity: .5
+
+@media (max-width: 1240px)
+    .chapters
+        padding-bottom: 50px
+
+@media (max-width: 992px)
+    .chapters
+        padding-bottom: 15px
+        &-item
+            margin-bottom: 20px
+            &__link
+                padding: 30px 0
+                &-img
+                    max-height: 35px
+                    margin-right: 20px
+                &-text
+                    font-size: 26px
+@media (max-width: 576px)
+    .chapters
+        &-item
+            margin-bottom: 10px
+            &__link
+                padding: 20px 0
+                &-img
+                    max-height: 30px
+                    margin-right: 15px
+                &-text
+                    font-size: 22px

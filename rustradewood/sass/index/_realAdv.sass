@@ -1,0 +1,101 @@
+.realAdv
+    margin-bottom: 120px
+    &-item
+        display: flex
+        &_reverse
+            flex-direction: row-reverse
+            .realAdv-item__text
+                padding-right: calc((100% - 1180px) / 2)
+                padding-left: 110px
+        &__text
+            flex-basis: 50%
+            background-color: #fff
+            padding-top: 80px
+            padding-bottom: 120px
+            padding-left: calc((100% - 1180px) / 2)
+            padding-right: 110px
+            &-img
+                margin-bottom: 40px
+            &-title
+                font-size: 24px
+                font-weight: 700
+                text-transform: uppercase
+                letter-spacing: 0.6px
+                margin-bottom: 15px
+            &-text
+                font-weight: 300
+        &__img
+            flex-basis: 50%
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+
+@media (max-width: 1210px)
+    .realAdv
+        margin-bottom: 90px
+        &-item
+            &_reverse
+                .realAdv-item__text
+                    padding-right: 15px
+                    padding-left: 80px
+            &__text
+                padding-top: 60px
+                padding-bottom: 90px
+                padding-right: 80px
+                padding-left: 15px
+                &-img
+                    margin-bottom: 30px
+
+@media (max-width: 1100px)
+    .realAdv
+        margin-bottom: 70px
+        &-item
+            &_reverse
+                .realAdv-item__text
+                    padding-left: 50px
+            &__text
+                padding-top: 40px
+                padding-bottom: 60px
+                padding-right: 50px
+                &-img
+                    margin-bottom: 20px
+                &-title
+                    font-size: 22px
+                    margin-bottom: 10px
+
+@media (max-width: 900px)
+    .realAdv
+        margin-bottom: 50px
+        &-item
+            &_reverse
+                .realAdv-item__text
+                    padding-left: 30px
+            &__text
+                padding-top: 30px
+                padding-bottom: 40px
+                padding-right: 30px
+                &-text
+                    font-size: 16px
+
+@media (max-width: 800px)
+    .realAdv
+        margin-bottom: 30px
+        &-item
+            flex-wrap: wrap
+            &_reverse
+                .realAdv-item__text
+                    padding-left: 15px
+            &__text
+                flex-basis: 100%
+                text-align: center
+                padding: 20px 15px 20px 15px
+                &-title
+                    font-size: 20px
+                    margin-bottom: 5px
+                &-img
+                    margin-bottom: 10px
+                    &__img
+                        max-height: 50px
+            &__img
+                min-height: 150px
+                flex-basis: 100%

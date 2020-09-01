@@ -1,0 +1,78 @@
+.news
+    padding-top: 0
+    &-list
+        display: flex
+        width: calc(100% + 20px)
+        margin-left: -10px
+        flex-wrap: wrap
+        margin-bottom: 20px
+        &__item
+            margin: 0 10px 20px 10px
+            flex-basis: 320px
+            padding: 20px 20px 40px 20px
+            flex-grow: 1
+            transition: .3s box-shadow, .3s background-color
+            display: flex
+            flex-direction: column
+            color: #000000
+            &:hover
+                box-shadow: 4px 5px 27px rgba(0, 0, 0, 0.16)
+                background-color: #ffffff
+                .news-list__item-text__title
+                    color: $dingley
+                    text-decoration: underline
+            &-img
+                background-size: cover
+                background-position: center center
+                background-repeat: no-repeat
+                margin-bottom: 30px
+                &__content
+                    display: block
+                    width: 100%
+                    opacity: 0
+                    visibility: hidden
+            &-text
+                flex-grow: 1
+                margin-bottom: 15px
+                &__title
+                    margin-bottom: 15px
+                    font-size: 20px
+                    font-weight: 500
+                    letter-spacing: 0.5px
+                    transition: .3s color, .3s text-decoration
+                &__text
+                    font-size: 16px
+            &-link
+                font-size: 16px
+                color: $dingley
+                span
+                    &::after
+                        background-color: $dingley
+    &-more
+        display: flex
+        justify-content: center
+        font-size: 20px
+        text-transform: uppercase
+        letter-spacing: 0.5px
+        font-weight: 500
+        &__content
+            color: $dingley
+            cursor: pointer
+            &::after
+                background-color: $dingley
+
+@media (max-width: 1100px)
+    .news
+        &-list
+            margin-bottom: 10px
+            &__item
+                &-img
+                    margin-bottom: 20px
+                &-text
+                    &__title
+                        margin-bottom: 10px
+
+@media (max-width: 850px)
+    .news
+        &-list
+            margin-bottom: 0

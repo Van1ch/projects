@@ -1,0 +1,103 @@
+.contacts
+    display: flex
+    &-wrapper
+        padding: 110px 0
+        background: $shark
+    &-item
+        flex-basis: 50%
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 45px
+        &__text
+            color: $narvik
+            &-img
+                margin-bottom: 20px
+                img
+                    max-width: 214px
+            &-phone
+                font-size: 20px
+                text-decoration: none
+                color: $narvik
+                margin-bottom: 10px
+                display: block
+            &-text
+                font-size: 16px
+                span
+                    display: block
+                &_link
+                    color: $narvik
+                    &::after
+                        background: $narvik
+            &-title
+                font-size: 36px
+                text-transform: uppercase
+                font-weight: 700
+                margin-bottom: 25px
+
+@media (max-width: 1230px)
+    .contacts
+        flex-wrap: wrap
+        justify-content: center
+        &-wrapper
+            padding: 50px 0
+        &-item
+            flex-basis: 100%
+            display: flex
+            justify-content: center
+            &:first-child
+                margin-bottom: 20px
+            &__text
+                &-img
+                    margin-bottom: 15px
+                    img
+                        max-width: 225px
+                &-title
+                    font-size: 28px
+                    margin-bottom: 15px
+                &-phone
+                    margin-bottom: 6px
+                    font-size: 18px
+                &-text
+                    font-size: 14px
+@media (max-width: 1000px)
+    .contacts
+        &-item
+            &__img
+                margin-right: 30px
+                img
+                    max-width: 140px
+            &__text
+                min-width: 220px
+                &-img
+                    img
+                        max-width: 180px
+                &-title
+                    font-size: 24px
+                &-phone
+                    font-size: 16px
+                &-text
+                    font-size: 14px
+@media (max-width: 768px)
+    .contacts
+        &-wrapper
+            padding: 35px 0
+        &-item
+            &__img
+                margin-right: 20px
+                img
+                    width: 100%
+                    max-width: 110px
+            &__text
+                min-width: 175px
+                &-img
+                    margin-bottom: 10px
+                    img
+                        max-width: 140px
+                &-title
+                    margin-bottom: 10px
+                    font-size: 20px
+                &-phone
+                    font-size: 14px
+                &-text
+                    font-size: 12px

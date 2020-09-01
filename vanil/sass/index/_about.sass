@@ -1,0 +1,111 @@
+.about
+    background-color: $gray
+    &-container
+        display: flex
+        align-items: flex-start
+    &-left
+        margin-right: 20px
+        flex-basis: 58.3%
+    &-right
+        flex-grow: 1
+    &-title
+        margin-bottom: 20px
+    &-text
+        margin-bottom: 75px
+        p
+            font-weight: 300
+            margin-bottom: 12px
+            &:last-child
+                margin-bottom: 0
+    &-img
+        position: relative
+        display: block
+        margin-bottom: 20px
+        overflow: hidden
+        &:last-child
+            margin-bottom: 0
+        &:hover
+            .about-img__content
+                transform: translate(-50%, -50%) scale(1.05)
+        &__text
+            font-weight: 700
+            font-size: 20px
+            padding: 30px 40px
+            position: absolute
+            bottom: 0
+            left: 0
+            color: #ffffff
+            text-transform: uppercase
+            z-index: 1
+            span
+                font-weight: 300
+        &__inner
+            opacity: 0
+            visibility: hidden
+            display: block
+            width: 100%
+        &_special
+            width: 80%
+        &__content
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            position: absolute
+            height: 100%
+            width: 100%
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            transition: .3s transform
+            z-index: 0
+            backface-visibility: hidden
+
+@media (max-width: 1100px)
+    .about
+        &-text
+            margin-bottom: 50px
+
+@media (max-width: 900px)
+    .about
+        &-text
+            margin-bottom: 40px
+            p
+                margin-bottom: 8px
+        &-img
+            &__text
+                padding: 20px
+                font-size: 18px
+
+@media (max-width: 750px)
+    .about
+        &-container
+            flex-direction: column
+            align-items: stretch
+        &-text
+            margin-bottom: 20px
+        &-left
+            flex-basis: auto
+            margin-right: 0
+            margin-bottom: 10px
+        &-right
+            display: flex
+            align-items: flex-start
+            flex-wrap: wrap
+            width: calc(100% + 10px)
+            margin-left: -5px
+            .about-img
+                flex-basis: 180px
+                margin: 0 5px
+                flex-grow: 1
+        &-img
+            margin-bottom: 0
+            &_special
+                width: auto
+
+@media (max-width: 399px)
+    .about
+        &-right
+            .about-img
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0

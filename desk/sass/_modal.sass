@@ -1,0 +1,131 @@
+.policy
+    background: #ffffff
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 15px
+    &-list
+        list-style: none
+        &__item
+            font-size: 16px
+            padding-left: 20px
+            margin-bottom: 12px
+            position: relative
+            &::before
+                position: absolute
+                left: 12px
+                top: 6px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: #7944e6
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modal
+    background: #ffffff
+    padding: 80px 100px
+    position: relative
+    &-success.active
+        opacity: 1
+        visibility: visible
+    &-success
+        z-index: 500
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: $royalBlue
+        color: #ffffff
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        top: 0
+        left: 0
+        padding: 80px 100px
+        opacity: 0
+        visibility: hidden
+        transition: .3s opacity, .3s visibility
+        &__img
+            text-align: center
+        &__btn
+            background-color: #000000
+            cursor: pointer
+            &::before
+               background: linear-gradient(to right, #7944e6 0%, #7944e6 50%, black 50%, black 100%); 
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 480px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-title
+        font-size: 36px
+        letter-spacing: 0.9px
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 5px
+    &-subtitle
+        font-size: 18px
+        letter-spacing: 0.45px
+        text-align: center
+        margin-bottom: 30px
+    &-input
+        width: 100%
+        margin-bottom: 15px
+    &-policy
+        display: flex
+        align-items: flex-start
+        margin-bottom: 35px
+        &__text
+            font-size: 12px
+            &-link
+                color: $royalBlue
+                &::after
+                    background-color: $royalBlue
+        &__img
+            margin-right: 12px
+    &-submit
+        cursor: pointer
+        width: 100%
+
+@media (max-width: 600px)
+    .modal
+        padding: 35px 25px 25px 25px
+        &-success
+            padding: 25px
+        &-wrapper
+            max-width: 320px
+        &-title
+            font-size: 32px
+        &-subtitle
+            margin-bottom: 20px
+        &-policy
+            margin-bottom: 20px
+    .policy
+        font-size: 15px
+        &-title
+            margin-bottom: 15px
+            font-size: 20px
+        &-list
+            &__item
+                font-size: 15px
+                padding-left: 15px
+                &::before
+                    left: 9px
+                    top: 6px
+                    width: 8px
+                    height: 8px
+        &-wrapper.fancybox-content
+            padding: 20px

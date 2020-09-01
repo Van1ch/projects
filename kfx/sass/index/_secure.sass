@@ -1,0 +1,121 @@
+.secure
+    background: $gradient
+    position: relative
+    padding: 50px 0
+    color: #ffffff
+    &-container
+        position: relative
+        z-index: 2
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &::after
+        position: absolute
+        height: 100%
+        width: 30%
+        display: block
+        content: ''
+        background-color: #fff
+        right: 0
+        top: 0
+    &-title
+        text-align: left
+        &::after
+            left: 0
+            transform: none
+    &-main
+        max-width: 670px
+    &-text
+        font-size: 22px
+        p
+            margin-bottom: 20px
+    &-img
+        margin: -110px 0 -120px 0
+        position: relative
+        margin-right: 50px
+        &__border
+            z-index: 2
+            position: relative
+        &__sert
+            z-index: 1
+            width: 244px
+            background-color: #fff
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-44%, -51%)
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            &-inner
+                opacity: 0
+                visibility: hidden
+                display: block
+                width: 100%
+        &__grass
+            position: absolute
+            top: -30px
+            right: -50px
+            z-index: 0
+    &-seeds
+        position: absolute
+        right: 0
+        z-index: 1
+        &_1
+            bottom: 390px
+        &_2
+            bottom: 200px
+        &_3
+            bottom: 50px
+
+
+@media (max-width: 1500px)
+    .secure
+        &-seeds
+            &_1
+            bottom: 240px
+            &_2
+                bottom: 50px
+            &_3
+                bottom: -100px
+
+
+@media (max-width: 1150px)
+    .secure
+        &-seeds
+            display: none
+
+@media (max-width: 1100px)
+    .secure
+        padding: 40px 0
+        &-text
+            font-size: 20px
+            p
+                margin-bottom: 15px
+        &-img
+            margin-right: 0
+            &__grass
+                display: none
+
+@media (max-width: 900px)
+    .secure
+        padding: 30px 0
+        &::after
+            display: none
+        &-container
+            flex-direction: column
+        &-img
+            margin-top: 0
+            margin-bottom: -150px
+        &-main
+            text-align: center
+        &-title
+            text-align: center
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+        &-img
+            &__border
+                max-width: 300px
+            &__sert
+                width: 198px

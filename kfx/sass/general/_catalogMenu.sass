@@ -1,0 +1,62 @@
+.catalogMenu
+    position: fixed
+    height: 100%
+    width: 100%
+    max-width: 300px
+    left: 0
+    top: 0
+    background-color: #ffffff
+    z-index: 50
+    padding: 30px 20px
+    padding-top: 50px
+    left: -300px
+    transition: .5s left, .5s box-shadow
+    overflow: auto
+    color: #ffffff
+    color: #000000
+    box-shadow: none
+    &-title
+        font-size: 28px
+        font-weight: 700
+        margin-bottom: 10px
+    &-item
+        border-top: 1px solid $silver
+        padding: 15px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &__title
+            font-size: 16px
+            font-weight: 700
+            color: #000000
+            margin-bottom: 15px
+        &__link
+            color: #000000
+            font-weight: 400
+            margin-left: 15px
+            position: relative
+            margin-bottom: 5px
+            font-size: 14px
+            transition: .3s color
+            &:last-child
+                margin-bottom: 0
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                top: 6px
+                left: -15px
+                border-radius: 100%
+                background-color: $citron
+                width: 5px
+                height: 5px
+    &-close
+        padding: 5px
+        position: absolute
+        top: 15px
+        right: 15px
+        width: 30px
+
+.catalogMenu.active
+    left: 0
+    box-shadow: 8px 6px 20px rgba(0, 0, 0, 0.25)

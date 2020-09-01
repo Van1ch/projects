@@ -1,0 +1,230 @@
+.feedback
+    padding: 110px 0
+    position: relative
+    &-slider
+        width: calc(100% + 30px)
+        margin-left: -15px
+        position: relative
+        z-index: 1
+        .slick-current > .feedback-slider__item
+                box-shadow: 20px 14px 40px 1px rgba(0, 0, 0, 0.13)
+        &__item
+            padding: 55px 0 80px 70px
+            background-color: #ffffff
+            margin: 0 15px
+            box-shadow: none
+            transition: .3s box-shadow
+            &-inner
+                max-width: 550px
+                &__top
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-bottom: 20px
+                    &-quotes
+                        margin-right: 30px
+                        &__content
+                            width: 39px
+                            height: 28px
+                            fill: #64737c
+                    &-line
+                        flex-grow: 1
+                        height: 1px
+                        background-color: #bdcad2
+                &__text
+                    font-style: italic
+                    margin-bottom: 20px
+                &__bottom
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    color: #64737c
+                    &-name
+                        font-size: 20px
+                        font-weight: 700
+                    &-line
+                        flex-grow: 1
+                        height: 1px
+                        background-color: #bdcad2
+                        margin: 0 20px
+                    &-date
+                        font-style: italic
+            &-wrapper
+                transition: .3s box-shadow
+                position: relative
+                padding: 40px 45px 50px 0
+        &__photo
+            position: absolute
+            right: 0
+            top: 0
+            &-content
+                width: 100%
+                max-width: 480px
+                max-height: 500px
+        &__nav
+            display: flex
+            align-items: center
+            position: relative
+            z-index: 1
+            &-dots
+                max-width: 100%
+                .slick-dots
+                    display: flex
+                    align-items: center
+                    width: 420px
+                    flex-wrap: wrap
+                    margin-left: 60px
+                    margin-right: 90px
+                    margin-bottom: -6px
+                    max-width: 100%
+                    li
+                        height: 5px
+                        background-color: #c5cdd2
+                        list-style: none
+                        margin: 0 6px
+                        flex-grow: 1
+                        cursor: pointer
+                        transition: .3s flex-grow
+                        width: 22px
+                        margin-bottom: 6px
+                        button
+                            display: none
+                    li.slick-active
+                        width: 35px
+                        flex-grow: 2
+                        background-color: #f8b039
+            &-arrows
+                display: flex
+                &__item
+                    background-color: #c5cdd2
+                    width: 44px
+                    height: 44px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 100%
+                    cursor: pointer
+                    transition: .3s background-color
+                    &:hover
+                        background-color: #f8b039
+                    svg
+                        width: 10px
+                        height: 18px
+                        fill: #ffffff
+                    &_left
+                        margin-right: 20px
+    &-bg
+        flex-basis: 50%
+        display: flex
+        &__wrapper
+            display: flex
+            justify-content: flex-end
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            z-index: 0
+        &__inner
+            width: 289px
+            background-image: url('../img/feedback/bg.png')
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+
+@media (max-width: 1210px)
+    .feedback
+        &-slider
+            &__photo
+                right: 15px
+                &-content
+                    max-width: 350px
+        &-bg
+            &__wrapper
+                display: none
+
+@media (max-width: 1100px)
+    .feedback
+        padding: 60px 0
+        &-title
+            text-align: center
+            margin-bottom: 25px
+        &-slider
+            width: 100%
+            margin-left: 0
+            box-shadow: 20px 14px 40px 1px rgba(0, 0, 0, 0.13)
+            .slick-current > .feedback-slider__item
+                box-shadow: none
+            &__photo
+                right: auto
+                top: auto
+                position: relative
+                margin-bottom: 20px
+                &-content
+                    margin: 0 auto
+            &__item
+                padding: 0
+                margin: 0
+                &-inner
+                    max-width: 100%
+                &-wrapper
+                    padding: 30px
+            &__nav
+                margin-top: 30px
+
+@media (max-width: 850px)
+    .feedback
+        padding: 50px 0
+        &-slider
+            &__photo
+                &-content
+                    max-width: 300px
+
+@media (max-width: 720px)
+    .feedback
+        &-slider
+            &__nav
+                flex-direction: column
+                &-arrows
+                    margin-top: 20px
+                &-dots
+                    .slick-dots
+                        margin: 0
+
+@media (max-width: 500px)
+    .feedback
+        padding: 20px 0
+        &-slider
+            &__photo
+                &-content
+                    max-width: 300px
+            &__item
+                &-wrapper
+                    padding: 20px
+                &-inner
+                    &__text
+                        font-size: 15px
+                        margin-bottom: 10px
+                    &__top
+                        margin-bottom: 10px
+                        &-quotes
+                            &__content
+                                width: 30px
+                    &__bottom
+                        &-name
+                            font-size: 16px
+                        &-line
+                            margin: 0 10px
+                        &-date
+                            font-size: 14px
+                    
+@media (max-width: 360px)
+    .feedback
+        &-slider
+            &__item
+                &-inner
+                    &__bottom
+                        flex-direction: column
+                        &-line
+                            margin: 10px 0
+                            width: 100%

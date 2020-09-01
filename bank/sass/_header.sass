@@ -1,0 +1,171 @@
+.header
+    padding: 15px 0
+    &-container
+        display: flex
+    &-logo
+        margin-right: 75px
+        &__img
+            max-width: 250px
+    &-content
+        flex-grow: 1
+        &__top
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &-button
+                background-color: $brightRed
+                border-radius: 5px
+                text-decoration: none
+                color: #ffffff
+                font-size: 16px
+                padding: 9px 15px
+                font-weight: 700
+                position: relative
+                &::before
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    display: block
+                    content: ''
+                    background-color: $brightRed
+                    border-radius: 5px
+                    z-index: 0
+                    animation: 5s scale linear infinite
+                    transition: .3s background-color
+                &:hover
+                    &::before
+                        background-color: lighten($brightRed, 10%)
+                &__content
+                    position: relative
+                    z-index: 1
+            &-right
+                display: flex
+                align-items: center
+                &__text
+                    color: $regentGray
+                    font-size: 14px
+                    letter-spacing: 0.35px
+                    margin-right: 25px
+                &__phone
+                    font-size: 24px
+                    letter-spacing: 0.6px
+                    font-weight: 700
+                    color: #000000
+                    span
+                        color: $kashmirBlue
+                &__icon
+                    margin-right: 25px
+                    display: inline-flex
+                    svg
+                        fill: #00E676
+                        width: 22px
+        &__nav
+            display: flex
+            justify-content: flex-end
+            padding-top: 20px
+            border-top: 1px solid $geyser
+            margin-top: 15px
+            &-item
+                font-size: 14px
+                text-transform: uppercase
+                letter-spacing: 0.35px
+                color: #000000
+                margin-right: 45px
+                transition: .3s color
+                &:last-child
+                    margin-right: 0
+                &:hover
+                    color: $kashmirBlue
+
+@keyframes scale
+    0%
+        transform: scale(1)
+    40%
+        transform: scale(1)
+    45%
+        transform: scale(1.02)
+    50%
+        transform: scale(1)
+    55%
+        transform: scale(1.02)
+    60%
+        transform: scale(1)
+    100%
+        transform: scale(1)
+
+@media (max-width: 1210px)
+    .header
+        padding-bottom: 5px
+        &-container
+            flex-direction: column
+        &-logo
+            text-align: center
+            margin-bottom: 10px
+            margin-right: 0
+            &__img
+                max-width: 200px
+        &-content
+            &__top
+                justify-content: center
+                &-button
+                    margin-right: 30px
+                &-right
+                    &__text
+                        margin-right: 30px
+            &__nav
+                width: calc(100% + 30px)
+                margin-left: -15px
+                justify-content: center
+                flex-wrap: wrap
+                &-item
+                    margin: 0 15px
+                    margin-bottom: 10px
+                    &:last-child
+                        margin: 0 15px
+
+@media (max-width: 880px)
+    .header
+        &-content
+            &__top
+                flex-direction: column
+                &-button
+                    padding: 6px 15px
+                    font-size: 14px
+                    margin-right: 0
+                    margin-bottom: 10px
+            &__nav
+                padding-top: 15px
+                margin-top: 10px
+                &-item
+                    margin: 0 10px 10px 10px
+
+@media (max-width: 520px)
+    .header
+        padding-bottom: 0
+        &-logo
+            margin-bottom: 5px
+            &__img
+                max-width: 160px
+        &-content
+            &__top
+                &-button
+                    margin-right: 0
+                    margin-bottom: 10px
+                &-right
+                    flex-direction: column
+                    &__text
+                        margin-right: 0
+                        margin-bottom: 5px
+                    &__phone
+                        font-size: 22px
+                    &__icon
+                        margin-bottom: 5px
+                        margin-right: 0
+            &__nav
+                padding-top: 10px
+                margin-top: 10px
+                &-item
+                    font-size: 13px
+                    margin: 0 10px 10px 10px

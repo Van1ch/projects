@@ -1,0 +1,109 @@
+.policy
+    background: #ffffff
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 25px
+    &-list
+        list-style: none
+        &__item
+            padding-left: 20px
+            margin-bottom: 20px
+            position: relative
+            &::before
+                position: absolute
+                left: 12px
+                top: 4px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: $seaBuckthorn
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modal
+    display: flex
+    background: #ffffff
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 600px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-photo
+        flex-basis: 45%
+        min-height: 100%
+        max-height: 100%
+        background: url('../img/general/modalBg.jpg')
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+    &-content
+        padding: 30px
+        width: 100%
+        &__title
+            font-weight: 700
+            font-size: 26px
+            margin-bottom: 12px
+        &__text
+            font-size: 16px
+            margin-bottom: 15px
+        &__input
+            padding: 15px 20px
+            margin-bottom: 12px
+            font-size: 18px
+        &__input#picketType
+            display: none
+        &__btn
+            margin-top: 4px
+            margin-bottom: 20px
+            width: 100%
+            border: none
+            cursor: pointer
+        &__policy
+            display: flex
+            align-items: center
+            font-size: 12px
+            &-checkbox
+                margin-right: 10px
+                width: 20px
+                height: 20px
+            &-text
+                &__link
+                    color: #000000
+                    &::after
+                        background-color: #000000
+
+@media (max-width: 600px)
+    .modal
+        &-wrapper
+            max-width: 340px
+        &-content
+            &__input
+                padding: 14px 20px
+            &__policy
+                &-text
+                    &__link
+                        text-decoration: underline
+                        &::after
+                            display: none
+        &-photo
+            display: none
+        &-content
+            padding: 25px 20px
+    .policy
+        &-title
+            margin-bottom: 20px
+            font-size: 20px

@@ -1,0 +1,116 @@
+.book
+    display: flex
+    align-items: center
+    &-wrapper
+        background: $midGray
+    &-img
+        flex-basis: 50%
+        max-height: 350px
+    &-text
+        max-width: 500px
+        &__title
+            margin-bottom: 50px
+            span
+                font-size: 36px
+            h2
+                font-size: 40px
+                font-weight: 700
+                text-transform: uppercase
+    &-btn
+        color: $goldenTainoi
+        padding: 17px 40px
+        font-size: 24px
+        font-weight: 700
+        border: 4px solid #ffffff
+        text-decoration: none
+        transition: .3s all
+        display: inline-block
+        &:hover
+            color: #ffffff
+            border: 4px solid $goldenTainoi
+            background: $goldenTainoi
+
+@media (max-width: 1230px)
+    .book
+        &-img
+            max-height: 250px
+            img
+                max-height: 250px
+        &-text
+            &__title
+                margin-bottom: 30px
+                span
+                    font-size: 28px
+                h2
+                    font-size: 30px
+        &-btn
+            font-size: 18px
+            padding: 13px 30px
+            border: 3px solid #ffffff
+@media (max-width: 1000px)
+    .book
+        &-img
+            max-height: 200px
+            img
+                max-height: 200px
+        &-text
+            &__title
+                margin-bottom: 20px
+                span
+                    font-size: 22px
+                h2
+                    font-size: 24px
+        &-btn
+            font-size: 16px
+@media (max-width: 768px)
+    .book
+        &-img
+            margin-right: 20px
+            max-height: 170px
+            img
+                max-height: 170px
+        &-text
+            &__title
+                margin-bottom: 15px
+                span
+                    font-size: 16px
+                h2
+                    font-size: 18px
+        &-btn
+            font-size: 14px
+            padding: 10px 25px
+            border: 2px solid #ffffff
+@media (max-width: 576px)
+    .book
+        &-img
+            margin-right: 0
+            margin-left: -20px
+            max-height: 140px
+            img
+                max-height: 140px
+        &-text
+            &__title
+                margin-bottom: 10px
+                span
+                    font-size: 14px
+                h2
+                    font-size: 16px
+        &-btn
+            font-size: 12px
+            padding: 8px 20px
+@media (max-width: 400px)
+    .book
+        &-img
+            margin-right: 5px
+            max-height: 120px
+            img
+                max-height: 120px
+        &-text
+            &__title
+                span
+                    font-size: 12px
+                h2
+                    font-size: 12px
+        &-btn
+            font-size: 12px
+            padding: 7px 18px

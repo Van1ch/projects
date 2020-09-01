@@ -1,0 +1,132 @@
+.manage
+    padding: 100px 0 50px 0
+    position: relative
+    &::after, &::before
+        position: absolute
+        display: block
+        content: ''
+        background-color: $athensGray
+        height: 80%
+        bottom: 0
+        z-index: 0
+    &::after
+        width: 30%
+        left: 0
+    &::before
+        width: 19%
+        right: 0
+    &-content
+        display: flex
+        &__img
+            margin-right: 150px
+            margin-left: 100px
+            position: relative
+            &-content
+                position: relative
+                z-index: 2
+            &-bg
+                display: flex
+                align-items: center
+                justify-content: center
+                position: absolute
+                top: 0
+                right: -20px
+                background-color: #fff
+                border-radius: 100%
+                box-shadow: 17px 27px 29px 1px rgba(28, 27, 34, 0.11)
+                width: 570px
+                height: 570px
+                z-index: 1
+                &__inner
+                    background-color: #fff
+                    border-radius: 100%
+                    box-shadow: 17px 27px 29px 1px rgba(28, 27, 34, 0.11)
+                    width: 88%
+                    height: 88%
+        &__text
+            padding-right: 40px
+            position: relative
+            z-index: 1
+            &-subtitle
+                margin-bottom: 40px
+            &-caption
+                font-size: 20px
+                font-weight: 900
+                margin-bottom: 30px
+                text-transform: uppercase
+
+@media (max-width: 1210px)
+    .manage
+        padding: 80px 0 40px 0
+        &-content
+            &__img
+                margin-left: 50px
+                margin-right: 80px
+
+@media (max-width: 1000px)
+    .manage
+        padding: 60px 0 30px 0
+        &-content
+            flex-direction: column-reverse
+            &__text
+                padding-right: 0
+                margin-bottom: 30px
+                text-align: center
+                &-list
+                    text-align: left
+                    display: flex
+                    flex-direction: column
+            &__img
+                margin: 0
+                text-align: center
+                &-bg
+                    right: 55%
+                    transform: translateX(50%)
+                    width: 500px
+                    height: 500px
+                    max-width: 100%
+                    max-height: 100%
+                &-content
+                    max-width: 300px
+        &::before, &::after
+           display: none
+
+@media (max-width: 600px)
+    .manage
+        padding: 30px 0
+        &-content
+            &__text
+                &-subtitle
+                    margin-bottom: 20px
+                &-caption
+                    font-size: 18px
+                    margin-bottom: 20px
+                &-list
+                    &__item
+                        margin-bottom: 10px
+                        font-size: 18px
+            &__img
+                &-content
+                    max-width: 250px
+                &-bg
+                    right: 60%
+                    width: 410px
+                    height: 410px
+
+@media (max-width: 440px)
+    .manage
+        &-content
+            &__img
+                &-content
+                    max-width: 210px
+                &-bg
+                    width: 330px
+                    height: 330px
+
+@media (max-width: 360px)
+    .manage
+        &-content
+            &__img
+                &-bg
+                    width: 290px
+                    height: 290px

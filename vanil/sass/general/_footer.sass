@@ -1,0 +1,101 @@
+.footer
+    background-color: #fff
+    &-wrapper
+        display: flex
+        width: calc(100% + 20px)
+        margin-left: -10px
+    &-item
+        padding: 0 10px
+        flex-basis: 25%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &_right
+            padding-top: 39px
+            font-size: 12px
+            color: $doveGray
+            display: flex
+            flex-direction: row
+            justify-content: flex-end
+        &__inner
+            max-width: 220px
+    &-phone
+        font-size: 20px
+        font-weight: 700
+        letter-spacing: 0.5px
+        color: #000000
+        margin-bottom: 5px
+    &-mail
+        margin-top: 10px
+        color: #000000
+        margin-bottom: 20px
+    &-title
+        margin-bottom: 20px
+        font-weight: 700
+        text-transform: uppercase
+    &-link
+        color: #000000
+        margin-bottom: 10px
+        transition: .3s color
+        &:last-child
+            margin-bottom: 0
+        &:hover
+            color: $red
+    &-text
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+    &-policy
+        color: $doveGray
+        margin-bottom: 10px
+        transition: .3s color
+        &:hover
+            color: #000000
+    &-dev
+        color: #000000
+
+@media (max-width: 1100px)
+    .footer
+        &-wrapper
+            flex-wrap: wrap
+        &-item
+            flex-basis: 33.33%
+            &_right
+                flex-basis: 100%
+                padding-top: 30px
+                justify-content: center
+            &__inner
+                text-align: center
+                max-width: 100%
+
+@media (max-width: 800px)
+    .footer
+        &-item
+            flex-basis: 50%
+            margin-bottom: 20px
+            &:nth-child(n + 3)
+                margin-bottom: 0
+            &_right
+                padding-top: 0
+            &__inner
+                text-align: left
+        &-title
+            margin-bottom: 15px
+        &-link
+            margin-bottom: 7px
+
+@media (max-width: 600px)
+    .footer
+        &-item
+            flex-basis: 100%
+            align-items: center
+            margin-bottom: 15px
+            &:nth-child(3)
+                margin-bottom: 15px
+            &__inner
+                text-align: center
+        &-title
+            margin-bottom: 10px
+        &-mail
+            margin-top: 5px
+            margin-bottom: 10px

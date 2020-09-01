@@ -1,0 +1,129 @@
+.feedback
+    padding: 120px 0 90px 0
+    background-color: $mirage
+    position: relative
+    color: #ffffff
+    &-title
+        margin-bottom: 75px
+    .container
+        position: relative
+        z-index: 1
+    &-btn
+        text-align: center
+        margin-top: 51px
+        &__link
+            padding: 18px 60px
+    &-list
+        display: flex
+        width: calc(100% + 30px)
+        margin-left: -15px
+        flex-wrap: wrap
+        justify-content: center
+        &__item
+            flex-basis: 260px
+            margin: 0 15px 15px 15px
+            color: #ffffff
+            &:hover
+                .feedback-list__item-img::after
+                    opacity: 1
+                    visibility: visible
+                .feedback-list__item-img__dec
+                    opacity: 1
+                    visibility: visible
+                .feedback-list__item-img__dec::after
+                    width: 80%
+                    height: 80%
+                .feedback-list__item-img__dec-content
+                    animation-play-state: running
+            &-img
+                border-radius: 100%
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                position: relative
+                margin-bottom: 30px
+                &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    width: 100%
+                    height: 100%
+                    background-color: transparentize($mirage, .2)
+                    top: 0
+                    left: 0
+                    border-radius: 100%
+                    z-index: 1
+                    opacity: 0
+                    visibility: hidden
+                    transition: .3s opacity, .3s visibility
+                &__content
+                    width: 100%
+                    display: block
+                    visibility: hidden
+                    opacity: 0
+                &__dec
+                    position: absolute
+                    right: 0
+                    top: 0
+                    z-index: 2
+                    opacity: 0
+                    visibility: hidden
+                    transition: .3s opacity, .3s visibility
+                    border: none
+                    &::after
+                        position: absolute
+                        display: block
+                        content: ''
+                        width: 0
+                        height: 0
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        border-radius: 100%
+                        background-color: #ffffff
+                        transition: .4s width, .4s height
+                    &-content
+                        stroke: $mulledWine
+                        stroke-width: 1px
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        animation: rotateArrow 10s linear infinite paused
+                    &-inner
+                        z-index: 1
+            &-title, &-position
+                font-size: 20px
+                letter-spacing: 0.5px
+                text-align: center
+            &-title
+                text-transform: uppercase
+                margin-bottom: 12px
+
+@media (max-width: 1210px)
+    .feedback
+        padding: 90px 0 60px 0
+        &-title
+            text-align: center
+            margin-bottom: 60px
+
+@media (max-width: 900px)
+    .feedback
+        padding: 70px 0 40px 0
+        &-title
+            margin-bottom: 50px
+
+@media (max-width: 600px)
+    .feedback
+        padding: 30px 0 30px 0
+        &-title
+            margin-bottom: 30px
+            br
+                display: none
+        &-list
+            &__item
+                flex-basis: 220px
+                &-img
+                    margin-bottom: 20px

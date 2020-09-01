@@ -1,0 +1,251 @@
+@import _variables.sass
+
+// Общие настройки
+
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none !important
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'Proxima Nova', sans-serif
+    font-size: 18px
+    font-weight: 600
+    color: $emperor
+    background-color: #fff
+a
+    text-decoration: none
+    display: inline-block
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+    overflow-x: hidden
+
+.content
+    flex: 1 0 auto
+    &-contacts
+        display: flex
+        flex-direction: column
+        .map
+            flex-grow: 1
+        .deliveryPage
+            flex-grow: 1
+
+.footer
+    flex: 0 0 auto
+
+.container
+    max-width: 1200px
+    padding: 0 15px
+    margin: 0 auto
+
+.logo
+    display: inline-flex
+    align-items: center
+    color: $emperor
+    &-img
+        margin-right: 10px
+    &-text
+        font-size: 16px
+        text-align: center
+        span
+            display: block
+            font-weight: 700
+            font-size: 25px
+            letter-spacing: 9px
+            line-height: 70%
+
+// Элементы, которые есть на всем сайте
+
+.link
+    position: relative
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: $emperor
+        transition: .3s width
+    &:hover
+        &::after
+            width: 0
+    &_reverse
+        &::after
+            width: 0
+        &:hover
+            &::after
+                width: 100%
+    &_right
+        &::after
+            left: auto
+            right: 0
+
+.empty
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    height: 0 !important
+    border: none !important
+    min-height: 0 !important
+    pointer-events: none
+    &::after
+        display: none !important
+    &::before
+        display: none !important
+
+textarea, input
+    -webkit-appearance: none
+    -moz-appearance: none
+    border-radius: 0
+    width: 100%
+    border: 1px solid $silver
+    padding: 14px 30px
+    transition: .3s border-color
+    color: #000000
+    font-size: 18px
+    &::-webkit-input-placeholder
+        color: #000000
+    &:hover, &:focus
+        border-color: $green
+
+.btn
+    background-color: $lemon
+    border-radius: 24px
+    font-size: 16px
+    color: $emperor
+    padding: 12px 50px
+    transition: .3s background-color, .3s color
+    &:hover
+        background-color: $citron
+        color: #ffffff
+
+.title
+    font-size: 36px
+    text-transform: uppercase
+    font-weight: 700
+    text-align: center
+    position: relative
+    padding-bottom: 15px
+    margin-bottom: 20px
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        background-color: $lemon
+        width: 60px
+        height: 5px
+        border-radius: 10px
+
+.page
+    &-title
+        color: #ffffff
+        font-size: 32px
+        text-transform: uppercase
+        font-weight: 700
+
+
+// Файлы, относящиеся ко всем страницам
+
+@import ./general/_header.sass
+@import ./general/_footer.sass
+@import ./general/_breadcrumbs.sass
+@import ./general/_navigation.sass
+@import ./general/_menu.sass
+@import ./general/_catalogMenu.sass
+@import ./general/_modal.sass
+
+// Файлы, относящиеся к Главной странице
+
+@import ./index/_hero.sass
+@import ./index/_production.sass
+@import ./index/_ad.sass
+@import ./index/_adv.sass
+@import ./index/_secure.sass
+@import ./index/_gallery.sass
+@import ./index/_delivery.sass
+@import ./index/_map.sass
+
+// Файлы, относящиеся к странице О ферме
+
+@import ./about/_about.sass
+
+// Файлы, относящиеся к странице Доставка
+
+@import ./delivery/_deliveryPage.sass
+
+// Файлы, относящиеся к странице Каталога
+
+@import ./catalog/_catalog.sass
+
+// Файлы, относящиеся к карточке товара
+
+@import ./card/_card.sass
+
+
+.alertify-notifier .ajs-message.ajs-warning
+    background: white
+    -webkit-box-shadow: 0 0 3px #333333
+    box-shadow: 0 0 3px #333333
+
+.alertify-notifier .ajs-message.ajs-success
+    color: #fff
+    background: rgba(40, 136, 62, 0.9)
+    text-shadow: 0 0 1px rgba(0,0,0,.5)
+
+.alertify-notifier
+    z-index: 99998
+
+@media (max-width: 1100px)
+    .title
+        font-size: 32px
+    .page
+        &-title
+            font-size: 28px
+
+@media (max-width: 800px)
+    .title
+        font-size: 28px
+
+@media (max-width: 700px)
+    .logo
+        &-img
+            max-width: 60px
+            margin-right: 7px
+        &-text
+            font-size: 14px
+            span
+                font-size: 20px
+        &-phones
+            &__item
+                font-size: 18px
+
+@media (max-width: 600px)
+    body
+        font-size: 16px
+    .btn
+        padding: 12px 40px
+    .title
+        font-size: 26px
+        padding-bottom: 10px
+        margin-bottom: 15px
+        &::after
+            height: 4px
+    .page
+        &-title
+            font-size: 24px
+    textarea, input
+        padding: 12px 20px
+        font-size: 16px

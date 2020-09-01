@@ -1,0 +1,217 @@
+.form
+    display: flex
+    justify-content: space-between
+    &-wrapper
+        background-image: url('../img/form/bg.jpg')
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        background-color: $wildSand
+        position: relative
+    &-man
+        flex-basis: 58%
+        position: relative
+        z-index: 1
+        display: flex
+        align-items: flex-end
+        &__img
+            display: flex
+            justify-content: flex-end
+            &-content
+                display: block
+                max-width: 100%
+                max-height: 100%
+        &__rec
+            position: absolute
+            bottom: 60px
+            left: 0
+            padding: 40px
+            background-color: #ffffff
+            display: flex
+            &-img
+                margin-right: 30px
+                position: relative
+                z-index: 1
+            &-text
+                position: relative
+                z-index: 1
+                max-width: 260px
+                &__title
+                    font-size: 24px
+                    font-weight: 700
+                    text-transform: uppercase
+                    margin-bottom: 15px
+                &__text
+                    font-size: 20px
+                    font-style: italic
+                    color: $mako
+            &-dec
+                position: absolute
+                width: 60px
+                height: 60px
+                z-index: 0
+                &_topLeft
+                    top: 10px
+                    left: 10px
+                    border-top: 1px solid #d2d9db
+                    border-left: 1px solid #d2d9db
+                &_topRight
+                    top: 10px
+                    right: 10px
+                    border-top: 1px solid #d2d9db
+                    border-right: 1px solid #d2d9db
+                &_bottomLeft
+                    bottom: 10px
+                    left: 10px
+                    border-bottom: 1px solid #d2d9db
+                    border-left: 1px solid #d2d9db
+                &_bottomRight
+                    bottom: 10px
+                    right: 10px
+                    border-bottom: 1px solid #d2d9db
+                    border-right: 1px solid #d2d9db
+    &-content
+        flex-basis: 385px
+        padding-top: 120px
+        padding-bottom: 100px
+        position: relative
+        z-index: 1
+        &__title
+            margin-bottom: 40px
+        &__subtitle
+            margin-bottom: 50px
+        &__input
+            margin-bottom: 25px
+        &__checkbox
+            display: flex
+            align-items: center
+            margin-bottom: 55px
+            &-img
+                margin-right: 20px
+            &-text
+                color: #656c70
+                &__link
+                    color: #656c70
+                    &::after
+                        background-color: #656c70
+        &__btn
+            width: 100%
+            border: none
+            cursor: pointer
+    &-bg
+        flex-basis: 50%
+        display: flex
+        justify-content: flex-end
+        &__wrapper
+            display: flex
+            justify-content: flex-start
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            z-index: 0
+        &__inner
+            width: 100%
+            max-width: 500px
+            background-image: url('../img/form/dec.png')
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+
+@media (max-width: 1210px)
+    .form
+        flex-direction: column
+        &-wrapper
+            background-image: none
+        &-content
+            width: 100%
+            margin: 0 auto
+            text-align: center
+            padding: 50px 0
+            &__title
+                margin-bottom: 20px
+            &__subtitle
+                padding-left: 0
+                border-left: none
+                margin-bottom: 20px
+            &__checkbox
+                justify-content: center
+                margin-bottom: 30px
+            .wpcf7
+                max-width: 400px
+                margin: 0 auto
+        &-man
+            flex-basis: auto
+            width: calc(100% + 30px)
+            margin-left: -15px
+            background-image: url('../img/form/bg.jpg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            justify-content: center
+            &__rec
+                padding: 30px
+                left: 50%
+                transform: translateX(-50%) !important
+                &-img
+                    margin-right: 20px
+                    &__content
+                        max-width: 65px
+                &-text
+                    &__title
+                        font-size: 20px
+                        margin-bottom: 10px
+                    &__text
+                        font-size: 18px
+            &__img
+                &-content
+                    max-height: 500px
+        &-bg
+            &__wrapper
+                display: none
+
+@media (max-width: 850px)
+    .form
+        &-content
+            padding: 40px 0
+
+@media (max-width: 700px)
+    .form
+        &-man
+            &__rec
+                padding: 20px
+                width: 100%
+                max-width: 320px
+                &-dec
+                    width: 40px
+                    height: 40px
+                &-text
+                    max-width: 350px
+                    &__title
+                        font-size: 18px
+                    &__text
+                        font-size: 16px
+
+@media (max-width: 500px)
+    .form
+        &-content
+            padding: 30px 0
+            &__input
+                margin-bottom: 20px
+            &__checkbox
+                margin-bottom: 20px
+                &-img
+                    margin-right: 10px
+                &-text
+                    font-size: 14px
+
+@media (max-width: 360px)
+    .form
+        &-content
+            &__checkbox
+                &-text
+                    &__link
+                        text-decoration: underline
+                        &::after
+                            display: none

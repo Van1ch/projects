@@ -1,0 +1,58 @@
+.range
+    background-color: #f4f4f4
+    padding: 80px 0 135px 0
+    &-title
+        margin-bottom: 15px
+        max-width: 700px
+    &-subtitle
+        margin-bottom: 60px
+    &-slider
+        width: calc(100% + 20px)
+        position: relative
+        left: -10px
+        .slick-track
+            margin-left: 0
+        &__item
+            margin: 0 10px
+            box-shadow: none
+        &__arrow
+            position: absolute
+            bottom: -55px
+            cursor: pointer
+            text-transform: uppercase
+            color: #181821
+            letter-spacing: 0.4px
+            text-decoration: underline
+            transition: .3s color
+            &:hover
+                color: #8686ac
+            &_left
+                left: 10px
+            &_right
+                right: 10px
+        .soft-item
+            margin: 0 10px
+            box-shadow: none
+            display: flex !important
+@media (max-width: 1240px)
+    .range
+        padding: 60px 0 100px 0
+@media (max-width: 992px)
+    .range
+        padding: 50px 0 80px 0
+        &-subtitle
+            margin-bottom: 40px
+@media (max-width: 767px)
+    .range
+        padding: 40px 0 80px 0
+        &-title
+            text-align: center
+        &-subtitle
+            text-align: center
+            margin-bottom: 30px
+        &-slider
+            &__arrow
+                bottom: -45px
+@media (max-width: 576px)
+    .range
+        padding: 30px 0 70px 0

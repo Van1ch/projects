@@ -1,0 +1,134 @@
+.categoryInfo
+    background-color: #fff
+    &-container
+        padding-left: 315px
+    &-top
+        display: flex
+        align-items: flex-start
+        margin-bottom: 40px
+        &__text
+            margin-right: 75px
+            font-size: 16px
+            font-weight: 300
+            &-inner
+                max-height: 333px
+                overflow: hidden
+            p
+                margin-bottom: 12px
+                &:last-child
+                    margin-bottom: 0
+            &-title
+                margin-bottom: 15px
+                font-weight: 500
+                text-transform: uppercase
+                letter-spacing: 0.4px
+                margin-top: 25px
+                &:first-child
+                    margin-top: 0
+            &-more
+                margin-top: 15px
+                display: none
+                &__content
+                    cursor: pointer
+                    color: $costaDelSol
+                    font-weight: 500
+                    &::after
+                        background-color: $costaDelSol
+        &__img
+            min-width: 280px
+            min-height: 280px
+            background-color: $wildSand 
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 100%
+            &-content
+                background-size: cover
+                background-position: center center
+                background-repeat: no-repeat
+                border-radius: 100%
+                width: 100%
+                max-width: 250px
+                &__inner
+                    width: 100%
+                    opacity: 0 
+                    visibility: hidden
+                    display: block
+    &-gallery
+        display: flex
+        width: calc(100% + 12px)
+        margin-left: -6px
+        flex-wrap: wrap
+        &__item
+            margin: 0 6px 12px 6px
+            flex-basis: 210px
+            flex-grow: 1
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            position: relative
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                opacity: 0
+                visibility: hidden
+                background-color: transparentize($dingley, .2)
+                transition: .3s opacity, .3s visibility
+                background-image: url(../img/category/categoryInfo/zoom.png)
+                background-repeat: no-repeat
+                background-position: center center
+            &:hover
+                &::after
+                    opacity: 1
+                    visibility: visible
+            &-inner
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+
+@media (max-width: 1210px)
+    .categoryInfo
+        &-container
+            padding-left: 295px
+
+@media (max-width: 1100px)
+    .categoryInfo
+        &-container
+            padding-left: 15px
+
+@media (max-width: 1000px)
+    .categoryInfo
+        &-top
+            &__text
+                margin-right: 40px
+            &__img
+                min-width: 250px
+                min-height: 250px
+                &-content
+                    max-width: 220px
+            
+@media (max-width: 850px)
+    .categoryInfo
+        &-top
+            flex-direction: column-reverse
+            align-items: center
+            &__img
+                margin-bottom: 15px
+                min-width: 220px
+                min-height: 220px
+                &-content
+                    max-width: 200px
+            &__text
+                margin-right: 0
+
+@media (max-width: 500px)
+    .categoryInfo
+        &-gallery
+            &__item
+                flex-basis: 130px

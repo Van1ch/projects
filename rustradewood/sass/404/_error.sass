@@ -1,0 +1,58 @@
+.error
+    padding-bottom: 100px
+    &-container
+        padding-top: 70px
+        padding-bottom: 200px
+        background-image: url(../img/404/bg.png)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: right center
+        color: #ffffff
+    &-title
+        font-size: 36px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.9px
+        margin-bottom: 20px
+    &-subtitle
+        font-size: 16px
+        font-weight: 400
+        margin-bottom: 60px
+    &-btn
+        &__link
+            box-shadow: 7px 12px 27px 1px rgba(28, 27, 34, 0.22)
+            background-color: #ffffff
+            color: #000000
+
+@media (max-width: 1210px)
+    .error
+        padding-bottom: 50px
+        &-container
+            background-size: 60%
+            padding-top: 40px
+            padding-bottom: 170px
+
+@media (max-width: 1000px)
+    .error
+        padding-bottom: 60px
+        padding-top: 30px
+        text-align: center
+        &-container
+            padding-bottom: 0
+            padding-top: 0
+            background-image: none
+        &-title
+            font-size: 32px
+        &-subtitle
+            margin-bottom: 40px
+
+@media (max-width: 600px)
+    .error
+        padding-bottom: 40px
+        padding-top: 20px
+        text-align: center
+        &-title
+            font-size: 26px
+            margin-bottom: 15px
+        &-subtitle
+            margin-bottom: 30px

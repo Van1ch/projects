@@ -1,0 +1,124 @@
+.adv
+    padding: 120px 0
+    &-content
+        display: flex
+        margin-bottom: 10px
+        &__column
+            flex-basis: 25%
+            padding-top: 30px
+            &-item
+                max-width: 250px
+                margin-bottom: 120px
+                &:last-child
+                    margin-bottom: 0
+                &__text
+                    padding-right: 20px
+                &__line
+                    margin-top: 14px
+                    height: 1px
+                    background-color: $citron
+                    position: relative
+                    &::after
+                        position: absolute
+                        display: block
+                        content: ''
+                        background-color: $citron
+                        border-radius: 100%
+                        height: 7px
+                        width: 7px
+                        top: -3px
+                        right: 0
+            &_reverse
+                text-align: right
+                .adv-content__column-item__text
+                    padding-right: 0
+                    padding-left: 20px
+                .adv-content__column-item__line::after
+                    left: 0
+        &__img
+            flex-basis: 50%
+            text-align: center
+    &-list
+        display: flex
+        justify-content: space-between
+        width: calc(100% + 30px)
+        margin-left: -15px
+        flex-wrap: wrap
+        &__item
+            flex-basis: 200px
+            margin: 0 15px
+            margin-bottom: 20px
+            &-img
+                margin-bottom: 15px
+                min-height: 70px
+                text-align: center
+            &-text
+                text-align: center
+
+@media (max-width: 1210px)
+    .adv
+        padding: 90px 0
+        &-content
+            margin-bottom: 40px
+            &__img
+                &-inner
+                    max-width: 500px
+
+@media (max-width: 1050px)
+    .adv
+        padding: 60px 0
+        padding-top: 70px
+        &-content
+            width: calc(100% + 30px)
+            margin-left: -15px
+            &__img
+                display: none
+            &__column
+                flex-basis: 50%
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin: 0 15px
+                &-item
+                    max-width: 330px
+                    margin-bottom: 50px
+
+@media (max-width: 600px)
+    .adv
+        padding-bottom: 10px
+        &-content
+            width: 100%
+            flex-wrap: wrap
+            margin-left: 0
+            margin-bottom: 10px
+            &__column
+                flex-basis: 100%
+                margin: 0
+                padding-top: 0
+                &-item
+                    max-width: 100%
+                    text-align: center
+                    margin-bottom: 20px
+                    &:last-child
+                        margin-bottom: 20px
+                    &__text
+                        padding: 0 !important
+                    &__line
+                        &::after
+                            left: 50%
+                            transform: translateX(-50%)
+                &_reverse
+                    .adv-content__column-item__line::after
+                        left: 50%
+
+@media (max-width: 460px)
+    .adv
+        &-list
+            justify-content: center
+            &__item
+                flex-basis: 100%
+                &-img
+                    min-height: 1px
+                    margin-bottom: 5px
+                    &__inner
+                        max-height: 50px

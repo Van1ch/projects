@@ -1,0 +1,38 @@
+.breadcrumbs
+    padding: 40px 0
+    &-container
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &-item
+        color: $dingley
+        position: relative
+        font-size: 12px
+        line-height: 16px
+        &__dec
+            width: 25px
+            height: 1px
+            background-color: $dingley
+            margin: 0 10px
+    &-item.inactive
+        color: #000000
+
+body.green
+    .breadcrumbs
+        &-item
+            color: #ffffff
+            &__dec
+                background-color: #fff
+        &-item.inactive
+            color: #000000
+
+.categoryMain .breadcrumbs-container
+    padding: 0
+
+@media (max-width: 1100px)
+    .breadcrumbs
+        padding: 30px 0
+
+@media (max-width: 600px)
+    .breadcrumbs
+        padding: 20px 0

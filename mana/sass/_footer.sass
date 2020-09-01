@@ -1,0 +1,213 @@
+.footer
+    padding: 70px 0
+    background: #000 url('../img/footer/bg.png') center no-repeat
+    background-position: right
+    background-size: cover
+    color: #ffffff
+    position: relative
+    &-title
+        font-size: 36px
+        letter-spacing: -1.8px
+        line-height: 40px
+        margin-bottom: 50px
+        z-index: 1
+        &_right
+            margin-bottom: 30px
+        &::before
+            width: 28px
+            height: 28px
+            left: -20px
+            top: 4px
+    &-phone
+        margin-bottom: 25px
+        position: relative
+        z-index: 1
+        &__text
+            font-size: 16px
+            color: $gray
+            margin-bottom: 5px
+        &__link
+            font-size: 48px
+            font-weight: 700
+            color: $supernova
+    &-mail
+        margin-bottom: 150px
+        position: relative
+        z-index: 1
+        &__text
+            font-size: 16px
+            color: $gray
+            margin-bottom: 8px
+        &__link
+            font-size: 24px
+            color: $concrete
+    &-copyright, &-policy, &-developer
+        position: relative
+        z-index: 1
+        font-size: 14px
+        color: $scorpion
+    &-developer
+        margin-top: 10px
+        &__link
+            color: $scorpion
+            &::before
+                background-color: $scorpion
+    &-policy
+        transition: .3s color
+        &:hover
+            color: #ffffff
+    &-text
+        color: $silverChalice
+        margin-bottom: 100px
+    &-man
+        display: flex
+        align-items: center
+        &__photo
+            display: inline-block
+            position: relative
+            margin-right: 25px
+            &-img
+                position: relative
+                z-index: 1
+                border-radius: 100%
+                width: 228px
+                height: 228px
+            &-bg
+                z-index: 0
+                position: absolute
+                height: 140%
+                width: 140%
+                border-radius: 100%
+                left: 50%
+                top: 50%
+                transform: translateX(-50%) translateY(-50%)
+                background: #000000 url('../img/general/noise.gif')
+        &__text
+            position: relative
+            z-index: 1
+            &-title
+                font-size: 20px
+                font-weight: 700
+                text-transform: uppercase
+                color: #ffffff
+                margin-bottom: 15px
+            &-subtitle
+                font-size: 16px
+                color: $silverChalice
+                margin-bottom: 45px
+            &-btn
+                font-size: 16px
+                padding: 20px 40px
+    &-noise
+        height: 100%
+        width: 48%
+        position: absolute
+        left: 0
+        top: 0
+        background: #000000 url('../img/general/noise.gif')
+        z-index: 0
+
+@media (max-width: 1300px)
+    .footer
+        &-title
+            font-size: 34px
+
+@media (max-width: 1220px)
+    .footer
+        &-title
+            margin-bottom: 25px
+            &::before
+                width: 20px
+                height: 20px
+                left: -13px
+                top: 8px
+        &-phone
+            margin-bottom: 20px
+            &__link
+                font-size: 36px
+        &-mail
+            margin-bottom: 80px
+            &__link
+                font-size: 20px
+        &-noise
+            width: 44%
+        &-man
+            &__photo
+                &-img
+                    width: 180px
+                    height: 180px
+            &__text
+                &-title
+                    margin-bottom: 10px
+                &-subtitle
+                    margin-bottom: 30px
+                &-btn
+                    padding: 20px 35px
+@media (max-width: 992px)
+    .footer
+        padding: 40px 0
+        text-align: center
+        &-title
+            display: inline-block
+            margin-bottom: 15px
+            font-size: 30px
+        &-noise
+            width: 100%
+            height: 46%
+            top: auto
+            bottom: 0
+        &-man
+            justify-content: center
+            margin-bottom: 70px
+            &__photo
+                margin-right: 20px
+                &-img
+                    width: 150px
+                    height: 150px
+            &__text
+                text-align: left
+                &-subtitle
+                    margin-bottom: 20px
+                &-btn
+                    padding: 15px 25px
+        &-text
+            margin-bottom: 40px
+        &-phone
+            &__link
+                font-size: 30px
+        &-mail
+            margin-bottom: 30px
+            &__link
+                font-size: 18px
+@media (max-width: 768px)
+    .footer
+        padding: 20px 0
+        &-title
+            font-size: 24px
+@media (max-width: 576px)
+    .footer
+        &-title
+            font-size: 22px
+        &-man
+            padding: 0 20px
+            &__text
+                &-btn
+                    font-size: 15px
+                    padding: 12px 20px
+@media (max-width: 430px)
+    .footer
+        &-man
+            flex-direction: column
+            margin-bottom: 40px
+            &__text
+                text-align: center
+            &__photo
+                margin-right: 0
+                margin-bottom: 35px
+        &-noise
+            width: 100%
+            height: 39%
+@media (max-width: 396px)
+    .footer
+        &-noise
+            height: 38%

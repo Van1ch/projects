@@ -1,0 +1,93 @@
+.salesCard
+    &-container
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &-img
+        flex-basis: 50%
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
+        position: relative
+        overflow: hidden
+        &__inner
+            width: 100%
+            display: block
+            opacity: 0
+            visibility: hidden
+        &__text
+            position: absolute
+            font-size: 230px
+            color: #ffffff
+            right: -30px
+            bottom: 0
+            text-transform: uppercase
+            font-weight: 700
+            line-height: 70%
+    &-main
+        flex-basis: 42%
+        margin-top: 30px
+    &-title
+        font-size: 24px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.6px
+        margin-bottom: 40px
+    &-text
+        div
+            font-weight: 500
+            letter-spacing: 0.4px
+            margin-bottom: 5px
+        div.add
+            margin-top: 20px
+            ~ p
+                font-size: 12px
+                margin-bottom: 0
+        p
+            font-weight: 300
+            margin-bottom: 20px
+
+@media (max-width: 1210px)
+    .salesCard
+        &-img
+            &__text
+                font-size: 210px
+
+@media (max-width: 1050px)
+    .salesCard
+        &-img
+            &__text
+                font-size: 190px
+        &-main
+            flex-basis: 46%
+
+@media (max-width: 900px)
+    .salesCard
+        &-img
+            &__text
+                font-size: 160px
+        &-title
+            font-size: 22px
+            margin-bottom: 25px
+        &-text
+            p
+                margin-bottom: 15px
+
+@media (max-width: 800px)
+    .salesCard
+        &-container
+            flex-direction: column
+            align-items: center
+        &-img
+            width: 100%
+            max-width: 400px
+            &__text
+                font-size: 140px
+        &-img, &-main
+            flex-basis: auto
+
+@media (max-width: 390px)
+    .salesCard
+        &-img
+            &__text
+                font-size: 120px

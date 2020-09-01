@@ -1,0 +1,128 @@
+.step
+    padding: 120px 0 150px 0
+    background-color: $athensGray
+    &-title
+        margin-bottom: 100px
+    &-list
+        display: flex
+        &__item
+            flex-basis: 25%
+            position: relative
+            &:first-child
+                .step-list__item-dec
+                    display: none
+            &:nth-child(2)
+                .step-list__item-number
+                    animation-delay: .5s
+            &:nth-child(3)
+                .step-list__item-number
+                    animation-delay: 1s
+            &:nth-child(4)
+                .step-list__item-number
+                    animation-delay: 1.5s
+            &-number
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: transparentize($daisyBush, .4)
+                border-radius: 100%
+                width: 80px
+                height: 80px
+                margin: 0 auto
+                margin-bottom: 30px
+                position: relative
+                box-shadow: 0 0 0 rgba(83, 45, 144, 0.4)
+                animation: pulse 2s infinite
+                &__inner
+                    font-size: 24px
+                    color: #ffffff
+                    background-color: $daisyBush
+                    border-radius: 100%
+                    width: 60px
+                    height: 60px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+            &-dec
+                position: absolute
+                top: 40px
+                left: 0
+                background-color: $alto
+                height: 1px
+                width: calc(100% - 120px)
+                transform: translateX(-50%)
+                &__item
+                    position: absolute
+                    width: 3px
+                    height: 3px
+                    background-color: $codGray
+                    border-radius: 100%
+                    top: -1px
+                    &_left
+                        left: 0
+                    &_right
+                        right: 0
+                &__arrow
+                    border: solid black
+                    border-width: 0 1px 1px 0
+                    padding: 2px
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: rotate(-45deg) translate(-50%, -100%)
+            &-title
+                margin-bottom: 10px
+                font-size: 24px
+                letter-spacing: 0.6px
+            &-text
+                font-size: 16px
+                font-weight: 300
+                color: $doveGray
+            &-text, &-title
+                text-align: center
+                padding: 0 15px
+
+@media (max-width: 1050px)
+    .step
+        padding: 80px 0 55px 0
+        &-title
+            text-align: center
+            margin-bottom: 60px
+        &-list
+            flex-wrap: wrap
+            &__item
+                flex-basis: 50%
+                margin-bottom: 25px
+                &-dec
+                    display: none
+                &-number
+                    margin-bottom: 15px
+
+@media (max-width: 550px)
+    .step
+        padding: 30px 0 10px 0
+        &-title
+            text-align: center
+            margin-bottom: 30px
+        &-list
+            flex-wrap: wrap
+            &__item
+                flex-basis: 100%
+                margin-bottom: 20px
+                &-number
+                    margin-bottom: 10px
+                    width: 70px
+                    height: 70px
+                    &__inner
+                        width: 55px
+                        height: 55px
+                &-title
+                    margin-bottom: 5px
+
+@keyframes pulse
+  0%
+    box-shadow: 0 0 0 0 rgba(83, 45, 144, 0.4)
+  70%
+    box-shadow: 0 0 0 10px rgba(83, 45, 144, 0)
+  100% 
+    box-shadow: 0 0 0 0 rgba(83, 45, 144, 0)

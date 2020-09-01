@@ -1,0 +1,135 @@
+.footer
+    .contacts-content__contacts-socials
+        margin-top: 20px
+        &__item
+            &-img
+                width: 30px
+                height: 30px
+    &-top
+        padding: 80px 0 65px 0
+        background-color: $lightSteelGray
+        &__logo
+            &-main
+                font-size: 35px
+                display: block
+            &-subtitle
+                font-size: 14px
+        &__phone
+            margin-bottom: 40px
+            &-link
+                font-size: 30px
+                font-family: 'Oswald'
+                font-weight: 700
+                letter-spacing: 0.55px
+                text-decoration: none
+                color: #ffffff
+        &__order
+            display: flex
+            align-items: center
+            justify-content: center
+            text-decoration: none
+            font-weight: 700
+            &-img
+                padding: 13px
+                border-radius: 100%
+                background-color: $waterloo
+                display: flex
+                margin-right: 20px
+                &__img
+                    fill: $lightSteelGray
+                    width: 20px
+                    height: 20px
+            &-text
+                color: $waterloo
+                text-transform: uppercase
+                letter-spacing: 0.4px
+                &::after
+                    bottom: 1px
+                    background-color: $waterloo
+        &__nav
+            &-item
+                display: block
+                color: #ffffff
+                text-decoration: none
+                letter-spacing: 0.4px
+                transition: .3s color
+                margin-bottom: 10px
+                &:hover
+                    color: $waterloo
+                &:last-child
+                    margin-bottom: 0
+    &-bottom
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+        &__wrapper
+            padding: 20px 0
+            background-color: $steelGray
+        &__item
+            color: $comet
+            &-link
+                color: $comet
+                text-decoration: none
+                transition: .3s color
+                &:hover
+                    color: #ffffff
+
+@media (max-width: 992px)
+    .footer
+        .contacts-content__contacts-socials
+            justify-content: flex-start
+        &-top
+            padding: 30px 0
+            &__logo
+                &-main
+                    font-size: 33px
+            &__phone
+                margin-bottom: 15px
+                text-align: center
+                &-link
+                    font-size: 22px
+            &__order
+                &-img
+                    margin-right: 10px
+                    padding: 10px
+                    &__img
+                        width: 14px
+                        height: 14px
+        &-bottom
+            font-size: 14px
+@media (max-width: 767px)
+    .footer
+        .contacts-content__contacts-socials
+            justify-content: center
+        &-top
+            padding: 20px 0
+            &__nav
+                margin-top: 20px
+                display: flex
+                justify-content: center
+                flex-wrap: wrap
+                &-item
+                    margin: 5px
+        &-bottom
+            flex-wrap: wrap
+            justify-content: center
+            &__item
+                margin: 2px 10px
+            &__wrapper
+                padding: 10px 0
+@media (max-width: 576px)
+    .footer
+        .contacts-content__contacts-socials
+            margin: 15px 0
+        &-top
+            &__nav
+                flex-direction: column
+                align-items: center
+            &__logo
+                text-align: center
+                margin-bottom: 15px
+                &-main
+                    font-size: 28px
+                &-subtitle
+                    margin: 0 auto
+                    max-width: 220px

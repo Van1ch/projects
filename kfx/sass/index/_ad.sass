@@ -1,0 +1,77 @@
+.ad
+    background-image: url(../img/index/ad/bg.jpg)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    padding: 20px 0 30px 0
+    position: relative
+    &-container
+        display: flex
+        align-items: center
+    &-img
+        margin: -60px 0
+        position: relative
+        filter: drop-shadow(-5px 10px 14px rgba(50, 50, 50, 0.4))
+    &-text
+        background-color: #fff
+        margin-left: -120px
+        align-self: stretch
+        padding: 50px 20px 50px 200px
+    &-title
+        text-align: left
+        font-size: 34px
+        text-transform: none
+        color: $gray
+        &::after
+            left: 0
+            transform: none
+    &-subtitle
+        max-width: 420px
+        font-size: 24px
+        font-weight: 600
+    &-leaf
+        position: absolute
+        &_1
+            top: -100px
+            left: 200px
+        &_2
+            bottom: -100px
+            left: calc((100% - 1150px) / 2)
+        &_3
+            top: -50px
+            right: 7%
+        &_4
+            bottom: -150px
+            right: 15%
+
+@media (max-width: 1100px)
+    .ad
+        &-leaf
+            display: none
+        &-img
+            max-width: 400px
+        &-text
+            padding-left: 150px
+
+@media (max-width: 900px)
+    .ad
+        background-image: none
+        background-color: #f4f4f4
+        &-text
+            padding: 0
+            margin: 0
+            margin-bottom: 30px
+            background-color: transparent
+            text-align: center
+        &-subtitle
+            margin: 0 auto
+        &-title
+            text-align: center
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+        &-container
+            flex-direction: column-reverse
+        &-img
+            max-width: 300px
+            margin-top: 0

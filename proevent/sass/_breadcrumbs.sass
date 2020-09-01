@@ -1,0 +1,52 @@
+.breadcrumbs
+    position: relative
+    z-index: 2
+    &-item
+        font-size: 14px
+        letter-spacing: 0.35px
+        color: $lightSteelGray
+        margin-right: 30px
+        position: relative
+        &::before
+            position: absolute
+            display: block
+            content: ''
+            height: 100%
+            width: 1px
+            background-color: $lightSteelGray
+            top: 0
+            right: -15px
+        &:last-child
+            color: $manatee !important
+            pointer-events: none
+            &::before, &::after
+                display: none
+    
+.catalog
+    &-breadcrumbs
+        padding: 30px 0
+
+.softwareHero
+    &-breadcrumbs
+        padding: 30px 0 60px 0
+        .breadcrumbs-item
+            color: #ffffff
+            &::before
+                background-color: #fff
+            &::after
+                background-color: #fff
+@media (max-width: 992px)
+    .catalog
+        &-breadcrumbs
+            padding: 20px 0
+    .softwareHero
+        &-breadcrumbs
+            padding: 20px 0 40px 0
+            
+@media (max-width: 576px)
+    .catalog
+        &-breadcrumbs
+            padding: 15px 0
+    .softwareHero
+        &-breadcrumbs
+            padding: 20px 0

@@ -1,0 +1,177 @@
+.wood
+    padding-top: 0
+    &-text
+        p
+            font-size: 16px
+            font-weight: 400
+            letter-spacing: 0.4px
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+    &-content
+        margin-top: 40px
+        margin-bottom: 80px
+        display: flex
+        &__text
+            background-color: #fff
+            padding: 50px 60px 50px 60px
+            margin-top: 45px
+            position: relative
+            z-index: 1
+            flex-grow: 1
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+                width: 120%
+                height: 100%
+                background-color: #fff
+                z-index: 0
+            &-item
+                display: none
+            &-item.active
+                display: block
+            &-text
+                position: relative
+                p
+                    margin-bottom: 10px
+                    font-size: 16px
+            &-title
+                position: relative
+                font-size: 24px
+                font-weight: 700
+                letter-spacing: 0.6px
+                text-transform: uppercase
+                margin-bottom: 20px
+        &__list
+            min-width: 280px
+            padding-bottom: 45px
+            position: relative
+            z-index: 2
+            &-item
+                background-size: cover
+                background-position: center center
+                background-repeat: no-repeat
+                position: relative
+                margin-bottom: 25px
+                cursor: pointer
+                &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background-image: url('../img/wood/bg.png')
+                    background-repeat: no-repeat
+                    background-position: center bottom
+                    background-size: contain
+                    z-index: 1
+                    opacity: 1
+                    visibility: visible
+                    transition: .3s opacity, .3s visibility
+                &:hover
+                    &::after
+                        opacity: 0
+                        visibility: hidden
+                &:last-child
+                    margin-bottom: 0
+                &__content
+                    display: block
+                    width: 100%
+                    opacity: 0
+                    visibility: hidden
+                &__title
+                    z-index: 2
+                    position: absolute
+                    width: 100%
+                    padding: 20px
+                    bottom: 0
+                    left: 0
+                    font-size: 20px
+                    font-weight: 500
+                    letter-spacing: 0.5px
+                    color: #ffffff
+            &-item.active
+                &::after
+                    opacity: 0
+                    visibility: hidden
+
+@media (max-width: 1150px)
+    .wood
+        &-content
+            margin-top: 30px
+            margin-bottom: 50px
+            &__list
+                min-width: 250px
+            &__text
+                padding: 40px 40px 40px 40px
+
+@media (max-width: 1050px)
+    .wood
+        &-content
+            flex-wrap: wrap
+            justify-content: center
+            width: calc(100% + 20px)
+            margin-left: -10px
+            margin-bottom: 40px
+            &__text
+                flex-basis: 100%
+                order: 3
+                padding: 30px 20px
+                margin-right: -5px
+                margin-left: -5px
+                &::before
+                    display: none
+            &__list
+                flex-basis: 330px
+                margin: 0 10px
+                padding-bottom: 30px
+                &-item
+                    margin-bottom: 20px
+            
+@media (max-width: 750px)
+    .wood
+        &-text
+            p
+                margin-bottom: 10px
+        &-content
+            margin-bottom: 40px
+            &__text
+                padding: 30px 20px
+                &-title
+                    font-size: 22px
+            &__list
+                flex-basis: 270px
+                &-item
+                    &__title
+                        font-size: 18px
+
+@media (max-width: 600px)
+    .wood
+        &-content
+            &__list
+                min-width: 1px
+                flex-basis: 210px
+            &__text
+                padding: 20px 15px
+
+@media (max-width: 470px)
+    .wood
+        &-content
+            &__list
+                flex-basis: 44%
+                &-item
+                    &__title
+                        padding: 10px
+                        font-size: 16px
+
+@media (max-width: 370px)
+    .wood
+        &-content
+            &__list
+                flex-basis: 100%

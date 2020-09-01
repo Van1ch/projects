@@ -1,0 +1,123 @@
+.hero
+    background-image: url('../img/hero/heroBg.jpg')
+    background-repeat: no-repeat
+    background-position: center 0
+    background-size: cover
+    &-list
+        display: flex
+    &-item
+        overflow: hidden
+        flex-basis: 33.33%
+        padding: 60px 0 0 30px
+        color: #ffffff
+        text-decoration: none
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        position: relative
+        &::before
+            position: absolute
+            display: block
+            content: ''
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background-image: url('../img/hero/itemBg.png')
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            transition: .3s opacity
+            z-index: 0
+            opacity: 0
+        &:hover
+            .hero-item__text-title_special
+                color: $tacha
+            &::before
+                opacity: 1
+            .hero-item__img
+                transform: scale(1.1)
+        &__text
+            &-title
+                position: relative
+                z-index: 1
+                font-size: 30px
+                font-weight: 700
+                text-transform: uppercase
+                letter-spacing: 0.75px
+                margin-bottom: 30px
+                &_special
+                    transition: .3s color
+                    color: $stormGray
+            &-text
+                position: relative
+                z-index: 1
+                margin-bottom: 60px
+                line-height: 24px
+                letter-spacing: 0.4px
+                max-width: 290px
+        &__img
+            position: relative
+            z-index: 1
+            display: flex
+            justify-content: center
+            transition: .3s transform
+            &-img
+                display: block
+                max-width: 100%
+                max-height: 300px
+@media (max-width: 1240px)
+    .hero
+        &-item
+            padding-top: 40px
+            &__text
+                &-title
+                    margin-bottom: 15px
+                    min-height: 72px
+                    font-size: 28px
+@media (max-width: 992px)
+    .hero
+        &-item
+            &__text
+                &-title
+                    min-height: 56px
+                    font-size: 24px
+                    line-height: 28px
+                &-text
+                    margin-bottom: 40px
+@media (max-width: 767px)
+    .hero
+        &-list
+            flex-wrap: wrap
+        &-item
+            padding-top: 25px
+            flex-basis: 50%
+            &:last-child
+                flex-basis: 100%
+                text-align: center
+            &__text
+                &-text
+                    max-width: 100%
+                    margin-bottom: 25px
+                &-title
+                    min-height: 1px
+                    font-size: 20px
+
+@media (max-width: 575px)
+    .hero
+        &-item
+            &__text
+                &-text
+                    font-size: 15px
+                    line-height: 20px
+@media (max-width: 450px)
+    .hero
+        &-item
+            flex-basis: 100%
+            text-align: center
+            &__img
+                &-img
+                    max-height: 200px
+            &__text
+                &-title
+                    margin-bottom: 10px

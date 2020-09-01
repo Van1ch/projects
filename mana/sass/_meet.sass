@@ -1,0 +1,111 @@
+.meet
+    padding-top: 80px
+    padding-bottom: 300px
+    position: relative
+    &-title
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 50px
+    &-list
+        &__item
+            &-photo
+                margin-bottom: 25px
+                background-repeat: no-repeat
+                background-position: center 0
+                background-size: cover
+                &__img
+                    opacity: 0
+                    visibility: hidden
+                    width: 100%
+                    display: block
+            &-title
+                font-size: 30px
+                font-weight: 900
+                text-transform: uppercase
+                margin-bottom: 13px
+            &-subtitle
+                font-weight: 700
+                margin-bottom: 20px
+    &-triangle
+        z-index: -1
+        position: absolute
+        top: 0
+        right: 0
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 750px 750px 0
+        border-color: transparent $mercury transparent transparent
+    &-mana
+        max-width: 90%
+        z-index: 0
+        position: absolute
+        bottom: -55px
+        left: 50%
+        transform: translateX(-50%)
+
+@media (max-width: 1220px)
+    .meet
+        padding-top: 60px
+        padding-bottom: 180px
+        &-triangle
+            border-width: 0 550px 550px 0
+        &-title
+            margin-bottom: 20px
+        &-list
+            &__item
+                &-photo
+                    margin-bottom: 20px
+                &-title
+                    font-size: 26px
+                    margin-bottom: 10px
+@media (max-width: 992px)
+    .meet
+        padding-top: 40px
+        padding-bottom: 120px
+        &-mana
+            max-width: 80%
+            bottom: -30px
+        &-triangle
+            border-width: 0 400px 400px 0
+        &-list
+            &__item
+                margin-bottom: 30px
+                &-photo
+                    margin-bottom: 15px
+                    max-width: 280px
+                &-title
+                    font-size: 22px
+                    margin-bottom: 5px
+@media (max-width: 768px)
+    .meet
+        padding-bottom: 90px
+        &-text
+            margin-bottom: 30px
+        &-mana
+            bottom: -25px
+        &-triangle
+            border-width: 0 350px 350px 0
+        &-list
+            &__item
+                &-photo
+                    max-width: 210px
+                    &__img
+                        max-width: 210px
+
+@media (max-width: 576px)
+    .meet
+        padding-top: 30px
+        padding-bottom: 60px
+        &-list
+            &__item
+                text-align: center
+                &-photo
+                    margin: 0 auto 15px auto
+        &-triangle
+            border-width: 0 250px 250px 0
+@media (max-width: 440px)
+    .meet
+        padding-bottom: 40px
+        &-triangle
+            border-width: 0 200px 200px 0

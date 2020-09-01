@@ -1,0 +1,73 @@
+.section
+    &-title
+        font-size: 48px
+        color: #000000
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1.2px
+        position: relative
+        &__special
+            color: $manatee
+        &__dec
+            position: relative
+            text-align: right
+            display: inline-block
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                height: 34px
+                width: 1px
+                background-color: $lightComet
+                left: calc(50% + 1px)
+                top: -20px
+                transform: translate(0, -100%)
+            &-wrapper
+                text-align: right
+                white-space: nowrap
+                font-weight: 400
+                right: -50px
+                top: 0
+                position: absolute
+                writing-mode: vertical-lr
+                font-size: 14px
+                text-transform: uppercase
+                color: $lightComet
+                transform: rotate(180deg)
+                &_left
+                    top: 22px
+                    left: -60px
+                    right: auto
+    &-subtitle
+        color: $lightComet
+        font-size: 20px
+        font-weight: 700
+        letter-spacing: 0.5px
+@media (max-width: 1240px)
+    .section
+        &-title
+            &__dec
+                &-wrapper
+                    right: -30px
+                    &_left
+                        right: auto
+                        left: -35px
+@media (max-width: 992px)
+    .section
+        &-title
+            font-size: 34px
+        &-subtitle
+            font-size: 18px
+@media (max-width: 767px)
+    .section
+        &-title
+            font-size: 34px
+            &__dec
+                &-wrapper
+                    display: none
+@media (max-width: 576px)
+    .section
+        &-title
+            font-size: 28px
+        &-subtitle
+            font-size: 18px

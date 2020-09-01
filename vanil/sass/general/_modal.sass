@@ -1,0 +1,188 @@
+.policy
+    background: #ffffff
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 25px
+    &-list
+        list-style: none
+        &__item
+            padding-left: 20px
+            margin-bottom: 20px
+            position: relative
+            &::before
+                position: absolute
+                left: 12px
+                top: 4px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: $yellow
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modal
+    background: #ffffff
+    padding: 40px
+    display: flex
+    flex-direction: column
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 480px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-title
+        font-weight: 700
+        font-size: 26px
+        letter-spacing: 0.9px
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 5px
+    &-subtitle
+        font-size: 18px
+        letter-spacing: 0.45px
+        text-align: center
+        margin-bottom: 30px
+    &-close
+        border: 3px solid $yellow
+        padding: 12px 20px
+        font-size: 18px
+        font-weight: 500
+        text-align: center
+        margin-bottom: 15px
+        transition: .3s background-color
+        cursor: pointer
+        &:hover
+            background-color: $yellow
+    &-cart
+        color: #000000
+        padding: 15px 20px
+        background-color: $yellow
+        text-align: center
+        font-weight: 500
+        font-size: 18px
+        transition: .3s color, .3s background-color
+        &:hover
+            background-color: #000000
+            color: #ffffff
+
+.app
+    background: #ffffff
+    padding: 115px 90px 90px 90px
+    display: flex
+    flex-direction: column
+    position: relative
+    width: 100%
+    max-width: 580px
+    &::after, &::before
+        position: absolute
+        display: block
+        content: ''
+        background-size: contain
+        background-position: center center
+        background-repeat: no-repeat
+    &::after
+        left: -80px
+        top: -90px
+        background-image: url(../img/general/modal1.svg)
+        width: 540px
+        height: 340px
+    &::before
+        right: -40px
+        top: 50%
+        background-image: url(../img/general/modal2.svg)
+        width: 70px
+        height: 50px
+    &-wrapper
+        display: none
+    &-wrapper.fancybox-content
+        padding: 0
+        overflow: visible
+    &-title
+        font-size: 30px
+        font-weight: 500
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 40px
+        position: relative
+    &-input
+        border: 1px solid #000000
+        color: #000000
+        margin-bottom: 20px
+        position: relative
+        z-index: 1
+        &::-webkit-input-placeholder
+            color: #000000
+    &-policy
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        &__check
+            margin-right: 14px
+        &__text
+            font-size: 12px
+            letter-spacing: 0.3px
+            color: $emperor
+            a
+                color: $emperor
+    &-submit
+        padding: 20px 40px
+
+@media (max-height: 730px)
+    .app
+        padding: 50px 70px  
+        &::after
+            left: -50px
+            top: -60px
+            width: 400px
+            height: 250px
+
+@media (max-width: 700px)
+    .app
+        padding: 40px
+        &::after, &::before
+            display: none 
+        &-title
+            font-size: 26px
+            margin-bottom: 20px
+        &-input
+            margin-bottom: 15px
+        &-policy
+            margin-bottom: 20px
+        &-submit
+            padding: 16px 30px
+
+@media (max-width: 600px)
+    .modal
+        padding: 35px 25px 25px 25px
+        &-wrapper
+            max-width: 320px
+        &-title
+            font-size: 28px
+        &-subtitle
+            font-size: 16px
+            margin-bottom: 20px
+    .policy
+        font-size: 15px
+        &-title
+            margin-bottom: 15px
+            font-size: 20px
+        &-wrapper.fancybox-content
+            padding: 20px
+
+@media (max-width: 450px)
+    .app
+        padding: 30px 20px

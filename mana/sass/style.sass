@@ -1,0 +1,287 @@
+@import _variables.sass
+
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none !important
+    padding: 0
+    margin: 0
+
+html, body
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none !important
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    color: #000000
+    background: #ffffff
+    font-size: 18px
+
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.btn
+    padding: 30px 50px
+    font-size: 24px
+    text-transform: uppercase
+    font-weight: 700
+    display: inline-block
+    &-transparent
+        color: #ffffff
+        border: 3px solid $supernova
+        transition: .3s color
+        transition: .3s background-color
+        &:hover
+            color: #000000
+            background-color: $supernova 
+    &-filled
+        color: #000000
+        background-color: $supernova
+        transition: .3s box-shadow
+        &:hover
+            box-shadow: inset 0 0 0 5px $supernova, inset 0 0 0 8px black
+
+.section
+    &-title
+        font-size: 60px
+        font-family: 'BankGothicRUSSMedium'
+        line-height: 60px
+        letter-spacing: -3px
+        text-transform: uppercase
+        position: relative
+        &_yellow
+            color: $supernova
+        &::before
+            position: absolute
+            top: 7px
+            left: -10px
+            width: 40px
+            height: 40px
+            display: block
+            content: ''
+            background-color: $supernova
+            transform: translateX(-100%)
+
+.link
+    position: relative
+    &::before
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        display: block
+        content: ''
+        background-color: #ffffff
+        transition: .3s width
+    &:hover
+        &::before
+            width: 0
+
+@keyframes gallery
+    0%
+        transform: translateX(0%)
+
+    100%
+        transform: translateX(100%)
+
+.modal
+    display: flex
+    background: #ffffff
+    font-family: 'Roboto'
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 600px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-photo
+        flex-basis: 45%
+        min-height: 100%
+        max-height: 100%
+        background: url('../img/general/modalBg.png') center no-repeat
+    &-content
+        padding: 30px
+        width: 100%
+        &__title
+            font-family: 'BankGothicRUSSMedium'
+            color: $supernova
+            font-size: 26px
+            margin-bottom: 12px
+        &__text
+            font-size: 16px
+            margin-bottom: 15px
+        &__input
+            display: block
+            padding: 11px 18px
+            width: 100%
+            font-size: 16px
+            margin-bottom: 12px
+            border: 2px solid #000000
+            transition: .3s border-color
+            font-family: 'Roboto'
+            &:hover, &:focus
+                border-color: $supernova
+            &::-webkit-input-placeholder
+                font-family: 'Roboto'
+                color: #000000
+        &__btn
+            margin-top: 4px
+            width: 100%
+            border: none
+            padding: 16px 0
+            font-size: 16px
+            margin-bottom: 20px
+            cursor: pointer
+        &__policy
+            display: flex
+            align-items: center
+            font-size: 12px
+            &-checkbox
+                margin-right: 10px
+            &-text
+                &__link
+                    padding: 10px 0
+                    color: #000000
+                    &::before
+                        bottom: 10px
+                        background-color: #000000
+
+.policy
+    background: #ffffff
+    font-family: 'Roboto'
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 25px
+    &-list
+        list-style: none
+        &__item
+            padding-left: 20px
+            margin-bottom: 20px
+            position: relative
+            &::before
+                position: absolute
+                left: 14px
+                top: 4px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 14px
+                height: 12px
+                background: url('../img/general/check.png') center no-repeat
+            &:last-child
+                margin-bottom: 0
+
+@media (max-width: 1300px)
+    .section
+        &-title
+            margin-left: 30px
+    
+@media (max-width: 1220px)
+    .btn
+        font-size: 22px
+        padding: 25px 40px
+    .section
+        &-title
+            font-size: 46px
+            line-height: 50px
+            &::before
+                width: 30px
+                height: 30px
+    .wrapper
+        font-size: 16px
+@media (max-width: 992px)
+    .section
+        &-title
+            line-height: 40px
+            font-size: 36px
+    .btn
+        text-align: center
+        font-size: 18px
+        padding: 20px 35px
+
+@media (max-width: 768px)
+    .section
+        &-title
+            font-size: 28px
+            line-height: 30px
+            letter-spacing: -1px
+            &::before
+                top: 4px
+                width: 20px
+                height: 20px
+    .btn
+        font-size: 16px
+        padding: 15px 30px
+        &-filled
+            &:hover
+                box-shadow: inset 0 0 0 4px $supernova, inset 0 0 0 6px black
+@media (max-width: 576px)
+    .section
+        &-title
+            font-size: 24px
+            line-height: 28px
+            &::before
+                width: 16px
+                height: 16px
+    .btn
+        font-size: 15px
+        padding: 12px 25px
+@media (max-width: 500px)
+    .modal
+        &-wrapper
+            max-width: 340px
+        &-content
+            &__policy
+                &-text
+                    &__link
+                        text-decoration: underline !important
+                        &::before
+                            display: none
+        &-photo
+            display: none
+        &-content
+            padding: 25px 20px
+    .policy
+        &-title
+            margin-bottom: 20px
+            font-size: 20px
+
+@media (max-width: 360px)
+    .section
+        &-title
+            font-size: 22px
+
+@import _header.sass
+@import _hero.sass
+@import _about.sass
+@import _trend.sass
+@import _advantage.sass
+@import _benefit.sass
+@import _gallery.sass
+@import _package.sass
+@import _profit.sass
+@import _step.sass
+@import _meet.sass
+@import _footer.sass

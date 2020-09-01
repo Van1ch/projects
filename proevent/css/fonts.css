@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'HarmoniaSansProCyr';
+    src: url('../fonts/HarmoniaSansProCyr-Light.eot');
+    src: local('HarmoniaSansProCyr-Light'), local('HarmoniaSansProCyr Light'),
+    url('../fonts/HarmoniaSansProCyr-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HarmoniaSansProCyr-Light.woff') format('woff'),
+    url('../fonts/HarmoniaSansProCyr-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmoniaSansProCyr';
+    src: url('../fonts/HarmoniaSansProCyr-Regular.eot');
+    src: local('HarmoniaSansProCyr-Regular'), local('HarmoniaSansProCyr Regular'),
+    url('../fonts/HarmoniaSansProCyr-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HarmoniaSansProCyr-Regular.woff') format('woff'),
+    url('../fonts/HarmoniaSansProCyr-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: local('ProximaNova Regular'), local('ProximaNova-Regular'),
+    url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: local('ProximaNova Bold'), local('ProximaNova-Bold'),
+    url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Bold.woff') format('woff'),
+    url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Bold.eot');
+    src: local('Oswald Bold'), local('Oswald-Bold'),
+    url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Bold.woff') format('woff'),
+    url('../fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmoniaSansProCyr';
+    src: url('../fonts/HarmoniaSansProCyr-Bold.eot');
+    src: local('HarmoniaSansProCyr Bold'), local('HarmoniaSansProCyr-Bold'),
+    url('../fonts/HarmoniaSansProCyr-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HarmoniaSansProCyr-Bold.woff') format('woff'),
+    url('../fonts/HarmoniaSansProCyr-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HarmoniaSansProCyr';
+    src: url('../fonts/HarmoniaSansProCyr-Black.eot');
+    src: local('HarmoniaSansProCyr Black'), local('HarmoniaSansProCyr-Black'),
+    url('../fonts/HarmoniaSansProCyr-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HarmoniaSansProCyr-Black.woff') format('woff'),
+    url('../fonts/HarmoniaSansProCyr-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

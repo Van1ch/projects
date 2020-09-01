@@ -1,0 +1,61 @@
+.clients
+    padding-bottom: 30px
+    box-shadow: 0 11px 21px 1px rgba(28, 27, 34, 0.09)
+    background-color: #ffffff
+    &-title
+        margin-bottom: 70px
+    &-list
+        display: flex
+        flex-wrap: wrap
+        &__item
+            flex-basis: 25%
+            padding: 0 10px
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            margin-bottom: 90px
+            font-weight: 700
+            color: #2C3A83
+            &-content
+                max-width: 100%
+
+@media (max-width: 1100px)
+    .clients
+        &-title
+            text-align: center
+            margin-bottom: 50px
+        &-list
+            &__item
+                flex-basis: 33.33%
+                margin-bottom: 60px
+
+@media (max-width: 900px)
+    .clients
+        &-title
+            margin-bottom: 40px
+        &-list
+            &__item
+                flex-basis: 50%
+                margin-bottom: 40px
+
+@media (max-width: 700px)
+    .clients
+        &-title
+            margin-bottom: 30px
+        &-list
+            &__item
+                flex-basis: 100%
+                margin-bottom: 25px
+                &:nth-child(n + 7)
+                    display: none
+                &:last-child
+                    display: inline-flex
+                    margin-bottom: 0
+                    br
+                        display: none
+
+@media (max-width: 500px)
+    .clients
+        &-title
+            margin-bottom: 20px

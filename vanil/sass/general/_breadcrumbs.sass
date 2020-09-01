@@ -1,0 +1,40 @@
+.breadcrumbs
+    padding: 35px 0
+    &-container
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &-item
+        color: #000000
+        position: relative
+        font-size: 12px
+        line-height: 16px
+        font-weight: 300
+        margin: 5px 0
+        &__dec
+            width: 1px
+            height: 12px
+            background-color: #000000
+            margin: 0 12px
+    &-item.inactive
+        color: #a8a8a8
+
+body.green
+    .breadcrumbs
+        &-item
+            color: #ffffff
+            &__dec
+                background-color: #fff
+        &-item.inactive
+            color: #000000
+
+.categoryMain .breadcrumbs-container
+    padding: 0
+
+@media (max-width: 1100px)
+    .breadcrumbs
+        padding: 25px 0
+
+@media (max-width: 600px)
+    .breadcrumbs
+        padding: 15px 0

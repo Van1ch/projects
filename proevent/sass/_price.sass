@@ -1,0 +1,184 @@
+.price
+    background-color: #f4f4f4
+    padding: 100px 0
+    &-title
+        margin-bottom: 70px
+    &-list
+        display: flex
+        justify-content: center
+        align-items: stretch
+        flex-wrap: wrap
+        width: calc(100% + 20px)
+        margin-left: -10px
+        &__item
+            flex-basis: 370px
+            padding-left: 16px
+            position: relative
+            display: flex
+            margin: 0 10px
+            margin-bottom: 20px
+            &-circle
+                top: 25px
+                left: 0
+                position: absolute
+                height: 60px
+                width: 60px
+                border-radius: 100%
+                font-size: 24px
+                font-weight: 700
+                text-transform: uppercase
+                display: flex
+                align-items: center
+                justify-content: center
+                img
+                    max-width: 60%
+                    max-height: 60%
+            &-content
+                flex-grow: 1
+                display: flex
+                flex-direction: column
+                border-top: 8px solid #8686ac
+                color: #000000
+                box-shadow: 17px 27px 29px 1px rgba(28, 27, 34, 0.11)
+                background-color: #ffffff
+                transition: .3s border-color
+                &:hover
+                    border-color: #57577e
+                    .price-list__item-content__btn
+                        background-color: #57577e
+                &__top
+                    padding: 10px
+                    min-height: 110px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: column
+                    text-align: center
+                    &-title
+                        font-size: 30px
+                        font-weight: 700
+                    &-subtitle
+                        font-size: 18px
+                        text-transform: uppercase
+                &__price
+                    padding: 10px
+                    min-height: 81px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: column
+                    border-top: 1px solid #dfdfe7
+                    border-bottom: 1px solid #dfdfe7
+                    &-old
+                        text-decoration: line-through
+                        letter-spacing: 0.45px
+                        font-size: 18px
+                    &-new
+                        font-size: 30px
+                        text-transform: uppercase
+                        font-weight: 700
+                        &_start
+                            font-size: 18px
+                &__text
+                    padding: 25px 40px
+                    flex-grow: 1
+                    &-item
+                        margin-bottom: 10px
+                        position: relative
+                        padding-left: 12px
+                        display: block
+                        text-decoration: none
+                        color: #000000
+                        &::before
+                            position: absolute
+                            display: block
+                            content: ''
+                            width: 4px
+                            height: 4px
+                            background-color: #272525
+                            border-radius: 100%
+                            left: 0
+                            top: 50%
+                            transform: translate(-100%, -50%)
+                        &:last-child
+                            margin-bottom: 0
+                a.price-list__item-content__text-item:hover
+                    color: #57577e
+                    text-decoration: underline
+                &__btn
+                    padding: 23px 10px
+                    text-align: center
+                    display: block
+                    background-color: #8686ac
+                    color: #ffffff
+                    font-size: 20px
+                    font-weight: 700
+                    text-transform: uppercase
+                    text-decoration: none
+                    transition: .3s background-color
+
+@media (max-width: 1239px)
+    .price
+        padding: 70px 0
+        &-title
+            margin-bottom: 50px
+        &-list
+            &__item
+                flex-basis: 305px
+                &-content
+                    &__top
+                        min-height: 100px
+                        &-title
+                            font-size: 28px
+                    &__text
+                        padding: 20px 25px
+                    &__btn
+                        padding: 18px 10px
+                &-circle
+                    height: 55px
+                    width: 55px
+                    font-size: 22px
+
+@media (max-width: 991px)
+    .price
+        padding: 50px 0
+        &-title
+            text-align: center
+            margin-bottom: 35px
+        &-list
+            justify-content: center
+
+@media (max-width: 767px)
+    .price
+        &-list
+            &__item
+                padding-left: 0
+                margin-bottom: 35px
+                &-circle
+                    height: 45px
+                    width: 45px
+                    font-size: 18px
+                    top: 0
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+
+@media (max-width: 576px)
+    .price
+        padding: 30px 0 15px 0
+        &-list
+            &__item
+                &-content
+                    &__top
+                        min-height: 100px
+                        &-title
+                            font-size: 28px
+                    &__price
+                        min-height: 70px
+                        &-new
+                            font-size: 28px
+                    &__btn
+                        padding: 18px 10px
+                        font-size: 18px
+                    &__text
+                        padding: 20px 30px

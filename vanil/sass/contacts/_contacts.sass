@@ -1,0 +1,80 @@
+.contacts
+    &-container
+        display: flex
+    &-list
+        background-color: #fff
+        padding: 40px 35px
+        &__item
+            border-bottom: 1px solid #e8eaec
+            font-weight: 300
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            padding: 20px 0
+            &:first-child
+                padding-top: 0
+            &:last-child
+                border: none
+                padding-bottom: 0
+            &-title
+                font-weight: 700
+                letter-spacing: 0.4px
+                margin-bottom: 10px
+            &-phone
+                font-weight: 400
+                color: #000000
+                margin-top: 5px
+                margin-bottom: 20px
+            &-show
+                color: $red
+                text-transform: uppercase
+                font-weight: 700
+                font-size: 14px
+                letter-spacing: 0.35px
+                cursor: pointer
+                &::after
+                    background-color: $red
+    &-map
+        flex-grow: 1
+
+#mapData
+    display: none
+
+@media (max-width: 1100px)
+    .contacts
+        &-list
+            padding: 25px 20px
+            &__item
+                padding: 15px 0
+
+@media (max-width: 900px)
+    .contacts
+        &-container
+            flex-direction: column
+        &-map
+            min-height: 350px
+        &-list
+            display: flex
+            flex-wrap: wrap
+            &__item
+                flex-basis: 50%
+                &:nth-child(2)
+                    padding-top: 0
+                &:nth-child(3)
+                    border-bottom-width: 0px
+
+@media (max-width: 550px)
+    .contacts
+        &-map
+            min-height: 300px
+        &-list
+            flex-direction: column
+            padding: 20px 15px
+            &__item
+                align-items: center
+                &:nth-child(2)
+                    padding-top: 15px
+                &:nth-child(3)
+                    border-bottom-width: 1px
+                &-phone
+                    margin-bottom: 10px

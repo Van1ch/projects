@@ -1,0 +1,126 @@
+.send
+    background-image: url('../img/send/bg.png')
+    background-position: top right
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 120px 0 200px 0
+    position: relative
+    overflow-y: hidden
+    &-subtitle
+        margin-bottom: 90px
+    &-title, &-subtitle, &-text
+        position: relative
+        z-index: 1
+    &-box
+        position: absolute
+        z-index: 0
+        pointer-events: none
+        &_1
+            bottom: -300px
+            right: 250px
+        &_2
+            right: 0
+            top: -80px
+        &_3
+            top: -200px
+            right: 520px
+
+@media (max-width: 1700px)
+    .send
+        &::after
+            position: absolute
+            display: block
+            content: ''
+            width: 47%
+            height: 100%
+            top: 0
+            left: 0
+            background-color: #ffffff
+            z-index: 0
+        &-text
+            &__wrapper
+                max-width: 45%
+
+@media (max-width: 1400px)
+    .send
+        &-box
+            &_1
+                bottom: -250px
+                width: 600px 
+            &_2
+                top: -30px
+                width: 500px
+            &_3
+                top: -100px
+                width: 400px
+
+@media (max-width: 1210px)
+    .send
+        padding: 90px 0 150px 0
+        &::after
+            opacity: 0.65
+            width: 100%
+        &-text
+            &__wrapper
+                max-width: 100%
+        &-title, &-subtitle
+            text-align: center
+        &-subtitle
+            margin-bottom: 60px
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+
+@media (max-width: 900px)
+    .send
+        padding: 60px 0 100px 0
+        &-subtitle
+            margin-bottom: 50px
+        &-box
+            &_1
+                bottom: -200px
+                width: 500px 
+                right: 100px
+            &_2
+                top: -90px
+                width: 400px
+            &_3
+                top: -80px
+                width: 300px
+                right: 350px
+
+@media (max-width: 600px)
+    .send
+        padding: 30px 0 40px 0
+        &-subtitle
+            margin-bottom: 30px
+        &-box
+            &_1
+                bottom: -100px
+                width: 350px 
+                right: 80px
+            &_2
+                top: -70px
+                width: 300px
+            &_3
+                top: -60px
+                width: 230px
+                right: 250px
+
+@media (max-width: 400px)
+    .send
+        &-box
+            &_1
+                bottom: -150px
+                width: 300px 
+                right: 80px
+            &_2
+                top: -30px
+                width: 270px
+            &_3
+                top: -20px
+                right: 170px
+        &-text
+            br
+                display: none

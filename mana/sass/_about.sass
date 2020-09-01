@@ -1,0 +1,218 @@
+.about
+    background-color: $concrete
+    padding: 120px 0 100px 0
+    position: relative
+    &-title
+        font-size: 36px
+        font-weight: 700
+        line-height: 48px
+        position: relative
+        z-index: 1
+        margin-bottom: 60px
+        &__img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: -170px
+            z-index: -1
+            fill: #ffffff
+            width: 328px
+    &-text
+        line-height: 24px
+        position: relative
+        z-index: 1
+        margin-left: 100px
+        &__text
+            margin-bottom: 70px
+            &_bold
+                display: block
+                margin-bottom: 15px
+                font-weight: 700
+        &__logo
+            position: relative
+            z-index: 1
+            width: calc(100% + 30px)
+            margin-left: -15px
+            &-img
+                max-width: 140px
+                margin: 0 15px 10px 15px
+    &-img
+        margin-top: 65px
+        z-index: 2
+        position: relative
+        &__img
+            max-width: 450px
+    &-rectangle
+        position: absolute
+        left: -17%
+        top: 0
+        max-width: 900px
+        max-height: 900px
+        &__img
+            max-width: 100% 
+            max-height: 100%
+    &-keyboard
+        position: absolute
+        top: 400px
+        left: -560px
+        &__img
+            max-width: 830px
+    &-mana
+        pointer-events: none
+        z-index: 0
+        position: absolute
+        bottom: -10%
+        right: 300px
+        font-weight: 900
+        line-height: 250px
+        color: transparent
+        -webkit-text-stroke: 1px #ffffff;
+        font-size: 357px
+        text-transform: uppercase
+
+@media (max-width: 1400px)
+    .about
+        &-keyboard
+            left: -500px
+            &__img
+                width: 700px
+
+@media (max-width: 1220px)
+    .about
+        &-img
+            &__img
+                max-width: 380px
+        &-title
+            font-size: 30px
+            line-height: 40px
+            margin-bottom: 40px
+            &__img
+                width: 280px
+        &-text
+            margin-left: 60px
+            &__text
+                margin-bottom: 50px
+                &_bold
+                    margin-bottom: 10px
+        &-rectangle
+            left: -40%
+            max-width: 800px
+        &-keyboard
+            top: 350px
+            left: -450px
+            &__img
+                width: 600px
+        &-mana
+            right: 100px
+            font-size: 250px
+            bottom: -12%
+
+@media (max-width: 992px)
+    .about
+        padding-top: 70px
+        padding-bottom: 60px
+        &-title
+            font-size: 26px
+            &__img
+                width: 200px
+                left: -100px
+        &-rectangle
+            max-width: 630px
+            left: -40%
+        &-mana
+            font-size: 200px
+            bottom: -17%
+            right: 80px
+        &-keyboard
+            left: -330px
+            top: 250px
+            &__img
+                width: 470px
+        &-text
+            display: flex
+            margin-left: 0
+            &__left
+                &-img
+                    margin-right: 30px
+                    &__img
+                        max-width: 250px
+            &__text
+                margin-bottom: 30px
+@media (max-width: 850px)
+    .about
+        &-mana
+            font-size: 170px
+            bottom: -19%
+@media (max-width: 820px)
+    .about
+        &-rectangle
+            left: -50%
+@media (max-width: 768px)
+    .about
+        padding: 40px 0
+        &-keyboard
+            left: -280px
+            top: 230px
+            &__img
+                width: 400px
+        &-mana
+            font-size: 130px
+        &-rectangle
+            max-width: 620px
+            left: -60%
+        &-title
+            font-size: 22px
+            line-height: 30px
+            margin-bottom: 30px
+            &__img
+                width: 150px
+                left: -70px
+        &-text
+            &__text
+                margin-bottom: 20px
+            &__left
+                &-img
+                    margin-right: 20px
+                    &__img
+                        max-width: 210px
+            &__logo
+                &-img
+                    max-width: 100px
+@media (max-width: 680px)
+    .about
+        &-rectangle
+            left: -75%
+@media (max-width: 600px)
+    .about
+        &-rectangle
+            left: -85%
+@media (max-width: 576px)
+    .about
+        padding: 25px 0
+        &-title
+            text-align: center
+            margin-bottom: 20px
+            &__img
+                width: 120px
+                top: 0
+                transform: none
+        &-rectangle
+            display: none
+        &-keyboard
+            display: none
+        &-text
+            flex-direction: column
+            text-align: center
+            &__left
+                &-img
+                    margin-right: 0
+                    margin-bottom: 20px
+        &-mana
+            right: 50%
+            transform: translateX(50%)
+            bottom: -17%
+@media (max-width: 400px)
+    .about
+        &-mana
+            font-size: 90px
+            bottom: -15%

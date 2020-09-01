@@ -1,0 +1,280 @@
+.card
+    &-container
+        display: flex
+        justify-content: space-between
+    &-content
+        width: 42%
+    &-slider
+        &__realWrapper
+            width: 50%
+            position: relative
+            align-self: flex-start
+        &__wrapper
+            height: 820px
+            margin-left: 0
+        &__item
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            &-inner
+                opacity: 0
+                visibility: hidden
+                display: block
+                width: 100%
+        &__dots
+            display: flex
+            flex-direction: column
+            position: absolute
+            top: 50%
+            transform: translate(100%, -50%)
+            right: -10px
+            max-height: 80%
+            span.swiper-pagination-bullet
+                width: 4px
+                flex-basis: 80px
+                border-radius: 0
+                margin: 8px 0
+                background-color: $ghost
+                opacity: 1
+                transition: .3s background-color
+            span.swiper-pagination-bullet.swiper-pagination-bullet-active
+                background-color: #000000
+    &-content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-top: 40px
+    &-top
+        margin-bottom: 30px
+    &-title
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.6px
+        font-size: 24px
+        margin-bottom: 35px
+    &-prices
+        display: flex
+        align-items: center
+        font-size: 20px
+        letter-spacing: 0.5px
+        margin-bottom: 20px
+        &__old
+            margin-right: 15px
+        &__new
+            color: $red
+            margin-right: 15px
+            ~ .card-prices__old
+                text-decoration: line-through
+                order: -1
+        &__disc
+            padding: 3px 6px
+            font-size: 14px
+            border: 1px solid $emperor
+    &-art
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 0.35px
+        margin-bottom: 20px
+    &-desc
+        margin-bottom: 40px
+    &-sizes
+        display: flex
+        padding-bottom: 30px
+        border-bottom: 1px solid #000000
+        margin-bottom: 30px
+        &__item
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            width: 33px
+            height: 33px
+            background-color: transparent
+            color: #000000
+            transition: .3s color, .3s background-color
+            cursor: pointer
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+            &:hover
+                background-color: #000000
+                color: #ffffff
+        &__item.active
+            color: #ffffff
+            background-color: #000000
+    &-colors
+        display: flex
+        margin-bottom: 40px
+        flex-wrap: wrap
+        &__item
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            width: 70px
+            margin-right: 12px
+            margin-bottom: 12px
+            cursor: pointer
+            position: relative
+            &:hover
+                &::after
+                    opacity: 1
+                    visibility: visible
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                border: 2px solid $red
+                opacity: 0
+                visibility: hidden
+                transition: .3s opacity, .3s visibility
+            &:last-child
+                margin-right: 0
+            &-inner
+                opacity: 0
+                visibility: hidden
+                display: block
+                width: 100%
+        &__item.active
+            &::after
+                opacity: 1
+                visibility: visible
+    &-buttons
+        display: flex
+        &__add
+            flex-grow: 1
+            cursor: pointer
+            margin-right: 12px
+            font-weight: 700
+            display: inline-flex
+            align-items: center
+            justify-content: center
+        &__favorite
+            width: 60px
+            height: 60px
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            background-color: #000000
+            cursor: pointer
+            transition: .3s background-color
+            svg
+                width: 26px
+                stroke: #ffffff
+                fill: transparent
+            &:hover
+                background-color: $red
+        &__favorite.active
+            background-color: $red
+    &-bottom
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &__item
+            text-transform: uppercase
+            color: #000000
+            font-size: 12px
+            letter-spacing: 0.3px
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+    &-section
+        padding-bottom: 75px
+
+@media (max-width: 1100px)
+    .card
+        &-slider
+            &__realWrapper
+                width: 42%
+        &-content
+            padding-top: 15px
+            width: 50%
+        &-title
+            margin-bottom: 20px
+        &-prices
+            margin-bottom: 15px
+        &-art
+            margin-bottom: 15px
+        &-desc
+            margin-bottom: 25px
+        &-sizes
+            padding-bottom: 20px
+            margin-bottom: 20px
+        &-colors
+            margin-bottom: 10px
+        &-buttons
+            &__favorite
+                width: 50px
+                height: 50px
+        &-section
+            padding-bottom: 50px
+
+@media (max-width: 950px)
+    .card
+        &-container
+            flex-direction: column
+            align-items: center
+        &-slider
+            &__realWrapper
+                width: 100%
+                margin-bottom: 30px
+            &__wrapper
+                width: 50%
+                margin: 0 auto
+            &__dots
+                flex-direction: row
+                justify-content: center
+                top: auto
+                bottom: -10px
+                left: 50%
+                transform: translate(-50%, 100%)
+                max-height: 100%
+                max-width: 1180px
+                span.swiper-pagination-bullet
+                    flex-basis: 80px
+                    height: 4px
+                    margin: 0 8px
+        &-content
+            width: 100%
+        &-section
+            padding-bottom: 40px
+
+@media (max-width: 750px)
+    .card
+        &-slider
+            &__realWrapper
+                margin-bottom: 20px
+            &__wrapper
+                width: 60%
+
+@media (max-width: 600px)
+    .card
+        &-section
+            padding-bottom: 30px
+
+@media (max-width: 500px)
+    .card
+        &-slider
+            &__wrapper
+                width: 100%
+        &-title
+            margin-bottom: 10px
+        &-prices
+            margin-bottom: 10px
+        &-art
+            margin-bottom: 10px
+        &-desc
+            margin-bottom: 15px
+        &-sizes
+            padding-bottom: 15px
+            margin-bottom: 15px
+        &-colors
+            margin-bottom: 5px
+
+@media (max-width: 340px)
+    .card
+        &-buttons
+            &__add
+                padding: 13px 25px

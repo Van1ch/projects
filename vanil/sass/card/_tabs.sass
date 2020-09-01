@@ -1,0 +1,48 @@
+.tabs
+    &-header
+        display: flex
+        border-bottom: 1px solid #000000
+        margin-bottom: 40px
+        &__item
+            margin-bottom: -1px
+            border: 1px solid transparent
+            padding: 15px 50px
+            cursor: pointer
+            text-transform: uppercase
+        &__item.active
+            border-color: #000000
+            border-bottom-color: #ffffff
+    &-content
+        &__item
+            display: none
+        &__item.active
+            display: block
+
+@media (max-width: 1100px)
+    .tabs
+        &-header
+            &__item
+                padding: 12px 30px
+
+@media (max-width: 900px)
+    .tabs
+        &-header
+            &__item
+                padding: 12px 20px
+
+@media (max-width: 800px)
+    .tabs
+        &-header
+            flex-direction: column
+            border-bottom: none
+            margin-bottom: 30px
+            &__item
+                margin-bottom: 0
+                text-align: center
+            &__item.active
+                border-bottom-color: #000000
+
+@media (max-width: 600px)
+    .tabs
+        &-header
+            margin-bottom: 20px

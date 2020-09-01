@@ -1,0 +1,47 @@
+.categoryMenu
+    position: fixed
+    height: 100%
+    width: 100%
+    max-width: 300px
+    left: 0
+    top: 0
+    background-color: #ffffff
+    z-index: 50
+    padding: 30px 20px
+    padding-top: 50px
+    left: -300px
+    transition: .5s left, .5s box-shadow
+    overflow: auto
+    color: #ffffff
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: #000000
+    box-shadow: none
+    &-title
+        font-size: 22px
+        color: #000000
+        font-weight: 700
+        color: $dingley
+        text-transform: uppercase
+        letter-spacing: 0.45px
+        margin-bottom: 20px
+    &-item
+        color: #000000
+        font-size: 16px
+        margin-bottom: 15px
+        transition: .3s color
+        &:last-child
+            margin-bottom: 0
+    &-item.active
+        color: $costaDelSol
+    &-close
+        padding: 5px
+        position: absolute
+        top: 15px
+        right: 15px
+        width: 30px
+
+.categoryMenu.active
+    left: 0
+    box-shadow: 8px 6px 20px rgba(0, 0, 0, 0.25)

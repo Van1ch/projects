@@ -1,0 +1,113 @@
+.modal
+    display: flex
+    background: #ffffff
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 600px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-photo
+        flex-basis: 45%
+        min-height: 100%
+        max-height: 100%
+        background: url('../img/general/modalBg.jpg') center no-repeat
+    &-content
+        padding: 30px
+        width: 100%
+        &__title
+            font-weight: 700
+            color: $lightSteelGray
+            font-size: 26px
+            margin-bottom: 12px
+        &__text
+            font-size: 16px
+            margin-bottom: 15px
+        &__input
+            display: block
+            padding: 11px 18px
+            width: 100%
+            font-size: 16px
+            margin-bottom: 12px
+            border: 2px solid #000000
+            transition: .3s border-color
+            &:hover, &:focus
+                border-color: $tacha
+            &::-webkit-input-placeholder
+                color: #000000
+        &__btn
+            margin-top: 4px
+            margin-bottom: 20px
+            width: 100%
+            border: none
+            padding: 16px 0
+            font-size: 16px
+            cursor: pointer
+        &__policy
+            display: flex
+            align-items: center
+            font-size: 12px
+            &-checkbox
+                margin-right: 10px
+            &-text
+                &__link
+                    color: #000000
+                    &::before
+                        bottom: 10px
+                        background-color: #000000
+
+#productName, #productPrice, #productNameTwo, #productNameThree
+    display: none
+
+.policy
+    background: #ffffff
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 25px
+    &-list
+        list-style: none
+        &__item
+            padding-left: 20px
+            margin-bottom: 20px
+            position: relative
+            &::before
+                position: absolute
+                left: 14px
+                top: 4px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: $lightSteelGray
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+@media (max-width: 500px)
+    .modal
+        &-wrapper
+            max-width: 340px
+        &-content
+            &__policy
+                &-text
+                    &__link
+                        text-decoration: underline
+                        &::after
+                            display: none
+        &-photo
+            display: none
+        &-content
+            padding: 25px 20px
+    .policy
+        &-title
+            margin-bottom: 20px
+            font-size: 20px

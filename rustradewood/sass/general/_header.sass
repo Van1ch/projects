@@ -1,0 +1,156 @@
+.header
+    padding: 20px 0
+    background-color: $costaDelSol
+    color: #ffffff
+    position: relative
+    &-main
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-logo
+        &__link
+            &-content
+                max-width: 220px
+    &-menu
+        display: flex
+        margin: 0 10px
+        &__item
+            margin-right: 25px
+            font-size: 16px
+            letter-spacing: 0.4px
+            font-family: 'HarmoniaSansProCyr'
+            transition: .3s color
+            color: #ffffff
+            &:hover
+                color: $chelseaCucumber
+            &:last-child
+                margin-right: 0
+            &_hover
+                padding-bottom: 40px
+                display: flex
+                align-items: center
+                margin-bottom: -40px
+                cursor: pointer
+                &:hover 
+                    .production
+                        opacity: 1
+                        visibility: visible
+                        transform: translateY(0)
+                        z-index: 5
+                    .header-menu__item-arrow__item_bottom
+                        height: 5px
+            &-text
+                margin-right: 8px
+            &-arrow
+                margin-bottom: -1px
+                &__item
+                    width: 9px
+                    height: 5px
+                    background-image: url(../img/general/header/arrowDown.svg)
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: 9px 5px
+                    &_bottom
+                        margin-top: -1px
+                        transform: rotate(180deg)
+                        height: 0
+                        transition: .3s height
+    &-phone
+        &__link
+            font-size: 20px
+            letter-spacing: 0.5px
+            color: #ffffff
+            margin-bottom: 10px
+        &__text
+            color: transparentize(#ffffff, .6)
+            font-size: 12px
+            font-weight: 300
+            letter-spacing: 0.3px
+    &-lang
+        display: flex
+        margin-left: 10px
+        &__item
+            font-size: 14px
+            font-family: 'HarmoniaSansProCyr'
+            margin: 0 7px
+            cursor: pointer
+            &:first-child
+                &::before
+                    position: absolute
+                    right: -8px
+                    top: 0
+                    height: 100%
+                    width: 2px
+                    content: ''
+                    display: block
+                    background-color: #fff
+        &__item.active
+            color: $chelseaCucumber
+            &::after
+                display: none
+    &-burger
+        width: 50px
+        height: 44px
+        display: none
+        padding: 10px
+        padding-right: 0
+        cursor: pointer
+        &__item
+            position: relative
+            width: 100%
+            display: block
+            height: 4px
+            background-color: #ffffff
+            &::after, &::before
+                position: absolute
+                left: 0
+                top: 10px
+                display: block
+                content: ''
+                width: 100%
+                height: 4px
+                background-color: #ffffff
+            &::before
+                top: 20px
+
+@media (max-width: 1100px)
+    .header
+        padding: 15px 0
+        &-container
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &-main
+            flex-grow: 1
+        &-menu
+            display: none
+        &-burger
+            display: block
+        &-lang
+            margin-right: 10px
+
+@media (max-width: 800px)
+    .header
+        &-logo
+            &__link
+                &-content
+                    max-width: 200px
+        &-phone
+            &__link
+                font-size: 18px
+                margin-bottom: 5px
+
+@media (max-width: 600px)
+    .header
+        padding: 7px 0
+        &-phone
+            display: none
+        &-logo
+            &__link
+                &-content
+                    max-width: 180px
+
+@media (max-width: 400px)
+    .header
+        &-lang
+            display: none

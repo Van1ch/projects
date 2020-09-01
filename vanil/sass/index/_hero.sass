@@ -1,0 +1,70 @@
+.hero
+    position: relative
+    &-slider
+        &__wrapper
+            width: 1920px
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+        &__item
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            &-inner
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+    &-dots
+        position: absolute
+        left: 50%
+        bottom: 20px
+        transform: translateX(-50%)
+        display: flex
+        list-style: none
+        width: calc(100% + 6px)
+        margin-left: -3px
+        justify-content: center
+        flex-wrap: wrap
+        span
+            width: 13%
+            height: 3px
+            background-color: #fff
+            margin: 0 3px 3px 3px
+            position: relative
+            border-radius: 0
+            opacity: 1
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                height: 100%
+                background: #000
+        span.swiper-pagination-bullet-active::after
+            animation: 5s heroDots linear 1
+
+@media (max-width: 1300px)
+    .hero
+        &-slider
+            &__wrapper
+                width: calc(100% + 620px)
+
+@media (max-width: 1250px)
+    .hero
+        &-slider
+            &__wrapper
+                width: calc(100% + 350px)
+
+@media (max-width: 750px)
+    .hero
+        &-slider
+            &__wrapper
+                width: calc(100% + 150px)
+        &-dots
+            bottom: 10px
+
+@keyframes heroDots
+    0%
+        width: 0
+    100%
+        width: 100%

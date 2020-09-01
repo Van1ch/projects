@@ -1,0 +1,136 @@
+.delivery
+    padding: 80px 0 120px 0
+    position: relative
+    .container
+        position: relative
+        z-index: 2
+    &-car
+        position: absolute
+        bottom: 0
+        left: -80px
+        &__img
+            width: 100%
+            max-width: 777px
+    &-map
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+        position: relative
+        pointer-events: none
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        &__img
+            max-width: 100%
+    &-bg
+        display: flex
+        flex-basis: 50%
+        background-color: $alto
+        &__wrapper
+            display: flex
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            z-index: 0
+        &__inner
+            width: 45%
+            background-image: url('../img/form/dec.png')
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+    &-title
+        margin-bottom: 120px
+    &-content
+        position: relative
+        z-index: 3
+        &__wrapper
+            display: flex
+            justify-content: flex-end
+        &__item
+            display: flex
+            align-items: center
+            margin-bottom: 70px
+            &-img
+                margin-right: 20px
+                min-width: 49px
+                text-align: center
+            &-text
+                &__title
+                    font-size: 24px
+                    font-weight: 700
+                &__text
+                    color: $mako
+                    font-size: 20px
+        &__btn
+            margin: 0 0 150px 70px
+            padding-top: 20px
+        &:nth-last-child(2 - n)
+            margin-bottom: 90px
+
+@media (max-width: 1210px)
+    .delivery
+        padding: 60px 0
+        &-title
+            margin-bottom: 50px
+        &-bg
+            &__wrapper
+                display: none
+        &-car
+            &__img
+                max-width: 600px
+        &-content
+            &__item
+                margin-bottom: 50px
+            &__btn
+                margin: 0 0 100px 50px
+
+@media (max-width: 1000px)
+    .delivery
+        padding: 40px 0
+        &-title
+            margin-bottom: 20px
+            text-align: center
+        &-car
+            position: relative
+            left: auto
+            text-align: center
+            margin-bottom: 20px
+            &__img
+                max-width: 500px
+        &-content
+            &__item
+                justify-content: center
+                margin-bottom: 30px
+            &__btn
+                margin: 0
+                text-align: center
+            &__wrapper
+                justify-content: center
+
+@media (max-width: 850px)
+    .delivery
+        &-map
+            &__img
+                margin-top: 50px
+        &-content
+            &__item
+                &-text
+                    &__title
+                        font-size: 22px
+                    &__text
+                        font-size: 18px
+
+@media (max-width: 550px)
+    .delivery
+        &-content
+            &__item
+                flex-direction: column
+                text-align: center
+                &-img
+                    margin-right: 0
+                    margin-bottom: 10px

@@ -1,0 +1,157 @@
+.feedback
+    padding: 80px 0 100px 0
+    background-color: #f4f4f4
+    &-title
+        margin-bottom: 90px
+    &-slider
+        .slick-list
+            box-shadow: 7px 11px 35px 1px rgba(0, 0, 0, 0.19)
+        &__item
+            padding: 35px 90px 35px 35px
+            background-color: #fff
+            display: flex !important
+            align-items: center
+            justify-content: center
+            color: #000000
+            &-photo
+                min-width: 25%
+                height: 100%
+                position: relative
+                margin-right: 80px
+                &__quotes
+                    position: absolute
+                    right: -20px
+                    top: 10px
+                    width: 70px
+                    fill: #747499
+                &__img
+                    width: 100%
+                    background-image: url('../img/feedback/1.jpg')
+                    background-position: center center
+                    background-size: cover
+                    background-repeat: no-repeat
+                    border-radius: 100%
+                    &-img
+                        width: 100%
+                        display: block
+                        opacity: 0
+                        visibility: hidden
+            &-text
+                &__comment
+                    padding-bottom: 30px
+                    margin-bottom: 30px
+                    font-size: 20px
+                    border-bottom: 1px solid #c6c6d9
+                &__bottom
+                    display: flex
+                    align-items: center
+                    &-name
+                        font-size: 24px
+                        margin-right: 45px
+                        font-weight: 700
+                    &-position
+                        color: #747499
+        &__nav
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-top: 40px
+            &-arrow
+                cursor: pointer
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                svg
+                    width: 17px
+                    height: 12px
+                    fill: #000000
+                &_left
+                    margin-right: 40px
+                &_right
+                    margin-left: 40px
+            &-dots
+                .slick-dots
+                    justify-content: center
+                    list-style-type: none
+                    align-items: center
+                    display: flex !important
+                    li
+                        cursor: pointer
+                        margin-right: 13px
+                        width: 7px
+                        height: 7px
+                        background-color: #000000
+                        border-radius: 100%
+                        &:last-child
+                            margin-right: 0
+                        button
+                            opacity: 0
+                            visibility: hidden
+                            display: none
+                    .slick-active
+                        width: 25px
+                        height: 25px
+                        border: 2px solid #c6c6d9
+                        background-color: transparent
+@media (max-width: 1240px)
+    .feedback
+        padding: 60px 0 70px 0
+        &-title
+            margin-bottom: 60px
+        &-slider
+            &__item
+                &-text
+                    &__comment
+                        padding-bottom: 15px
+                        margin-bottom: 15px
+                    &__bottom
+                        flex-direction: column
+                        align-items: flex-start
+                        &-name
+                            margin-right: 0
+                            margin-bottom: 5px
+@media (max-width: 992px)
+    .feedback
+        padding: 50px 0
+        &-title
+            text-align: center
+            margin-bottom: 40px
+        &-slider
+            &__item
+                padding: 30px
+                &-photo
+                    margin-right: 40px
+                    &__quotes
+                        width: 50px
+                        right: -10px
+                &-text
+                    &__comment
+                        font-size: 18px
+                    &__bottom
+                        &-name
+                            font-size: 22px
+@media (max-width: 767px)
+    .feedback
+        padding: 40px 0
+        &-title
+            margin-bottom: 30px
+        &-slider
+            &__item
+                padding: 20px
+                flex-direction: column
+                &-photo
+                    max-width: 180px
+                    margin-bottom: 20px
+                    margin-right: 0
+                &-text
+                    text-align: center
+                    &__bottom
+                        align-items: center
+                        &-name
+                            font-size: 20px
+@media (max-width: 576px)
+    .feedback
+        padding: 30px 0
+        &-slider
+            &__nav
+                margin-top: 30px

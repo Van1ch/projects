@@ -1,0 +1,102 @@
+.footer
+    background-color: $green
+    color: #ffffff
+    padding: 15px 0
+    &-container
+        align-items: center
+        display: flex
+        justify-content: space-between
+    &-logo
+        color: #ffffff
+    &-center
+        margin: 0 10px
+    &-menu
+        margin-bottom: 10px
+        &__item
+            color: #ffffff
+            position: relative
+            margin-right: 15px
+            padding-right: 15px
+            font-size: 14px
+            font-weight: 400
+            transition: .3s color
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                height: 13px
+                width: 1px
+                top: 50%
+                transform: translateY(-50%)
+                right: 0
+                background-color: #1CA236
+            &:last-child
+                margin-right: 0
+                padding-right: 0
+            &:hover
+                color: $lemon
+    &-copyright
+        font-size: 12px
+        color: rgba(255, 255, 255, 0.5)
+    &-policy    
+        font-size: 12px
+        &__link
+            color: rgba(255, 255, 255, 0.5)
+            &::after
+                background-color: rgba(255, 255, 255, 0.5)
+    &-right
+        display: flex
+        align-items: center
+    &-socials
+        margin-right: 60px
+        &__item
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+            svg
+                height: 19px
+                fill: #ffffff
+    &-dev
+        &__text
+            font-size: 12px
+            text-align: right
+            color: $silver
+            font-weight: 400
+
+@media (max-width: 1100px)
+    .footer
+        &-socials
+            margin-right: 40px
+
+@media (max-width: 1000px)
+    .footer
+        &-menu
+            &__item
+                margin-right: 10px 
+                padding-right: 10px
+
+@media (max-width: 950px)
+    .footer
+        &-container
+            flex-wrap: wrap
+        &-right
+            margin-top: 15px
+            flex-basis: 100%
+            justify-content: center
+
+@media (max-width: 700px)
+    .footer
+        padding: 10px 0
+        &-container
+            flex-wrap: no-wrap
+            flex-direction: column
+        &-center
+            margin: 0
+        &-logo
+            margin-bottom: 15px
+        &-menu
+            &__item
+                margin-right: 7px
+                padding-right: 7px
+        &-socials
+            margin-right: 25px

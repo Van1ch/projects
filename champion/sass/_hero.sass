@@ -1,0 +1,100 @@
+.hero
+    display: flex
+    align-items: stretch
+    justify-content: center
+    &-photo
+        flex-grow: 1
+        flex-basis: 50%
+        background-image: url('../img/hero/bg.jpg')
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+        position: relative
+        &__text
+            right: 0
+            top: 100px
+            position: absolute
+            font-size: 18px
+            text-transform: uppercase
+            font-weight: 600
+            color: #ffffff
+            padding: 15px 25px
+            background-color: $mako
+    &-text
+        flex-grow: 1
+        flex-basis: 50%
+        padding: 100px 20px 110px 90px
+        background-color: $wildSand
+        &__title
+            font-size: 48px
+            text-transform: uppercase
+            font-weight: 800
+            margin-bottom: 30px
+            max-width: 550px
+        &__subtitle
+            max-width: 450px
+            font-size: 20px
+            margin-bottom: 90px
+            &-title
+                font-weight: 700
+                margin-bottom: 10px
+
+@media (min-width: 1151px)
+    .hero-wrapper
+        margin-top: 115px
+
+@media (max-width: 1100px)
+    .hero
+        &-text
+            padding: 50px 20px 60px 50px
+            &__title
+                font-size: 40px
+            &__subtitle
+                font-size: 18px
+                margin-bottom: 40px
+        &-photo
+            &__text
+                font-size: 16px
+                top: 50px
+                padding: 12px 20px
+
+@media (max-width: 1000px)
+    .hero
+        &-text
+            padding: 40px 15px 50px 35px
+            &__title
+                font-size: 35px
+                margin-bottom: 20px
+            &__subtitle
+                font-size: 16px
+                margin-bottom: 30px
+
+@media (max-width: 850px)
+    .hero
+        flex-direction: column
+        &-photo
+            flex-basis: 100%
+            min-height: 250px
+            &__text
+                font-size: 15px
+                padding: 11px 18px
+                top: 30px
+        &-text
+            flex-basis: 100%
+            text-align: center
+            padding: 30px 15px
+            &__title
+                font-size: 30px
+                max-width: 100%
+                margin-bottom: 15px
+            &__subtitle
+                max-width: 100%
+                margin-bottom: 20px
+        
+@media (max-width: 500px)
+    .hero
+        &-photo
+            min-height: 200px
+        &-text
+            &__title
+                font-size: 27px
