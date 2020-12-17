@@ -1,0 +1,177 @@
+.contacts
+    position: relative
+    &-title
+        margin-top: 40px
+        margin-bottom: 60px
+    &-top
+        background-color: $darkLady
+        &__wrapper
+            position: relative
+        &__img
+            position: absolute
+            transform: translateX(-100%)
+            &_1
+                bottom: 100px
+                left: -60px
+            &_2
+                left: -110px
+                bottom: -50px
+        &__main
+            max-width: 570px
+            padding-right: 60px
+            padding-bottom: 70px
+            display: flex
+            justify-content: space-between
+            margin-left: -10px
+            margin-right: -10px
+        &__item
+            flex-basis: 220px
+            flex-grow: 1
+            margin: 0 10px
+        &__phone
+            font-size: 20px
+            font-family: 'FuturaPT Demi'
+            margin-bottom: 25px
+        &__socials
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            &-item
+                margin-right: 20px
+                &__img
+                    display: block
+                    transition: .3s fill
+                &:hover
+                    .contacts-top__socials-item__img
+                        fill: $red
+        &__address
+            margin-bottom: 25px
+    &-bottom
+        max-width: 570px
+        padding: 75px 0
+        padding-right: 60px
+        &__container
+            position: relative
+        &__img
+            position: absolute
+            transform: translateX(-100%)
+            &_1
+                bottom: 80px
+                left: -75px
+            &_2
+                bottom: -30px
+                left: -30px
+            &_3
+                z-index: 1
+                right: -150px
+                bottom: -60px
+                transform: none
+            &_4
+                z-index: 1
+                right: -100px
+                transform: translate(100%, 100%)
+                bottom: -25px
+        &__wrapper
+            background-color: $peach
+        &__title
+            text-transform: uppercase
+            font-family: 'FuturaPT Demi'
+            margin-bottom: 30px
+        &__form
+            display: grid
+            grid-template-rows: 1fr
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 30px
+            margin-bottom: 40px
+        &__textarea
+            grid-row: auto / span 2
+            resize: none
+    &-map
+        position: absolute
+        height: 100%
+        width: 56%
+        top: 0
+        right: 0
+        z-index: 0
+
+@media (max-width: 1400px)
+    .contacts
+        &-title
+            margin-top: 30px
+            margin-bottom: 50px
+        &-top
+            &__main
+                padding-bottom: 60px
+            &__img
+                display: none
+        &-bottom
+            padding: 60px 0
+            &__img
+                display: none
+        &-map
+            width: 48%
+
+@media (max-width: 1200px)
+    .contacts
+        &-title
+            margin-top: 20px
+            margin-bottom: 40px
+        &-top
+            &__main
+                padding-bottom: 50px
+                padding-right: 0
+        &-bottom
+            padding: 50px 0
+        &-map
+            width: 100%
+            height: 450px
+            position: relative
+
+@media (max-width: 700px)
+    .contacts
+        &-title
+            margin-top: 10px
+            margin-bottom: 30px
+        &-top
+            &__main
+                max-width: 100%
+                padding-bottom: 30px
+                padding-right: 0
+        &-bottom
+            max-width: 100%
+            padding: 30px 0
+        &-map
+            height: 400px
+
+@media (max-width: 500px)
+    .contacts
+        &-top
+            &__main
+                padding-bottom: 20px
+                padding-right: 0
+                flex-direction: column
+                text-align: center
+                margin: 0
+            &__item
+                flex-basis: auto
+                margin: 0
+            &__phone
+                margin-bottom: 15px
+            &__socials
+                margin-bottom: 15px
+                justify-content: center
+            &__address
+                margin-bottom: 15px
+        &-map
+            height: 350px
+        &-bottom
+            padding: 25px 0
+            text-align: center
+            &__title
+                margin-bottom: 20px
+            &__form
+                grid-gap: 15px
+                margin-bottom: 20px
+                grid-template-columns: 1fr
+            &__textarea
+                order: 3

@@ -1,0 +1,91 @@
+.delivery
+    display: flex
+    justify-content: space-between
+    &-left
+        flex-basis: 58%
+        background-color: transparentize($peach, .5)
+        padding-left: calc((100% - 1370px) / 2)
+        padding-right: 20px
+        padding-bottom: 90px
+        p
+            margin-bottom: 10px
+            font-weight: 300
+        h2
+            margin-top: 25px
+            margin-bottom: 10px
+            text-transform: uppercase
+            font-size: 20px
+        b
+            font-weight: 600
+    &-right
+        flex-basis: 42%
+        padding-top: 145px
+        background-color: $peach
+        padding-right: calc((100% - 1370px) / 2)
+        padding-left: 90px
+        padding-bottom: 90px
+    &-title
+        margin-bottom: 40px
+    &-item
+        display: flex
+        align-items: flex-start
+        font-size: 16px
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
+        &__img
+            margin-right: 30px
+            min-width: 39px
+        &__title
+            font-weight: 600
+            margin-bottom: 10px
+            text-transform: uppercase
+        &__subtitle
+            font-weight: 300
+
+@media (max-width: 1400px)
+    .delivery
+        &-left
+            padding-left: 15px
+            padding-bottom: 70px
+        &-right
+            padding-right: 15px
+            padding-left: 60px
+            padding-bottom: 70px
+
+@media (max-width: 1150px)
+    .delivery
+        &-title
+            margin-bottom: 30px
+        &-left, &-right
+            flex-basis: 50%
+            padding-bottom: 50px
+        &-right
+            padding-top: 131px
+            padding-left: 40px
+
+@media (max-width: 900px)
+    .delivery
+        flex-direction: column
+        &-title
+            margin-bottom: 20px
+        &-left, &-right
+            padding: 0 15px
+            flex-basis: auto
+        &-left
+            padding-bottom: 20px
+            p
+                margin-bottom: 7px
+            h2
+                margin-top: 15px
+                font-size: 18px
+                margin-bottom: 7px
+        &-right
+            padding-top: 20px
+            padding-bottom: 30px
+        &-item
+            margin-bottom: 20px
+            &__img
+                margin-right: 20px
+            &__title
+                margin-bottom: 7px

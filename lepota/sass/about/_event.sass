@@ -1,0 +1,117 @@
+.event
+    background-color: $peach
+    padding: 80px 0 95px 0
+    margin-top: 250px
+    &-container
+        display: flex
+        align-items: center
+        position: relative
+    &-text
+        margin-right: 80px
+    &-title
+        margin-bottom: 20px
+    &-subtitle
+        font-weight: 300
+    &-socials
+        display: flex
+        align-items: center
+        &__item
+            width: 90px
+            height: 90px
+            border: 1px solid $copper
+            border-radius: 100%
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            margin-right: 30px
+            transition: .3s background-color
+            &:hover
+                background-color: $copper
+                .event-socials__item-inner
+                    fill: $peach
+            &:last-child
+                margin-right: 0
+            &-inner
+                fill: $copper
+                transition: .3s fill
+            &-vk
+                width: 41px
+            &-inst
+                width: 30px
+    &-pie
+        position: absolute
+        top: -200px
+        right: 28px
+    &-berry, &-leaf, &-seeds
+        position: absolute
+    &-berry
+        z-index: 2
+        &_1
+            bottom: -50px
+            left: -140px
+        &_2
+            top: -100px
+            left: 140px
+        &_3
+            top: -200px
+            right: 600px
+        &_4
+            right: -44px
+            top: -120px
+        &_5
+           right: -100px
+           bottom: 0
+    &-leaf
+        z-index: 1
+        &_1
+            left: -220px
+            bottom: 30px
+        &_2
+            right: -240px
+            bottom: 20px
+    &-seeds
+        z-index: 0
+        &_1
+            top: -200px
+            left: -130px
+        &_2
+            top: -200px
+            right: -230px
+
+@media (max-width: 1400px)
+    .event
+        margin-top: 200px
+        &-pie
+            right: -100px
+        &-berry, &-leaf, &-seeds
+            display: none
+
+@media (max-width: 1250px)
+    .event
+        margin-top: 100px
+        padding: 60px 0
+        &-pie
+            display: none
+
+@media (max-width: 900px)
+    .event
+        padding: 45px 0
+        margin-top: 80px
+        &-text
+            margin-right: 0
+            margin-bottom: 20px
+            text-align: center
+        &-socials
+            &__item
+                margin-right: 20px
+                width: 75px
+                height: 75px
+        &-container
+            flex-direction: column
+
+@media (max-width: 600px)
+    .event
+        margin-top: 60px
+        padding: 25px 0
+        &-title
+            margin-bottom: 10px

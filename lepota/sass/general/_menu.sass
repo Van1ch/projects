@@ -1,0 +1,49 @@
+.menu
+    position: fixed
+    height: 100%
+    width: 300px
+    right: -300px
+    top: 0
+    background-color: $copper
+    z-index: 50
+    padding: 60px 30px 20px 30px
+    transition: .5s right
+    overflow: auto
+    color: #ffffff
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-content
+        display: flex
+        flex-direction: column
+        &__item
+            color: #ffffff
+            margin-bottom: 15px
+            font-size: 20px
+            text-transform: uppercase
+            &:last-child
+                margin-bottom: 0
+    &-close
+        padding: 5px
+        position: absolute
+        top: 15px
+        right: 15px
+        width: 35px
+    &-phone
+        margin-top: 20px
+        display: none
+        align-items: center
+        &__img
+            margin-right: 10px
+            fill: #ffffff
+        &__link
+            color: #ffffff
+            font-weight: 500
+
+.menu.active
+    right: 0
+
+@media (max-width: 600px)
+    .menu
+        &-phone
+            display: flex

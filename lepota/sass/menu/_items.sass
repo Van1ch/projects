@@ -1,0 +1,61 @@
+.items
+    &-title
+        margin-top: 40px
+        margin-bottom: 60px
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 30px)
+        margin-left: -15px
+        &__item
+            flex-basis: 320px
+            flex-grow: 1
+            margin: 0 15px
+            margin-bottom: 100px
+    &-more
+        display: flex
+        justify-content: center
+        &__content
+            font-size: 16px
+            text-transform: uppercase
+            color: $copper
+            cursor: pointer
+            &::after
+                background-color: $copper
+
+@media (max-width: 1300px)
+    .items
+        &-title
+            margin-top: 20px
+            margin-bottom: 40px
+        &-list
+            &__item
+                margin-bottom: 70px
+
+@media (max-width: 1000px)
+    .items
+        &-title
+            margin-top: 10px
+            margin-bottom: 30px
+        &-list
+            &__item
+                margin-bottom: 50px
+
+@media (max-width: 800px)
+    .items
+        &-title
+            margin-top: 0
+            margin-bottom: 20px
+        &-list
+            &__item
+                margin-bottom: 40px
+
+@media (max-width: 750px)
+    .items
+        &-list
+            width: calc(100% + 20px)
+            margin-left: -10px
+            &__item
+                margin: 0 10px
+                margin-bottom: 40px
+                flex-basis: 310px

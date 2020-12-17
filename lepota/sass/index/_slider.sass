@@ -1,0 +1,170 @@
+.slider
+    &-realWrapper
+        position: relative
+    &-wrapper
+        padding-top: 16px
+        margin-top: -16px
+    &-item
+        position: relative
+        &__img
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center center
+            position: relative
+            margin-bottom: 25px
+            display: block
+            &-content
+                opacity: 0
+                visibility: hidden
+                display: block
+                width: 100%
+            &:hover
+                .slider-item__hover
+                    opacity: 1
+                    visibility: visible
+        &__hover
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            opacity: 0
+            visibility: hidden
+            transition: .3s opacity, .3s visibility
+            background-color: #fff
+            padding: 20px 20px 15px 20px
+            display: flex
+            flex-direction: column
+            &-title
+                color: $copper
+                font-size: 20px
+                font-weight: 500
+                margin-bottom: 25px
+            &-list
+                font-weight: 300
+                flex-grow: 1
+            &-bottom
+                display: flex
+                justify-content: space-between
+                padding-bottom: 20px
+                border-bottom: 1px solid #000000
+                font-size: 16px
+                font-weight: 500
+                &__weight
+                    color: $copper
+        &__title
+            font-size: 20px
+            font-weight: 500
+            padding: 0 20px
+            margin-bottom: 25px
+        &__bottom
+            padding: 0 20px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &-price
+                font-size: 24px
+                color: $copper
+                font-weight: 500
+            &-amount
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 15px
+                background-color: $alabaster
+                border-radius: 23px
+                margin: 0 5px
+                &__number
+                    margin: 0 15px
+                &__minus, &__plus
+                    display: inline-flex
+                    align-items: center
+                    cursor: pointer
+                    svg
+                        width: 14px
+                        fill: #000000
+                        transition: .3s fill
+                    &:hover
+                        svg
+                            fill: $copper
+            &-cart
+                border-radius: 100%
+                background-color: $copper
+                width: 45px
+                height: 45px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                transition: .3s background-color
+                svg
+                    width: 23px
+                    height: 21px
+                    margin-left: -2px
+                    fill: #ffffff
+                &:hover
+                    background-color: $red
+        &__circle
+            position: absolute
+            right: 11px
+            top: -16px
+            border-radius: 100%
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            color: #ffffff
+            background-color: $red
+            width: 75px
+            height: 75px
+            text-align: center
+    &-arrows
+        position: absolute
+        right: 0
+        top: -50px
+        display: flex
+        align-items: center
+    &-arrow
+        margin: 0 5px
+        cursor: pointer
+        svg
+            width: 18px
+            height: 16px
+            fill: #000000
+            transition: .3s fill
+        &:hover
+            svg
+                fill: $red
+    &-arrow.swiper-button-disabled
+        cursor: default
+        svg
+            fill: #afafaf
+
+@media (max-width: 1100px)
+    .slider
+        &-item
+            &__img, &__title
+                margin-bottom: 15px
+            &__title, &__bottom
+                padding: 0 10px
+
+@media (max-width: 720px)
+    .slider
+        &-item
+            &__bottom
+                &-price
+                    font-size: 22px
+                &-amount
+                    padding: 12px 13px
+                    &__number
+                        margin: 0 12px
+
+@media (max-width: 670px)
+    .slider
+        &-arrows
+            top: -25px
+        &-item
+            &__circle
+                font-size: 16px
+                width: 70px
+                height: 70px
+                line-height: 110%

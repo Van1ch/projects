@@ -1,0 +1,269 @@
+.policy
+    background: #ffffff
+    font-size: 16px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 20px
+    &-list
+        list-style: none
+        &__item
+            padding-left: 20px
+            margin-bottom: 15px
+            position: relative
+            &::before
+                position: absolute
+                left: 12px
+                top: 6px
+                transform: translateX(-100%)
+                display: block
+                content: ''
+                width: 10px
+                height: 10px
+                background-color: $copper
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modal
+    background: #ffffff
+    padding: 40px
+    display: flex
+    flex-direction: column
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 480px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-title
+        font-weight: 700
+        font-size: 26px
+        letter-spacing: 0.9px
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 5px
+    &-subtitle
+        font-size: 18px
+        letter-spacing: 0.45px
+        text-align: center
+        margin-bottom: 30px
+    &-close
+        border: 3px solid $copper
+        padding: 12px 20px
+        font-size: 18px
+        font-weight: 500
+        text-align: center
+        margin-bottom: 15px
+        transition: .3s background-color
+        cursor: pointer
+        &:hover
+            background-color: $copper
+    &-cart
+        color: #ffffff
+        padding: 15px 20px
+        background-color: $copper
+        text-align: center
+        font-weight: 500
+        font-size: 18px
+        transition: .3s color, .3s background-color
+        &:hover
+            background-color: #000000
+            color: #ffffff
+
+.desk
+    text-align: center
+    position: relative
+    &-wrapper
+        display: none
+        width: 670px
+    &-wrapper.fancybox-content
+        padding: 0
+        overflow: visible
+        background-color: transparent
+        button
+            display: none
+    &-title
+        font-size: 48px
+        text-transform: uppercase
+        margin-bottom: 15px
+        font-family: 'Miroslav'
+    &-phone
+        margin-bottom: 40px
+    &-input
+        border: 1px solid #000000
+        border-radius: 25px
+        margin-bottom: 20px
+        font-size: 20px
+        padding: 11px 30px
+        width: 100%
+        &::-webkit-input-placeholder
+            font-size: 20px
+    &-policy
+        display: flex
+        align-items: center
+        margin-bottom: 25px
+        &__img
+            margin-right: 20px
+        &__text
+            text-align: left
+            font-size: 14px
+    &-submit
+        width: 100%
+    &-main
+        z-index: 1
+        position: relative
+        background-color: #fff
+        border-radius: 100%
+        padding: 120px 160px
+        &__hidden
+            z-index: 1
+            position: relative
+            background-color: $red
+            border-radius: 100%
+            padding: 60px 100px 120px 100px
+            color: #ffffff
+            display: none
+            flex-direction: column
+            justify-content: space-between
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+        &__hidden.active
+            display: flex
+    &-img
+        &__inner
+            width: 95px
+    &-title2
+        font-size: 60px
+        text-transform: uppercase
+        font-family: 'Miroslav'
+    &-subtitle
+        font-size: 40px
+        margin-bottom: 15px
+    &-closeBtn
+        max-width: 280px
+        background-color: #ffffff
+        margin: 0 auto
+        color: #000000
+    &-item
+        position: absolute
+        &_1
+            z-index: 0
+            top: -47px
+            left: -170px
+        &_2
+            top: 130px  
+            left: -100px
+            z-index: 2
+        &_3
+            bottom: 90px
+            left: -180px
+            z-index: 2
+        &_4
+            bottom: -20px
+            z-index: 2
+            left: -60px
+        &_5
+            top: 77px  
+            right: -55px
+            z-index: 2
+        &_6
+            bottom: 15px
+            right: -100px
+            z-index: 2
+        &_7
+           right: -80px
+           bottom: -20px
+           z-index: 0 
+    &-close
+        display: flex
+        align-items: center
+        position: absolute
+        top: 0
+        right: 60px
+        &__img
+            margin-right: 15px
+        &__text
+            font-size: 16px
+            color: #ffffff
+            &::after
+                background-color: #fff
+
+@media (max-width: 750px)
+    .desk
+        &-item
+            display: none
+        &-wrapper
+            width: 500px
+        &-main
+            padding: 75px 100px
+            &__hidden
+                padding: 40px 40px 60px 40px
+        &-title
+            font-size: 36px
+            margin-bottom: 10px
+        &-phone
+            margin-bottom: 20px
+        &-input
+            margin-bottom: 15px
+        &-policy
+            margin-bottom: 15px
+        &-close
+            right: 30px
+            top: -10px
+        &-title2
+            font-size: 46px
+        &-subtitle
+            font-size: 30px
+
+@media (max-width: 600px)
+    .modal
+        padding: 35px 25px 25px 25px
+        &-wrapper
+            max-width: 320px
+        &-title
+            font-size: 28px
+        &-subtitle
+            font-size: 16px
+            margin-bottom: 20px
+    .policy
+        font-size: 15px
+        &-title
+            margin-bottom: 15px
+            font-size: 20px
+        &-wrapper.fancybox-content
+            padding: 20px
+
+@media (max-width: 550px)
+    .desk
+        &-main
+            border-radius: 35px
+            padding: 30px
+            &__hidden
+                border-radius: 35px
+                padding: 30px
+        &-close
+            top: -40px
+            right: 0
+        &-title2
+            font-size: 42px
+        &-subtitle
+            font-size: 24px
+
+@media (max-width: 350px)
+    .desk
+        &-main
+            padding: 20px
+            &__hidden
+                padding: 20px

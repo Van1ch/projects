@@ -1,0 +1,166 @@
+.about
+    background-color: transparentize($peach, .5)
+    &-container
+        position: relative
+        padding-bottom: 100px
+    &-title
+        margin-top: 40px
+    &-text
+        max-width: 42%
+        font-size: 20px
+        font-weight: 300
+        margin-bottom: 40px
+        p
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+        p.bold
+            font-weight: 500
+    &-btn
+        &__link
+            color: $copper
+            text-transform: uppercase
+            font-size: 16px
+            font-weight: 500
+            &::after
+                background-color: $copper
+    &-pie
+        position: absolute
+        z-index: 1
+        &_1
+            right: 100px
+            top: 80px
+            z-index: 2
+        &_3
+            bottom: -35px
+            right: 200px
+        &_2
+            right: -240px
+            bottom: 70px
+    &-berry
+        position: absolute
+        z-index: 3
+        pointer-events: none
+        &_1
+            left: -150px
+            top: 250px
+        &_2
+            left: -220px
+            bottom: 260px
+        &_3
+            top: 40px
+            right: 640px
+        &_4
+            top: 105px
+            right: 540px
+        &_5
+            right: 640px
+            bottom: 320px
+        &_6
+          bottom: -75px
+          right: 520px
+        &_7
+            bottom: 180px
+            right: 140px
+        &_8
+            right: -23px
+            top: 260px
+        &_9
+            right: -160px
+            top: 150px
+    &-leaf
+        position: absolute
+        z-index: 2
+        pointer-events: none
+        &_1
+            left: -180px
+            top: 150px
+        &_2
+            right: 600px
+            bottom: 200px
+        &_3
+            bottom: -20px
+            right: 380px
+        &_4
+            right: -66px
+            top: 50px
+    &-seeds
+        position: absolute
+        z-index: 0
+        pointer-events: none
+        &_1
+            left: -260px
+            bottom: 120px
+        &_2
+            bottom: 10px
+            left: 200px
+        &_3
+            top: 80px
+            left: 340px
+        &_4
+            top: 160px
+            right: 600px
+        &_5
+            bottom: -110px
+            right: 400px
+        &_6
+            right: -80px
+            top: 220px
+
+@media (max-width: 1300px)
+    .about
+        &-berry, &-leaf, &-seeds
+            display: none
+        &-title
+            margin-top: 30px
+        &-container
+            padding-bottom: 70px
+        &-pie
+            &_1
+                right: 0
+            &_3
+                bottom: 40px
+                right: 30px
+            &_2
+                display: none
+
+@media (max-width: 1100px)
+    .about
+        &-title
+            margin-top: 10px
+        &-container
+            padding-bottom: 0
+        &-text
+            max-width: 100%
+            margin-bottom: 20px
+            font-size: 17px
+            p
+                margin-bottom: 7px
+        &-pie
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            right: auto
+            top: 0
+            max-width: 70%
+            &_1
+                margin-top: 40px
+            &_3
+                margin-top: -180px
+
+
+@media (max-width: 700px)
+    .about
+        &-title
+            margin-top: 0
+        &-pie
+            max-width: 80%
+            &_3
+                margin-top: -140px
+        
+@media (max-width: 500px)
+    .about
+        &-pie
+            max-width: 90%
+            &_3
+                margin-top: -100px
