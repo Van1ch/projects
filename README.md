@@ -2,7 +2,7 @@
 ***
 1. bank - landing https://dom-garantiy.ru/
 2. champion - landing https://shtaketnik-chempion.ru/
-3. desk - landing с интерактивными элементами, большим количеством анимаций
+3. desk - landing с интерактивными элементами, большим количеством анимаций https://gadget-co.ru/
 4. kfx - корпоративный сайт-каталог https://fermerskoekhozyaystvo.ru/
 5. lepota - интернет-магазин кафе, еще не в продакшане, но есть крутая анимация на главной странице
 6. letters - папка с письмами, некоторые верстались с нуля, некоторые просто правились
