@@ -1,0 +1,150 @@
+.device
+    &-container
+        display: flex
+        justify-content: space-between
+    &-text
+        padding-bottom: 210px
+        padding-top: 150px
+        align-self: center
+        min-width: 550px
+        max-width: 550px
+        margin-left: 20px
+    &-title
+        margin-bottom: 70px
+    &-subtitle
+        color: #ffffff
+        margin-bottom: 40px
+        font-weight: 700
+        font-size: 30px
+        letter-spacing: 0.75px
+    &-desc
+        margin-bottom: 60px
+    &-list
+        display: flex
+    &-item
+        display: flex
+        align-items: center
+        margin-right: 60px
+        &:last-child
+            margin-right: 0
+        &__img
+            margin-right: 12px
+        &__text
+            font-size: 16px
+            letter-spacing: 0.4px
+    &-img
+        position: relative
+        flex-grow: 1
+        &__left, &__right
+            position: absolute
+            display: block
+            background-color: $bunker
+        &__right
+            width: 28%
+            height: 10%
+            top: 3%
+            right: -3%
+            z-index: 2
+        &__left
+            width: 63%
+            height: 33%
+            top: 20%
+            left: -40%
+            z-index: 0
+        &__item
+            position: absolute
+            z-index: 1
+            &_1
+                left: 0
+                top: 10%
+                width: 82%
+            &_2
+                width: 62%
+                right: 13%
+                top: 35%
+            &_3
+                width: 53%
+                top: 60%
+                left: -4%
+        &__inner
+            display: none
+
+@media (max-width: 1150px)
+    .device
+        padding-top: 60px
+        padding-bottom: 70px
+        &-container
+            flex-direction: column-reverse
+        &-text
+            max-width: 100%
+            text-align: center
+            padding: 0
+            margin-left: 0
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            font-size: 26px
+            margin-bottom: 20px
+        &-text
+            margin-bottom: 30px
+        &-list
+            justify-content: center
+        &-img
+            max-width: 60%
+            margin: 0 auto
+            &__inner
+                display: block
+                opacity: 0
+                visibility: hidden
+                width: 100%
+            &__item
+                &_2
+                    top: 46%
+                &_3
+                   top: 75% 
+            &__left
+                top: 45%
+                width: 40%
+                left: -25%
+
+@media (max-width: 600px)
+    .device
+        &-img
+            max-width: 90%
+            margin: 0 auto
+            &__inner
+                display: block
+                opacity: 0
+                visibility: hidden
+                width: 100%
+            &__item
+                &_1
+                    left: 8%
+                &_2
+                    right: 3%
+                &_3
+                   left: 5%
+            &__left
+                width: 35%
+                left: -5%
+                height: 26%
+
+@media (max-width: 500px)
+    .device
+        &-item
+            margin-right: 35px
+
+@media (max-width: 450px)
+    .device
+        padding-bottom: 50px
+
+@media (max-width: 400px)
+    .device
+        &-list
+            flex-direction: column
+            align-items: center
+        &-item
+            margin-right: 0
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0

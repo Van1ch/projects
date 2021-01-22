@@ -1,0 +1,125 @@
+.footer
+    background-color: $mirage
+    padding: 70px 0
+    &-top
+        margin-bottom: 50px
+        display: flex
+        align-items: center
+    &-logo
+        width: 270px
+        margin-right: 60px
+    &-icons
+        display: flex
+        align-items: center
+        &__item
+            margin-right: 25px
+            &:hover
+                svg
+                    fill: $goldenDream
+            svg
+                width: 47px
+                height: 47px
+                fill: #454f5a
+                transition: .3s fill
+                display: block
+            &:last-child
+                margin-right: 0
+            &_special
+                background-color: #454f5a
+                border-radius: 100%
+                width: 47px
+                height: 47px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                transition: .3s background-color
+                svg
+                    fill: $mirage
+                    width: 28px
+                    height: 16px
+                &:hover
+                    background-color: $goldenDream
+                    svg
+                        fill: $mirage
+    &-bottom
+        display: flex
+        justify-content: space-between
+    &-left
+        margin-right: 70px
+        font-size: 12px
+        p
+            margin-bottom: 15px
+            color: #ffffff
+            font-weight: 300
+            line-height: 150%
+            &:last-child
+                margin-bottom: 0
+        p.special
+            margin-bottom: 10px
+            color: $blue
+            line-height: 110%
+    &-right
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        min-width: 215px
+    &-item
+        color: #ffffff
+        margin-bottom: 10px
+        transition: .3s color
+        letter-spacing: 0.35px
+        font-size: 14px
+        font-weight: 300
+        &:hover
+            color: $goldenDream
+        &:last-child
+            margin-bottom: 0
+
+@media (max-width: 1200px)
+    .footer
+        padding: 50px 0
+        &-top
+            margin-bottom: 35px
+        &-logo
+            width: 250px
+            margin-right: 40px
+        &-left
+            margin-right: 40px
+        &-icons
+            &__item
+                margin-right: 20px
+                svg
+                    width: 42px
+                    height: 42px
+                &_special
+                    width: 42px
+                    height: 42px
+                    svg
+                        width: 28px
+                        height: 16px
+
+@media (max-width: 800px)
+    .footer
+        padding: 20px 0
+        &-top
+            margin-bottom: 20px
+        &-bottom
+            flex-direction: column-reverse
+        &-right
+            margin-bottom: 30px
+        &-logo
+            width: 220px
+            margin-right: 20px
+        &-left
+            margin-right: 0
+            p
+                margin-bottom: 10px
+
+@media (max-width: 400px)
+    .footer
+        &-top
+            flex-direction: column
+            margin-bottom: 15px
+        &-logo
+            margin-right: 0
+            margin-bottom: 15px

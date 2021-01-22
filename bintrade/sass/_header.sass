@@ -1,0 +1,119 @@
+.header
+    padding: 25px 0
+    &-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-logo
+        &__inner
+            width: 270px
+    &-btns
+        display: flex
+        align-items: center
+        &__inner
+            display: flex
+            align-items: center
+    &-btn
+        cursor: pointer
+        &_special
+            background-color: #fff
+            margin-left: 16px
+    &-user
+        display: none
+        align-items: center
+        margin-right: 100px
+        cursor: pointer
+        position: relative
+        &__img
+            width: 33px
+            height: 33px
+            border-radius: 100%
+            border: 1px solid rgba(214, 218, 220, 0.3)
+            border-radius: 100%
+            margin-right: 13px
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            &-content
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+        &__nickname
+            font-size: 14px
+            letter-spacing: 0.35px
+            color: transparentize(#ffffff, .5)
+            margin-right: 7px
+            transition: .3s color
+        &__arrow
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 4px 4px 0 4px
+            border-color: $gray transparent transparent transparent
+            margin-bottom: -2px
+            transition: .3s border-color
+        &__menu
+            position: absolute
+            font-size: 12px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            top: 100%
+            left: 31px
+            opacity: 0
+            visibility: hidden
+            transition: .3s opacity, .3s visibility
+            border-radius: 10px
+            padding: 10px 15px
+            background-color: #fff
+            z-index: 15
+            &-item
+                color: $gray
+                transition: .3s color
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+                &:hover
+                    color: #000000
+        &:hover
+            .header-user__nickname
+                color: #ffffff
+            .header-user__arrow
+                border-color: #ffffff transparent transparent transparent
+            .header-user__menu
+                opacity: 1
+                visibility: visible
+    &-user.active
+        display: flex
+
+@media (max-width: 1000px)
+    .header
+        &-user
+            margin-right: 50px
+
+@media (max-width: 850px)
+    .header
+        &-container
+            flex-direction: column
+        &-logo
+            margin-bottom: 20px
+        &-user
+            margin-right: 50px
+
+@media (max-width: 700px)
+    .header
+        padding: 20px 0
+        &-logo
+            margin-bottom: 15px
+            &__inner
+                width: 240px
+
+@media (max-width: 600px)
+    .header
+        padding: 15px 0
+        &-btns
+            flex-direction: column-reverse
+        &-user
+            margin-right: 0
+            margin-top: 15px
