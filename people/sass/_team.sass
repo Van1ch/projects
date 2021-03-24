@@ -1,0 +1,314 @@
+.team
+    background-color: #000
+    padding-bottom: 170px
+    &-title, &-subtitle
+        text-align: center
+        position: relative
+        z-index: 2
+    &-title
+        margin-bottom: 35px
+    &-subtitle
+        max-width: 850px
+        margin: 0 auto
+        margin-bottom: 110px
+    &-list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-column-gap: 60px
+        grid-row-gap: 60px
+        position: relative
+        z-index: 2
+    &-item
+        border-radius: 100%
+        grid-column: span 4
+        cursor: pointer
+        position: relative
+        transition: .3s box-shadow
+        &__text
+            display: none
+        &__img
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            border-radius: 100%
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+            pointer-events: none
+            background-color: #fff
+            &_hover
+                z-index: 2
+                opacity: 0
+                visibility: hidden
+                transition: .3s opacity, .3s visibility
+        &:hover
+            box-shadow: 0px 0px 125px 50px #0066ff
+            .team-item__img_hover
+                opacity: 1
+                visibility: visible
+        &__inner
+            width: 100%
+            display: block
+            opacity: 0
+            visibility: hidden
+        &:nth-child(n + 4)
+            grid-column: span 3
+            grid-gap: 40px
+    &-modal
+        max-width: 940px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        color: #fff
+        position: relative
+        &__close
+            position: absolute
+            top: 0
+            right: 0
+            cursor: pointer
+        &__wrapper
+            background-color: transparent
+            display: none
+            padding: 15px
+            button.fancybox-close-small
+                display: none
+        &__photo
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            min-width: 500px
+            width: 500px
+            margin-right: 40px
+            position: relative
+            border-radius: 100%
+            &::after
+                position: absolute
+                content: ''
+                display: block
+                width: 106%
+                height: 106%
+                border-radius: 100%
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                border: 1px solid #fff
+            &-inner
+                display: block
+                width: 100%
+                opacity: 0
+                visibility: hidden
+        &__body
+            align-self: flex-end
+        &__title
+            font-size: 40px
+            font-weight: 500
+            margin-bottom: 25px
+        &__position
+            color: $yellow
+            margin-bottom: 30px
+            font-size: 24px
+        &__list
+            list-style: none
+            font-size: 24px
+            margin-bottom: 30px
+            li
+                margin-bottom: 30px
+                position: relative
+                padding-left: 20px
+                &::after
+                    position: absolute
+                    display: block
+                    content: ''
+                    width: 6px
+                    height: 6px
+                    border-radius: 100%
+                    background-color: $yellow
+                    top: 10px
+                    left: 0
+        &__socials
+            display: flex
+            align-items: center
+            &-item
+                margin-right: 25px
+                svg
+                    transition: .3s fill
+                    fill: #fff
+                    display: inline-block
+                &:hover
+                    svg
+                        fill: $yellow
+                &:last-child
+                    margin-right: 0
+
+@keyframes shake
+    0%
+        transform: translateX(-50%) rotate(0deg)
+    47.5%
+        transform: translateX(-50%) rotate(0deg)
+    48.75%
+        transform: translateX(-50%) rotate(20deg)
+    51.25%
+        transform: translateX(-50%) rotate(-20deg)
+    52.5%
+        transform: translateX(-50%) rotate(0deg)
+    100%
+        transform: translateX(-50%) rotate(0deg)
+
+@media (max-width: 1670px)
+    .team
+        padding-bottom: 140px
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 80px
+        &-list
+            grid-column-gap: 50px
+            grid-row-gap: 50px
+
+@media (max-width: 1300px)
+    .team
+        padding-bottom: 120px
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 60px
+        &-list
+            grid-column-gap: 40px
+            grid-row-gap: 40px
+
+@media (max-width: 1200px)
+    .team
+        &-modal
+            &__photo
+                width: 400px
+                min-width: 400px
+            &__title
+                font-size: 34px
+                margin-bottom: 20px
+            &__position
+                font-size: 22px
+                margin-bottom: 20px
+            &__list
+                margin-bottom: 20px
+                font-size: 22px
+                li
+                    margin-bottom: 20px
+                    padding-left: 15px
+
+@media (max-width: 1100px)
+    .team
+        padding-bottom: 90px
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 40px
+        &-list
+            grid-column-gap: 30px
+            grid-row-gap: 30px
+
+@media (max-width: 1000px)
+    .team
+        &-modal
+            &__photo
+                width: 300px
+                min-width: 300px
+            &__title
+                font-size: 28px
+                margin-bottom: 15px
+            &__position
+                font-size: 20px
+                margin-bottom: 15px
+            &__list
+                margin-bottom: 15px
+                font-size: 20px
+                li
+                    margin-bottom: 15px
+
+@media (max-width: 800px)
+    .team
+        padding-bottom: 70px
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 30px
+        &-list
+            grid-column-gap: 20px
+            grid-row-gap: 20px
+            position: relative
+        &-item
+            order: 1
+            grid-column: span 6
+            &:nth-child(2)
+                grid-column: span 12
+                order: 0
+                max-width: 70%
+                position: relative
+                left: 50%
+                transform: translateX(-50%)
+            &:nth-child(n + 4)
+                grid-column: span 6
+
+@media (max-width: 750px)
+    .team
+        &-modal
+            flex-direction: column
+            text-align: center
+            &__photo
+                width: 250px
+                min-width: 250px
+                margin: 0 auto
+                margin-bottom: 20px
+            &__title
+                font-size: 24px
+            &__list
+                font-size: 18px
+                text-align: left
+
+@media (max-width: 600px)
+    .team
+        &-item
+            &__text
+                display: block
+                position: absolute
+                bottom: 40px
+                left: 50%
+                color: #fff
+                z-index: 1
+                font-weight: 700
+                padding: 10px
+                background-color: $blue
+                animation-name: shake
+                animation-duration: 6s
+                animation-iteration-count: infinite
+                animation-timing-function: linear
+                animation-fill-mode: forwards
+
+@media (max-width: 500px)
+    .team
+        padding-bottom: 50px
+        &-title
+            margin-bottom: 15px
+        &-subtitle
+            margin-bottom: 20px
+        &-list
+            grid-column-gap: 15px
+            grid-row-gap: 15px
+        &-item
+            &:nth-child(2)
+                max-width: 100%
+
+@media (max-width: 374px)
+    .team
+        &-item
+            &__text
+                font-size: 16px
+                bottom: 30px
+
+@media (max-width: 340px)
+    .team
+        &-item
+            &__text
+                font-size: 14px

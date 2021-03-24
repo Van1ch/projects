@@ -1,0 +1,64 @@
+.newsCard
+    padding-bottom: 170px
+    &-container
+        max-width: 920px
+    &-img
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        margin-bottom: 70px
+        &__inner
+            width: 100%
+            display: block
+            opacity: 0
+            visibility: hidden
+    &-date
+        color: $silver
+        text-transform: uppercase
+        margin-bottom: 25px
+    &-title
+        margin-bottom: 20px
+    &-text
+        font-size: 18px
+        line-height: 140% 
+        margin-bottom: 25px
+    a
+        color: #000
+        transition: .3s color
+        font-weight: 600
+        &:hover
+            color: $shiraz
+
+@media (max-width: 1300px)
+    .newsCard
+        padding-bottom: 140px
+        &-img
+            margin-bottom: 50px
+        &-date
+            margin-bottom: 20px
+        &-text
+            margin-bottom: 20px
+
+@media (max-width: 1100px)
+    .newsCard
+        padding-bottom: 100px
+        &-img
+            margin-bottom: 40px
+        &-date
+            margin-bottom: 20px
+        &-text
+            margin-bottom: 20px
+
+@media (max-width: 800px)
+    .newsCard
+        padding-bottom: 70px
+        &-img
+            margin-bottom: 30px
+        &-date
+            margin-bottom: 15px
+        &-text
+            margin-bottom: 15px
+
+@media (max-width: 600px)
+    .newsCard
+        padding-bottom: 40px

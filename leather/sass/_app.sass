@@ -1,0 +1,123 @@
+.app
+    padding: 140px 0 100px 0
+    &-container
+        display: flex
+        align-items: flex-start
+    &-main
+        margin-right: 150px
+        flex-grow: 1
+    &-gallery
+        min-width: calc((100% / 12 * 5) + 6px)
+        width: calc((100% / 12 * 5) + 6px)
+        margin-left: -3px
+        display: flex
+        flex-wrap: wrap
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            flex-basis: 230px
+            flex-grow: 1
+            margin: 0 3px 6px 3px
+    &-title
+        margin-bottom: 40px
+    &-subtitle
+        margin-bottom: 10px
+    &-caption
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 90px
+    &-form
+        margin-bottom: 40px
+        display: flex
+        align-items: flex-start
+        &__main
+            display: flex
+            flex-direction: column
+            flex-grow: 1
+            margin-right: 50px
+        &__input
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+    &-policy
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 30px
+        &__text
+            font-size: 11px
+            font-weight: 300
+            max-width: 450px
+            a
+                color: #000
+                transition: .3s color
+                &:hover
+                    color: $main
+
+@media (max-width: 1500px)
+    .app
+        padding: 110px 0 70px
+        &-main
+            margin-right: 100px
+
+@media (max-width: 1400px)
+    .app
+        padding: 90px 0 50px
+        &-main
+            margin-right: 60px
+        &-title
+            margin-bottom: 30px
+        &-caption
+            margin-bottom: 60px
+
+@media (max-width: 1200px)
+    .app
+        padding: 60px 0 30px
+        &-container
+            flex-direction: column
+        &-main
+            margin-right: 0
+            margin-bottom: 40px
+        &-title
+            margin-bottom: 20px
+        &-caption
+            margin-bottom: 40px
+        &-form
+            margin-bottom: 30px
+            &__input
+                margin-bottom: 10px
+        &-gallery
+            width: calc(100% + 6px)
+        &-caption
+            font-size: 22px
+
+@media (max-width: 600px)
+    .app
+        padding: 40px 0 20px
+        &-title
+            margin-bottom: 15px
+        &-caption
+            font-size: 20px
+            margin-bottom: 30px
+        &-main
+            margin-bottom: 30px
+        &-form
+            flex-direction: column
+            align-items: center
+            &__main
+                width: 100%
+                margin-bottom: 20px
+                margin-right: 0
+        &-policy
+            &__img
+                margin-right: 20px
+        &-gallery
+            &__item
+                flex-basis: 190px
+
+@media (max-width: 450px)
+    .app
+        &-gallery
+            &__item
+                flex-basis: 140px

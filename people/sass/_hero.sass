@@ -1,0 +1,433 @@
+.hero
+    display: flex
+    align-items: flex-start
+    background-color: #000
+    color: #fff
+    position: relative
+    &-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 0
+        overflow: hidden
+        #canvas
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+        img
+            max-width: 100%
+            opacity: 0
+    &-main
+        width: 71%
+        align-self: flex-end
+        border-radius: 100%
+        border: 1px solid transparentize(#fff, .7)
+        position: relative
+        &__inner
+            display: block
+            width: 100%
+            opacity: 0
+            visibility: hidden
+    &-video
+        border-radius: 100%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 65%
+        &__img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            border-radius: 100%
+            opacity: 0.4
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            &-inner
+                opacity: 0
+                visibility: hidden
+                width: 100%
+                display: block
+        &__inner
+            display: block
+            width: 100%
+            opacity: 0
+            visibility: hidden
+        &__main
+            position: absolute
+            top: 50%
+            left: 55%
+            transform: translate(-50%, -50%)
+            z-index: 2
+            width: 16.6%
+        &__arrow
+            fill: $blue
+            cursor: pointer
+            transition: .3s fill
+            width: 100%
+            &:hover
+                fill: $yellow
+        &__text
+            position: absolute
+            left: 0
+            bottom: -65%
+            width: 200px
+            line-height: 150%
+            text-transform: uppercase
+    &-list
+        width: 29%
+        background-color: #000
+        z-index: 1
+    &-item
+        background-color: #000
+        position: relative
+        &__inner
+            width: 100%
+            display: block
+            opacity: 0
+            visibility: hidden
+        &:first-child
+            border-bottom: 1px solid transparentize(#fff, .7)
+        &:hover
+            .hero-item__img
+                animation-name: spring
+        &__main
+            padding: 60px
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+        &__img
+            margin-bottom: 35px
+            transform-origin: 0 100%
+            animation-duration: .3s
+            animation-iteration-count: 1
+            animation-timing-function: ease-in
+            animation-fill-mode: forwards
+        &__title
+            font-weight: 500
+            font-size: 30px
+            line-height: 130%
+            text-transform: uppercase
+            max-width: 350px
+        &__subtitle
+            margin-top: 25px
+            font-size: 20px
+            text-transform: uppercase
+            font-weight: 500
+            line-height: 150%
+            color: $gray
+            max-width: 360px
+        &__top
+            flex-grow: 1
+            position: relative
+            z-index: 1
+        &__btn
+            position: relative
+            z-index: 1
+            animation-duration: .3s
+            animation-iteration-count: 1
+            animation-timing-function: ease-in
+        &_special
+            position: relative
+            &::before 
+                position: absolute
+                display: block
+                content: ''
+                width: 100%
+                height: 100%
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                background-color: $blue
+                z-index: 0
+                border-radius: 100%
+                transition: .3s width, .3s height
+            .hero-item__main
+                padding-top: 50px
+                align-items: center
+            .hero-item__subtitle
+                color: #fff
+                margin-top: 15px
+                font-size: 20px
+            &__img
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                bottom: 0
+                height: 63%
+            &:hover
+                &::before
+                    width: 0
+                    height: 0
+                .hero-item__btn
+                    animation-name: scale
+    &-text
+        position: absolute
+        left: calc((100% - 1640px) / 2)
+        top: 140px
+        z-index: 1
+        &__title
+            max-width: 950px
+            margin-bottom: 70px
+            div
+                font-weight: 400
+                display: block
+        &__subtitle
+            max-width: 670px
+            font-size: 38px
+            line-height: 125%
+            font-weight: 400
+
+@keyframes spring
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(.7)
+    100%
+        transform: scale(1)
+
+@keyframes scale
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(1.1)
+    100%
+        transform: scale(1)
+
+@media (max-width: 1670px)
+    .hero
+        &-text
+            left: 0
+            padding: 0 15px
+            &__title
+                margin-bottom: 50px
+            &__subtitle
+                font-size: 34px
+        &-item
+            &__img
+                max-width: 85px
+                margin-bottom: 25px
+            &__title
+                font-size: 26px
+            &__subtitle
+                margin-top: 15px
+            &__main
+                padding: 40px
+            &_special
+                .hero-item__main
+                    padding-top: 40px
+                .hero-item__subtitle
+                    line-height: 130%
+                    margin-top: 10px
+                    font-size: 18px
+        &-video
+            &__text
+                bottom: -70%
+
+@media (max-width: 1400px)
+    .hero
+        &-text
+            top: 100px
+            &__title
+                margin-bottom: 40px
+                span
+                    display: inline
+            &__subtitle
+                font-size: 30px
+
+
+@media (max-width: 1300px)
+    .hero
+        &-text
+            &__title
+                margin-bottom: 30px
+                max-width: 830px
+            &__subtitle
+                font-size: 26px
+        &-item
+            &__img
+                max-width: 75px
+                margin-bottom: 20px
+            &__title
+                font-size: 24px
+            &__subtitle
+                margin-top: 10px
+                font-size: 18px
+            &_special
+                .hero-item__main
+                    padding-top: 25px
+                .hero-item__subtitle
+                    font-size: 18px
+            &__main
+                padding: 25px
+        &-video
+            &__text
+                width: 180px
+
+@media (max-width: 1200px)
+    .hero
+        padding-top: 60px
+        flex-direction: column
+        &-text
+            left: auto
+            top: auto
+            position: relative
+            margin-bottom: 20px
+            &__title
+                margin-bottom: 20px
+                max-width: 100%
+            &__subtitle
+                max-width: 100%
+        &-main
+            width: 70%
+            margin: 0 auto
+            margin-bottom: 50px
+        &-list
+            display: flex
+            width: 100%
+        &-item
+            flex-grow: 1
+            &:first-child
+                border: none
+            &__title
+                font-size: 22px
+        &-video
+            &__text
+                bottom: -80%
+
+@media (max-width: 1000px)
+    .hero
+        &-list
+            flex-direction: column
+        &-text
+            &__subtitle
+                font-size: 24px
+        &-item
+            margin: 0 150px
+            &__title
+                max-width: 100%
+            &__subtitle
+                max-width: 100%
+            &:first-child
+                border-bottom: 1px solid transparentize(#fff, .7)
+            &__inner
+                display: none
+            &__main
+                position: relative
+            &_special
+                .hero-item__inner
+                    display: block
+                .hero-item__main
+                    position: absolute
+                &__img
+                    max-height: 100%
+                    height: 400px
+
+@media (max-width: 900px)
+    .hero
+        padding-top: 40px
+        &-main
+            width: 80%
+            margin-bottom: 30px
+        &-video
+            width: 75%
+        &-text
+            &__subtitle
+                font-size: 22px
+        &-item
+            &__img
+                max-width: 60px
+            &__main
+                padding: 30px 20px
+            &__title
+                font-size: 20px
+            &_special
+                &__img
+                    height: 350px
+
+@media (max-width: 750px)
+    .hero
+        &-item
+            margin: 0 100px
+            &_special
+                &__img
+                    height: 310px
+
+@media (max-width: 700px)
+    .hero
+        &-main
+            width: 90%
+        &-video
+            width: 80%
+
+@media (max-width: 600px)
+    .hero
+        padding-top: 30px
+        &-main
+            width: 100%
+        &-video
+            width: 85%
+        &-text
+            &__title
+                margin-bottom: 20px
+            &__subtitle
+                font-size: 20px
+        &-item
+            margin: 0 50px
+            &_special
+                &__img
+                    height: 290px
+
+@media (max-width: 550px)
+    .hero
+        &-video
+            &__text
+                bottom: -85%
+                font-size: 15px
+                width: 155px
+
+@media (max-width: 500px)
+    .hero
+        &-item
+            margin: 0
+
+@media (max-width: 450px)
+    .hero
+        &-video
+            &__text
+                bottom: -95%
+        &-item
+            &_special
+                .hero-item__subtitle
+                    font-size: 16px
+                    margin-top: 10px
+
+@media (max-width: 400px)
+    .hero
+        &-item
+            &_special
+                &__img
+                    height: 250px
+                    
+@media (max-width: 350px)
+    .hero
+        &-video
+            &__text
+                font-size: 14px
+                width: 145px
+                bottom: -105%
+        &-item
+            &_special
+                &__img
+                    height: 200px

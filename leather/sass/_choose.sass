@@ -1,0 +1,71 @@
+.choose
+    padding: 110px 0 125px 0
+    &-title
+        margin-bottom: 40px
+    &-subtitle
+        max-width: 750px
+        margin-bottom: 100px
+    &-slider
+        .swiper-wrapper
+            align-items: center
+    &-item
+        text-align: center
+        img
+            max-width: 100%
+    &-pagination
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 20px
+        margin-top: 80px
+        span
+            width: 10px
+            height: 10px
+            background-color: $lightGray2
+            opacity: 1
+            margin: 0 5px
+            transition: .3s background-color, .3s width, .3s height
+        span.swiper-pagination-bullet-active
+            width: 20px
+            height: 20px
+            background-color: $main
+
+@media (max-width: 1630px)
+    .choose
+        padding: 80px 0 100px 0
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 80px
+        &-pagination
+            margin-top: 60px
+
+@media (max-width: 1400px)
+    .choose
+        padding: 70px 0
+        &-title
+            margin-bottom: 25px
+        &-subtitle
+            margin-bottom: 60px
+        &-pagination
+            margin-top: 50px
+
+@media (max-width: 1000px)
+    .choose
+        padding: 50px 0
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 40px
+        &-pagination
+            margin-top: 30px
+
+@media (max-width: 600px)
+    .choose
+        padding: 40px 0
+        &-title
+            margin-bottom: 15px
+        &-subtitle
+            margin-bottom: 20px
+        &-pagination
+            margin-top: 20px

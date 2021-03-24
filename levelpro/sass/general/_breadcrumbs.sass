@@ -1,0 +1,64 @@
+.breadcrumbs
+    padding-top: 35px
+    padding-bottom: 50px
+    &-container
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &-item
+        color: #000000
+        position: relative
+        font-size: 10px
+        text-transform: uppercase
+        transition: .3s color
+        font-weight: 600
+        margin-bottom: 5px
+        &__dec
+            width: 120px
+            height: 1px
+            background-color: #000
+            margin: 0 25px
+            margin-bottom: 5px
+        &:hover
+            color: $shiraz
+    &-item.inactive
+        color: $silverChalice
+
+@media (max-width: 1300px)
+    .breadcrumbs
+        padding-top: 30px
+        padding-bottom: 40px
+        &-item
+            &__dec
+                width: 100px
+                margin: 0 20px
+                margin-bottom: 5px
+
+@media (max-width: 1100px)
+    .breadcrumbs
+        padding-top: 25px
+        padding-bottom: 35px
+        &-item
+            &__dec
+                width: 80px
+                margin: 0 20px
+                margin-bottom: 5px
+
+@media (max-width: 900px)
+    .breadcrumbs
+        padding-top: 20px
+        padding-bottom: 30px
+        &-item
+            &__dec
+                width: 60px
+                margin: 0 15px
+                margin-bottom: 5px
+
+@media (max-width: 600px)
+    .breadcrumbs
+        padding-bottom: 20px
+        &-item
+            &__dec
+                width: 40px
+                margin: 0 10px
+                margin-bottom: 5px

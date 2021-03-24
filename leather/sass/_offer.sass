@@ -1,0 +1,118 @@
+.offer
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    padding: 130px 0
+    &-title
+        color: #fff
+        max-width: 800px
+        margin: 0 auto
+        margin-bottom: 80px
+        text-align: center
+    &-form
+        display: flex
+        max-width: 1120px
+        margin-left: -25px
+        margin: 0 auto
+        margin-bottom: 100px
+    &-input
+        margin: 0 25px
+        flex-grow: 1
+    &-bottom
+        max-width: 375px
+        margin: 0 auto
+    &-submit
+        margin-bottom: 40px
+        width: 100%
+        border: none
+        font-size: 20px
+        font-weight: 500
+        text-transform: uppercase
+        text-align: center
+        padding: 21px 70px
+        color: #fff
+        background-color: $main
+        cursor: pointer
+        transition: .3s background-color
+        &:hover
+            background-color: $lightMain
+    &-policy
+        display: flex
+        align-items: center
+        &__img
+            margin-right: 15px
+        &__text
+            font-size: 11px
+            font-weight: 300
+            color: $lightGray2
+            a
+                color: $lightGray2
+                transition: .3s color
+                &:hover
+                    color: $main
+
+@media (max-width: 1630px)
+    .offer
+        padding: 100px
+        &-title
+            margin-bottom: 60px
+        &-form
+            margin-bottom: 70px
+        &-submit
+            margin-bottom: 30px
+
+@media (max-width: 1400px)
+    .offer
+        &-submit
+            padding: 16px 60px
+
+@media (max-width: 1200px)
+    .offer
+        padding: 70px 0
+        &-title
+            margin-bottom: 50px
+        &-form
+            margin-bottom: 60px
+        &-submit
+            margin-bottom: 25px
+
+@media (max-width: 800px)
+    .offer
+        padding: 50px 0
+        &-form
+            flex-direction: column
+            margin-bottom: 40px
+        &-input
+            margin-bottom: 15px
+        &-title
+            margin-bottom: 40px
+        &-submit
+            margin-bottom: 20px
+
+@media (max-width: 800px)
+    .offer
+        padding: 50px 0
+        &-form
+            margin-bottom: 40px
+        &-input
+            margin: 0
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+        &-title
+            margin-bottom: 40px
+        &-submit
+            margin-bottom: 20px
+
+@media (max-width: 500px)
+    .offer
+        padding: 40px 0
+        &-bottom
+            max-width: 100%
+        &-form
+            margin-bottom: 25px
+        &-title
+            margin-bottom: 25px
+        &-submit
+            padding: 14px 40px
+            font-size: 18px

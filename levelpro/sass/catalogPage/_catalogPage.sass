@@ -1,0 +1,57 @@
+.catalogPage
+    padding-bottom: 190px
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        margin-left: -20px
+    &-item
+        flex-basis: 330px
+        flex-grow: 1
+        margin: 0 20px 40px 20px
+        color: #000
+        &__img
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 100% 100%
+            margin-bottom: 35px
+            transition: .3s background-size
+            &-inner
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+        &:hover
+            .catalogPage-item__img
+                background-size: 110% 110%
+
+@media (max-width: 1300px)
+    .catalogPage
+        padding-bottom: 140px
+
+@media (max-width: 1100px)
+    .catalogPage
+        padding-bottom: 140px
+        &-list
+            width: calc(100% + 30px)
+            margin-left: -15px
+        &-item
+            flex-basis: 280px
+            margin: 0 15px 30px 15px
+            &__img
+                margin-bottom: 25px
+
+@media (max-width: 900px)
+    .catalogPage
+        padding-bottom: 70px
+        &-item
+            &__img
+                margin-bottom: 15px
+
+@media (max-width: 600px)
+    .catalogPage
+        padding-bottom: 40px
+
+@media (max-width: 500px)
+    .catalogPage
+        padding-bottom: 20px

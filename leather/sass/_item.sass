@@ -1,0 +1,165 @@
+.item
+    display: flex
+    &:nth-child(even)
+        flex-direction: row-reverse
+    &-gallery
+        flex-basis: 50%
+        width: 100%
+        min-height: 475px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        &:last-child
+            .item-gallery__container
+                animation-name: gallery-reverse
+                &:last-child
+                    left: 1230px
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            width: 410px
+            flex-grow: 1
+        &__wrapper
+            flex-basis: 50%
+            display: flex
+            flex-direction: column
+        &__container
+            display: flex
+            min-width: 1230px
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            animation-name: gallery
+            animation-iteration-count: infinite
+            animation-fill-mode: none
+            animation-duration: 30s
+            animation-timing-function: linear
+            &:last-child
+                left: -1230px
+    &-main
+        flex-basis: 50%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &-img
+        margin-bottom: 50px
+    &-title
+        text-align: center
+        margin-bottom: 40px
+    &-text
+        text-align: center
+        font-weight: 300
+        line-height: 140%
+        max-width: 550px
+    &-dec
+        height: 75px
+        width: 1px
+        background-color: $main
+        margin: 40px 0
+
+@keyframes gallery
+    0%
+        transform: translateX(0%)
+
+    100%
+        transform: translateX(100%)
+
+@keyframes gallery-reverse
+    0%
+        transform: translateX(0%)
+
+    100%
+        transform: translateX(-100%)
+
+@media (max-width: 1500px)
+    .item
+        &-gallery
+            min-height: 405px
+            &:last-child
+                .item-gallery__container
+                    &:last-child
+                        left: 1050px
+            &__container
+                min-width: 1050px
+                &:last-child
+                    left: -1050px
+            &__item
+                width: 350px
+        &-img
+            margin-bottom: 40px
+        &-title
+            margin-bottom: 40px
+        &-dec
+            height: 60px
+            margin: 30px 0
+
+@media (max-width: 1200px)
+    .item
+        &-text
+            max-width: 500px
+
+@media (max-width: 1100px)
+    .item
+        &-text
+            max-width: 450px
+
+@media (max-width: 1050px)
+    .item
+        flex-direction: column-reverse
+        &:nth-child(even)
+            flex-direction: column-reverse
+        &-main
+            padding: 50px 15px
+        &-img
+            margin-bottom: 30px
+        &-title
+            margin-bottom: 30px
+        &-dec
+            height: 50px
+            margin: 20px 0
+        &-text
+            max-width: 100%
+
+@media (max-width: 800px)
+    .item
+        &-gallery
+            min-height: 348px
+            &:last-child
+                .item-gallery__container
+                    &:last-child
+                        left: 900px
+            &__container
+                min-width: 900px
+                &:last-child
+                    left: -900px
+            &__item
+                width: 300px
+
+@media (max-width: 600px)
+    .item
+        &-gallery
+            min-height: 290px
+            &:last-child
+                .item-gallery__container
+                    &:last-child
+                        left: 750px
+            &__container
+                min-width: 750px
+                &:last-child
+                    left: -750px
+            &__item
+                width: 250px
+        &-main
+            padding: 40px 15px
+        &-img
+            margin-bottom: 20px
+        &-title
+            margin-bottom: 20px
+        &-dec
+            height: 40px
+            margin: 15px 0

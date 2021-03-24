@@ -1,0 +1,60 @@
+.search
+    padding: 26px 15px 20px 15px
+    border-bottom: 1px solid $mercury
+    background-color: #fff
+    z-index: 15
+    position: fixed
+    width: 100%
+    top: -95px
+    left: 0
+    transition: .3s top
+    &-cross
+        width: 20px
+        height: 11px
+        cursor: pointer
+        margin-right: 20px
+        position: relative
+        margin-bottom: 15px
+        &__item
+            position: absolute
+            width: 100%
+            display: block
+            height: 1px
+            background-color: #000
+            &:first-child
+                top: 5px
+                left: 0
+                transform: rotate(45deg)
+            &:last-child
+                bottom: 5px
+                left: 0
+                transform: rotate(-45deg)
+    &-input
+        width: 100%
+        border: none
+        font-size: 18px
+        &::-webkit-input-placeholder
+            color: $silverChalice
+            font-size: 18px
+        &:-moz-placeholder
+            color: $silverChalice
+            font-size: 18px
+    &-form
+        &__wrapper
+            position: relative
+        &__cross
+            width: 17px
+            height: 17px
+            border-radius: 100%
+            background-color: $silver
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            cursor: pointer
+
+.search.active
+    top: 0

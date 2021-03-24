@@ -1,0 +1,33 @@
+.search
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        margin-left: -20px
+    &-catalog
+        margin-bottom: 50px
+        .header-search
+            max-width: 50%
+            position: relative
+
+@media (max-width: 1000px)
+    .search
+        &-list
+            width: calc(100% + 30px)
+            margin-left: -15px
+        &-catalog
+            margin-bottom: 40px
+            .header-search
+                max-width: 60%
+
+@media (max-width: 800px)
+    .search
+        &-catalog
+            .header-search
+                max-width: 70%
+
+@media (max-width: 600px)
+    .search
+        &-catalog
+            .header-search
+                max-width: 100%

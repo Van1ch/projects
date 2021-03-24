@@ -1,0 +1,96 @@
+.gift
+    display: flex
+    align-items: flex-start
+    &-main
+        flex-basis: 50%
+        padding-top: 140px
+        padding-left: calc((100% - 1600px) / 2)
+        padding-right: 120px
+    &-title
+        margin-bottom: 40px
+    &-subtitle
+        margin-bottom: 60px
+    &-btn
+        margin-left: 40px
+    &-list
+        margin-bottom: 130px
+    &-slider
+        width: 50%
+        position: relative
+    &-item
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+    &-arrows
+        position: absolute
+        bottom: 90px
+        left: 60px
+        display: flex
+    &-arrow
+        margin-right: 25px
+        z-index: 1
+        &:last-child
+            margin-right: 0
+
+@media (max-width: 1630px)
+    .gift
+        &-main
+            padding-left: 15px
+            padding-top: 100px
+            padding-right: 90px
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 50px
+        &-list
+            margin-bottom: 100px
+
+@media (max-width: 1400px)
+    .gift
+        &-main
+            padding-top: 70px
+            padding-right: 70px
+        &-title
+            margin-bottom: 25px
+        &-subtitle
+            margin-bottom: 40px
+        &-list
+            margin-bottom: 80px
+        &-arrows
+            bottom: 60px
+            left: 50px
+        &-btn
+            margin-left: 30px
+
+@media (max-width: 1300px)
+    .gift
+        flex-direction: column
+        &-main
+            padding-top: 50px
+            padding-right: 15px
+            padding-bottom: 50px
+            flex-basis: auto
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 30px
+        &-list
+            margin-bottom: 40px
+        &-slider
+            width: 100%
+
+@media (max-width: 600px)
+    .gift
+        &-main
+            padding-top: 40px
+            padding-bottom: 40px
+        &-btn
+            margin-left: 0
+        &-arrows
+            bottom: 40px
+            left: 20px
+        &-arrow
+            margin-right: 20px
+        &-btn
+            padding: 14px 15px
+            width: 100%

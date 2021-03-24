@@ -1,0 +1,108 @@
+.policy
+    background: #fff
+    font-size: 16px
+    color: #000
+    position: relative
+    padding: 25px
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 0
+        background: #fff
+        button.fancybox-close-small
+            display: none
+    &-title
+        font-weight: 700
+        font-size: 24px
+        font-family: 'RobotoSlab', sans-serif
+        margin-bottom: 30px
+        text-transform: uppercase
+    &-text
+        margin-bottom: 15px
+    &-list
+        li
+            margin-bottom: 20px
+            padding-left: 30px
+            &::after
+                top: 3px
+
+.modal
+    position: relative
+    background-color: #fff
+    padding: 40px
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 450px
+    &-wrapper.fancybox-content
+        padding: 0
+        button.fancybox-close-small
+            display: none
+    &-title
+        margin-bottom: 30px
+        text-align: center
+        font-family: 'RobotoSlab', sans-serif
+        font-size: 30px
+        font-weight: 700
+        text-transform: uppercase
+    &-input
+        margin-bottom: 25px
+        width: 100%
+    &-submit
+        margin-top: 30px
+        width: 100%
+        border: none
+        margin-bottom: 35px
+        input
+            display: none
+    &-close
+        position: absolute
+        top: 12px
+        right: 12px
+        width: 14px
+    &-btn
+        width: 100%
+    &-policy
+        font-size: 11px
+        font-weight: 300
+        a
+            color: #000
+            transition: .3s color
+            &:hover
+                color: $main
+        
+@media (max-width: 600px)
+    .policy
+        font-size: 15px
+        padding: 15px
+        padding-top: 20px
+        &-wrapper
+            max-width: 100%
+        &-title
+            font-size: 22px
+            margin-bottom: 20px
+        &-list
+            li
+                margin-bottom: 15px
+                padding-left: 25px
+                &::after
+                    top: 1px
+            
+@media (max-width: 500px)
+    .modal
+        padding: 25px
+        &-title
+            font-size: 24px
+            margin-bottom: 20px
+        &-input
+            margin-bottom: 15px
+        &-submit
+            margin-top: 20px
+            margin-bottom: 25px
+
+@media (max-width: 350px)
+    .policy
+        &-title
+            font-size: 20px

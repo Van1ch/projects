@@ -1,0 +1,129 @@
+.page
+    padding-bottom: 150px
+    &-table
+        overflow: auto
+    a
+        color: #000 
+        transition: .3s color
+        &:hover
+            color: $shiraz
+    .bold
+        font-weight: 700
+    .small
+        font-size: 16px
+    .center
+        text-align: center
+    .uc
+        text-transform: uppercase
+    p
+        margin-top: 15px
+        font-size: 18px
+    h1, h2, h3, h4
+        font-weight: 700
+        text-transform: uppercase
+    h1
+        font-size: 36px
+        margin-top: 30px
+    h2
+        font-size: 30px
+        margin-top: 25px
+    h3
+        font-size: 24px
+        margin-top: 20px
+    h4
+        font-size: 20px
+        margin-top: 15px
+    ul, ol
+        margin-top: 15px
+    ul, ol
+        display: flex
+        flex-direction: column
+        list-style: none
+    ol
+        counter-reset: section
+    li
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+    ul > li
+        padding-left: 10px
+        position: relative
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            background-color: $shiraz
+            width: 4px
+            height: 4px
+            border-radius: 100%
+            left: 0
+            top: 7px
+    ol > li
+        padding-left: 20px
+        position: relative
+        display: flex
+        align-items: center
+        &::before
+            position: absolute
+            left: 0
+            top: 0
+            display: block
+            counter-increment: section
+            content: counter(section) "."
+            color: $shiraz
+        &:nth-child(n + 10)
+            padding-left: 25px
+    table
+        width: 100%
+        font-size: 16px
+        margin-top: 20px
+        border-spacing: 0
+        min-width: 700px
+        th
+            background-color: #000
+            padding: 20px 30px
+            text-align: left
+            font-size: 12px
+            font-weight: 700
+            color: #ffffff
+            text-transform: uppercase
+            &:nth-child(n + 2)
+                background-color: $silver
+                border-left: 2px solid #fff
+        tr
+            background-color: #fff
+            &:nth-child(even)
+                background-color: $wildSand
+                border-left: 1px solid 
+            td
+                padding: 20px 30px
+                font-size: 16px
+
+@media (max-width: 700px)
+    .page
+        padding-bottom: 50px
+        ul, ol
+            margin-top: 10px
+            li
+                margin-bottom: 7px
+        p
+            margin-top: 10px
+        table
+            margin-top: 15px
+            th
+                padding: 15px 20px
+            tr td
+                padding: 12px 20px
+        h1
+            font-size: 30px
+            margin-top: 25px
+        h2
+            font-size: 24px
+            margin-top: 20px
+        h3
+            font-size: 20px
+            margin-top: 15px
+        h4
+            font-size: 18px
+            margin-top: 10px
+    

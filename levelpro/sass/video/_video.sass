@@ -1,0 +1,64 @@
+.video
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        margin-left: -20px
+        padding-bottom: 40px
+    &-item
+        margin: 0 20px 60px 20px
+        flex-basis: 330px
+        flex-grow: 1
+        color: #000
+        &__img
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            position: relative
+            margin-bottom: 25px
+            &-inner
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+            &-icon
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                fill: $shiraz
+                transition: .3s fill
+        &__date
+            text-transform: uppercase
+            color: $silver
+            margin-bottom: 25px
+        &:hover
+            .video-item__img-icon
+                fill: #fff
+
+@media (max-width: 1100px)
+    .video
+        &-list
+            width: calc(100% + 30px)
+            margin-left: -15px
+            padding-bottom: 30px
+        &-item
+            margin: 0 15px 40px 15px
+
+@media (max-width: 1079px)
+    .video
+        &-item
+            &__img
+                margin-bottom: 20px
+            &__date
+                margin-bottom: 20px
+
+@media (max-width: 800px)
+    .video
+        &-list
+            padding-bottom: 10px
+        &-item
+            &__img
+                margin-bottom: 15px
+            &__date
+                margin-bottom: 15px

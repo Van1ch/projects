@@ -1,0 +1,351 @@
+@import _variables.sass
+
+// Общие настройки
+
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none !important
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'Raleway', sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: #000000
+    font-feature-settings: 'pnum' on, 'lnum' on
+
+a
+    text-decoration: none
+    display: inline-block
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+    overflow-x: hidden
+    position: relative
+
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.container
+    max-width: 1430px
+    padding: 0 15px
+    margin: 0 auto
+
+// Элементы, которые есть на всем сайте
+
+.link
+    position: relative
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #fff
+        transition: .3s width
+    &:hover
+        &::after
+            width: 0
+    &_reverse
+        &::after
+            width: 0
+        &:hover
+            &::after
+                width: 100%
+    &_right
+        &::after
+            left: auto
+            right: 0
+
+.empty
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    height: 0 !important
+    border: none !important
+    min-height: 0 !important
+    pointer-events: none
+    &::after
+        display: none !important
+    &::before
+        display: none !important
+
+textarea, input
+    -webkit-appearance: none
+    -moz-appearance: none
+    border-radius: 0
+    font-family: 'Raleway', sans-serif
+    &::-webkit-input-placeholder
+        font-family: 'Raleway', sans-serif
+    &:-moz-placeholder
+        font-family: 'Raleway', sans-serif
+    
+.input, textarea
+    border: 1px solid transparent
+    background-color: $wildSand
+    padding: 15px 20px
+    width: 100%
+    transition: .3s border-color, .3s background-color
+    font-family: 'Raleway', sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: #000000
+    font-feature-settings: 'pnum' on, 'lnum' on
+    &:focus, &:hover
+        background-color: #fff
+        border-color: #000
+    &::-webkit-input-placeholder
+        color: $silverChalice
+    &:-moz-placeholder
+        color: $silverChalice
+
+textarea
+    resize: none
+
+.btn
+    padding: 16px 40px
+    cursor: pointer
+    text-align: center
+    background-color: $shiraz
+    color: #fff
+    font-weight: 700
+    text-transform: uppercase
+    transition: .3s background-color, .3s color
+    &_small
+        padding: 9px 15px
+        font-size: 11px
+    &:hover
+        background-color: $brightRed
+    &_wide
+        padding: 16px 50px
+    &_gray
+        border: 1px solid $silverChalice
+        background-color: #fff
+        color: $gray
+        &:hover
+            background-color: $mineShaft
+            color: #fff
+    &_black
+        border: 1px solid #000
+        color: #000
+        background-color: #fff
+        padding: 12px 10px
+        &:hover
+            color: #fff
+            background-color: #000
+
+.title
+    font-weight: 700
+    text-transform: uppercase
+    &_reallyBig
+        font-weight: 900
+        font-size: 50px
+        line-height: 120%
+    &_big
+        font-size: 36px
+    &_medium
+        font-size: 30px
+    &_small
+        font-size: 24px
+    &_reallySmall
+        font-size: 20px
+
+.page
+    &-title
+        margin-bottom: 60px
+
+.line
+    transform: translateY(110%)
+    transition: .6s transform cubic-bezier(0.19, 1, 0.22, 1) .3s
+    will-change: transform
+    &-wrapper
+        overflow: hidden
+        display: inline-block
+    &-wrapper.active
+        .line
+            transform: translateY(0)
+
+@media (max-width: 1300px)
+    .title
+        &_reallyBig
+            font-size: 44px
+        &_big
+            font-size: 32px
+        &_medium
+            font-size: 26px
+        &_small
+            font-size: 22px
+        &_reallySmall
+            font-size: 18px
+    .page
+        &-title
+            margin-bottom: 50px
+
+@media (max-width: 1100px)
+    .title
+        &_reallyBig
+            font-size: 40px
+        &_big
+            font-size: 30px
+        &_medium
+            font-size: 24px
+        &_small
+            font-size: 22px
+        &_reallySmall
+            font-size: 18px
+    .page
+        &-title
+            margin-bottom: 45px
+
+@media (max-width: 800px)
+    .title
+        &_reallyBig
+            font-size: 35px
+        &_big
+            font-size: 28px
+        &_medium
+            font-size: 22px
+        &_small
+            font-size: 20px
+        &_reallySmall
+            font-size: 18px
+    .btn
+        padding: 14px 30px
+        font-size: 15px
+        &_wide
+            padding: 14px 40px
+    .page
+        &-title
+            margin-bottom: 35px
+
+    .input, textarea
+        padding: 13px 15px
+
+@media (max-width: 500px)
+    .title
+        &_reallyBig
+            font-size: 30px
+        &_big
+            font-size: 26px
+        &_medium
+            font-size: 22px
+        &_small
+            font-size: 20px
+        &_reallySmall
+            font-size: 18px
+    .page
+        &-title
+            margin-bottom: 25px
+
+
+// Файлы, относящиеся ко всем страницам
+
+@import ./general/_header.sass
+@import ./general/_footer.sass
+@import ./general/_slider.sass
+@import ./general/_breadcrumbs.sass
+@import ./general/_pagination.sass
+@import ./general/_item.sass
+@import ./general/_menu.sass
+@import ./general/_modal.sass
+@import ./general/_mobile-menu.sass
+@import ./general/_search.sass
+@import ./general/_cart.sass
+
+// Файлы, относящиеся к главной странице
+
+@import ./index/_hero.sass
+@import ./index/_brands.sass
+@import ./index/_fashion.sass
+@import ./index/_mask.sass
+@import ./index/_inst.sass
+@import ./index/_star.sass
+@import ./index/_collab.sass
+@import ./index/_app.sass
+@import ./index/_about.sass
+@import ./index/_partners.sass
+
+// Файлы, относящиеся к странице новостей
+
+@import ./news/_news.sass
+
+// Файлы, относящиеся к карточке новости
+
+@import ./newsCard/_newsCard.sass
+
+// Файлы, относящиеся к странице видео
+
+@import ./video/_video.sass
+
+// Файлы, относящиеся к странице рекомендации
+
+@import ./recommendation/_recommendation.sass
+
+// Файлы, относящиеся к рубрике каталога
+
+@import ./catalog/_catalog.sass
+
+// Файлы, относящиеся к карточке товара
+
+@import ./card/_card.sass
+@import ./card/_desc.sass
+@import ./card/_cardSlider.sass
+
+// Файлы, относящиеся к странице регистрации/входа
+
+@import ./sign/_sign.sass
+
+// Файлы, относящиеся к странице каталога
+
+@import ./catalogPage/_catalogPage.sass
+
+// Файлы, относящиеся к странице контактов
+
+@import ./contacts/_contacts.sass
+
+// Файлы, относящиеся к странице поиска
+
+@import ./search/_search.sass
+
+// Файлы, относящиеся к типовой странице
+
+@import ./page/_page.sass
+
+// Файлы, относящиеся к странице бренда
+
+@import ./brand/_brand-hero.sass
+@import ./brand/_brand-list.sass
+@import ./brand/_brand-home.sass
+@import ./brand/_brand-gallery.sass
+@import ./brand/_brand-stages.sass
+@import ./brand/_brand-app.sass
+@import ./brand/_brand-advantages.sass
+
+// Файлы, относящиеся к странице выставки
+
+@import ./exhibition/_exhibition.sass
+
+.alertify-notifier .ajs-message.ajs-error
+    -webkit-box-shadow: 0 0 3px #333333
+    box-shadow: 0 0 3px #333333
+    color: #fff 
+
+.alertify-notifier .ajs-message.ajs-success
+    color: #fff
+    background: rgba(40, 136, 62, 0.9)
+    text-shadow: 0 0 1px rgba(0,0,0,.5)
+
+.alertify-notifier
+    z-index: 99998

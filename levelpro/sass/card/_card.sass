@@ -1,0 +1,337 @@
+.card
+    padding-bottom: 100px
+    &-container
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &-slider
+        margin-left: 0
+        &__wrapper
+            width: 50%
+            position: relative
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+        &__dots
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 14px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            z-index: 1
+            span
+                height: auto
+                opacity: 1
+                flex-grow: 1
+                flex-basis: 40px
+                border-radius: 0
+                margin: 10px 0
+                width: 4px
+                background-color: $silver
+                transition: .3s flex-basis
+            span.swiper-pagination-bullet-active
+                background-color: $shiraz
+                flex-basis: 80px
+    &-top
+        flex-grow: 1
+    &-info
+        align-self: stretch
+        width: 41.66%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &-title
+        margin-bottom: 25px
+    &-specs
+        font-size: 14px
+        margin-bottom: 25px
+        &__item
+            display: flex
+            align-items: flex-start
+            padding: 8px 0
+            border-top: 1px solid $mercury
+            &:last-child
+                border-bottom: 1px solid $mercury
+            &-name
+                font-weight: 600
+                min-width: 120px
+                margin-right: 50px
+            &-value
+                &_copy
+                    display: flex
+                    align-items: center
+                &__img
+                    margin-left: 25px
+                    cursor: pointer
+    &-name
+        font-weight: 600
+        margin-bottom: 20px
+    &-color
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 18px)
+        margin-left: -9px
+        margin-bottom: 10px
+        &__item
+            width: 35px 
+            height: 35px
+            position: relative
+            border: 1px solid $mercury
+            margin: 0 9px 18px 9px
+            &-img
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                opacity: 0
+                visibility: hidden
+                transition: .3s visibility, .3s opacity
+            &::after
+                position: absolute
+                display: block
+                width: 100%
+                height: 100%
+                content: ''
+                border: 2px solid #000
+                opacity: 0
+                visibility: hidden
+                transition: .3s visibility, .3s opacity
+            &:hover
+                &::after
+                    opacity: 1
+                    visibility: visible
+                .card-color__item-img
+                    opacity: 1
+                    visibility: visible 
+        &__item.active  
+            &::after
+                opacity: 1
+                visibility: visible
+            .card-color__item-img
+                opacity: 1
+                visibility: visible
+        &__item.inactive
+            cursor: default
+            background-image: url(../img/card/cross.svg)
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            &:hover
+                &::after
+                    opacity: 0
+                    visibility: hidden
+                .card-color__item-img
+                    opacity: 0
+                    visibility: hidden
+    &-size
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 16px)
+        margin-left: -8px
+        margin-bottom: 14px
+        &__item
+            padding: 7px 7px
+            margin: 0 8px 16px 8px
+            border: 1px solid #000
+            cursor: pointer
+            transition: .3s background-color, .3s color
+            &:hover
+                background-color: #000
+                color: #fff
+        &__item.active
+            background-color: #000
+            color: #fff
+        &__item.inactive
+            cursor: default
+            position: relative
+            &:hover
+                background-color: transparent
+                color: #000
+            &::before
+                position: absolute
+                display: block
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                content: ''
+                background-color: #000
+                opacity: 0.4
+    &-combined
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 20px)
+        margin-left: -10px
+        margin-bottom: 20px
+        &__item
+            margin: 0 10px 10px 10px
+            flex-basis: 45px
+            &-color
+                width: 100%
+                height: 35px
+                border: 1px solid $mercury
+                margin-bottom: 5px
+            &-size
+                font-size: 14px
+                color: #000
+                text-align: center
+                transition: .3s color
+            &:hover
+                .card-combined__item-size
+                    color: $shiraz
+    &-quantity
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        &__number
+            margin: 0 20px
+            width: 85px
+            text-align: center
+            border: 1px solid
+            padding: 7px 7px
+            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                display: none
+                -webkit-appearance: none
+                margin: 0
+        &__img
+            cursor: pointer
+    &-prices
+        display: flex
+        align-items: flex-end
+        margin-bottom: 30px
+    &-price
+        &__old
+            font-size: 14px
+            color: $doveGray
+            text-decoration: line-through
+            margin-right: 10px
+            margin-bottom: 1px
+        &__new
+            font-size: 18px
+            font-weight: 700
+    &-bottom
+        display: flex
+        align-items: center
+        &__text
+            margin-left: 60px
+            font-weight: 600
+
+@media (max-width: 1300px)
+    .card
+        padding-bottom: 80px
+        &-name
+            margin-bottom: 10px
+        &-title, &-specs, &-quantity, &-prices
+            margin-bottom: 20px
+        &-size
+            margin-bottom: 4px
+        &-color
+            margin-bottom: 6px
+            &__item
+                margin: 0 7px 14px 7px
+        &-combined
+            margin-bottom: 10px
+        &-bottom
+            &__text
+                margin-left: 40px
+
+@media (max-width: 1200px)
+    .card
+        &-specs
+            &__item
+                padding: 7px 0
+
+@media (max-width: 1150px)
+    .card
+        padding-bottom: 70px
+        &-slider
+           &__wrapper
+                width: 43%
+        &-info
+            width: 50%
+
+@media (max-width: 1000px)
+    .card
+        padding-bottom: 60px
+        &-container
+            flex-direction: column
+        &-slider
+            &__wrapper
+                margin: 0 auto
+                margin-bottom: 40px
+                width: 60%
+            &__dots
+                margin-top: 20px 
+                position: relative
+                top: auto
+                left: auto
+                transform: translateY(0)
+                flex-direction: row
+                align-items: center
+                bottom: auto
+                span
+                    height: 4px
+                    margin: 0 10px
+                    width: auto
+                    &:first-child
+                        margin-left: 0
+                    &:last-child
+                        margin-right: 0
+        &-info
+            width: 100%
+
+@media (max-width: 800px)
+    .card
+        padding-bottom: 50px
+        &-slider
+            &__wrapper
+                margin-bottom: 30px
+                width: 70%
+
+@media (max-width: 500px)
+    .card
+        padding-bottom: 40px
+        &-slider
+            &__wrapper
+                margin-bottom: 20px
+                width: 100%
+            &__dots
+                margin-top: 15px
+        &-specs
+            &__item
+                &-name
+                    margin-right: 30px
+        &-bottom
+            &__text
+                margin-left: 25px
+                font-size: 14px
+        &-combined
+            width: calc(100% + 16px)
+            modal-close
+            &__item
+                margin: 0 8px 8px 8px
+
+@media (max-width: 410px)
+    .card
+        &-specs
+            &__item
+                &-name
+                    margin-right: 15px
+        &-bottom
+            flex-direction: column-reverse
+            align-items: flex-start
+            &__text
+                margin-left: 0
+                margin-bottom: 20px
+                font-size: 14px
+
+@media (max-width: 350px)
+    .card
+        &-specs
+            &__item
+                font-size: 13px
+                &-name
+                    min-width: 110px

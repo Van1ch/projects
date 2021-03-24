@@ -1,0 +1,82 @@
+.app
+    background-color: $codGray
+    padding: 90px 0 110px 0
+    color: #fff
+    position: relative
+    &-main
+        max-width: 520px
+    &-title
+        margin-bottom: 20px
+    &-subtitle
+        color: $shiraz
+        margin-bottom: 35px
+        text-transform: none
+    &-list
+        margin-bottom: 40px
+        &__item
+            position: relative
+            padding-left: 10px
+            margin-bottom: 15px
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                left: 0
+                top: 7px
+                width: 3px
+                height: 3px
+                border-radius: 100%
+                background-color: $shiraz
+    &-dec
+        position: absolute
+        height: 104%
+        bottom: 0
+        left: 47%
+        &__circle
+            border-style: solid
+            border-color: $shiraz
+            border-radius: 100%
+            position: absolute
+            height: 100%
+            left: 40px
+            top: 0
+            z-index: 0
+        &__img
+            z-index: 1
+            position: relative
+            max-height: 100%
+
+@media (max-width: 1300px)
+    .app
+        padding: 80px 0
+
+@media (max-width: 1000px)
+    .app
+        padding: 70px 0
+        &-dec
+            left: 50%
+
+@media (max-width: 900px)
+    .app
+        padding: 50px 0
+        &-dec
+            display: none
+        &-main
+            max-width: 100%
+
+@media (max-width: 600px)
+    .app
+        padding: 40px 0
+        &-title
+            margin-bottom: 15px
+        &-subtitle
+            margin-bottom: 25px
+        &-list
+            margin-bottom: 30px
+            &__item
+                margin-bottom: 10px
+
+@media (max-width: 340px)
+    .app
+        &-title
+            font-size: 28px

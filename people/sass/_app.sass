@@ -1,0 +1,87 @@
+.app
+    padding-top: 140px
+    &-title
+        margin-bottom: 40px
+        max-width: 1300px
+    &-subtitle
+        margin-bottom: 180px
+        max-width: 1300px
+    &-img
+        width: 100%
+    &-form
+        form
+            margin-bottom: 90px
+            display: flex
+            align-items: center
+        span
+            margin-right: 50px
+        &__input
+            width: 100%
+            max-width: 500px
+            margin-right: 50px
+        &__submit
+            margin-left: 50px
+
+@media (max-width: 1670px)
+    .app
+        padding-top: 120px
+        &-subtitle
+            margin-bottom: 140px
+        &-form
+            form
+                margin-bottom: 70px
+
+@media (max-width: 1400px)
+    .app
+        padding-top: 100px
+        &-subtitle
+            margin-bottom: 100px
+        &-form
+            form
+                margin-bottom: 50px
+
+@media (max-width: 1300px)
+    .app
+        padding-top: 90px
+        &-form
+            span
+                margin-right: 30px
+            &__submit
+                margin-left: 30px
+            &__input
+                margin-right: 30px
+
+@media (max-width: 1000px)
+    .app
+        padding-top: 70px
+        &-subtitle
+            margin-bottom: 70px
+        &-form
+            form
+                flex-direction: column
+                span
+                    margin-right: 0
+            &__input
+                margin-right: 0
+                margin-bottom: 30px
+                width: 100%
+            &__submit
+                margin-left: 0
+
+@media (max-width: 800px)
+    .app
+        padding-top: 60px
+        &-subtitle
+            margin-bottom: 40px
+        &-title
+            margin-bottom: 20px
+        &-form
+            form
+                margin-bottom: 30px
+
+@media (max-width: 600px)
+    .app
+        padding-top: 50px
+        &-form
+            form
+                margin-bottom: 20px

@@ -1,0 +1,102 @@
+.scheme
+    background: $lightGray
+    padding-top: 120px
+    padding-bottom: 40px
+    &-title
+        margin-bottom: 100px
+    &-list
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        width: calc(100% + 90px)
+        margin-left: -45px
+    &-item
+        margin: 0 45px 80px 45px
+        flex-basis: 400px
+        flex-grow: 1
+        &__number
+            font-size: 72px
+            font-weight: 700
+            font-family: 'RobotoSlab', sans-serif
+            margin-bottom: 20px
+            color: $main
+        &__title
+            font-weight: 700
+            text-transform: uppercase
+            font-size: 30px
+            margin-bottom: 40px
+    &-contacts
+        background-color: #fff
+        padding: 55px
+        &__text
+            margin-bottom: 35px
+        &__item
+            display: flex
+            align-items: center
+            color: #000
+            margin-bottom: 5px
+            transition: .3s color
+            &:last-child
+                margin-bottom: 0
+            &:hover
+                color: $main
+            &-img
+                margin-right: 20px
+            &-text
+                font-weight: 700
+
+@media (max-width: 1630px)
+    .scheme
+        padding: 100px 0 40px 0
+        &-list
+            width: calc(100% + 70px)
+            margin-left: -35px
+        &-item
+            margin: 0 35px 60px 35px
+            &__number
+                font-size: 60px
+                margin-bottom: 15px
+            &__title
+                font-size: 26px
+                margin-bottom: 30px
+        &-title
+            margin-bottom: 80px
+
+@media (max-width: 1200px)
+    .scheme
+        padding: 70px 0 30px 0
+        &-list
+            width: calc(100% + 50px)
+            margin-left: -25px
+        &-item
+            margin: 0 25px 40px 25px
+            &__number
+                font-size: 40px
+                margin-bottom: 10px
+            &__title
+                font-size: 24px
+                margin-bottom: 20px
+        &-title
+            margin-bottom: 60px
+        &-contacts
+            padding: 40px
+            &__text
+                margin-bottom: 25px
+    
+@media (max-width: 800px)
+    .scheme
+        padding: 40px 0 0px 0
+        &-item
+            margin: 0 25px 35px 25px
+            &__number
+                font-size: 30px
+                margin-bottom: 10px
+            &__title
+                font-size: 22px
+                margin-bottom: 10px
+        &-title
+            margin-bottom: 20px
+        &-contacts
+            padding: 25px
+            &__text
+                margin-bottom: 20px

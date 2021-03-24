@@ -1,0 +1,102 @@
+.footer
+    background-color: $lightGray
+    padding: 100px 0 120px 0
+    &-container
+        display: flex
+        justify-content: space-between
+    &-logo
+        &__img
+            margin-right: 35px
+            width: 100px
+        &__text
+            font-size: 30px
+    &-contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &-phone, &-mail
+        color: #000
+        transition: .3s color
+        &:hover
+            color: $main
+    &-phone
+        font-weight: 900
+        font-size: 36px
+        margin-bottom: 25px
+    &-info
+        font-size: 14px
+        font-weight: 300
+        line-height: 140%
+        max-width: 370px
+        a
+            color: #000
+            transition: .3s color
+            &:hover
+                color: $main
+    &-copyright
+        margin-bottom: 15px
+
+@media (max-width: 1630px)
+    .footer
+        padding: 90px 0
+
+@media (max-width: 1500px)
+    .footer
+        padding: 70px 0
+        &-logo
+            &__img
+                margin-right: 25px
+                width: 90px
+            &__text
+                font-size: 26px
+        &-phone
+            font-size: 32px
+            margin-bottom: 20px
+
+@media (max-width: 1200px)
+    .footer
+        padding: 60px 0
+        &-logo
+            &__img
+                margin-right: 20px
+                width: 80px
+            &__text
+                font-size: 24px
+        &-phone
+            font-size: 28px
+            margin-bottom: 15px
+
+@media (max-width: 1100px)
+    .footer
+        padding: 50px 0
+        &-container
+            flex-direction: column
+        &-logo
+            margin-bottom: 15px
+        &-contacts
+            margin-bottom: 15px
+        &-phone
+            font-size: 24px
+            margin-bottom: 10px
+
+@media (max-width: 800px)
+    .footer
+        padding: 40px 0
+        &-logo
+            &__text
+                font-size: 22px
+        &-phone
+            font-size: 22px
+
+@media (max-width: 600px)
+    .footer
+        padding: 30px 0
+
+@media (max-width: 360px)
+    .footer
+        &-logo
+            &__img
+                margin-right: 15px
+                width: 75px
+            &__text
+                font-size: 20px

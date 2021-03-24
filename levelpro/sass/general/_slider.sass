@@ -1,0 +1,63 @@
+.slider
+    &-bottom
+        display: flex
+        align-items: center
+    &-count
+        display: flex
+        align-items: center
+        margin-right: 25px
+        width: auto
+        font-weight: 700
+        &__current
+            min-width: 25px
+            color: $shiraz
+            text-align: center
+        &__dec
+            width: 230px
+            height: 1px
+            background-color: #000
+            margin: 0 25px
+        &__total
+            min-width: 25px
+            color: #000
+            text-align: center
+    &-arrows
+        display: flex
+        align-items: center
+    &-arrow
+        cursor: pointer
+        height: 15px
+        svg
+            height: 15px
+            fill: #000
+            transition: .3s fill
+        &:hover
+            svg
+                fill: $shiraz
+        &__prev
+            margin-right: 30px
+    &-arrow.swiper-button-disabled
+        svg
+            fill: $silver
+
+@media (max-width: 1100px)
+    .slider
+        &-count
+            margin-right: 20px
+            &__dec
+                width: 150px
+                margin: 0 20px
+        &-arrow
+            &__prev
+                margin-right: 25px
+
+@media (max-width: 600px)
+    .slider
+        &-count
+            margin-right: 15px
+            &__dec
+                width: 70px
+                margin: 0 15px
+        &-arrow
+            &__prev
+                margin-right: 20px

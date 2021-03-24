@@ -1,0 +1,60 @@
+.mobile-menu
+    display: flex
+    flex-direction: column
+    position: fixed
+    height: calc(100% - 67px)
+    width: 100%
+    top: -110%
+    left: 0
+    z-index: 5
+    transition: .5s top
+    overflow: hidden
+    background-color: #fff
+    &__menu
+        padding: 15px 20px
+    &__top
+        flex-grow: 1
+        overflow: auto
+    &__nav
+        display: flex
+        flex-direction: column
+        border-top: 1px solid $mercury
+        padding: 20px 0
+        padding: 15px 20px
+        &-item
+            color: #000
+            transition: .3s color
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            &:hover
+                color: $shiraz
+    &__bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-wrapper
+            display: flex
+            flex-direction: column
+            font-size: 14px
+            padding-top: 15px
+            border-top: 1px solid $mercury
+            padding: 15px 20px
+        &-email
+            color: #000
+    &__phone
+        font-weight: 700
+        color: #000
+        margin-bottom: 15px
+    &__lang
+        display: flex
+        align-items: center
+        &-dec
+            margin: 0 12px
+        &-item
+            color: #000
+        &-item.active
+            color: $shiraz
+
+.mobile-menu.active
+    top: 67px

@@ -1,0 +1,71 @@
+.item
+    color: #000
+    &-img
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        margin-bottom: 35px
+        &__inner
+            display: block
+            width: 100%
+            opacity: 0
+            visibility: hidden
+    &-prices
+        display: flex
+        flex-direction: row-reverse
+        align-items: flex-end
+        justify-content: flex-end
+        margin-bottom: 25px
+    &-price
+        &_new
+            font-size: 24px
+            font-weight: 700
+        &_old
+            font-size: 18px
+            text-decoration: line-through
+            margin-bottom: 2px
+            ~ .item-price_new
+                margin-right: 15px
+                color: $shiraz
+    &-title
+        font-weight: 600
+
+@media (max-width: 1300px)
+    .item
+        &-img
+            margin-bottom: 30px
+        &-prices
+            margin-bottom: 20px
+        
+@media (max-width: 1100px)
+    .item
+        &-img
+            margin-bottom: 25px
+        &-prices
+            margin-bottom: 15px
+        &-price
+            font-size: 22px
+            &_old
+                margin-bottom: 0
+                font-size: 16px
+
+@media (max-width: 800px)
+    .item
+        &-img
+            margin-bottom: 20px
+        &-prices
+            margin-bottom: 10px
+
+@media (max-width: 600px)
+    .item
+        &-img
+            margin-bottom: 15px
+
+@media (max-width: 450px)
+    .item
+        &-title
+            font-size: 14px
+        &-prices
+            margin-bottom: 5px
+        &-img
+            margin-bottom: 10px

@@ -1,0 +1,515 @@
+@import _variables.sass
+
+// Общие настройки
+
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none !important
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'Stolzl', sans-serif
+    font-size: 20px
+    font-weight: 400
+    color: #000000
+
+a
+    text-decoration: none
+    display: inline-block
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+    background-color: #fff
+
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.container
+    max-width: 1670px
+    padding: 0 15px
+    margin: 0 auto
+
+// Элементы, которые есть на всем сайте
+
+.link
+    position: relative
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #fff
+        transition: .3s width
+    &:hover
+        &::after
+            width: 0
+    &_reverse
+        &::after
+            width: 0
+        &:hover
+            &::after
+                width: 100%
+    &_right
+        &::after
+            left: auto
+            right: 0
+
+.empty
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    height: 0 !important
+    border: none !important
+    min-height: 0 !important
+    pointer-events: none
+    &::after
+        display: none !important
+    &::before
+        display: none !important
+
+textarea, input
+    -webkit-appearance: none
+    -moz-appearance: none
+    border-radius: 0
+    border: none
+    font-family: 'Stolzl', sans-serif
+    font-weight: 400
+    color: #000000
+
+.arrow
+    position: relative
+    color: #fff
+    &-circle
+        position: absolute
+        width: 100px
+        height: 100px
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        &__empty
+            position: absolute
+            width: 100%
+            height: 100%
+            border: 1px solid transparentize(#fff, .6)
+            border-radius: 100%
+            top: 0
+            left: 0
+            transition: .3s transform
+        &__filled
+            width: 70%
+            height: 70%
+            background-color: #fff
+            border-radius: 100%
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto
+            display: flex
+            align-items: center
+            justify-content: center
+            transform: scale(0)
+            transition: .3s transform
+            transform-origin: 50% 50%
+        &__img
+            fill: #000
+    &-text
+        font-weight: 500
+        font-size: 30px
+        margin-left: 60px
+        transition: .3s margin-left
+    &:hover
+        .arrow-circle__empty
+            transform: scale(0)
+        .arrow-circle__filled
+            transform: scale(1)
+        .arrow-text
+            margin-left: 100px
+    &_black
+        color: #000
+        .arrow-circle
+        .arrow-circle__empty
+            border: 1px solid #000
+        .arrow-circle__filled
+            background-color:#000
+        .arrow-circle__img
+            fill: #fff
+
+ul
+    list-style: none
+    li
+        position: relative
+        padding-left: 20px
+        margin-bottom: 10px
+        &::after
+            position: absolute
+            content: '◌'
+            color: $yellow
+            display: block
+            top: 3px
+            left: 0
+            font-size: 24px
+            line-height: 16px
+        &:last-child
+            margin-bottom: 0
+
+.input
+    border-bottom: 4px solid #000
+    padding: 0
+    padding-bottom: 40px
+    padding-right: 10px
+    font-size: 30px
+    color: #000000
+    transition: .3s border-color
+    background-color: transparent
+    &::-webkit-input-placeholder
+        font-family: 'Stolzl', sans-serif
+        color: #000000
+    &:-moz-placeholder
+        font-family: 'Stolzl', sans-serif
+        color: #000000
+    &:hover, &:focus
+        border-color: $yellow
+    &_white
+        border-color: #fff
+        border-width: 3px
+        padding-bottom: 20px
+        font-size: 20px
+        color: #ffffff
+        transition: .3s border-color
+        &::-webkit-input-placeholder
+            font-family: 'Stolzl', sans-serif
+            color: #ffffff
+        &:-moz-placeholder
+            font-family: 'Stolzl', sans-serif
+            color: #ffffff
+    &_modal
+        padding: 18px 10px 18px 0
+        font-size: 18px
+    
+.submit
+    width: 240px
+    height: 240px
+    font-size: 20px
+    font-weight: 500
+    border-radius: 100%
+    padding: 45px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    position: relative
+    &-text
+        position: relative
+        z-index: 2
+        transition: .3s transform ease-out
+    &::after, &::before
+        position: absolute
+        display: block
+        content: ''
+        width: 100%
+        height: 100%
+        left: 50%
+        top: 50%
+        transition: .3s transform ease-out
+        transform: translate(-50%, -50%)
+        border-radius: 100%
+    &::after
+        background-color: $yellow
+        z-index: 0
+    &::before
+        background-color: $blue
+        z-index: 1
+        transform: translate(-50%, -50%) scale(0)
+    &:hover
+        .submit-text
+            transform: scale(.9)
+        &::after
+            transform: translate(-50%, -50%) scale(.75)
+        &::before
+            transform: translate(-50%, -50%) scale(.85)
+    input
+        display: none
+    &_modal
+        width: 210px
+        height: 210px
+    
+
+.section
+    &-title
+        font-weight: 500
+        font-size: 70px
+        color: #fff
+        line-height: 115%
+        &_black
+            color: #000
+    &-subtitle
+        font-weight: 400
+        font-size: 30px
+        line-height: 130%
+        color: #fff
+        &_black
+            color: #000
+
+span.line
+    position: relative
+    &::after
+        position: absolute
+        bottom: 0
+        left: 0
+        display: block
+        content: ''
+        height: 17px
+        width: 0
+        background-color: $blue
+        animation-name: line
+        animation-duration: .4s
+        animation-delay: .5s
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+    &:nth-child(2)
+        &::after
+            animation-delay: .7s
+
+@keyframes line
+    0%
+        width: 0
+    100%
+        width: 90%
+.btn
+    position: relative
+    display: flex
+    &-text
+        width: 100%
+        background: linear-gradient(180deg, #DD009F 0%, #FF001F 100%)
+        position: relative
+        z-index: 1
+        padding: 25px 42px
+        text-align: center
+        border-radius: 60px
+        font-weight: 500
+        text-transform: uppercase
+        color: #fff
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.5)
+    &::before
+        position: absolute
+        display: block
+        content: ''
+        width: calc(100% + 18px)
+        height: calc(100% + 16px)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border-radius: 60px
+        z-index: 0
+        background: linear-gradient(180deg, #313030 0%, #141414 100%)
+    &:hover
+        .btn-text
+            background: linear-gradient(180deg, #FF001F 0%, #DD009F 100%)
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.5)
+    &:active
+        .btn-text
+            box-shadow: inset 0px 2px 3px #000000, inset 0px -2px 3px #7B7A7A
+        &::before
+            background: linear-gradient(180deg, #313030 0%, #121212 100%)
+    &_filled
+        .btn-text
+            background: linear-gradient(180deg, #04A5FF 0%, #0042A5 100%)
+        &:hover
+            .btn-text
+                background: linear-gradient(180deg, #0042A5 0%, #04A5FF 100%)
+    &_yellow
+        &::before
+            display: none
+        .btn-text
+            background: linear-gradient(180deg, #FFF500 0%, #FFC700 100%)
+            color: #000
+        &:hover, &:active
+            .btn-text
+                background: linear-gradient(180deg, #FFC700 0%, #FFF500 100%)
+
+@media (max-width: 1670px)
+    .section
+        &-title
+            font-size: 60px
+        &-subtitle
+            font-size: 28px
+    span.line
+        &::after
+            height: 15px
+
+@media (max-width: 1500px)
+    .btn
+        &-text
+            padding: 20px 30px
+            font-size: 18px
+
+@media (max-width: 1400px)
+    .section
+        &-title
+            font-size: 50px
+        &-subtitle
+            font-size: 24px
+    span.line
+        &::after
+            height: 13px
+
+@media (max-width: 1300px)
+    .section
+        &-title
+            font-size: 44px
+    span.line
+        &::after
+            height: 12px
+    body
+        font-size: 18px
+    ul
+        li
+            &::after
+                top: 1px
+    .arrow
+        &-circle
+            width: 80px
+            height: 80px
+        &-text
+            font-size: 24px
+            margin-left: 40px
+        &:hover
+            .arrow-text
+                margin-left: 80px
+    .submit
+        width: 210px
+        height: 210px
+    .input
+        border-width: 3px
+        padding-bottom: 30px
+        padding-right: 10px
+        font-size: 24px
+
+@media (max-width: 1100px)
+    .section
+        &-title
+            font-size: 36px
+        &-subtitle
+            font-size: 22px
+    span.line
+        &::after
+            height: 9px
+
+@media (max-width: 1000px)
+    .submit
+        width: 190px
+        height: 190px
+        font-size: 18px
+    .input
+        border-width: 3px
+        padding-bottom: 20px
+        padding-right: 10px
+        font-size: 22px
+
+@media (max-width: 900px)
+    .section
+        &-title
+            font-size: 32px
+    span.line
+        &::after
+            height: 8px
+
+@media (max-width: 800px)
+    .btn
+        &-text
+            padding: 14px 20px
+            font-size: 16px
+    .submit
+        width: 160px
+        height: 160px
+        font-size: 16px
+        &_modal
+            width: 120px
+            height: 120px
+    .input
+        border-width: 3px
+        padding-bottom: 15px
+        padding-right: 10px
+        font-size: 20px
+        &_modal
+            padding: 14px 10px 14px 0
+            font-size: 18px
+        
+@media (max-width: 600px)
+    .section
+        &-title
+            font-size: 26px
+        &-subtitle
+            font-size: 20px
+    span.line
+        &::after
+            height: 7px
+    .arrow
+        &-circle
+            width: 65px
+            height: 65px
+        &-text
+            font-size: 22px
+            margin-left: 30px
+        &:hover
+            .arrow-text
+                margin-left: 70px
+
+@media (max-width: 365px)
+    .btn
+        &-text
+            font-size: 14px
+            padding: 12px 15px
+
+@import ./_header.sass
+@import ./_hero.sass
+@import ./_results.sass
+@import ./_advantages.sass
+@import ./_strategy.sass
+@import ./_begin.sass
+@import ./_feedback.sass
+@import ./_ready.sass
+@import ./_team.sass
+@import ./_app.sass
+@import ./_footer.sass
+@import ./_modal.sass
+
+
+.wpcf7-not-valid
+    border-color: #f34f41 !important
+
+.alertify-notifier .ajs-message.ajs-warning
+    background: #f34f41
+    color: #fff
+    -webkit-box-shadow: 0 0 3px #333333
+    box-shadow: 0 0 3px #333333
+
+.alertify-notifier .ajs-message.ajs-success
+    color: #fff
+    background: $blue
+    text-shadow: 0 0 1px rgba(0,0,0,.5)
+
+.alertify-notifier
+    z-index: 99998
+    font-family: 'Stolzl', sans-serif
+    font-size: 16px
+    font-weight: 400
+
+div.wpcf7 .ajax-loader, .wpcf7-not-valid-tip, .wpcf7-response-output
+    display: none !important

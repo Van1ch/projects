@@ -1,0 +1,96 @@
+.brands
+    padding-top: 130px
+    padding-bottom: 80px
+    &-title
+        margin-bottom: 60px
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        margin-left: -20px
+    &-item
+        margin: 0 20px 40px 20px
+        flex-basis: 520px
+        flex-grow: 1
+        background-repeat: no-repeat
+        background-position: right bottom
+        background-size: contain
+        padding: 60px 60px 80px 60px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &__top
+            flex-grow: 1
+            max-width: 300px
+        &__logo
+            margin-bottom: 25px
+        &__title
+            margin-bottom: 20px
+        &__text
+            margin-bottom: 20px
+
+@media (max-width: 1300px)
+    .brands
+        padding-top: 100px
+        padding-bottom: 60px
+        &-title
+            margin-bottom: 50px
+
+@media (max-width: 1250px)
+    .brands
+        &-item
+            position: relative
+            &__top
+                position: relative
+                z-index: 1
+            &__btn
+                position: relative
+                z-index: 1
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                background-color: rgba(#000, .3)
+                z-index: 0
+
+@media (max-width: 1109px)
+    .brands
+        padding-top: 70px
+        padding-bottom: 50px
+        &-title
+            margin-bottom: 40px
+        &-item
+            padding: 40px
+            margin-bottom: 20px
+            &::before
+                display: none
+            &__top
+                max-width: 500px
+
+@media (max-width: 800px)
+    .brands
+        padding-top: 40px
+        padding-bottom: 30px
+        &-title
+            margin-bottom: 30px
+        &-item
+            padding: 30px
+            &__top
+                max-width: 300px
+            &__logo
+                max-width: 220px
+                margin-bottom: 15px
+
+@media (max-width: 600px)
+    .brands
+        &-item
+            background-image: none !important
+            padding: 25px
+            &__top
+                max-width: 100%
+            &__title
+                margin-bottom: 15px

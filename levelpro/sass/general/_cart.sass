@@ -1,0 +1,298 @@
+.cart
+    position: fixed
+    right: -770px
+    top: 0
+    width: 770px
+    height: 100%
+    background-color: #fff
+    z-index: 20
+    display: flex
+    flex-direction: column
+    border-left: 1px solid #000
+    transition: .3s right
+    &-top, &-main
+        padding-top: 30px
+        padding-right: 35px
+        padding-left: 35px
+    &-title
+        margin-right: 10px
+    &-top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 50px
+        &__left
+            display: flex
+            align-items: center
+        &__user
+            display: flex
+            align-items: center
+            &-img
+                margin-right: 10px
+    &-cross
+        margin-right: 35px
+        cursor: pointer
+    &-main
+        padding-bottom: 30px
+        padding-top: 0
+        flex-grow: 1
+        overflow: auto
+    &-item
+        display: flex
+        align-items: flex-end
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+        &__wrapper
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+                padding-bottom: 30px
+        &__img
+            margin-right: 50px
+            width: 80px
+            align-self: stretch
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+        &__title
+            font-size: 14px
+            margin-bottom: 5px
+        &__article
+            font-size: 14px
+            color: $doveGray
+        &__body
+            flex-grow: 1
+            &-bottom
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+                &__wrapper
+                    padding-bottom: 12px
+                    padding-top: 5px
+                    border-bottom: 1px solid $mercury
+        &__text
+            flex-grow: 1
+            font-size: 14px
+        &__prices
+            margin-left: 60px
+            margin-right: 25px
+        &__price
+            &_old
+                font-size: 12px
+                color: $doveGray
+                text-decoration: line-through
+                margin-bottom: 10px
+            &_new
+                font-size: 14px
+        &__quantity
+            display: flex
+            align-items: center
+            font-size: 14px
+            &-img
+                cursor: pointer
+            &-number
+                width: 35px
+                margin: 0 10px
+                text-align: center
+                border: none
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                    display: none
+                    -webkit-appearance: none
+                    margin: 0
+        &__delete
+            &-wrapper
+                cursor: pointer
+        &__warning
+            font-size: 11px
+            color: $shiraz
+            margin-top: 9px
+    &-bottom
+        box-shadow: 20px 0px 20px rgba(0, 0, 0, 0.25)
+        padding: 30px 50px
+        &__text
+            margin-bottom: 20px
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            &-text
+                font-size: 10px
+                line-height: 180%
+                margin-right: 5px
+            &-item
+                &__name
+                    font-size: 12px
+                    color: $doveGray
+                    margin-bottom: 10px
+                &__number
+                    font-weight: 700
+        &__btn
+            width: 100%
+            padding: 22px 40px
+    &-circle
+        width: 110px
+        height: 110px
+        background-color: #000
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        border-radius: 100%
+        position: fixed
+        right: 20px
+        top: 150px
+        z-index: 15
+        cursor: pointer
+        text-align: center
+        &__img
+            fill: #fff
+            width: 45%
+        &__number
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translateX(-50%)
+            color: $shiraz
+            font-weight: 700
+        &__number[data-number="0"]
+            display: none
+
+.cart.active
+    right: 0
+
+@media (max-width: 1300px)
+    .cart
+        width: 650px
+        right: -650px
+        &-top, &-main
+            padding-top: 20px
+            padding-right: 25px
+            padding-left: 25px
+        &-main
+            padding-top: 0
+        &-bottom
+            padding: 20px 25px
+            &__text
+                margin-bottom: 15px
+            &__btn
+                padding: 18px 40px
+        &-top
+            padding-bottom: 30px
+        &-cross
+            margin-right: 25px
+        &-item
+            &__img
+                margin-right: 30px
+            &__wrapper
+                margin-bottom: 20px
+            &__price
+                &_old
+                    margin-bottom: 5px
+            &__body
+                &-bottom
+                    padding-bottom: 8px
+
+@media (max-width: 1150px)
+    .cart
+        &-circle
+            display: none
+
+@media (max-width: 1050px)
+    .cart
+        &-top, &-main
+            padding-right: 20px
+            padding-left: 20px
+        &-bottom
+            padding: 15px 20px
+            &__text
+                flex-wrap: wrap
+                justify-content: flex-start 
+                &-text
+                    flex-basis: 100%
+                    margin-right: 0
+                    margin-bottom: 10px
+                &-item
+                    margin-right: 20px
+            &__btn
+                padding: 18px 40px
+        &-top
+            padding-bottom: 20px
+            &__user
+                &-name
+                    font-size: 14px
+        &-cross
+            margin-right: 25px
+        &-item
+            &__prices
+                margin-left: 40px
+                margin-right: 20px
+            &__img
+                margin-right: 20px
+
+@media (max-width: 700px)
+    .cart
+        width: 100%
+        right: -100%
+        border-left: none
+
+@media (max-width: 600px)
+    .cart
+        &-top
+            flex-direction: column
+            align-items: flex-start
+            &__left
+                margin-bottom: 10px
+        &-title
+            margin-right: 0
+
+@media (max-width: 500px)
+    .cart
+        &-item
+            &__wrapper
+                &:last-child
+                    padding-bottom: 20px
+            &__body
+                &-bottom
+                    flex-wrap: wrap
+            &__text, &__delete-wrapper
+                margin-bottom: 10px
+            &__text
+                flex-basis: 50%
+                order: 1
+            &__delete
+                &-wrapper
+                    flex-basis: 50%
+                    order: 2
+                    text-align: right
+            &__quantity
+                flex-basis: 50%
+                order: 3
+            &__prices
+                flex-basis: 50%
+                order: 4
+                margin: 0
+                text-align: right
+        &-bottom
+            padding: 10px 15px
+            &__text
+                &-item
+                    &__name
+                        margin-bottom: 5px
+                &-text
+                    margin-bottom: 5px
+            &__btn
+                padding: 16px 40px
+        &-top, &-main
+            padding-right: 15px
+            padding-left: 15px
+        &-top
+            padding-top: 15px
+            padding-bottom: 15px
+
+@media (max-width: 370px)
+    .cart
+        &-item
+            &__img
+                margin-right: 10px
+            &__title
+                font-size: 12px

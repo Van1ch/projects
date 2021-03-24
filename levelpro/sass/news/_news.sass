@@ -1,0 +1,59 @@
+.news
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        margin-left: -20px
+    &-item
+        margin: 0 20px 60px 20px
+        color: #000
+        flex-basis: 330px
+        flex-grow: 1
+        &__img
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            margin-bottom: 25px
+            &-inner
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+        &__date
+            text-transform: uppercase
+            color: $silver
+            margin-bottom: 30px
+        &__title
+            margin-bottom: 25px
+            transition: .3s color
+        &:hover
+            .news-item__title
+                color: $shiraz
+        
+@media (max-width: 1099px)
+    .news
+        &-list
+            width: calc(100% + 30px)
+            margin-left: -15px
+        &-item
+            margin: 0 15px 40px 15px
+
+@media (max-width: 1079px)
+    .news
+        &-item
+            &__img
+                margin-bottom: 20px
+            &__date
+                margin-bottom: 25px
+            &__title
+                margin-bottom: 20px
+
+@media (max-width: 1079px)
+    .news
+        &-item
+            &__img
+                margin-bottom: 15px
+            &__date
+                margin-bottom: 20px
+            &__title
+                margin-bottom: 15px

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevelPro</title>
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./img/general/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./img/general/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./img/general/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./img/general/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./img/general/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./img/general/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./img/general/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./img/general/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./img/general/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./img/general/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./img/general/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/general/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./img/general/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="./img/general/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="./img/general/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="./img/general/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="./img/general/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="./img/general/favicon/mstile-310x310.png" />
+
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="header-top">
+                    <div class="container header-top__container">
+                        <div class="header-top__left">
+                            <a href="tel:74993506309" class="header-phone">+7 (499) 350-63-09</a>
+                            <a href="tel:79537241722" class="header-phone">+7 (953) 724-17-22</a>
+                            <a href="mailto:office@levelpro68.ru" class="header-email">office@levelpro68.ru</a>
+                        </div>
+                        <div class="header-top__right">
+                            <div class="header-sign btn btn_small">Вход / Регистрация</div>
+                            <div class="header-lang">
+                                <a href="#" class="header-lang__item">En</a>
+                                <div class="header-lang__dec">|</div>
+                                <a href="#" class="header-lang__item active">Ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="container header-bottom__container">
+                        <div class="header-bottom__left">
+                            <div class="header-burger">
+                                <span class="header-burger__item"></span>
+                                <span class="header-burger__item"></span>
+                                <span class="header-burger__item"></span>
+                            </div>
+                            <a href="/" class="header-logo">
+                                <img src="./img/general/logo.svg" alt="logo" class="header-logo__img">
+                            </a>
+                        </div>
+                        <div class="header-bottom__right">
+                            <form action="#" class="header-search">
+                                <input type="submit" class="header-search__lens" value="">
+                                <input type="text" class="header-search__text">
+                            </form>
+                            <div class="header-search_mobile">
+                                <svg width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M11.4113 9.45262C11.9623 8.54777 12.2536 7.50879 12.2536 6.44942C12.2536 3.24014 9.65678 0.641417 6.44686 0.640137C3.23982 0.641097 0.640137 3.24014 0.640137 6.44878C0.640137 9.65454 3.24014 12.2533 6.44878 12.2533C7.54958 12.2533 8.57518 11.9422 9.45166 11.4107L13.4014 15.3601L15.3601 13.4005L11.4113 9.45262ZM6.44814 10.0417C4.4635 10.0369 2.85902 8.4331 2.8555 6.45262C2.85685 5.50015 3.23577 4.58706 3.90921 3.91351C4.58265 3.23995 5.49567 2.86086 6.44814 2.85934C8.43182 2.86446 10.0369 4.4683 10.0411 6.45262C10.0369 8.43086 8.43118 10.0369 6.44814 10.0417Z"/>
+                                </svg>
+                            </div>
+                            <div class="header-cart">
+                                <img src="./img/header/cart.svg" alt="cart" class="header-cart__img">
+                            </div>
+                        </div>
+                        <div class="header-nav">
+                            <a href="#" class="header-nav__item">Бренд</a>
+                            <a href="#" class="header-nav__item">Коллекции</a>
+                            <a href="#" class="header-nav__item">Сотрудничество</a>
+                            <a href="#" class="header-nav__item">Контакты</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="breadcrumbs">
+                <div class="container breadcrumbs-container">
+                    <a href="/" class="breadcrumbs-item">Главная</a>
+                    <span class="breadcrumbs-item__dec"></span>
+                    <span class="breadcrumbs-item inactive">Каталог</span>
+                </div>
+            </div>
+            <div class="container page-title">
+                <h1 class="title title_big">Каталог</h1>
+            </div>
+            <section class="catalogPage">
+                <div class="container catalogPage-container">
+                    <div class="catalogPage-list">
+                        <a href="#" class="catalogPage-item">
+                            <div class="catalogPage-item__img" style="background-image: url(./img/catalogPage/1.jpg);">
+                                <img src="./img/catalogPage/rec.jpg" alt="rec" class="catalogPage-item__img-inner">
+                            </div>
+                            <div class="title title_medium catalogPage-item__title">Женщинам</div>
+                        </a>
+                        <a href="#" class="catalogPage-item">
+                            <div class="catalogPage-item__img" style="background-image: url(./img/catalogPage/2.jpg);">
+                                <img src="./img/catalogPage/rec.jpg" alt="rec" class="catalogPage-item__img-inner">
+                            </div>
+                            <div class="title title_medium catalogPage-item__title">Детям</div>
+                        </a>
+                        <a href="#" class="catalogPage-item">
+                            <div class="catalogPage-item__img" style="background-image: url(./img/catalogPage/3.jpg);">
+                                <img src="./img/catalogPage/rec.jpg" alt="rec" class="catalogPage-item__img-inner">
+                            </div>
+                            <div class="title title_medium catalogPage-item__title">Интерьер</div>
+                        </a>
+                        <a href="#" class="catalogPage-item empty"></a>
+                        <a href="#" class="catalogPage-item empty"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-list footer-list_logo">
+                    <div class="footer-item footer-logo">
+                        <img src="./img/general/logo.svg" alt="logo" class="footer-logo__img" style="position: relative; top: -5px;">
+                        <div class="footer-logo__dec"></div>
+                        <div class="footer-logo__text">Женские головные уборы и аксессуары</div>
+                    </div>
+                    <div class="footer-item footer-logo">
+                        <img src="./img/index/brands/2.svg" alt="logo" class="footer-logo__img" style="position: relative; top: -10px;">
+                        <div class="footer-logo__dec"></div>
+                        <div class="footer-logo__text">Детские, подростковые головные уборы и аксессуары</div>
+                    </div>
+                    <div class="footer-item footer-logo">
+                        <img src="./img/index/brands/3.png" alt="logo" class="footer-logo__img">
+                        <div class="footer-logo__dec"></div>
+                        <div class="footer-logo__text">Женские головные уборы из Италии</div>
+                    </div>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-item">
+                        <div class="footer-top">
+                            <div class="footer-title">ПРОИЗВОДСТВО ТАМБОВ</div>
+                            <div class="footer-address">392022, г. Тамбов, ул. Академика Островитянова, д. 9-а</div>
+                            <a href="mailto:office@levelpro68.ru" class="footer-email link">office@levelpro68.ru</a>
+                            <a href="tel:79152092164" class="footer-phone">+7 (915) 209-21-64</a>
+                            <div class="footer-time">Время работы: 8:00 - 18:00 (Мск)</div>
+                        </div>
+                        <div class="footer-socials">
+                            <a href="#" target="_blank" class="footer-socials__item">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M23.184 7.382a8.163 8.163 0 00-.524-2.77A5.763 5.763 0 0019.37 1.32a8.257 8.257 0 00-2.733-.525C15.434.742 15.053.727 12 .727c-3.052 0-3.444 0-4.637.068a8.258 8.258 0 00-2.732.525 5.759 5.759 0 00-3.29 3.292 8.193 8.193 0 00-.525 2.73C.763 8.548.746 8.929.746 11.98c0 3.053 0 3.443.07 4.638.02.935.195 1.857.524 2.734a5.762 5.762 0 003.293 3.29 8.23 8.23 0 002.73.562c1.205.054 1.586.07 4.638.07 3.053 0 3.444 0 4.638-.07a8.236 8.236 0 002.732-.524 5.768 5.768 0 003.292-3.29 8.232 8.232 0 00.523-2.735c.054-1.202.07-1.583.07-4.637-.002-3.053-.002-3.44-.072-4.636zm-11.191 10.37a5.777 5.777 0 01-5.78-5.778 5.778 5.778 0 1111.558 0 5.779 5.779 0 01-5.778 5.779zM18 7.33a1.346 1.346 0 01-.516-2.592 1.347 1.347 0 11.516 2.592z"/>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank" class="footer-socials__item">
+                                <svg width="15" height="30" viewBox="0 0 15 30">
+                                    <path d="M3.722 30V15.923H0v-5.068h3.722v-4.33C3.722 3.125 5.921 0 10.987 0c2.052 0 3.568.197 3.568.197l-.12 4.733s-1.546-.015-3.234-.015c-1.827 0-2.12.842-2.12 2.239v3.7h5.5l-.24 5.07h-5.26V30H3.722z"/>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank" class="footer-socials__item">
+                                <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.703 18.447s2.425 2.396 3.025 3.504a.19.19 0 01.027.053c.245.41.305.73.185.967-.203.392-.888.588-1.12.605h-4.288c-.298 0-.92-.078-1.675-.6-.578-.404-1.152-1.068-1.709-1.718-.83-.964-1.55-1.801-2.277-1.801a.821.821 0 00-.27.045c-.55.174-1.25.958-1.25 3.048 0 .654-.515 1.026-.877 1.026h-1.963c-.67 0-4.152-.234-7.24-3.49C3.485 16.097.086 8.1.053 8.03c-.212-.518.232-.8.712-.8h4.33c.58 0 .769.351.9.666.154.362.72 1.808 1.65 3.432 1.507 2.643 2.432 3.719 3.172 3.719a.79.79 0 00.396-.105c.966-.531.786-3.981.74-4.692 0-.138 0-1.54-.496-2.219-.354-.486-.957-.675-1.321-.744.097-.14.304-.357.57-.484.661-.33 1.857-.378 3.043-.378h.659c1.287.018 1.62.1 2.088.219.942.225.96.835.877 2.914-.024.594-.05 1.263-.05 2.05 0 .169-.007.356-.007.547-.028 1.066-.066 2.268.687 2.761.098.061.21.093.326.093.26 0 1.042 0 3.162-3.637.93-1.607 1.65-3.501 1.7-3.644.041-.08.167-.303.32-.393a.718.718 0 01.354-.084h5.093c.555 0 .931.084 1.005.294.123.34-.024 1.38-2.35 4.524-.39.524-.734.977-1.036 1.373-2.107 2.766-2.107 2.905.125 5.005z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-top">
+                            <div class="footer-title">ПРЕДСТАВИТЕЛЬСТВО Москва</div>
+                            <div class="footer-address">115612, г. Москва, 19-й км МКАДа. ТК «Южные Ворота». 5-й вход, линия Ж8, павильон 119.</div>
+                            <a href="tel:79152092164" class="footer-phone">+7 (915) 209-21-64</a>
+                            <div class="footer-time">Время работы: 6:00 - 15:00 (Мск)</div>
+                        </div>
+                        <div class="footer-socials">
+                            <a href="#" target="_blank" class="footer-socials__item">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M23.184 7.382a8.163 8.163 0 00-.524-2.77A5.763 5.763 0 0019.37 1.32a8.257 8.257 0 00-2.733-.525C15.434.742 15.053.727 12 .727c-3.052 0-3.444 0-4.637.068a8.258 8.258 0 00-2.732.525 5.759 5.759 0 00-3.29 3.292 8.193 8.193 0 00-.525 2.73C.763 8.548.746 8.929.746 11.98c0 3.053 0 3.443.07 4.638.02.935.195 1.857.524 2.734a5.762 5.762 0 003.293 3.29 8.23 8.23 0 002.73.562c1.205.054 1.586.07 4.638.07 3.053 0 3.444 0 4.638-.07a8.236 8.236 0 002.732-.524 5.768 5.768 0 003.292-3.29 8.232 8.232 0 00.523-2.735c.054-1.202.07-1.583.07-4.637-.002-3.053-.002-3.44-.072-4.636zm-11.191 10.37a5.777 5.777 0 01-5.78-5.778 5.778 5.778 0 1111.558 0 5.779 5.779 0 01-5.778 5.779zM18 7.33a1.346 1.346 0 01-.516-2.592 1.347 1.347 0 11.516 2.592z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-top">
+                            <div class="footer-title">ПРЕДСТАВИТЕЛЬСТВО МОСКВА</div>
+                            <div class="footer-address">115612, г. Москва, 19-й км МКАДа. ТК «Южные Ворота». 5-й вход, линия Ж8, павильон 121.</div>
+                            <a href="tel:79152092164" class="footer-phone">+7 (915) 209-21-64</a>
+                            <div class="footer-time">Время работы: 6:00 - 15:00 (Мск)</div>
+                        </div>
+                    </div>
+                    <div class="footer-item empty"></div>
+                </div>
+                <div class="footer-bottom">Copyright Level Pro - 2020</div>
+            </div>
+        </footer>
+        <div class="modal-wrapper" id="modal">
+            <div class="modal">
+                <div class="title title_small modal-title">Оформить заказ</div>
+                <div class="modal-name">Ваше имя<span>*</span></div>
+                <input type="text" class="input modal-input" required>
+                <div class="modal-name">Номер телефона<span>*</span></div>
+                <input type="tel" class="input modal-input" required>
+                <div class="modal-name">E-mail<span>*</span></div>
+                <input type="email" class="input modal-input" required>
+                <div class="modal-policy">
+                    Я согласен с условиями обработки <a data-fancybox data-src="#policy" href="javascript:;" data-touch="false" class="link">персональных данных</a>
+                </div>
+                <input type="submit" class="btn modal-submit" value="Отправить">
+                <div class="modal-close" data-fancybox-close>
+                    <img src="./img/general/cross.svg" alt="cross" class="modal-close__img">
+                </div>
+            </div>
+        </div>
+        <div class="policy-wrapper" id="policy">
+            <div class="policy">
+                <div class="policy-title">Политика конфиденциальности</div>
+                <p class="policy-text">Настоящее Пользовательское соглашение является публичным документом администратора сайта https://udnet.ru (далее – Администратор) и определяет порядок использования посетителями (далее - Посетитель) сайта https://udnet.ru, принадлежащего Администратору, и обработки, хранения и иного использования информации, получаемой Администратором от Посетителя на сайте Администратора. Администратор сайта может изменить в любой момент данное Пользовательское соглашение без уведомления Посетителя сайта.</p>
+                <ul class="policy-list">
+                    <li class="policy-list__item">Посетитель сайта, оставляя какую-либо информацию, относящуюся прямо или косвенно к определенному или определяемому физическому лицу (далее - Персональные данные), подтверждает, что ознакомился с данным Пользовательским соглашением и согласен с ним.</li>
+                    <li class="policy-list__item">В отношении всех сообщаемых Персональных данных Посетитель дает Администратору полное согласие на их обработку.</li>
+                    <li class="policy-list__item">Администратор сайта гарантирует Посетителю, что обработка и хранение поступивших Персональных данных Посетителя будет осуществляться в соответствии с положениями Федерального закона от 27.06.2006 № 152-ФЗ «О персональных данных».</li>
+                    <li class="policy-list__item">Посетитель сайта понимает и соглашается с тем, что предоставление Администратору какой-либо информации, не имеющей никакого отношения к целям сайта, запрещено. Такой информацией может являться информация, касающаяся состояния здоровья, интимной жизни, национальности, религии, политических, философских и иных убеждений Посетителя, а равно и информация, которая является коммерческой, банковской и иной тайной Посетителя сайта.</li>
+                    <li class="policy-list__item">Администратор гарантирует Посетителю, что использует Персональные данные, поступившие от Посетителя, исключительно в целях, ограниченных маркетинговыми, рекламными, информационными целями Администратора, а также для анализа и исследования Посетителей сайта, а также в целях предоставления ему товаров и услуг непосредственно находящихся, либо нет, на сайте Администратора.</li>
+                    <li class="policy-list__item">Посетитель в соответствии с ч. 1 ст. 18 Федерального закона «О рекламе» дает Администратору свое согласие на получение сообщений рекламного характера по указанным контактным данным.Посетитель самостоятельно несёт ответственность за нарушение законодательства при использовании сайта Администратора.</li>
+                    <li class="policy-list__item">Посетитель самостоятельно несёт ответственность за нарушение законодательства при использовании сайта Администратора.</li>
+                    <li class="policy-list__item">Администратор не несет никакой ответственности в случае нарушения законодательства Посетителем, в том числе, не гарантирует, что содержимое сайта соответствует целям Посетителя сайта.</li>
+                    <li class="policy-list__item">Посетитель сайта несет самостоятельно ответственность в случае, если были нарушены права и законные интересы третьих лиц, при использовании сайта Администратора, Посетителем.</li>
+                    <li class="policy-list__item">Администратор вправе запретить использование сайта Посетителю, если на то есть законные основания.</li>
+                </ul>
+                <div class="modal-close" data-fancybox-close>
+                    <img src="./img/general/cross.svg" alt="cross" class="modal-close__img">
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__top">
+                <div class="menu mobile-menu__menu">
+                    <div class="menu-item">
+                        <div class="menu-item__top">
+                            <div class="menu-item__top-text">Женщинам</div>
+                            <img src="./img/catalog/arrow_down.svg" alt="arrow" class="menu-item__top-img">
+                        </div>
+                        <div class="menu-item__body">
+                            <a href="#" class="menu-item__body-item">Бейсболка</a>
+                            <a href="#" class="menu-item__body-item">Шляпа</a>
+                            <a href="#" class="menu-item__body-item">Кепка</a>
+                            <a href="#" class="menu-item__body-item">Шапка</a>
+                            <a href="#" class="menu-item__body-item">Бандана</a>
+                            <a href="#" class="menu-item__body-item">Берет</a>
+                            <a href="#" class="menu-item__body-item">Чалма</a>
+                            <a href="#" class="menu-item__body-item">Повязка</a>
+                            <a href="#" class="menu-item__body-item">Косынка</a>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__top">
+                            <div class="menu-item__top-text">Детям</div>
+                            <img src="./img/catalog/arrow_down.svg" alt="arrow" class="menu-item__top-img">
+                        </div>
+                        <div class="menu-item__body">
+                            <a href="#" class="menu-item__body-item">Бейсболка</a>
+                            <a href="#" class="menu-item__body-item">Шляпа</a>
+                            <a href="#" class="menu-item__body-item">Кепка</a>
+                            <a href="#" class="menu-item__body-item">Шапка</a>
+                            <a href="#" class="menu-item__body-item">Бандана</a>
+                            <a href="#" class="menu-item__body-item">Берет</a>
+                            <a href="#" class="menu-item__body-item">Чалма</a>
+                            <a href="#" class="menu-item__body-item">Повязка</a>
+                            <a href="#" class="menu-item__body-item">Косынка</a>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item__top">
+                            <div class="menu-item__top-text">Дизайнерские подушки</div>
+                            <img src="./img/catalog/arrow_down.svg" alt="arrow" class="menu-item__top-img">
+                        </div>
+                        <div class="menu-item__body">
+                            <a href="#" class="menu-item__body-item">Бейсболка</a>
+                            <a href="#" class="menu-item__body-item">Шляпа</a>
+                            <a href="#" class="menu-item__body-item">Кепка</a>
+                            <a href="#" class="menu-item__body-item">Шапка</a>
+                            <a href="#" class="menu-item__body-item">Бандана</a>
+                            <a href="#" class="menu-item__body-item">Берет</a>
+                            <a href="#" class="menu-item__body-item">Чалма</a>
+                            <a href="#" class="menu-item__body-item">Повязка</a>
+                            <a href="#" class="menu-item__body-item">Косынка</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu__nav">
+                    <a href="#" class="mobile-menu__nav-item">Вход/регистрация</a>
+                    <a href="#" class="mobile-menu__nav-item">Бренд</a>
+                    <a href="#" class="mobile-menu__nav-item">Коллекции</a>
+                    <a href="#" class="mobile-menu__nav-item">Сотрудничество</a>
+                    <a href="#" class="mobile-menu__nav-item">Контакты</a>
+                </div>
+            </div>
+            <div class="mobile-menu__bottom-wrapper">
+                <a href="tel:74993506309" class="mobile-menu__phone">+7 (499) 350-63-09</a>
+                <a href="tel:74993506309" class="mobile-menu__phone">+7 (499) 350-63-09</a>
+                <div class="mobile-menu__bottom">
+                    <a href="mailto:office@levelpro68.ru" class="mobile-menu__bottom-email">office@levelpro68.ru</a>
+                    <div class="mobile-menu__lang">
+                        <a href="#" class="mobile-menu__lang-item">En</a>
+                        <span class="mobile-menu__lang-dec">|</span>
+                        <a href="#" class="mobile-menu__lang-item active">Ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div class="search-top">
+                <div class="search-cross">
+                    <span class="search-cross__item"></span>
+                    <span class="search-cross__item"></span>
+                </div>
+            </div>
+            <div class="search-form__wrapper">
+                <form action="#" class="search-form">
+                    <input type="text" class="search-input" placeholder="Искать здесь">
+                </form>
+                <div class="search-form__cross">
+                    <img src="./img/general/search_cross.svg" alt="cross" class="search-form__cross-img">
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-top">
+                <div class="cart-top__left">
+                    <img src="./img/general/cross.svg" alt="cross" class="cart-cross">
+                    <div class="title title_small cart-title">Ваша корзина (<span class="cart-quantity">150</span>)</div>
+                </div>
+                <div class="cart-top__user">
+                    <img src="./img/general/user.svg" alt="user" class="cart-top__user-img">
+                    <div class="cart-top__user-name">ИП Соколов Владимир Николаевич</div>
+                </div>
+            </div>
+            <div class="cart-main">
+
+                <div class="cart-item__wrapper">
+
+                    <div class="cart-item">
+                        <div class="cart-item__img" style="background-image: url(./img/general/cart/1.jpg);"></div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__title">Шапка Belive с теплым подкладом</div>
+                            <div class="cart-item__article">VF24769-4667</div>
+                            <div class="cart-item__body-bottom__wrapper">
+                                <div class="cart-item__body-bottom">
+                                    <div class="cart-item__text">
+                                        <span>Черный</span>, <span>50-52</span>
+                                    </div>
+                                    <div class="cart-item__quantity">
+                                        <img src="./img/card/minus.svg" alt="minus" class="cart-item__quantity-img cart-item__quantity__minus">
+                                        <input type="number" class="cart-item__quantity-number" data-number="1" value="1">
+                                        <img src="./img/card/plus.svg" alt="plus" class="cart-item__quantity-img cart-item__quantity__plus">
+                                    </div>
+                                    <div class="cart-item__prices">
+                                        <div class="cart-item__price_old">782 785 руб.</div>
+                                        <div class="cart-item__price_new">442 785 руб.</div>
+                                    </div>
+                                    <div class="cart-item__delete-wrapper">
+                                        <img src="./img/general/trash.svg" alt="trash bin" class="cart-item__delete">
+                                    </div>
+                                </div>
+                                <div class="cart-item__warning">Доступный остаток — 30 шт</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item__img" style="background-image: url(./img/general/cart/1.jpg);"></div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__body-bottom__wrapper">
+                                <div class="cart-item__body-bottom">
+                                    <div class="cart-item__text">
+                                        <span>Черный</span>, <span>50-52</span>
+                                    </div>
+                                    <div class="cart-item__quantity">
+                                        <img src="./img/card/minus.svg" alt="minus" class="cart-item__quantity-img cart-item__quantity__minus">
+                                        <input type="number" class="cart-item__quantity-number" data-number="1" value="1">
+                                        <img src="./img/card/plus.svg" alt="plus" class="cart-item__quantity-img cart-item__quantity__plus">
+                                    </div>
+                                    <div class="cart-item__prices">
+                                        <div class="cart-item__price_old">782 785 руб.</div>
+                                        <div class="cart-item__price_new">442 785 руб.</div>
+                                    </div>
+                                    <div class="cart-item__delete-wrapper">
+                                        <img src="./img/general/trash.svg" alt="trash bin" class="cart-item__delete">
+                                    </div>
+                                </div>
+                                <div class="cart-item__warning">Доступный остаток — 30 шт</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item__img" style="background-image: url(./img/general/cart/1.jpg);"></div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__body-bottom__wrapper">
+                                <div class="cart-item__body-bottom">
+                                    <div class="cart-item__text">
+                                        <span>Черный</span>, <span>50-52</span>
+                                    </div>
+                                    <div class="cart-item__quantity">
+                                        <img src="./img/card/minus.svg" alt="minus" class="cart-item__quantity-img cart-item__quantity__minus">
+                                        <input type="number" class="cart-item__quantity-number" data-number="1" value="1">
+                                        <img src="./img/card/plus.svg" alt="plus" class="cart-item__quantity-img cart-item__quantity__plus">
+                                    </div>
+                                    <div class="cart-item__prices">
+                                        <div class="cart-item__price_old">782 785 руб.</div>
+                                        <div class="cart-item__price_new">442 785 руб.</div>
+                                    </div>
+                                    <div class="cart-item__delete-wrapper">
+                                        <img src="./img/general/trash.svg" alt="trash bin" class="cart-item__delete">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="cart-item__wrapper">
+
+                    <div class="cart-item">
+                        <div class="cart-item__img" style="background-image: url(./img/general/cart/2.jpg);"></div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__title">Шапка Belive с теплым подкладом</div>
+                            <div class="cart-item__article">VF24769-4667</div>
+                            <div class="cart-item__body-bottom__wrapper">
+                                <div class="cart-item__body-bottom">
+                                    <div class="cart-item__text">
+                                        <span>Черный</span>, <span>50-52</span>
+                                    </div>
+                                    <div class="cart-item__quantity">
+                                        <img src="./img/card/minus.svg" alt="minus" class="cart-item__quantity-img cart-item__quantity__minus">
+                                        <input type="number" class="cart-item__quantity-number" data-number="1" value="1">
+                                        <img src="./img/card/plus.svg" alt="plus" class="cart-item__quantity-img cart-item__quantity__plus">
+                                    </div>
+                                    <div class="cart-item__prices">
+                                        <div class="cart-item__price_old">782 785 руб.</div>
+                                        <div class="cart-item__price_new">442 785 руб.</div>
+                                    </div>
+                                    <div class="cart-item__delete-wrapper">
+                                        <img src="./img/general/trash.svg" alt="trash bin" class="cart-item__delete">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item__img" style="background-image: url(./img/general/cart/2.jpg);"></div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__body-bottom__wrapper">
+                                <div class="cart-item__body-bottom">
+                                    <div class="cart-item__text">
+                                        <span>Черный</span>, <span>50-52</span>
+                                    </div>
+                                    <div class="cart-item__quantity">
+                                        <img src="./img/card/minus.svg" alt="minus" class="cart-item__quantity-img cart-item__quantity__minus">
+                                        <input type="number" class="cart-item__quantity-number" data-number="1" value="1">
+                                        <img src="./img/card/plus.svg" alt="plus" class="cart-item__quantity-img cart-item__quantity__plus">
+                                    </div>
+                                    <div class="cart-item__prices">
+                                        <div class="cart-item__price_old">782 785 руб.</div>
+                                        <div class="cart-item__price_new">442 785 руб.</div>
+                                    </div>
+                                    <div class="cart-item__delete-wrapper">
+                                        <img src="./img/general/trash.svg" alt="trash bin" class="cart-item__delete">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item__img" style="background-image: url(./img/general/cart/2.jpg);"></div>
+                        <div class="cart-item__body">
+                            <div class="cart-item__body-bottom__wrapper">
+                                <div class="cart-item__body-bottom">
+                                    <div class="cart-item__text">
+                                        <span>Черный</span>, <span>50-52</span>
+                                    </div>
+                                    <div class="cart-item__quantity">
+                                        <img src="./img/card/minus.svg" alt="minus" class="cart-item__quantity-img cart-item__quantity__minus">
+                                        <input type="number" class="cart-item__quantity-number" data-number="1" value="1">
+                                        <img src="./img/card/plus.svg" alt="plus" class="cart-item__quantity-img cart-item__quantity__plus">
+                                    </div>
+                                    <div class="cart-item__prices">
+                                        <div class="cart-item__price_old">782 785 руб.</div>
+                                        <div class="cart-item__price_new">442 785 руб.</div>
+                                    </div>
+                                    <div class="cart-item__delete-wrapper">
+                                        <img src="./img/general/trash.svg" alt="trash bin" class="cart-item__delete">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="cart-bottom">
+                <div class="cart-bottom__text">
+                    <div class="cart-bottom__text-text">
+                        <div>Минимальная сумма заказа: СП - 10000 руб. / ОПТ - 20000 руб.</div>
+                        <div>Отправка заказа осуществляется после 100% предоплаты</div>
+                    </div>
+                    <div class="cart-bottom__text-item">
+                        <div class="cart-bottom__text-item__name">Всего изделий:</div>
+                        <div class="cart-bottom__text-item__number"><span class="cart-quantity">1000</span> шт.</div>
+                    </div>
+                    <div class="cart-bottom__text-item">
+                        <div class="cart-bottom__text-item__name">Итого:</div>
+                        <div class="cart-bottom__text-item__number"><span class="cart-sum">642 785</span> руб.</div>
+                    </div>
+                </div>
+                <a href="#" class="btn cart-bottom__btn">Оформить заказ</a>
+            </div>
+        </div>
+        <div class="cart-circle">
+            <svg viewBox="0 0 14 17" class="cart-circle__img">
+                <path d="M12.9781 4.5657C12.9733 4.50057 12.9188 4.4502 12.8535 4.4502H10.6035V3.8252C10.6035 1.82632 8.97725 0.200195 6.9785 0.200195C4.97975 0.200195 3.3535 1.82632 3.3535 3.8252V4.4502H1.1035C1.03825 4.4502 0.983749 4.50057 0.978874 4.5657L0.103874 16.0657C0.101249 16.1003 0.113124 16.1346 0.136874 16.1601C0.160499 16.1857 0.193749 16.2002 0.228499 16.2002H13.7285C13.7633 16.2002 13.7965 16.1857 13.8201 16.1602C13.8438 16.1347 13.8558 16.1004 13.8531 16.0658L12.9781 4.5657ZM4.3535 3.8252C4.3535 2.37782 5.531 1.2002 6.9785 1.2002C8.426 1.2002 9.6035 2.37782 9.6035 3.8252V4.4502H4.3535V3.8252ZM3.8535 7.9502C3.16412 7.9502 2.6035 7.38945 2.6035 6.7002C2.6035 6.20132 2.8535 5.75182 3.3535 5.55457V6.7002C3.3535 6.97595 3.57787 7.2002 3.8535 7.2002C4.12912 7.2002 4.3535 6.97595 4.3535 6.7002V5.55532C4.8535 5.75257 5.1035 6.20545 5.1035 6.7002C5.1035 7.38945 4.54287 7.9502 3.8535 7.9502ZM10.1035 7.9502C9.41413 7.9502 8.8535 7.38945 8.8535 6.7002C8.8535 6.20132 9.1035 5.75182 9.6035 5.55457V6.7002C9.6035 6.97595 9.82788 7.2002 10.1035 7.2002C10.3791 7.2002 10.6035 6.97595 10.6035 6.7002V5.55532C11.1035 5.75257 11.3535 6.20545 11.3535 6.7002C11.3535 7.38945 10.7929 7.9502 10.1035 7.9502Z"/>
+            </svg>
+            <div class="cart-circle__number" data-number="1000">1000</div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
+    <script src="./js/OverlayScrollbars.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

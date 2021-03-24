@@ -1,0 +1,147 @@
+.pagination
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 18px
+    margin-top: 60px
+    margin-bottom: 180px
+    &-main
+        margin: 0 40px
+        display: flex
+    &-text
+        color: #000
+        transition: .3s color
+        &:hover
+            color: $shiraz
+    &-text.incative
+        color: $silver
+        &:hover
+            color: $silver
+    &-item
+        color: #000
+        transition: .3s color, .3s background-color
+        width: 60px
+        height: 60px
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        &:hover
+            color: #fff
+            background-color: $shiraz
+    &-item
+        border-left: 1px solid $silver
+        border-top: 1px solid $silver
+        border-bottom: 1px solid $silver
+    &-item.notnumber
+        &:hover
+            color: #000
+            background-color: #fff
+    &-item.inactive
+        color: $silver
+        &:hover
+            color: $silver
+            background-color: #fff
+    &-item.active
+        color: #fff
+        background-color: $shiraz
+    &-arrow
+        width: 60px
+        height: 60px
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        transition: .3s background-color
+        border-top: 1px solid $silver
+        border-bottom: 1px solid $silver
+        svg
+            transition: .3s fill
+        &:hover
+            background-color: $shiraz
+            svg
+                fill: #fff
+        &_next
+            border-left: 1px solid $silver
+            border-right: 1px solid $silver
+        &_prev
+            border-left: 1px solid $silver
+    &-arrow.inactive
+        svg
+            fill: $silver
+        &:hover
+            background-color: #fff
+            svg
+                fill: $silver
+            
+
+@media (max-width: 1300px)
+    .pagination
+        margin-top: 50px
+        margin-bottom: 140px
+        &-item
+            width: 50px
+            height: 50px
+        &-arrow
+            height: 50px
+            width: 50px
+        &-main
+            margin: 0 30px
+
+@media (max-width: 1100px)
+    .pagination
+        margin-top: 40px
+        margin-bottom: 100px
+
+@media (max-width: 800px)
+    .pagination
+        margin-top: 30px
+        margin-bottom: 70px
+        &-item
+            width: 45px
+            height: 45px
+        &-arrow
+            height: 45px
+            width: 45px
+        &-main
+            margin: 0 25px
+
+@media (max-width: 700px)
+    .pagination
+        flex-wrap: wrap
+        &-main
+            order: 0
+            margin-bottom: 20px
+            flex-basis: 100%
+            display: flex
+            justify-content: center
+            margin-left: 0
+            margin-right: 0
+        &-text
+            text-align: center
+            order: 1
+            margin: 0 10px
+            &:first-child
+                text-align: right
+
+@media (max-width: 500px)
+    .pagination
+        margin-top: 20px
+        margin-bottom: 40px
+
+@media (max-width: 450px)
+    .pagination
+        &-item
+            width: 40px
+            height: 40px
+        &-arrow
+            height: 40px
+            width: 40px
+
+@media (max-width: 360px)
+    .pagination
+        &-item
+            font-size: 16px
+            width: 35px
+            height: 35px
+        &-arrow
+            height: 35px
+            width: 35px

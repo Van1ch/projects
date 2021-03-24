@@ -1,0 +1,388 @@
+@import _variables.sass
+
+// Общие настройки
+
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none !important
+    padding: 0
+    margin: 0
+
+body
+    font-family: 'Roboto', sans-serif
+    font-size: 24px
+    font-weight: 400
+    color: #000000
+
+a
+    text-decoration: none
+    display: inline-block
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+    overflow-x: hidden
+
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.container
+    max-width: 1630px
+    padding: 0 15px
+    margin: 0 auto
+
+// Элементы, которые есть на всем сайте
+
+.empty
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    height: 0 !important
+    border: none !important
+    min-height: 0 !important
+    pointer-events: none
+    &::after
+        display: none !important
+    &::before
+        display: none !important
+
+textarea, input
+    -webkit-appearance: none
+    -moz-appearance: none
+    border-radius: 0
+
+.logo
+    display: flex
+    align-items: center
+    margin-left: -6px
+    &-text
+        text-transform: uppercase
+        font-weight: 700
+        font-family: 'RobotoSlab', sans-serif
+        color: $gray
+    &-img
+        circle, path
+            stroke-width: 4px
+            fill: none
+            stroke: $main
+            transition: .3s transform
+    &.active
+        .logo-img
+            path
+                &:nth-child(1)
+                    transform: translate(0, -6px)
+                &:nth-child(2)
+                    transform: translate(4px, -4px)
+                &:nth-child(3)
+                    transform: translate(6px, 0)
+                &:nth-child(4)
+                    transform: translate(4px, 4px)
+                &:nth-child(5)
+                    transform: translate(0, 6px)
+                &:nth-child(6)
+                    transform: translate(-4px, 4px)
+                &:nth-child(7)
+                    transform: translate(-6px, 0)
+                &:nth-child(8)
+                    transform: translate(-4px, -4px)
+
+.title
+    font-family: 'RobotoSlab', sans-serif
+    font-weight: 700
+    font-size: 40px
+    line-height: 135%
+    text-transform: uppercase
+
+.subtitle
+    font-weight: 500
+    font-size: 30px
+    line-height: 100%
+    color: $main
+    &_light
+        font-weight: 300
+        color: #000
+        font-size: 24px
+        line-height: 90%
+
+.input
+    border: none
+    border-bottom: 1px solid $lightGray2
+    padding: 20px
+    font-size: 20px
+    color: #000
+    width: 100%
+    transition: .3s border-color
+    background: transparent
+    &::-webkit-input-placeholder
+        color: #000
+    &:-moz-placeholder
+        color: #000
+    &-wrapper
+        position: relative
+        &::after
+            position: absolute
+            display: block
+            content: ''
+            bottom: 10px
+            right: 0
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 0 10px 10px
+            border-color: transparent transparent $lightGray2 transparent
+            transition: .3s border-color
+        &:focus, &:hover
+            .input
+                border-color: $main
+            &::after
+                border-color: transparent transparent $main transparent
+    &_white
+        color: #fff
+        &::-webkit-input-placeholder
+            color: $lightGray2
+        &:-moz-placeholder
+            color: $lightGray2
+    &_modal
+        padding: 15px 0
+        font-size: 18px
+.submit
+    width: 240px
+    height: 240px
+    font-size: 20px
+    font-weight: 500
+    border-radius: 100%
+    padding: 20px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    position: relative
+    &-text
+        position: relative
+        z-index: 2
+        transition: .3s transform ease-out
+        color: #fff
+        text-transform: uppercase
+        font-weight: 500
+    &::after, &::before
+        position: absolute
+        display: block
+        content: ''
+        width: 100%
+        height: 100%
+        left: 50%
+        top: 50%
+        transition: .3s transform ease-out
+        transform: translate(-50%, -50%)
+        border-radius: 100%
+    &::after
+        background-color: $main
+        z-index: 0
+    &::before
+        background-color: #000
+        z-index: 1
+        transform: translate(-50%, -50%) scale(0)
+    &:hover
+        .submit-text
+            transform: scale(.9)
+        &::after
+            transform: translate(-50%, -50%) scale(.75)
+        &::before
+            transform: translate(-50%, -50%) scale(.85)
+    input
+        display: none
+
+.text
+    line-height: 125%
+
+ul
+    list-style-type: none
+    li
+        position: relative
+        padding-left: 40px
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
+        &::after
+            position: absolute
+            display: block
+            content: ''
+            top: 7px
+            left: 0
+            background-image: url(../img/general/li.svg)
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            width: 15px
+            height: 15px
+
+.btn
+    font-size: 20px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: center
+    padding: 20px 70px
+    color: #fff
+    background-color: $main
+    position: relative
+    cursor: pointer
+    &::after
+        position: absolute
+        display: block
+        content: ''
+        border: 2px solid $main
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        height: calc(100% + 6px)
+        width: calc(100% + 6px)
+        transition: .3s width, .3s height
+    &:hover
+        &::after
+            width: 100%
+            height: 100%
+
+.img
+    &-inner
+        display: block
+        width: 100%
+        opacity: 0
+        visibility: hidden
+
+.slider
+    &-arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: $main
+        transition: .3s background-color
+        cursor: pointer
+        &:hover
+            background-color: #000
+    &-arrow.swiper-button-disabled
+        background-color: $gray
+        cursor: default
+
+@media (max-width: 1630px)
+    .title
+        font-size: 35px
+    .subtitle
+        font-size: 28px
+        &_light
+            font-size: 24px
+    ul
+        li
+            margin-bottom: 30px
+
+@media (max-width: 1400px)
+    .title
+        font-size: 30px
+    .subtitle
+        font-size: 24px
+        &_light
+            font-size: 22px
+    body
+        font-size: 22px
+    ul
+        li
+            margin-bottom: 25px
+            padding-left: 30px
+            &::after
+                top: 5px
+    .btn
+        padding: 16px 60px
+    .slider
+        &-arrow
+            width: 70px
+            height: 70px
+    .submit
+        width: 210px
+        height: 210px
+        font-size: 20px
+        padding: 15px
+
+@media (max-width: 1200px)
+    .title
+        font-size: 28px
+    .input
+        padding: 15px
+        font-size: 18px
+        &-wrapper
+            &::after
+                bottom: 8px
+                border-width: 0 0 8px 8px
+        &_modal
+            padding: 12px 0
+
+
+@media (max-width: 800px)
+    .title
+        font-size: 24px
+    .subtitle
+        font-size: 22px
+        &_light
+            font-size: 20px
+    body
+        font-size: 20px
+    ul
+        li
+            margin-bottom: 15px
+            padding-left: 25px
+            &::after
+                top: 4px
+    .btn
+        padding: 14px 40px
+        font-size: 18px
+    .submit
+        width: 190px
+        height: 190px
+        font-size: 18px
+        padding: 15px
+    
+@media (max-width: 600px)
+    .slider
+        &-arrow
+            width: 60px
+            height: 60px
+
+
+@import ./_header.sass
+@import ./_hero.sass
+@import ./_brand.sass
+@import ./_scheme.sass
+@import ./_advantages.sass
+@import ./_item.sass
+@import ./_gift.sass
+@import ./_reason.sass
+@import ./_numbers.sass
+@import ./_app.sass
+@import ./_offer.sass
+@import ./_choose.sass
+@import ./_footer.sass
+@import ./_modal.sass
+
+
+.alertify-notifier .ajs-message.ajs-warning
+    background: white
+    -webkit-box-shadow: 0 0 3px #333333
+    box-shadow: 0 0 3px #333333
+
+.alertify-notifier .ajs-message.ajs-success
+    color: #fff
+    background: rgba(40, 136, 62, 0.9)
+    text-shadow: 0 0 1px rgba(0,0,0,.5)
+
+.alertify-notifier
+    z-index: 99998

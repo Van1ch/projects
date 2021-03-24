@@ -1,0 +1,75 @@
+.partners
+    padding-bottom: 100px
+    &-item
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            max-height: 100%
+            max-width: 100%
+    &-title
+        margin-bottom: 80px
+    &-slider
+        padding: 0 70px
+        position: relative
+        &__dots
+            padding-top: 90px
+            text-align: center
+            span
+                margin: 0 10px
+                background-color: $silver
+                opacity: 1
+            span.swiper-pagination-bullet-active
+                background-color: $shiraz
+        &__arrow
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            cursor: pointer
+            z-index: 2
+            &_next
+                right: 0
+            &_prev
+                left: 0
+
+@media (max-width: 1300px)
+    .partners
+        padding-bottom: 80px
+        &-title
+            margin-bottom: 60px
+        &-slider
+            padding: 0 50px
+            &__dots
+                padding-top: 70px
+
+@media (max-width: 1000px)
+    .partners
+        padding-bottom: 60px
+        &-title
+            margin-bottom: 40px
+        &-slider
+            padding: 0 30px
+            &__dots
+                padding-top: 50px
+
+@media (max-width: 650px)
+    .partners
+        padding-bottom: 50px
+        &-title
+            margin-bottom: 30px
+        &-slider
+            padding: 0 20px
+            &__dots
+                padding-top: 35px
+                span
+                    margin: 0 7px
+
+@media (max-width: 450px)
+    .partners
+        padding-bottom: 40px
+        &-title
+            margin-bottom: 20px
+        &-slider
+            padding: 0 15px
+            &__dots
+                padding-top: 20px

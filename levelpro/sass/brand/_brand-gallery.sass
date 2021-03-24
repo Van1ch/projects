@@ -1,0 +1,167 @@
+.brand
+    &-gallery
+        margin-bottom: 120px
+        &__item
+            display: flex
+            &-text, &-photo
+                flex-basis: 50%
+            &-photo
+                &__img
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: cover
+                    &-inner
+                        width: 100%
+                        display: block
+                        opacity: 0
+                        visibility: hidden
+                &__list
+                    width: calc(100% + 4px)
+                    margin-left: -2px
+                    display: flex
+                    flex-wrap: wrap
+                    &-item
+                        margin: 0 2px 4px 2px
+                        flex-basis: 400px
+                        flex-grow: 1
+                        background-repeat: no-repeat
+                        background-position: center center
+                        background-size: cover
+                        &__inner
+                            width: 100%
+                            display: block
+                            opacity: 0
+                            visibility: hidden
+            &-text
+                padding-top: 130px
+                padding-left: calc((100% - 1400px) / 2)
+                padding-right: 140px
+                &__title
+                    margin-bottom: 40px
+                &__text
+                    margin-bottom: 70px
+                    font-size: 18px
+                    p
+                        margin-bottom: 25px
+                        &:last-child
+                            margin-bottom: 0
+                    div
+                        margin-bottom: 10px
+                        &:last-child
+                            margin-bottom: 0
+                    .red
+                        color: $shiraz
+                    .bold
+                        font-weight: 700
+                    .uc
+                        text-transform: uppercase
+            &:nth-child(even)
+                flex-direction: row-reverse
+                .brand-gallery__item-text
+                    padding-left: 140px
+                    padding-right: calc((100% - 1400px) / 2)
+
+@media (max-width: 1650px)
+    .brand
+        &-gallery
+            margin-bottom: 100px
+            &__item
+                &-text
+                    padding-top: 90px
+                    padding-right: 100px
+                &-photo
+                    &__list
+                        &-item
+                            flex-basis: 300px
+                &:nth-child(even)
+                    .brand-gallery__item-text
+                        padding-left: 100px
+
+@media (max-width: 1430px)
+    .brand
+        &-gallery
+            margin-bottom: 90px
+            &__item
+                &-text
+                    padding-top: 60px
+                    padding-right: 70px
+                    padding-left: 15px
+                    &__title
+                        margin-bottom: 30px
+                    &__text
+                        margin-bottom: 40px
+                &-photo
+                    &__list
+                        &-item
+                            flex-basis: 250px
+                &:nth-child(even)
+                    .brand-gallery__item-text   
+                        padding-left: 70px
+                        padding-right: 15px   
+
+@media (max-width: 1200px)
+    .brand
+        &-gallery
+            margin-bottom: 70px
+            &__item
+                flex-direction: column
+                margin-bottom: 40px
+                &:last-child
+                    margin-bottom: 0
+                &-text
+                    padding: 0 15px
+                    margin-bottom: 30px
+                    &__title
+                        margin-bottom: 15px
+                    &__text
+                        margin-bottom: 20px
+                        p
+                            margin-bottom: 15px
+                &:nth-child(even)
+                    flex-direction: column
+                    .brand-gallery__item-text   
+                        padding: 0 15px
+                &-photo
+                    &__img
+                        height: 250px
+                        &-inner
+                            display: none
+
+@media (max-width: 1011px)
+    .brand
+        &-gallery
+            margin-bottom: 60px
+            &__item
+                &-photo
+                    &__list
+                        &-item
+                            flex-basis: 350px
+
+@media (max-width: 750px)
+    .brand
+        &-gallery
+            margin-bottom: 40px
+            &__item
+                margin-bottom: 30px
+                &-photo
+                    &__list
+                        &-item
+                            flex-basis: 250px
+
+@media (max-width: 550px)
+    .brand
+        &-gallery
+            &__item
+                &-photo
+                    &__list
+                        &-item
+                            flex-basis: 190px
+
+@media (max-width: 400px)
+    .brand
+        &-gallery
+            &__item
+                &-photo
+                    &__list
+                        &-item
+                            flex-basis: 150px

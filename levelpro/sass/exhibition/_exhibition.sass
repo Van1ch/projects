@@ -1,0 +1,130 @@
+.exhibition
+    padding-bottom: 0
+    &-gallery
+        margin-bottom: 70px
+    &-text
+        margin-bottom: 70px
+    &-inner
+        display: block
+        width: 100%
+        opacity: 0
+        visibility: hidden
+    &-hero
+        margin-bottom: 70px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+    &-galleryDefault
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 24px)
+        margin-left: -12px
+        margin-bottom: 70px
+        &__item
+            flex-basis: 220px
+            flex-grow: 1
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            margin: 0 12px 24px 12px
+    &-gallerySpecial
+        margin-bottom: 70px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 40px
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            &:first-child
+                grid-column: auto / span 2
+                img
+                    display: none
+    &-diploma
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 24px)
+        margin-left: -12px
+        margin-bottom: 70px
+        &__item
+            flex-basis: 220px
+            flex-grow: 1
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            margin: 0 12px 24px 12px
+            border: 1px solid $gray
+    &-galleryCool
+        margin-bottom: 70px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 40px
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            &:nth-child(2), &:nth-child(4)
+                grid-row: auto / span 2
+                img
+                    display: none
+
+@media (max-width: 1300px)
+    .exhibition
+        &-hero, &-gallery, &-text, &-galleryDefault, &-gallerySpecial, &-diploma, &-galleryCool
+            margin-bottom: 60px
+        &-galleryDefault
+            &__item
+                flex-basis: 190px
+        &-gallerySpecial
+            gap: 30px
+        &-diploma
+            &__item
+                flex-basis: 200px
+        &-galleryCool
+            gap: 30px
+
+@media (max-width: 900px)
+    .exhibition
+        &-hero, &-gallery, &-text, &-galleryDefault, &-gallerySpecial, &-diploma, &-galleryCool
+            margin-bottom: 50px
+        &-gallerySpecial
+            grid-template-columns: repeat(2, 1fr)
+            gap: 20px
+            &__item
+                &:first-child
+                    img
+                        display: block
+        &-galleryCool
+            gap: 20px
+
+@media (max-width: 600px)
+    .exhibition
+        &-hero, &-gallery, &-text, &-galleryDefault, &-gallerySpecial, &-diploma, &-galleryCool
+            margin-bottom: 40px
+        &-galleryDefault
+            width: calc(100% + 20px)
+            margin-left: -10px
+            &__item
+                flex-basis: 160px
+                margin: 0 10px 20px 10px
+        &-gallerySpecial
+            gap: 15px
+        &-diploma
+            width: calc(100% + 20px)
+            margin-left: -10px
+            &__item
+                flex-basis: 180px
+                margin: 0 10px 20px 10px
+        &-galleryCool
+            grid-template-columns: repeat(1, 1fr)
+            gap: 15px
+            &__item
+                &:nth-child(2), &:nth-child(4)
+                    img
+                        display: block
+            
+
+@media (max-width: 400px)
+    .exhibition
+        &-hero, &-gallery, &-text, &-galleryDefault, &-gallerySpecial, &-diploma, &-galleryCool
+            margin-bottom: 30px

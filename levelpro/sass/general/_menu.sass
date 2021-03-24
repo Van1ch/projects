@@ -1,0 +1,43 @@
+.menu
+    &-item
+        margin-bottom: 20px
+        &__top
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            cursor: pointer
+            &-text
+                margin-right: 10px
+                font-size: 18px
+                font-weight: 700
+                text-transform: uppercase
+                color: #000
+            &-img
+                margin-top: 7px
+                transition: .3s transform
+                opacity: 0
+                visibility: hidden
+        &__body
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            max-height: 0
+            overflow: hidden
+            transition: .5s max-height
+            &-item
+                color: #000
+                margin-bottom: 25px
+                transition: .3s color
+                &:first-child
+                    margin-top: 25px
+                &:last-child
+                    margin-bottom: 20px
+                &:hover
+                    color: $shiraz
+            &-item.active
+                color: $shiraz
+    &-item.active
+        .menu-item__top-img
+            transform: rotate(180deg)
+        .menu-item__body
+            max-height: 100%

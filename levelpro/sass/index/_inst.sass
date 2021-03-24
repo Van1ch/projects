@@ -1,0 +1,115 @@
+.inst
+    padding-bottom: 150px
+    &-title
+        margin-bottom: 80px
+    &-item
+        &__img
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            margin: 0 3px 6px 3px
+            flex-basis: 170px
+            flex-grow: 1
+            &-inner
+                display: block
+                width: 100%
+                opacity: 0
+                visibility: hidden
+            &-wrapper
+                display: flex
+                flex-wrap: wrap
+                width: calc(100% + 6px)
+                margin-left: -3px
+                margin-bottom: 30px
+        &__bottom
+            display: inline-flex
+            align-items: flex-start
+            &-img
+                margin-right: 15px
+            &-text
+                margin-top: 5px
+                &__name
+                    margin-bottom: 15px
+                    color: #000
+                    transition: .3s color
+                    span
+                        color: $shiraz
+                    &:hover
+                        color: $shiraz
+                &__numbers
+                    display: flex
+                    justify-content: space-between
+                &__number
+                    font-size: 20px
+                &__text
+                    font-size: 10px
+                    color: $gray
+        &:nth-child(2n)
+            margin-top: 100px
+    &-slider
+        &__bottom
+            margin-top: 40px
+            
+@media (max-width: 1300px)
+    .inst
+        padding-bottom: 120px
+        &-title
+            margin-bottom: 60px
+        &-item
+            &__img
+                &-wrapper
+                    margin-bottom: 20px
+
+@media (max-width: 1150px)
+    .inst
+        padding-bottom: 100px
+        &-title
+            margin-bottom: 50px
+        &-item
+            &__img
+                flex-basis: 140px
+        &-slider
+            &__bottom
+                margin-top: 30px
+
+@media (max-width: 950px)
+    .inst
+        padding-bottom: 80px
+        &-title
+            margin-bottom: 40px
+        &-item
+            &__img
+                flex-basis: 240px
+                &-wrapper
+                    margin-bottom: 10px
+            &:nth-child(2n)
+                margin-top: 0
+
+@media (max-width: 800px)
+    .inst
+        padding-bottom: 60px
+        &-item
+            &__img
+                flex-basis: 200px
+
+
+@media (max-width: 650px)
+    .inst
+        &-title
+            margin-bottom: 30px
+        &-item
+            &__img
+                flex-basis: 160px
+
+@media (max-width: 550px)
+    .inst
+        padding-bottom: 40px
+        &-item
+            &__img
+                flex-basis: 130px
+
+@media (max-width: 450px)
+    .inst
+        &-item
+            &__img
+                flex-basis: 115px

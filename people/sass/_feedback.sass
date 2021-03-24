@@ -1,0 +1,473 @@
+.feedback
+    padding: 150px 0
+    &-title
+        margin-bottom: 40px
+        text-align: center
+    &-subtitle
+        max-width: 1250px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 90px
+    &-tabs
+        display: flex
+        padding-left: 16.7%
+        padding-left: calc((100% - 1130px) / 2)
+        padding-right: calc((100% - 1130px) / 2)
+        margin-bottom: 100px
+        justify-content: space-between
+        &__item
+            flex-basis: 200px
+            flex-grow: 1
+            display: flex
+            align-items: center
+            justify-content: center
+            margin: 0 15px
+            cursor: pointer
+            border-radius: 60px
+            padding: 25px 15px
+            color: $gray
+            font-size: 20px
+            font-weight: 500
+            text-transform: uppercase
+            background: linear-gradient(180deg, #E0E0E0 0%, #FFFFFF 100%)
+            box-shadow: inset 0px 2px 5px #CBCBCB, inset 0px -4px 6px rgba(202, 202, 202, 0.2)
+            text-align: center
+        &__item.active
+            border-color: $blue
+            background-color: $blue
+            color: #fff
+            background: linear-gradient(180deg, #04A5FF 0%, #0042A5 100%)
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35), inset 0px 2px 3px rgba(255, 255, 255, 0.35), inset 0px -2px 3px rgba(0, 0, 0, 0.2)
+    &-body
+        display: none
+    &-body.active
+        display: block
+    &-slider
+        &__wrapper
+            padding-left: calc((100% - 1170px) / 2)
+            padding-right: calc((100% - 1170px) / 2)
+            margin-bottom: 100px
+            position: relative
+        &__arrow
+            cursor: pointer
+            position: relative
+            display: flex
+            transition: .3s margin
+            &::before
+                position: absolute
+                display: block
+                content: ''
+                width: 105px
+                height: 3px
+                background-color: #000
+                top: 48%
+                transform: translateY(-50%)
+            &_next
+                &::before
+                    right: 95%
+                &:hover
+                    margin-right: -15px
+            &_prev
+                &::before
+                    left: 95%
+                &:hover
+                    margin-left: -15px
+        &__arrows
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+    &-slide
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        &__video
+            position: relative
+            margin-bottom: 60px
+            &-inner
+                opacity: 0
+                visibility: hidden
+                width: 100%
+                display: block
+            .youtube, iframe
+                position: absolute
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                background-position: center center
+                background-repeat: no-repeat
+                background-size: cover
+                .play
+                    background: url('../img/feedback/youtube-play-btn.png') no-repeat
+                    background-position: 0 -50px
+                    background-size: 100% auto
+                    position: absolute
+                    height: 50px
+                    width: 69px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                &:hover
+                    .play
+                        background-position: 0 0
+        &__img
+            background-repeat: no-repeat
+            background-position: center bottom
+            background-size: contain
+            margin-bottom: 15px
+            &-inner
+                display: block
+                width: 100%
+                opacity: 0
+                visibility: hidden
+            &-wrapper
+                min-width: 440px
+                width: 440px
+                margin-right: 80px
+        &__socials
+            display: flex
+            align-items: center
+            &-text
+                font-size: 12px
+                margin-right: 5px
+            &-item
+                margin-right: 30px
+                max-width: 30px
+                display: flex
+                &:last-child
+                    margin-right: 0
+                svg
+                    fill: #000
+                    transition: .3s fill
+                    max-width: 100%
+                &:hover
+                    svg
+                        fill: $blue
+        &__main
+            width: 100%
+            padding-bottom: 50px
+        &__title
+            font-size: 40px
+            font-weight: 500
+            line-height: 125%
+            margin-bottom: 40px
+        &__text
+            margin-bottom: 80px
+        &__list
+            margin-bottom: 80px
+            &-item
+                display: flex
+                justify-content: space-between
+                border-top: 1px solid #000
+                padding: 12px 20px
+                &:last-child
+                    border-bottom: 1px solid #000
+                &__name
+                    position: relative
+                    padding-left: 14px
+                    margin-right: 10px
+                    &::after
+                        position: absolute
+                        top: 9px
+                        left: 0
+                        display: block
+                        content: ''
+                        width: 5px
+                        height: 5px
+                        background-color: #000
+                        border-radius: 100%
+                &__value
+                    font-weight: 500
+            &-item.active
+                background-color: $yellow
+    &-thumbs
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            cursor: pointer
+            position: relative
+            margin-bottom: 6px
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                width: 100%
+                top: 0
+                left: 0
+                height: 100%
+                box-shadow: inset 0 0 0 3px $yellow
+                opacity: 0
+                visibility: hidden
+                transition: .3s opacity, .3s visibility
+            &-inner
+                display: block
+                width: 100%
+                opacity: 0
+                visibility: hidden
+            &:hover
+                &::after
+                    opacity: 1
+                    visibility: visible
+            &-text
+                font-size: 9px
+            &-wrapper
+                width: 146px
+        &__item-wrapper.swiper-slide-thumb-active
+            .feedback-thumbs__item
+                &::after
+                    opacity: 1
+                    visibility: visible
+
+@media (max-width: 1670px)
+    .feedback
+        padding: 130px 0
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 70px
+        &-tabs
+            margin-bottom: 80px
+        &-slider
+            &__wrapper
+                margin-bottom: 80px
+            &__arrow
+                &::before
+                    width: 90px
+        &-slide
+            &__img
+                &-wrapper
+                    margin-right: 60px
+            &__title
+                font-size: 36px
+                margin-bottom: 30px
+            &__list
+                margin-bottom: 70px
+                &-item
+                    padding: 10px 16px
+
+@media (max-width: 1500px)
+    .feedback
+        padding: 110px 0
+        &-title
+            margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 70px
+        &-tabs
+            margin-bottom: 80px
+            &__item
+                padding: 22px 15px
+        &-slider
+            &__wrapper
+                margin-bottom: 80px
+            &__arrow
+                &::before
+                    width: 70px
+        &-slide
+            &__title
+                font-size: 36px
+                margin-bottom: 30px
+            &__list
+                margin-bottom: 70px
+                &-item
+                    padding: 10px 16px
+
+@media (max-width: 1450px)
+    .feedback
+        &-slider
+            &__arrow
+                &::before
+                    width: 35px
+
+@media (max-width: 1350px)
+    .feedback
+        &-slider
+            &__arrow
+                &::before
+                    width: 10px
+
+@media (max-width: 1300px)
+    .feedback
+        padding: 90px 0
+        &-title
+            margin-bottom: 25px
+        &-subtitle
+            margin-bottom: 60px
+        &-tabs
+            margin-bottom: 70px
+        &-slider
+            &__wrapper
+                margin-bottom: 60px
+                padding: 0
+            &__arrows
+                top: auto
+                bottom: 0
+                right: 0
+                flex-direction: column
+                align-items: flex-end
+                justify-content: flex-start
+                z-index: 1
+                transform: none
+            &__arrow
+                margin-bottom: 15px
+                &:last-child
+                    margin: 0
+                &::before
+                    width: 0
+                &_prev
+                    &:hover
+                        margin-left: 0
+                &_next
+                    &:hover
+                        margin-right: 0
+        &-slide
+            &__img
+               &-wrapper
+                    margin-right: 50px
+            &__title
+                font-size: 32px
+                margin-bottom: 25px
+            &__list
+                margin-bottom: 60px
+            &__video
+                margin-bottom: 50px
+
+@media (max-width: 1200px)
+    .feedback
+        padding: 80px 0
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            margin-bottom: 50px
+        &-tabs
+            margin-bottom: 50px
+            padding: 0
+            width: calc(100% + 20px)
+            margin-left: -10px
+            &__item
+                margin: 0 10px
+                font-size: 18px
+        &-slider
+            &__wrapper
+                margin-bottom: 40px
+        &-slide
+            &__img
+                &-wrapper
+                    margin-right: 40px
+                    width: 280px
+                    min-width: 280px
+            &__title
+                font-size: 26px
+                margin-bottom: 20px
+            &__list
+                margin-bottom: 50px
+
+@media (max-width: 900px)
+    .feedback
+        padding: 70px 0
+        &-subtitle
+            margin-bottom: 40px
+        &-tabs
+            margin-bottom: 40px
+        &-slider
+            &__wrapper
+                margin-bottom: 30px
+        &-tabs
+            &__item
+                padding: 20px 15px
+        &-slide
+            &__img
+                &-wrapper
+                    margin-right: 30px
+                    width: 260px
+                    min-width: 260px
+            &__title
+                font-size: 24px
+                margin-bottom: 15px
+            &__list
+                margin-bottom: 40px
+                &-item
+                    font-size: 16px
+                    padding: 8px 10px
+                    &__name
+                        padding-left: 10px
+                        margin-right: 6px
+                        &::after
+                            top: 7px
+
+@media (max-width: 767px)
+    .feedback
+        padding: 60px 0
+        &-slide
+            flex-direction: column
+            &__img
+                margin-bottom: 10px
+                &-wrapper
+                    margin: 0 auto
+                    margin-bottom: 20px
+                    min-width: 0
+                    width: 240px
+            &__socials
+                &-item
+                    margin-right: 15px
+            &__main
+                padding-bottom: 30px
+            &__video
+                margin-bottom: 40px
+        &-tabs
+            flex-direction: column
+            &__item
+                flex-basis: auto
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+        &-slider
+            &__arrows
+                position: relative
+                flex-direction: row
+                justify-content: flex-end
+            &__arrow
+                margin-bottom: 0
+                margin-right: 20px
+                margin-top: 10px
+            &__wrapper
+                margin-bottom: 20px
+
+@media (max-width: 600px)
+    .feedback
+        padding: 50px 0
+        &-subtitle
+            margin-bottom: 30px
+        &-slide
+            &__main
+                padding-bottom: 20px
+
+@media (max-width: 500px)
+    .feedback
+        &-tabs
+            &__item
+                font-size: 16px
+        &-slide
+            &__img
+                &-wrapper
+                    width: 200px
+        &-slide
+            &__list
+                &-item
+                    flex-direction: column
+                    &__name
+                        padding-left: 0
+                        margin-bottom: 5px
+                        &::after
+                            display: none
+
+@media (max-width: 350px)
+    .feedback
+        &-tabs
+            &__item
+                font-size: 14px
