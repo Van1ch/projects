@@ -4,7 +4,7 @@
 Хотел бы выделить пункты 2, 4 и последние 2
 
 - bank - landing https://dom-garantiy.ru/
-- bintrade - landing https://dom-garantiy.ru/
+- bintrade - landing https://bintradeclub.ru/
 - champion - landing https://shtaketnik-chempion.ru/
 - desk - landing с интерактивными элементами, большим количеством анимаций https://gadget-co.ru/
 - kfx - корпоративный сайт-каталог https://fermerskoekhozyaystvo.ru/
